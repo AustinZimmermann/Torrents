@@ -6,15 +6,16 @@
     <title>300 (2007) 1080p BluRay REMUX VC-1 TrueHD 5.1-FraMeSToR - 1337x</title>
     <style>
         :root {
-            --bg-primary: #121212;
-            --bg-secondary: #1e1e1e;
-            --bg-tertiary: #252525;
-            --accent-red: #d32f2f;
-            --accent-red-hover: #f44336;
+            --bg-color: #121212;
+            --panel-bg: #1e1e1e;
+            --panel-border: #2d2d2d;
+            --accent-red: #c51b1b;
+            --accent-red-hover: #e02424;
             --text-main: #e0e0e0;
-            --text-muted: #9e9e9e;
-            --border-color: #333333;
-            --link-color: #bb86fc;
+            --text-muted: #888888;
+            --text-bright: #ffffff;
+            --link-color: #4da6ff;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
@@ -24,160 +25,103 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-primary);
+            background-color: var(--bg-color);
             color: var(--text-main);
+            font-family: var(--font-family);
             line-height: 1.6;
-            padding-bottom: 50px;
-        }
-
-        header {
-            background-color: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            color: #ffffff;
-            background: var(--accent-red);
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            letter-spacing: -1px;
-        }
-
-        .search-bar {
-            display: flex;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            overflow: hidden;
-            width: 300px;
-        }
-
-        .search-bar input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: var(--text-main);
-            padding: 8px 12px;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        .search-bar button {
-            background: var(--accent-red);
-            border: none;
-            color: white;
-            padding: 0 15px;
-            cursor: pointer;
-            font-weight: bold;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .torrent-title-section {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 25px;
-        }
-
-        .torrent-title-section h1 {
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 10px;
-            word-break: break-all;
-        }
-
-        .torrent-meta-header {
+        /* Header Navigation Styles */
+        .site-header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 13px;
-            color: var(--text-muted);
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 15px 25px;
+            margin-bottom: 30px;
+            border-radius: 4px;
         }
 
-        .torrent-meta-header span b {
+        .logo-area {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-bright);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-area span {
+            color: var(--accent-red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
             color: var(--text-main);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s;
         }
 
-        .main-content-grid {
+        .nav-links a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Main Torrent Layout */
+        .torrent-page-grid {
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 30px;
         }
 
-        @media (max-width: 768px) {
-            .main-content-grid {
+        @media (max-width: 850px) {
+            .torrent-page-grid {
                 grid-template-columns: 1fr;
-            }
-            .search-bar {
-                display: none;
             }
         }
 
-        .sidebar {
+        /* Left Column: Poster and Quick Info */
+        .torrent-sidebar {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .poster-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .poster-placeholder {
-            width: 100%;
-            height: 380px;
-            background: linear-gradient(135deg, #2b0000 0%, #4a1515 100%);
-            border: 1px solid #5a1c1c;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #ff9e9e;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .poster-container {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 10px;
             border-radius: 4px;
-            padding: 20px;
             text-align: center;
         }
 
-        .poster-placeholder span {
-            font-size: 42px;
-            color: #fff;
+        .poster-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
             display: block;
-            margin-top: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
 
         .action-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
             padding: 20px;
-            border-radius: 6px;
+            border-radius: 4px;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -188,18 +132,16 @@
             width: 100%;
             padding: 12px;
             text-align: center;
-            border-radius: 4px;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
             font-size: 15px;
-            transition: background 0.2s;
-            cursor: pointer;
-            border: none;
+            transition: background-color 0.2s, transform 0.1s;
         }
 
         .btn-magnet {
             background-color: var(--accent-red);
-            color: white;
+            color: var(--text-bright);
         }
 
         .btn-magnet:hover {
@@ -207,338 +149,504 @@
         }
 
         .btn-torrent {
-            background-color: #333;
-            color: white;
+            background-color: #2b2b2b;
+            color: var(--text-bright);
+            border: 1px solid #444;
         }
 
         .btn-torrent:hover {
-            background-color: #444;
+            background-color: #383838;
         }
 
-        .details-panel {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 25px;
+        /* Right Column: Title, Metadata, Description */
+        .torrent-main-content {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 30px;
+            border-radius: 4px;
         }
 
-        .section-title {
-            font-size: 18px;
-            color: #fff;
-            border-bottom: 2px solid var(--accent-red);
-            padding-bottom: 8px;
+        .torrent-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: 15px;
+            word-break: break-word;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 15px;
+        }
+
+        .category-path {
+            font-size: 13px;
+            color: var(--text-muted);
             margin-bottom: 20px;
+        }
+
+        .category-path span {
+            color: var(--text-bright);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+            background-color: #161616;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid var(--panel-border);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-bright);
+        }
+
+        .stat-value.seeds {
+            color: #2ecc71;
+        }
+
+        .stat-value.leeches {
+            color: #e74c3c;
+        }
+
+        /* Detailed Specifications Table */
+        .specs-section {
+            margin-bottom: 30px;
+        }
+
+        .specs-section h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: var(--text-bright);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 10px;
         }
 
         .specs-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 25px;
             font-size: 14px;
         }
 
         .specs-table th, .specs-table td {
             padding: 10px 12px;
-            border-bottom: 1px solid var(--border-color);
+            border: 1px solid var(--panel-border);
             text-align: left;
         }
 
         .specs-table th {
+            background-color: #161616;
             color: var(--text-muted);
-            width: 35%;
+            width: 30%;
         }
 
         .specs-table td {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        .badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-size: 12px;
+            background-color: #1a1a1a;
             color: var(--text-main);
         }
 
-        .badge.highlight {
-            background: #2d1212;
-            border-color: #5c1c1c;
-            color: #ff8a8a;
-        }
-
+        /* Media Info Text Container */
         .media-info-box {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
+            background-color: #0f0f0f;
+            border: 1px solid var(--panel-border);
             padding: 15px;
             font-family: monospace;
             font-size: 12px;
             color: #b0b0b0;
             white-space: pre-wrap;
             overflow-x: auto;
-            margin-top: 15px;
-            max-height: 300px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .stat-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            padding: 10px;
+            max-height: 350px;
             border-radius: 4px;
+            margin-top: 10px;
         }
 
-        .stat-card .val {
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .stat-card .lbl {
-            font-size: 12px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
-
-        .stat-card.seeders .val { color: #4caf50; }
-        .stat-card.leechers .val { color: #ff9800; }
-
+        /* Comments Section */
         .comments-section {
-            margin-top: 30px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 25px;
+            border-radius: 4px;
         }
 
-        .comment {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
+        .comments-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-bright);
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .comment-form textarea {
+            background-color: #121212;
+            border: 1px solid var(--panel-border);
+            color: var(--text-bright);
             padding: 12px;
+            font-family: var(--font-family);
             border-radius: 4px;
-            margin-bottom: 12px;
-            font-size: 13px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-red);
+        }
+
+        .comment-form button {
+            align-self: flex-end;
+            padding: 8px 20px;
+            background-color: var(--accent-red);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: var(--accent-red-hover);
+        }
+
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment-card {
+            background-color: #161616;
+            border: 1px solid var(--panel-border);
+            padding: 15px;
+            border-radius: 4px;
         }
 
         .comment-header {
             display: flex;
             justify-content: space-between;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            font-size: 12px;
+            margin-bottom: 8px;
+            font-size: 13px;
         }
 
-        .comment-header b {
+        .comment-author {
+            font-weight: bold;
+            color: var(--text-bright);
+        }
+
+        .comment-date {
+            color: var(--text-muted);
+        }
+
+        .comment-body {
+            font-size: 14px;
             color: var(--text-main);
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--panel-border);
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2ecc71;
+            color: #121212;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+            animation: fadeInOut 2s ease;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(20px); }
+            15% { opacity: 1; transform: translateY(0); }
+            85% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(20px); }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <a href="#" class="logo">1337x</a>
-            <span style="font-size: 13px; color: var(--text-muted);">The Galaxy’s Torrent site</span>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search torrents..." value="300 FraMeSToR">
-            <button type="button">&#128269;</button>
-        </div>
-    </header>
-
     <div class="container">
-        
-        <div class="torrent-title-section">
-            <h1>300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR</h1>
-            <div class="torrent-meta-header">
-                <span>Category: <b>Movies / HD</b></span>
-                <span>Type: <b>BluRay</b></span>
-                <span>Language: <b>English</b></span>
-                <span>Size: <b>24.8 GB</b></span>
-                <span>Uploaded by: <b style="color: #ff5252;">FraMeSToR</b></span>
-                <span>Date: <b>October 24, 2021</b></span>
-            </div>
-        </div>
+        <!-- Header -->
+        <header class="site-header">
+            <a href="#" class="logo-area">1337<span>x</span></a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Top 100</a></li>
+            </ul>
+        </header>
 
-        <div class="main-content-grid">
-            
-            <!-- Sidebar / Actions -->
-            <div class="sidebar">
-                <div class="poster-box">
-                    <div class="poster-placeholder">
-                        Movie Poster
-                        <span>300</span>
-                    </div>
+        <!-- Main Grid Layout -->
+        <div class="torrent-page-grid">
+            <!-- Sidebar: Poster & Download buttons -->
+            <div class="torrent-sidebar">
+                <div class="poster-container">
+                    <img src="https://image.tmdb.org/t/p/original/h7Lcio0c9ohxPhSZg42eTlKIVVY.jpg" alt="300 Movie Poster">
                 </div>
-
                 <div class="action-box">
-                    <a href="magnet:?xt=urn:btih:3002007REMUXFRAMESTOR1080PVC1TRUEHD51&dn=300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR" class="btn btn-magnet" onclick="handleMagnet(event)">
-                        &#9889; Magnet Download
-                    </a>
-                    <button class="btn btn-torrent" onclick="alert('Downloading .torrent file simulation...')">
-                        &#128190; Torrent File
-                    </button>
-                </div>
-
-                <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    <div class="stat-card seeders">
-                        <div class="val">342</div>
-                        <div class="lbl">Seeders</div>
-                    </div>
-                    <div class="stat-card leechers">
-                        <div class="val">18</div>
-                        <div class="lbl">Leechers</div>
-                    </div>
+                    <a href="magnet:?xt=urn:btih:300remuxfrai777&dn=300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR" class="btn btn-magnet" id="magnet-btn">Magnet Download</a>
+                    <a href="#" class="btn btn-torrent" id="torrent-btn">Torrent File (.torrent)</a>
                 </div>
             </div>
 
-            <!-- Main Panel / Details -->
-            <div class="details-panel">
-                <div class="section-title">Torrent Details & Technical Specs</div>
+            <!-- Content Panel: Title, Specs, Media Info -->
+            <div class="torrent-main-content">
+                <div class="category-path">Category: <span>Movies &gt; Highres Movies</span></div>
+                <h1 class="torrent-title">300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR</h1>
 
-                <table class="specs-table">
-                    <tr>
-                        <th>Release Group</th>
-                        <td>FraMeSToR</td>
-                    </tr>
-                    <tr>
-                        <th>Video Codec</th>
-                        <td>VC-1 @ 19.8 Mbps (1080p / 23.976 fps / 16:9)</td>
-                    </tr>
-                    <tr>
-                        <th>Audio Tracks</th>
-                        <td>
-                            <div class="badges">
-                                <span class="badge highlight">English TrueHD 5.1 (3102 kbps)</span>
-                                <span class="badge">French (Canadian) Dolby Digital 5.1</span>
-                                <span class="badge">Spanish Dolby Digital 5.1</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Subtitles</th>
-                        <td>
-                            <div class="badges">
-                                <span class="badge">English (PGS)</span>
-                                <span class="badge">English SDH (PGS)</span>
-                                <span class="badge">French (PGS)</span>
-                                <span class="badge">Spanish (PGS)</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Container</th>
-                        <td>MKV (Matroska)</td>
-                    </tr>
-                    <tr>
-                        <th>Source</th>
-                        <td>1080p USA Blu-ray Disc (VC-1 TrueHD 5.1)</td>
-                    </tr>
-                </table>
+                <!-- Stats Bar -->
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Seeders</span>
+                        <span class="stat-value seeds">424</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Leechers</span>
+                        <span class="stat-value leeches">18</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value">3,892</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Size</span>
+                        <span class="stat-value">24.8 GB</span>
+                    </div>
+                </div>
 
-                <div class="section-title" style="margin-top: 30px;">MediaInfo Snapshot</div>
-                <div class="media-info-box" id="mediainfo-text">
-Unique ID                                : 20073001080200710802007108020071080
-Complete name                            : 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.mkv
-Format                                   : Matroska
-Format version                           : Version 4
-File size                                : 24.8 GiB
-Duration                                 : 1 h 56 min
-Overall bit rate mode                    : Variable
-Overall bit rate                         : 30.5 Mb/s
+                <!-- Technical Specification Table -->
+                <div class="specs-section">
+                    <h3>Release Specifications</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <th>Title / Year</th>
+                            <td>300 / 2007</td>
+                        </tr>
+                        <tr>
+                            <th>Group / Encoder</th>
+                            <td>FraMeSToR</td>
+                        </tr>
+                        <tr>
+                            <th>Source</th>
+                            <td>1080p Blu-ray REMUX (VC-1)</td>
+                        </tr>
+                        <tr>
+                            <th>Video Codec</th>
+                            <td>VC-1 @ ~22.5 Mbps</td>
+                        </tr>
+                        <tr>
+                            <th>Audio Tracks</th>
+                            <td>English Dolby TrueHD 5.1 (48kHz, 24-bit), French (Canadian) Dolby Digital 5.1, Spanish Dolby Digital 5.1</td>
+                        </tr>
+                        <tr>
+                            <th>Subtitles</th>
+                            <td>English, English SDH, French, Spanish (MUXed)</td>
+                        </tr>
+                        <tr>
+                            <th>Resolution</th>
+                            <td>1920 x 1080 (2.40:1 Aspect Ratio)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Media Info Text Segment -->
+                <div class="specs-section">
+                    <h3>MediaInfo Details</h3>
+                    <div class="media-info-box">General
+Unique ID : 2109481920381920381 (0x1D3B5C7EFA2B1)
+Complete name : 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.mkv
+Format : Matroska / Version 4
+File size : 24.8 GiB
+Duration : 1 h 57 min
+Overall bit rate mode : Variable
+Overall bit rate : 30.1 Mb/s
 
 Video
-ID                                       : 1
-Format                                   : VC-1
-Format profile                           : AP@L3
-Codec ID                                 : V_MS/VFW/FOURCC / WVC1
-Duration                                 : 1 h 56 min
-Width                                    : 1 920 pixels
-Height                                   : 1 080 pixels
-Display aspect ratio                     : 16:9
-Frame rate mode                          : Constant
-Frame rate                               : 23.976 (24000/1001) FPS
+ID : 1
+Format : VC-1
+Format profile : AP@L3
+Codec ID : V_MS/VFW/FOURCC / WVC1
+Duration : 1 h 57 min
+Width : 1 920 pixels
+Height : 1 080 pixels
+Display aspect ratio : 2.40:1
+Frame rate mode : Constant
+Frame rate : 23.976 (24000/1001) FPS
 
 Audio #1
-ID                                       : 2
-Format                                   : TrueHD
-Codec ID                                 : A_TRUEHD
-Duration                                 : 1 h 56 min
-Bit rate mode                            : Variable
-Channel(s)                               : 6 channels
-Channel layout                           : C L R Ls Rs LFE
-Language                                 : English
-Default                                  : Yes
+ID : 2
+Format : TrueHD / AC-3
+Codec ID : A_TRUEHD
+Duration : 1 h 57 min
+Channel(s) : 6 channels
+Channel layout : L R C LFE Ls Rs
+Sampling rate : 48.0 kHz
+Language : English
 
 Text #1
-ID                                       : 4
-Format                                   : PGS
-Codec ID                                 : S_HDMV/PGS
-Language                                 : English (SDH)
-</div>
+ID : 3
+Format : PGS
+Codec ID : S_HDMV/PGS
+Language : English (English SDH)</div>
+                </div>
+            </div>
+        </div>
 
-                <div class="section-title" style="margin-top: 30px;">Comments (3)</div>
-                <div class="comments-section" style="margin-top:0; border:none; padding:0;">
-                    <div class="comment">
-                        <div class="comment-header">
-                            <b>Spartan_King</b> • 2 years ago
-                        </div>
-                        Absolute reference quality remux from FraMeSToR as always. The VC-1 encode looks pristine and the TrueHD track shakes the room. Thank you!
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h3>User Comments (3)</h3>
+            
+            <div class="comment-form">
+                <textarea id="comment-input" placeholder="Leave a comment about this torrent..."></textarea>
+                <button id="submit-comment">Post Comment</button>
+            </div>
+
+            <div class="comment-list" id="comment-list">
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <span class="comment-author">SpartanElite99</span>
+                        <span class="comment-date">2 hours ago</span>
                     </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <b>Cinemaniac99</b> • 1 year ago
-                        </div>
-                        Thanks for including the French Canadian and Spanish audio tracks along with the original English. Perfect release!
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <b>SeedBoxerX</b> • 8 months ago
-                        </div>
-                        Seeding on a 10Gbps seedbox for the community. Enjoy the high speeds. This is Sparta!
+                    <div class="comment-body">
+                        Absolute masterclass presentation by FraMeSToR. Preserving the original VC-1 encode stream without re-encoding makes this look immaculate. Thanks for seeding!
                     </div>
                 </div>
 
-            </div>
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <span class="comment-author">CinephileX</span>
+                        <span class="comment-date">Yesterday</span>
+                    </div>
+                    <div class="comment-body">
+                        TrueHD track sounds thunderous during the pass of Thermopylae sequence. Great mix of audio tracks included too. Cheers.
+                    </div>
+                </div>
 
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <span class="comment-author">LeonidasKing</span>
+                        <span class="comment-date">3 days ago</span>
+                    </div>
+                    <div class="comment-body">
+                        “Tonight, we dine in hell!” Incredible quality upgrade over my old rip. Seeding 24/7 on a gigabit seedbox.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            &copy; 2007-2026 1337x.to. All rights reserved. Built for archival presentation.
         </div>
     </div>
 
-    <script>
-        function handleMagnet(e) {
-            e.preventDefault();
-            const magnetLink = e.currentTarget.getAttribute('href');
-            
-            // Create a temporary input to copy magnet link to clipboard
-            const tempInput = document.createElement('input');
-            tempInput.value = magnetLink;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
+    <!-- Toast Popup Notification -->
+    <div class="toast" id="toast">Magnet link copied to clipboard!</div>
 
-            alert('Magnet link copied to clipboard successfully!\nYou can now paste it into your torrent client (e.g., qBittorrent, Transmission).');
+    <!-- JavaScript Handling -->
+    <script>
+        // Magnet Link Intercept and Clipboard Copy Simulation
+        const magnetBtn = document.getElementById('magnet-btn');
+        const torrentBtn = document.getElementById('torrent-btn');
+        const toast = document.getElementById('toast');
+
+        function showToast(message) {
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
         }
 
-        // Interactive subtle logging or hover enhancement
-        console.log("1337x simulation loaded for: 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR");
+        magnetBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const magnetUri = magnetBtn.getAttribute('href');
+            navigator.clipboard.writeText(magnetUri).then(() => {
+                showToast('Magnet link copied to clipboard!');
+            }).catch(() => {
+                showToast('Failed to copy link.');
+            });
+        });
+
+        torrentBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showToast('Downloading .torrent payload bundle...');
+        });
+
+        // Interactive Comment Posting
+        const submitCommentBtn = document.getElementById('submit-comment');
+        const commentInput = document.getElementById('comment-input');
+        const commentList = document.getElementById('comment-list');
+
+        submitCommentBtn.addEventListener('click', () => {
+            const text = commentInput.value.trim();
+            if (text === '') return;
+
+            const card = document.createElement('div');
+            card.className = 'comment-card';
+
+            const header = document.createElement('div');
+            header.className = 'comment-header';
+            
+            const author = document.createElement('span');
+            author.className = 'comment-author';
+            author.textContent = 'AnonymousUser';
+
+            const date = document.createElement('span');
+            date.className = 'comment-date';
+            date.textContent = 'Just now';
+
+            header.appendChild(author);
+            header.appendChild(date);
+
+            const body = document.createElement('div');
+            body.className = 'comment-body';
+            body.textContent = text;
+
+            card.appendChild(header);
+            card.appendChild(body);
+
+            // Prepend new comment to the list
+            commentList.prepend(card);
+            commentInput.value = '';
+            showToast('Comment posted successfully!');
+        });
     </script>
 </body>
 </html>
