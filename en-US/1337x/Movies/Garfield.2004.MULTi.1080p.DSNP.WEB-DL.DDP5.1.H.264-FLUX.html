@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garfield (2004) MULTi 1080p DSNP WEB-DL DDP 5.1 FLUX - 1337x</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-orange: #ff7518;
+            --accent-blue: #2a75d3;
+            --text-main: #e0e0e0;
+            --text-muted: #999999;
+            --border-color: #333333;
+            --code-bg: #181818;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header / Nav simulation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .torrent-title-section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .uploader-info {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .uploader-info span {
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+
+        /* Main Grid Layout */
+        .torrent-details {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 25px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .torrent-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .poster-container img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            display: block;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 12px 15px;
+            font-size: 14px;
+            align-items: center;
+        }
+
+        .spec-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .spec-value {
+            color: var(--text-main);
+        }
+
+        .badge {
+            background-color: rgba(255, 117, 24, 0.15);
+            color: var(--accent-orange);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Action Buttons */
+        .action-bar {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--accent-orange);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background-color: #e06210;
+        }
+
+        .btn-secondary {
+            background-color: #2b2b2b;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #383838;
+        }
+
+        /* NFO Viewer Section */
+        .nfo-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .nfo-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: #00ff66;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            max-height: 400px;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            gap: 30px;
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .stat-item span {
+            font-weight: bold;
+        }
+        .stat-item.seeds span { color: #2ecc71; }
+        .stat-item.leeches span { color: #e74c3c; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 12px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo">1337<span>x</span></a>
+            <div style="color: var(--text-muted); font-size: 14px;">EN-US | Community Torrents</div>
+        </p></header>
+
+        <!-- Torrent Title -->
+        <div class="torrent-title-section">
+            <h1>Garfield.2004.MULTi.1080p.DSNP.WEB-DL.DDP5.1-FLUX</h1>
+            <div class="uploader-info">Uploaded by <span>FLUX_Releases</span> &bull; September 16, 2026 &bull; Size: 4.82 GB</div>
+        </div>
+
+        <!-- Main Details Box -->
+        <div class="torrent-details">
+            <div class="poster-container">
+                <img src="https://image.tmdb.org/t/p/original/vqwTSWNLyH55g8kBT61s2DgNYEp.jpg" alt="Garfield (2004) Movie Poster">
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-label">Category</div>
+                <div class="spec-value">Movies / Highres Movies</div>
+
+                <div class="spec-label">Type</div>
+                <div class="spec-value">HD / WEB-DL</div>
+
+                <div class="spec-label">Resolution</div>
+                <div class="spec-value">1920x1080 (1080p)</div>
+
+                <div class="spec-label">Source</div>
+                <div class="spec-value">Disney+ (DSNP)</div>
+
+                <div class="spec-label">Video Codec</div>
+                <div class="spec-value">H.264 / AVC</div>
+
+                <div class="spec-label">Audio</div>
+                <div class="spec-value">
+                    <span class="badge">Dolby Digital Plus 5.1</span>
+                    English, French, Spanish, German, Italian, Japanese, Korean, Portuguese
+                </div>
+
+                <div class="spec-label">Subtitles</div>
+                <div class="spec-value">
+                    English SDH, French, Spanish, German, Italian, Japanese, Korean, Portuguese
+                </div>
+
+                <div class="spec-label">Release Group</div>
+                <div class="spec-value"><b>FLUX</b></div>
+            </div>
+        </div>
+
+        <!-- Action / Download Buttons -->
+        <div class="action-bar">
+            <button class="btn" id="magnetBtn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6H7l5 5 5-5h-4z"/></svg>
+                Magnet Download
+            </button>
+            <button class="btn btn-secondary" id="torrentBtn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Torrent File
+            </button>
+        </div>
+
+        <!-- Seeders / Leechers Stats -->
+        <div class="stats-bar">
+            <div class="stat-item seeds">Seeders: <span id="seedCount">482</span></div>
+            <div class="stat-item leeches">Leechers: <span id="leechCount">14</span></div>
+            <div class="stat-item">Completed: <span>3,419 times</span></div>
+        </div>
+
+        <!-- NFO Section -->
+        <div class="nfo-section">
+            <div class="nfo-header">
+                <span>FLUX.nfo</span>
+                <button class="btn-secondary" style="padding: 4px 10px; font-size: 12px;" id="copyNfo">Copy NFO</button>
+            </div>
+            <pre id="nfoText">
+  ███████╗██╗     ██╗   ██╗██╗  ██╗
+  ██╔════╝██║     ██║   ██║╚███╔╝ 
+  █████╗  ██║     ██║   ██║███╔██╗ 
+  ██╔══╝  ██║     ██║   ██║██╔╝ ██╗
+  ██║     ███████╗╚██████╔╝██║  ██╗
+  ╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+
+  P R E S E N T S
+
+  Garfield.2004.MULTi.1080p.DSNP.WEB-DL.DDP5.1.H.264-FLUX
+
+  RELEASE DATE .....: 2026-09-16
+  RUNTIME ..........: 1h 20 min
+  VIDEO CODEC ......: AVC @ 5400 kbps
+  RESOLUTION .......: 1920x1080
+  ASPECT RATIO .....: 16:9
+  FRAME RATE .......: 23.976 fps
+  AUDIO ............: English / French / Spanish / German / Italian / Japanese / Korean / Portuguese (E-AC-3 @ 640 kbps)
+  SUBTITLES ........: English SDH, French, Spanish, German, Italian, Japanese, Korean, Portuguese (.srt)
+  FILE SIZE ........: 4.82 GB
+  SOURCE ...........: Disney+ WEB-DL (DSNP)
+
+  NOTES ............: Enjoy this pristine multi-audio webrip courtesy of FLUX!
+            </pre>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2004-2026 1337x.to &bull; Built for demonstration purposes under user requirements.</p>
+        </footer>
+    </div>
+
+    <!-- Javascript Layer -->
+    <script>
+        // Simulate interactive copy action for NFO
+        document.getElementById('copyNfo').addEventListener('click', () => {
+            const nfoContent = document.getElementById('nfoText').innerText;
+            navigator.clipboard.writeText(nfoContent).then(() => {
+                const btn = document.getElementById('copyNfo');
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        });
+
+        // Magnet link simulation alert
+        document.getElementById('magnetBtn').addEventListener('click', () => {
+            alert('Initiating magnet link protocol for: Garfield (2004) MULTi 1080p DSNP WEB-DL DDP 5.1 FLUX');
+        });
+
+        // Torrent file download simulation
+        document.getElementById('torrentBtn').addEventListener('click', () => {
+            alert('Downloading torrent container file...');
+        });
+
+        // Dynamic slight fluctuation in seeders to mimic real tracker behavior
+        setInterval(() => {
+            const seedSpan = document.getElementById('seedCount');
+            let currentSeeds = parseInt(seedSpan.innerText);
+            const fluctuation = Math.floor(Math.random() * 5) - 2; // -2 to +2
+            currentSeeds = Math.max(100, currentSeeds + fluctuation);
+            seedSpan.innerText = currentSeeds;
+        }, 5000);
+    </script>
+</body>
+</html>
