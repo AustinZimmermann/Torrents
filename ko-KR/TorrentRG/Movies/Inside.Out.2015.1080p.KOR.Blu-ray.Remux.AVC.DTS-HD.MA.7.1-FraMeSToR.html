@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인사이드 아웃 (Inside Out, 2015) Blu-ray Remux - TorrentRG</title>
+    <style>
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #181b22;
+            --bg-hover: #212530;
+            --accent-primary: #00d2ff;
+            --accent-secondary: #3a7bd5;
+            --text-main: #e1e4e8;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --tag-bg: #1f242c;
+            --joy-yellow: #f1c40f;
+            --sadness-blue: #3498db;
+            --anger-red: #e74c3c;
+            --fear-purple: #9b59b6;
+            --disgust-green: #2ecc71;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Style */
+        header {
+            background: linear-gradient(135deg, rgba(58, 123, 213, 0.2), rgba(0, 210, 255, 0.1));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .breadcrumb {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Layout */
+        .torrent-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .torrent-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .release-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            word-break: break-all;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: var(--accent-secondary);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.remux {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .meta-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .meta-tags span {
+            background-color: var(--tag-bg);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Body Details Grid */
+        .torrent-body {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .torrent-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .poster-container {
+            text-align: center;
+        }
+
+        .movie-poster {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .movie-poster:hover {
+            transform: scale(1.02);
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-group h3 {
+            font-size: 1.05rem;
+            color: var(--accent-primary);
+            margin-bottom: 8px;
+            border-left: 3px solid var(--accent-primary);
+            padding-left: 8px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .info-table th, .info-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-table th {
+            width: 130px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .info-table td {
+            color: var(--text-main);
+        }
+
+        /* Emotion Color Indicators */
+        .emotion-indicators {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .emotion-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(0,0,0,0.5);
+        }
+
+        .dot-joy { background-color: var(--joy-yellow); }
+        .dot-sad { background-color: var(--sadness-blue); }
+        .dot-anger { background-color: var(--anger-red); }
+        .dot-fear { background-color: var(--fear-purple); }
+        .dot-disgust { background-color: var(--disgust-green); }
+
+        /* Action / Download Section */
+        .download-box {
+            background-color: rgba(0, 210, 255, 0.05);
+            border: 1px dashed var(--accent-primary);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+        }
+
+        .magnet-link {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            word-break: break-all;
+            background: var(--bg-dark);
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            margin-top: 8px;
+            font-family: monospace;
+        }
+
+        /* Comments / Community section */
+        .comments-section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px 30px;
+        }
+
+        .comments-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comment-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+
+        .comment-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .comment-author {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .comment-text {
+            font-size: 0.95rem;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .comment-input {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            color: var(--text-main);
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .comment-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .btn-submit {
+            align-self: flex-end;
+            background-color: var(--bg-hover);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-secondary);
+            border-color: var(--accent-secondary);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <div class="site-title">TorrentRG</div>
+                <span class="breadcrumb">/ 영화 / 애니메이션</span>
+            </div>
+            <div class="breadcrumb" id="current-time">2026-06-16 18:50:27</div>
+        </header>
+
+        <!-- Main Torrent Info Card -->
+        <div class="torrent-card">
+            <div class="torrent-header">
+                <h1 class="release-title">
+                    <span class="badge">Blu-ray</span>
+                    <span class="badge remux">REMUX</span>
+                    인사이드 아웃 (Inside.Out.2015.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.7.1-FraMeSToR)
+                </h1>
+                <div class="meta-tags">
+                    <span>Category: Animation / Family</span>
+                    <span>Size: 32.4 GB</span>
+                    <span>Seeders: 142</span>
+                    <span>Leechers: 5</span>
+                    <span>Completed: 1,893 times</span>
+                </div>
+            </div>
+
+            <div class="torrent-body">
+                <!-- Poster & Visuals -->
+                <div class="poster-container">
+                    <img src="https://image.tmdb.org/t/p/original/rMXHvHzpuYZXrJUhRVJ3TvDSwe5.jpg" alt="Inside Out Poster" class="movie-poster">
+                    <div class="emotion-indicators" style="justify-content: center; margin-top: 15px;">
+                        <span class="emotion-dot dot-joy" title="Joy"></span>
+                        <span class="emotion-dot dot-sad" title="Sadness"></span>
+                        <span class="emotion-dot dot-anger" title="Anger"></span>
+                        <span class="emotion-dot dot-fear" title="Fear"></span>
+                        <span class="emotion-dot dot-disgust" title="Disgust"></span>
+                    </div>
+                </div>
+
+                <!-- Technical & Media Info -->
+                <div class="info-section">
+                    <div class="info-group">
+                        <h3>Release Specifications</h3>
+                        <table class="info-table">
+                            <tr>
+                                <th>Original Title</th>
+                                <td>Inside Out (2015)</td>
+                            </tr>
+                            <tr>
+                                <th>Container / Format</th>
+                                <td>MKV / AVC / 1080p Blu-ray Remux</td>
+                            </tr>
+                            <tr>
+                                <th>Audio Streams</th>
+                                <td>English (DTS-HD MA 7.1), Korean, Chinese, Thai, Portuguese (DD 5.1)</td>
+                            </tr>
+                            <tr>
+                                <th>Subtitles</th>
+                                <td>Korean, English, Portuguese, Cantonese, Malay, Mandarin Simplified, Mandarin Traditional, Thai</td>
+                            </tr>
+                            <tr>
+                                <th>File Size</th>
+                                <td>32.4 GB (Uncompressed Remux quality)</td>
+                            </tr>
+                            <tr>
+                                <th>Uploader</th>
+                                <td style="color: var(--accent-primary); font-weight: 600;">FraMeSToR (RG-Crew)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="download-box">
+                        <button class="btn-download" id="download-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            토렌트 파일 다운로드 (.torrent)
+                        </button>
+                        <div class="magnet-link" id="magnet-display">
+                            magnet:?xt=urn:btih:3a7bd50fd2ff0015e1e4e88b949e30363d... (Click to copy magnet)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community / Comments Section -->
+        <div class="comments-section">
+            <div class="comments-header">
+                <span>댓글 (3)</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">클린 커뮤니티 규칙을 준수해주세요.</span>
+            </div>
+
+            <div id="comment-list">
+                <div class="comment-item">
+                    <div class="comment-meta">
+                        <span class="comment-author">기쁨이최고야</span>
+                        <span>2026-06-16 17:12:00</span>
+                    </div>
+                    <div class="comment-text">와 프레임스토어 렘럭 버전이네요! 음향 DTS-HD MA 7.1 원본 그대로라 홈시어터 테스트용으로 최고입니다. 감사합니다!</div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-meta">
+                        <span class="comment-author">슬픔이모드</span>
+                        <span>2026-06-16 18:05:40</span>
+                    </div>
+                    <div class="comment-text">다국어 자막이랑 더빙 음성 엄청 다양하게 들어있어서 소장용으로 딱이네요. 속도도 잘 나옵니다. 시더분들 감사합니다.</div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-meta">
+                        <span class="comment-author">버럭이아저씨</span>
+                        <span>2026-06-16 18:32:11</span>
+                    </div>
+                    <div class="comment-text">배속 완벽하고 화질 미쳤습니다 역시 토렌트알지 굿~</div>
+                </div>
+            </div>
+
+            <div class="comment-form">
+                <textarea class="comment-input" id="new-comment-text" placeholder="댓글을 남겨주세요..."></textarea>
+                <button class="btn-submit" id="submit-comment">댓글 등록</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 TorrentRG (ko-KR). All rights reserved. Educational/Archive demonstration page.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Interactive Script for Download Button / Magnet Copy & Comment System
+        document.getElementById('download-btn').addEventListener('click', function() {
+            alert('토렌트 파일 다운로드가 시작되었습니다: Inside.Out.2015.1080p.KOR.Blu-ray.Remux.torrent');
+        });
+
+        const magnetBox = document.getElementById('magnet-display');
+        magnetBox.addEventListener('click', function() {
+            const magnetText = "magnet:?xt=urn:btih:INSIDEOUT2015REMUXAVC71FRAMESTOR";
+            navigator.clipboard.writeText(magnetText).then(() => {
+                const originalText = magnetBox.innerText;
+                magnetBox.innerText = "마그넷 주소가 클립보드에 복사되었습니다!";
+                magnetBox.style.color = "var(--accent-primary)";
+                setTimeout(() => {
+                    magnetBox.innerText = originalText;
+                    magnetBox.style.color = "var(--text-muted)";
+                }, 2000);
+            });
+        });
+
+        // Add dynamic comment handling
+        document.getElementById('submit-comment').addEventListener('click', function() {
+            const textarea = document.getElementById('new-comment-text');
+            const commentText = textarea.value.trim();
+            if(!commentText) return;
+
+            const commentList = document.getElementById('comment-list');
+            const newItem = document.createElement('div');
+            newItem.className = 'comment-item';
+            
+            const now = new Date();
+            const timeStr = now.toISOString().slice(0, 10) + ' ' + now.toTimeString().slice(0, 8);
+
+            newItem.innerHTML = `
+                <div class="comment-meta">
+                    <span class="comment-author">익명사용자</span>
+                    <span>${timeStr}</span>
+                </div>
+                <div class="comment-text">${escapeHtml(commentText)}</div>
+            `;
+
+            commentList.appendChild(newItem);
+            textarea.value = '';
+        });
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>
