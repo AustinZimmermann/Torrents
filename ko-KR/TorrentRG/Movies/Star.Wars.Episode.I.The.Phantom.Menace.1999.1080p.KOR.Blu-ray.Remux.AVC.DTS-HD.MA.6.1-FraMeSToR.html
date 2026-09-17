@@ -3,647 +3,1279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TorrentRG - 스타워즈 에피소드 1: 보이지 않는 위험 (1999)</title>
+    <title>스타워즈 에피소드 1: 보이지 않는 위험 (Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR) - 토렌트알지 (TorrentRG)</title>
     <style>
         :root {
-            --bg-color: #0f1015;
-            --panel-bg: #181a22;
-            --panel-border: #2a2d3d;
-            --accent-color: #ffe81f; /* 스타워즈 시그니처 옐로우 */
-            --accent-hover: #ffdf00;
-            --text-main: #e0e0e0;
-            --text-muted: #8c92a4;
-            --link-color: #4da6ff;
-            --danger-color: #ff4d4d;
-            --success-color: #4bb543;
+            --bg-body: #f4f6f9;
+            --bg-surface: #ffffff;
+            --header-bg: #1e2836;
+            --nav-bg: #2b394a;
+            --accent-color: #2b78e4;
+            --accent-hover: #1a5bba;
+            --accent-crimson: #d9534f;
+            --border-color: #dce1e6;
+            --text-primary: #222222;
+            --text-secondary: #666666;
+            --text-muted: #8c96a3;
+            --nfo-bg: #0f141c;
+            --nfo-text: #5af78e;
+            --highlight: #fff3cd;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+            font-size: 13px;
             line-height: 1.6;
-            padding: 20px;
+            color: var(--text-primary);
+            background-color: var(--bg-body);
         }
 
-        .container {
-            max-width: 1100px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top Bar */
+        .utility-bar {
+            background-color: #151d27;
+            color: #99aab5;
+            font-size: 11px;
+            padding: 4px 0;
+            border-bottom: 1px solid #24303e;
+        }
+
+        .utility-inner {
+            width: 1180px;
             margin: 0 auto;
-        }
-
-        /* 헤더 스타일 */
-        header {
-            background: linear-gradient(135deg, #181a22 0%, #111319 100%);
-            border-bottom: 3px solid var(--accent-color);
-            padding: 15px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 6px 6px 0 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--accent-color);
+        .utility-links span {
+            margin: 0 5px;
+            color: #4f5d73;
+        }
+
+        .utility-links a:hover {
+            color: #ffffff;
             text-decoration: none;
-            letter-spacing: 1px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .header-inner {
+            width: 1180px;
+            margin: 0 auto;
+            padding: 22px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo h1 {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-logo h1 span {
+            color: #38a9ff;
+        }
+
+        .brand-badge {
+            background: #e03131;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 2px;
             text-transform: uppercase;
         }
 
-        .logo span {
-            color: #ffffff;
-            font-size: 14px;
-            margin-left: 8px;
-            opacity: 0.7;
+        .search-container {
+            display: flex;
+            width: 480px;
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .user-nav {
+        .search-category {
+            background: #eef2f6;
+            border: none;
+            padding: 0 12px;
+            font-size: 12px;
+            color: #495057;
+            border-right: 1px solid #cfd7df;
+            outline: none;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 10px 14px;
             font-size: 13px;
-            color: var(--text-muted);
+            outline: none;
         }
 
-        .user-nav a {
-            color: var(--text-main);
+        .search-button {
+            background: var(--accent-color);
+            border: none;
+            color: #ffffff;
+            padding: 0 20px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background 0.15s ease-in-out;
+        }
+
+        .search-button:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--nav-bg);
+        }
+
+        .nav-inner {
+            width: 1180px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .nav-item {
+            color: #d1dbe5;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            position: relative;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: #1e2836;
+            color: #ffffff;
             text-decoration: none;
-            margin-left: 15px;
         }
 
-        .user-nav a:hover {
-            color: var(--accent-color);
+        .nav-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #38a9ff;
         }
 
-        /* 메인 콘텐츠 패널 */
-        .content-panel {
-            background-color: var(--panel-bg);
-            border: 1px solid var(--panel-border);
-            border-top: none;
-            padding: 30px;
-            border-radius: 0 0 6px 6px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        /* Page Layout */
+        .wrapper {
+            width: 1180px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
         }
 
-        /* 토렌트 타이틀 섹션 */
-        .torrent-title-area {
+        main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        aside {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            background: #ffffff;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb span {
+            margin: 0 6px;
+            color: #adb5bd;
+        }
+
+        /* Post Container */
+        .post-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             margin-bottom: 25px;
-            border-bottom: 1px solid var(--panel-border);
-            padding-bottom: 20px;
+        }
+
+        .post-header {
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid #edf1f5;
         }
 
         .category-tag {
             display: inline-block;
-            background-color: #25293c;
-            color: var(--accent-color);
-            font-size: 12px;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            border: 1px solid rgba(255, 232, 31, 0.2);
-        }
-
-        h1.release-name {
-            font-size: 18px;
-            color: #ffffff;
-            word-break: break-all;
-            font-family: 'Courier New', Courier, monospace;
-            background: #111319;
-            padding: 12px;
-            border-radius: 4px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        /* 정보 그리드 레이아웃 */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .poster-wrapper {
-            text-align: center;
-        }
-
-        .poster-wrapper img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-            border: 1px solid var(--panel-border);
-            transition: transform 0.3s ease;
-        }
-
-        .poster-wrapper img:hover {
-            transform: scale(1.02);
-        }
-
-        .meta-specs {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .spec-row {
-            display: flex;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 8px;
-        }
-
-        .spec-label {
-            width: 130px;
-            color: var(--text-muted);
-            font-weight: bold;
-            font-size: 13px;
-        }
-
-        .spec-value {
-            flex: 1;
-            color: var(--text-main);
-            font-size: 14px;
-        }
-
-        .highlight-val {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        /* 다운로드 액션 박스 */
-        .download-box {
-            background-color: #111319;
-            border: 1px solid var(--panel-border);
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .download-stats {
-            display: flex;
-            gap: 20px;
-            font-size: 13px;
-        }
-
-        .stat-item span {
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .stat-item.seeders span { color: var(--success-color); }
-        .stat-item.leechers span { color: var(--danger-color); }
-
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            background-color: var(--accent-color);
-            color: #0f1015;
-            border: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            transition: background-color 0.2s, transform 0.1s;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .btn:active {
-            transform: translateY(1px);
-        }
-
-        .btn-secondary {
-            background-color: #2a2d3d;
-            color: var(--text-main);
-            border: 1px solid #3e4259;
-        }
-
-        .btn-secondary:hover {
-            background-color: #3e4259;
-            color: #ffffff;
-        }
-
-        /* 상세 미디어 정보 및 시놉시스 */
-        .section-block {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 16px;
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--panel-border);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .synopsis-text {
-            font-size: 14px;
-            color: #cccccc;
-            line-height: 1.8;
-            background-color: #111319;
-            padding: 15px;
-            border-radius: 4px;
-            border: 1px solid rgba(255,255,255,0.03);
-        }
-
-        /* 미디어 테크니컬 스펙 테이블 스타일 */
-        .tech-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-            background-color: #111319;
-            border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid var(--panel-border);
-        }
-
-        .tech-table th, .tech-table td {
-            padding: 10px 15px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .tech-table th {
-            background-color: #181a22;
-            color: var(--text-muted);
-            width: 25%;
-        }
-
-        .tech-table td {
-            color: var(--text-main);
-        }
-
-        /* 댓글 영역 */
-        .comments-section {
-            margin-top: 40px;
-        }
-
-        .comment-form textarea {
-            width: 100%;
-            height: 90px;
-            background-color: #111319;
-            border: 1px solid var(--panel-border);
-            border-radius: 4px;
-            padding: 12px;
-            color: var(--text-main);
-            resize: vertical;
-            margin-bottom: 10px;
-            font-size: 13px;
-        }
-
-        .comment-form textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .comment-list {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .comment-item {
-            background-color: #111319;
-            padding: 15px;
-            border-radius: 4px;
-            border: 1px solid var(--panel-border);
-        }
-
-        .comment-header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            color: var(--text-muted);
+            background: #e7f3ff;
+            color: #1971c2;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 11px;
             margin-bottom: 8px;
         }
 
-        .comment-author {
-            color: var(--accent-color);
-            font-weight: bold;
+        .post-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.4;
+            word-break: break-all;
+            margin-bottom: 12px;
         }
 
-        .comment-body {
-            font-size: 13px;
-            color: var(--text-main);
+        .post-meta-panel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding-top: 10px;
+            border-top: 1px dashed #e9ecef;
         }
 
-        /* 모달 팝업 디자인 */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            backdrop-filter: blur(3px);
+        .post-meta-left span {
+            margin-right: 15px;
+        }
+
+        .post-meta-left i, .post-meta-right i {
+            font-style: normal;
+            color: #adb5bd;
+            margin-right: 3px;
+        }
+
+        .post-meta-right span {
+            margin-left: 12px;
+        }
+
+        /* Torrent File Box */
+        .file-box {
+            background: #f8fafc;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+            padding: 16px 24px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border: 1px solid #dae1e7;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .file-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .file-icon {
+            width: 32px;
+            height: 32px;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 11px;
+            color: #495057;
+            flex-shrink: 0;
+        }
+
+        .file-details {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .file-name {
+            font-weight: 700;
+            color: #2b78e4;
+            font-size: 13px;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .file-name:hover {
+            text-decoration: underline;
+        }
+
+        .file-specs {
+            font-size: 11px;
+            color: #868e96;
+            margin-top: 2px;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .btn-download, .btn-magnet {
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-download {
+            background: #2b78e4;
+            color: #ffffff;
+        }
+
+        .btn-download:hover {
+            background: #1a5bba;
+            text-decoration: none;
+        }
+
+        .btn-magnet {
+            background: #eef2f6;
+            border-color: #cbd5e1;
+            color: #334155;
+        }
+
+        .btn-magnet:hover {
+            background: #e2e8f0;
+            text-decoration: none;
+        }
+
+        /* Post Body */
+        .post-body {
+            padding: 30px 24px;
+            color: #2b2f33;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .media-poster-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .media-poster {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .media-overview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #ffffff;
+            border: 1px solid #e1e7ec;
+        }
+
+        .media-overview-table th {
+            width: 140px;
+            background: #f8f9fa;
+            border: 1px solid #e1e7ec;
+            padding: 10px 14px;
+            font-size: 12px;
+            color: #495057;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .media-overview-table td {
+            border: 1px solid #e1e7ec;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #212529;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-right: 4px;
+            margin-bottom: 2px;
+        }
+
+        .badge-video {
+            background: #e3fafc;
+            color: #0c8599;
+            border: 1px solid #99e9f2;
+        }
+
+        .badge-audio {
+            background: #ebfbee;
+            color: #2b8a3e;
+            border: 1px solid #b2f2bb;
+        }
+
+        .badge-sub {
+            background: #fff4e6;
+            color: #d9480f;
+            border: 1px solid #ffd8a8;
+        }
+
+        .nfo-viewer {
+            background: var(--nfo-bg);
+            color: var(--nfo-text);
+            padding: 20px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin-bottom: 30px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            user-select: text;
+        }
+
+        .nfo-header-title {
+            font-weight: bold;
+            color: #38a9ff;
+            margin-bottom: 8px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .modal-content {
-            background-color: var(--panel-bg);
-            border: 1px solid var(--panel-border);
-            padding: 25px;
-            border-radius: 6px;
-            width: 90%;
-            max-width: 450px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        .copy-btn {
+            background: #2b394a;
+            color: #ffffff;
+            border: 1px solid #4a5d73;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 3px;
+            cursor: pointer;
         }
 
-        .modal-content h3 {
-            margin-bottom: 15px;
+        .copy-btn:hover {
+            background: #3b4e65;
+        }
+
+        /* Social Share / Interactivity */
+        .post-interactive {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0 20px;
+        }
+
+        .btn-vote {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #495057;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-vote:hover {
+            background: #f1f3f5;
+            border-color: #adb5bd;
+        }
+
+        .btn-vote.like {
+            color: var(--accent-crimson);
+            border-color: #fcc2d7;
+            background: #fff5f5;
+        }
+
+        .btn-vote.like:hover {
+            background: #ffe3e3;
+        }
+
+        /* Comments Box */
+        .comments-section {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 24px;
+        }
+
+        .comments-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #2b394a;
+            margin-bottom: 20px;
+        }
+
+        .comments-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .comments-title span {
             color: var(--accent-color);
         }
 
-        .modal-content p {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            word-break: break-all;
+        .comment-list {
+            list-style: none;
+            margin-bottom: 24px;
         }
 
-        /* 푸터 */
-        footer {
-            text-align: center;
-            margin-top: 30px;
+        .comment-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
+            gap: 14px;
+        }
+
+        .comment-avatar {
+            width: 36px;
+            height: 36px;
+            background: #dee2e6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #495057;
+            flex-shrink: 0;
+        }
+
+        .comment-content-wrap {
+            flex: 1;
+        }
+
+        .comment-meta {
+            margin-bottom: 4px;
             font-size: 12px;
-            color: var(--text-muted);
+        }
+
+        .comment-author {
+            font-weight: 700;
+            color: #343a40;
+            margin-right: 8px;
+        }
+
+        .comment-date {
+            color: #adb5bd;
+            font-size: 11px;
+        }
+
+        .comment-text {
+            color: #495057;
+            font-size: 13px;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .comment-input-area {
+            width: 100%;
+            height: 80px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 13px;
+            resize: vertical;
+            outline: none;
+        }
+
+        .comment-input-area:focus {
+            border-color: var(--accent-color);
+        }
+
+        .comment-submit-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comment-btn {
+            background: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .comment-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Sidebar Widgets */
+        .widget {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .widget-title {
+            background: #f8fafc;
+            padding: 12px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            color: #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .widget-body {
+            padding: 14px 16px;
+        }
+
+        .user-status-card {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .user-avatar-placeholder {
+            width: 44px;
+            height: 44px;
+            background: #2b78e4;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .user-info p {
+            margin-bottom: 2px;
+        }
+
+        .user-point-badge {
+            display: inline-block;
+            background: #edf2ff;
+            color: #364fc7;
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .ranking-list {
+            list-style: none;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f3f5;
+            font-size: 12px;
+        }
+
+        .ranking-item:last-child {
+            border-bottom: none;
+        }
+
+        .ranking-num {
+            width: 20px;
+            font-weight: 700;
+            color: #868e96;
+        }
+
+        .ranking-item:nth-child(-n+3) .ranking-num {
+            color: #e03131;
+        }
+
+        .ranking-link {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e2836;
+            color: #94a3b8;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #334155;
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            margin: 0 8px;
+        }
+
+        .footer-links span {
+            color: #475569;
+        }
+
+        .footer-warning {
+            color: #64748b;
+            font-size: 11px;
+            max-width: 800px;
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(30, 40, 54, 0.95);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 1000;
+            font-size: 13px;
+            border-left: 4px solid var(--accent-color);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- 웹사이트 헤더 -->
-        <header>
-            <a href="#" class="logo">TorrentRG <span>(ko-KR)</span></a>
-            <div class="user-nav">
-                환영합니다, <strong>JediMaster</strong>님 | <a href="#">마이페이지</a> | <a href="#">로그아웃</a>
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <div class="utility-inner">
+            <div class="utility-left">
+                토렌트알지 공식 도메인 안내: <strong>torrentrg.com</strong> | 평생 도메인 알림 수신중
             </div>
-        </header>
-
-        <!-- 메인 콘텐츠 영역 -->
-        <div class="content-panel">
-            
-            <!-- 토렌트 타이틀 -->
-            <div class="torrent-title-area">
-                <span class="category-tag">영화 / 블루레이 / Remux</span>
-                <h1 class="release-name">스타워즈 에피소드 1: 보이지 않는 위험 / Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR</h1>
+            <div class="utility-links">
+                <a href="#login">로그인</a>
+                <span>|</span>
+                <a href="#register">회원가입</a>
+                <span>|</span>
+                <a href="#bookmark">즐겨찾기 추가</a>
+                <span>|</span>
+                <a href="#rss">RSS 피드</a>
             </div>
-
-            <!-- 정보 그리드 (포스터 + 메타데이터) -->
-            <div class="info-grid">
-                <!-- 포스터 이미지 -->
-                <div class="poster-wrapper">
-                    <img src="https://image.tmdb.org/t/p/original/pt7oxFkvQFzXD0ByCe1uJumL6vD.jpg" alt="스타워즈 에피소드 1: 보이지 않는 위험 포스터">
-                </div>
-
-                <!-- 상세 메타데이터 -->
-                <div class="meta-specs">
-                    <div class="spec-row">
-                        <div class="spec-label">원제 / 영제</div>
-                        <div class="spec-value">Star Wars: Episode I – The Phantom Menace (1999)</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">장르</div>
-                        <div class="spec-value">SF, 모험, 액션, 판타지</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">감독 / 출연</div>
-                        <div class="spec-value">조지 루카스 / 리암 니슨, 이완 맥그리거, 나탈리 포트만</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">릴리즈 그룹</div>
-                        <div class="spec-value highlight-val">FraMeSToR</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">용량</div>
-                        <div class="spec-value highlight-val">34.2 GB</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">등록일</div>
-                        <div class="spec-value">2026-06-06 14:22:01</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">오디오 언어</div>
-                        <div class="spec-value">영어, 태국어</div>
-                    </div>
-                    <div class="spec-row">
-                        <div class="spec-label">지원 자막</div>
-                        <div class="spec-value"><span class="highlight-val">한국어</span>, 영어, 태국어, 광둥어, 표준 중국어</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 다운로드 및 토렌트 상태 바 -->
-            <div class="download-box">
-                <div class="download-stats">
-                    <div class="stat-item seeders">시더(Seed): <span>142</span></div>
-                    <div class="stat-item leechers">리처(Leech): <span>3</span></div>
-                    <div class="stat-item">완료 횟수: <span>1,589회</span></div>
-                </div>
-                <div class="btn-group">
-                    <button class="btn" id="magnetBtn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v10m0 0l4-4m-4 4l-4-4M4 20h16"/></svg>
-                        마그넷 다운로드
-                    </button>
-                    <button class="btn btn-secondary" id="torrentFileBtn">토렌트 파일 (.torrent)</button>
-                </div>
-            </div>
-
-            <!-- 시놉시스 섹션 -->
-            <div class="section-block">
-                <div class="section-title">작품 소개 / 시놉시스</div>
-                <div class="synopsis-text">
-                    평화롭던 은하계 공화국에 무역 연합의 은하계 무역로 봉쇄라는 위기가 닥친다. 최고 의장은 분쟁 조정을 위해 두 명의 제다이 기사, 콰이곤 진(리암 니슨)과 그의 제자 오비완 케노비(이완 맥그리거)를 파견한다. 무역 연합 배후의 어둠의 세력(시스)을 피해 탈출하는 과정에서 이들은 나부 행성의 젊은 여왕 아미달라(나탈리 포트만)를 구출하고, 우연히 타투인 행성에서 놀라운 포스를 지닌 어린 소년 아나킨 스카이워커를 만나게 되는데... ‘보이지 않는 위험’이 은하계를 서서히 잠식하기 시작한다.
-                </div>
-            </div>
-
-            <!-- 미디어 테크니컬 상세 스펙 -->
-            <div class="section-block">
-                <div class="section-title">미디어 상세 정보 (MediaInfo)</div>
-                <table class="tech-table">
-                    <tr>
-                        <th>컨테이너 포맷</th>
-                        <td>Matroska / Blu-ray Remux</td>
-                    </tr>
-                    <tr>
-                        <th>비디오 코덱</th>
-                        <td>AVC (High @ L4.1) / 1920x1080 / 23.976 fps</td>
-                    </tr>
-                    <tr>
-                        <th>오디오 스트림</th>
-                        <td>English DTS-HD Master Audio 6.1 / Thai Dolby Digital 5.1</td>
-                    </tr>
-                    <tr>
-                        <th>자막 스트림</th>
-                        <td>한국어 (Korean), 영어 (English), 태국어 (Thai), 광둥어 (Cantonese), 표준 중국어 (Mandarin) - 모두 포함 외부/내부 PGS mux</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- 댓글 및 피드백 섹션 -->
-            <div class="comments-section">
-                <div class="section-title">코멘트 (3)</div>
-                <div class="comment-form">
-                    <textarea id="commentInput" placeholder="이 릴리즈에 대한 의견을 남겨주세요. (클린 인터넷 환경 조성)"></textarea>
-                    <button class="btn btn-secondary" id="submitComment" style="float: right;">댓글 등록</button>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <div class="comment-list" id="commentList">
-                    <div class="comment-item">
-                        <div class="comment-header">
-                            <span class="comment-author">DarthVader99</span>
-                            <span>2026-06-06 15:01</span>
-                        </div>
-                        <div class="comment-body">
-                            FraMeSToR 렘럭 화질, 음질 두말할 것 없이 최고네요. 한국어 자막 싱크도 완벽합니다. 감사합니다!
-                        </div>
-                    </div>
-                    <div class="comment-item">
-                        <div class="comment-header">
-                            <span class="comment-author">YodaMaster</span>
-                            <span>2026-06-06 18:30</span>
-                        </div>
-                        <div class="comment-body">
-                            DTS-HD MA 6.1 채널 분리도 훌륭합니다. 포스 가득한 명작을 고화질로 소장하네요. 시딩 유지하겠습니다.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- 푸터 -->
-        <footer>
-            &copy; 2026 TorrentRG(ko-KR) Community. All rights reserved. Non-profit metadata sharing platform.
-        </footer>
-    </div>
-
-    <!-- 마그넷 복사 안내 모달 팝업 -->
-    <div class="modal" id="alertModal">
-        <div class="modal-content">
-            <h3>마그넷 링크 복사 완료</h3>
-            <p id="magnetTextDisplay">magnet:?xt=urn:btih:STARWARSEP1REMUXFRAMESTOR19991080P</p>
-            <button class="btn" id="closeModalBtn" style="width: 100%; justify-content: center;">확인</button>
         </div>
     </div>
 
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="brand-logo">
+                <a href="#">
+                    <h1>토렌트<span>알지</span></h1>
+                </a>
+                <span class="brand-badge">TorrentRG</span>
+            </div>
+            <form class="search-container" onsubmit="handleSearch(event)">
+                <select class="search-category">
+                    <option>전체검색</option>
+                    <option selected>영화 (고화질)</option>
+                    <option>드라마</option>
+                    <option>예능/오락</option>
+                    <option>애니메이션</option>
+                </select>
+                <input type="text" class="search-input" placeholder="검색어를 입력하세요 (예: 스타워즈 Remux, FraMeSToR)" value="보이지 않는 위험 FraMeSToR">
+                <button type="submit" class="search-button">검색</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-item">홈</a>
+            <a href="#" class="nav-item active">외국영화</a>
+            <a href="#" class="nav-item">한국영화</a>
+            <a href="#" class="nav-item">드라마</a>
+            <a href="#" class="nav-item">예능/오락</a>
+            <a href="#" class="nav-item">다큐/교양</a>
+            <a href="#" class="nav-item">애니메이션</a>
+            <a href="#" class="nav-item">음악</a>
+            <a href="#" class="nav-item">요청게시판</a>
+            <a href="#" class="nav-item">자유게시판</a>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <main>
+            <!-- Breadcrumbs -->
+            <div class="breadcrumb">
+                <a href="#">홈</a>
+                <span>&gt;</span>
+                <a href="#">외국영화</a>
+                <span>&gt;</span>
+                <a href="#">블루레이 리믹스 (Remux)</a>
+            </div>
+
+            <!-- Post Container -->
+            <article class="post-container">
+                <header class="post-header">
+                    <span class="category-tag">BLURAY REMUX</span>
+                    <h2 class="post-title">스타워즈 에피소드 1: 보이지 않는 위험 (Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR)</h2>
+                    <div class="post-meta-panel">
+                        <div class="post-meta-left">
+                            <span><i>작성자</i> FraMeSToR_Upl</span>
+                            <span><i>등록일</i> 2024-03-15 14:22:09</span>
+                            <span><i>조회수</i> 28,491</span>
+                        </div>
+                        <div class="post-meta-right">
+                            <span><i>댓글</i> 18</span>
+                            <span><i>추천</i> 124</span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Attached File / Torrent Block -->
+                <section class="file-box">
+                    <div class="file-item">
+                        <div class="file-info">
+                            <div class="file-icon">TOR</div>
+                            <div class="file-details">
+                                <span class="file-name" onclick="downloadNotice('torrent')">Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.torrent</span>
+                                <div class="file-specs">용량: 32.41 GB | 시더(Seed): 48 | 리처(Leech): 3 | 해시: A10BC98FA12E8B93120FEAB9432098D8E9402C41</div>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="btn-download" onclick="downloadNotice('torrent')">토렌트 다운</button>
+                            <button class="btn-magnet" onclick="copyMagnet()">마그넷 주소</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content Body -->
+                <div class="post-body">
+                    <!-- TMDB Poster Box -->
+                    <div class="media-poster-wrapper">
+                        <img src="https://image.tmdb.org/t/p/original/rMXHvHzpuYZXrJUhRVJ3TvDSwe5.jpg" alt="Star Wars: Episode I - The Phantom Menace Poster" class="media-poster">
+                    </div>
+
+                    <!-- Meta specs overview table -->
+                    <table class="media-overview-table">
+                        <tbody>
+                            <tr>
+                                <th>원제</th>
+                                <td>Star Wars: Episode I – The Phantom Menace (1999)</td>
+                            </tr>
+                            <tr>
+                                <th>한국 개봉명</th>
+                                <td>스타워즈 에피소드 1: 보이지 않는 위험</td>
+                            </tr>
+                            <tr>
+                                <th>장르 / 상영시간</th>
+                                <td>SF, 액션, 모험 / 136분</td>
+                            </tr>
+                            <tr>
+                                <th>영상 코덱 (Video)</th>
+                                <td>
+                                    <span class="badge badge-video">1080p High Profile 4.1</span>
+                                    <span class="badge badge-video">MPEG-4 AVC</span>
+                                    <span class="badge badge-video">Remux (1920x1080)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>오디오 스펙 (Audio)</th>
+                                <td>
+                                    <span class="badge badge-audio">English (DTS-HD MA 6.1ch)</span>
+                                    <span class="badge badge-audio">English (AC-3 5.1ch Commentary)</span>
+                                    <span class="badge badge-audio">Thai (AC-3 5.1ch @ 640 kbps)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>자막 정보 (Subtitles)</th>
+                                <td>
+                                    <span class="badge badge-sub">Korean (한국어 PGS / 정식 리팩)</span>
+                                    <span class="badge badge-sub">English (영어 SDH PGS)</span>
+                                    <span class="badge badge-sub">Thai (태국어 PGS)</span>
+                                    <span class="badge badge-sub">Cantonese (광둥어 PGS)</span>
+                                    <span class="badge badge-sub">Mandarin (중국어 번체/간체 PGS)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>릴리즈 그룹</th>
+                                <td>FraMeSToR (무손실 오리지널 블루레이 리믹스)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Description / Synopsis -->
+                    <h3 style="font-size: 15px; margin-bottom: 10px; border-left: 4px solid var(--accent-color); padding-left: 8px;">영화 줄거리</h3>
+                    <p style="margin-bottom: 25px; color: #444; line-height: 1.8;">
+                        은하 공화국의 무역 항로 과세를 둘러싸고 발생한 무역연합(Trade Federation)의 행성 나부(Naboo) 봉쇄 사태를 해결하기 위해,
+                        공화국 의장은 두 명의 제다이 기사 콰이곤 진(리암 니슨)과 그의 파다완 오비완 캐노비(이완 맥그리거)를 파견한다.<br><br>
+                        협상은 결렬되고 무역연합의 암살 위협을 뚫고 탈출한 이들은 나부의 여왕 파드메 아미달라(나탈리 포트만)를 구출해 수도 행성 코러산트로 향하던 중 
+                        하이퍼드라이브 고장으로 인해 사막 행성 타투인에 불시착하게 된다. 그곳에서 콰이곤 진은 포스의 잠재력이 비정상적으로 강력한 어린 노예 소년 
+                        아나킨 스카이워커를 발견하게 되는데...
+                    </p>
+
+                    <!-- MediaInfo NFO Box -->
+                    <div class="nfo-header-title">
+                        <span>MEDIAINFO / RELEASE NFO</span>
+                        <button class="copy-btn" onclick="copyNfo()">NFO 복사</button>
+                    </div>
+                    <pre class="nfo-viewer" id="nfo-text">Disc Title: Star Wars Episode I - The Phantom Menace 1999 1080p Blu-ray Remux AVC DTS-HD MA 6.1-FraMeSToR
+Unique ID: 22894104958190348501928410298412948
+Format: Matroska (MKV)
+File Size: 32.41 GiB
+Duration: 2 h 16 min 11 s
+Overall Bitrate: 34.0 Mb/s
+
+Video:
+Codec ID: V_MPEG4/ISO/AVC
+Resolution: 1920x1080
+Aspect Ratio: 16:9
+Frame Rate: 23.976 (24000/1001) FPS
+Bit Depth: 8 bits
+Color Space: YUV 4:2:0
+
+Audio #1:
+Language: English
+Format: DTS-HD Master Audio
+Channels: 6.1 Discrete (Center / Left / Right / Back Center / Side Left / Side Right / LFE)
+Bitrate: 4 612 kbps
+Sampling Rate: 48.0 kHz
+
+Audio #2:
+Language: Thai
+Format: Dolby Digital (AC-3)
+Channels: 5.1 Surround
+Bitrate: 640 kbps
+Sampling Rate: 48.0 kHz
+
+Subtitles:
+1. Korean (KOR PGS) - 리어셈블 정식 한글자막
+2. English (ENG PGS SDH)
+3. Thai (THA PGS)
+4. Chinese Cantonese (ZHO PGS)
+5. Chinese Mandarin Traditional (ZHO PGS)
+6. Chinese Mandarin Simplified (ZHO PGS)</pre>
+
+                    <!-- Interactive Reaction Buttons -->
+                    <div class="post-interactive">
+                        <button class="btn-vote like" onclick="handleVote('like')">
+                            <span>👍 추천</span> <strong id="like-count">124</strong>
+                        </button>
+                        <button class="btn-vote" onclick="handleVote('scrap')">
+                            <span>⭐ 스크랩</span>
+                        </button>
+                        <button class="btn-vote" onclick="handleVote('report')">
+                            <span>🚨 신고</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Comments Section -->
+            <section class="comments-section">
+                <div class="comments-header">
+                    <div class="comments-title">댓글 <span>18</span>개</div>
+                </div>
+
+                <ul class="comment-list" id="comment-list">
+                    <li class="comment-item">
+                        <div class="comment-avatar">SW</div>
+                        <div class="comment-content-wrap">
+                            <div class="comment-meta">
+                                <span class="comment-author">포스마스터</span>
+                                <span class="comment-date">2024-03-15 15:10</span>
+                            </div>
+                            <div class="comment-text">
+                                FraMeSToR 리믹스 버전 기다리고 있었는데 드디어 올라왔네요! DTS-HD MA 6.1 원음 채널 분리도 정말 좋습니다. 고화질 감사합니다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <div class="comment-avatar">무비</div>
+                        <div class="comment-content-wrap">
+                            <div class="comment-meta">
+                                <span class="comment-author">시네마천국</span>
+                                <span class="comment-date">2024-03-15 16:42</span>
+                            </div>
+                            <div class="comment-text">
+                                한국어 공식 PGS 자막 포함되어 있어서 싱크 완벽하게 잘 맞습니다. 시드 유지 부탁드립니다!
+                            </div>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <div class="comment-avatar">RG</div>
+                        <div class="comment-content-wrap">
+                            <div class="comment-meta">
+                                <span class="comment-author">스카이워커</span>
+                                <span class="comment-date">2024-03-15 18:05</span>
+                            </div>
+                            <div class="comment-text">
+                                포드 레이싱 장면이랑 다스 몰과의 듀얼 오브 더 페이츠(Duel of the Fates) 광검 대결은 다시 봐도 역대급 명장면입니다. 잘 받겠습니다.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Comment Input -->
+                <form class="comment-form" onsubmit="addComment(event)">
+                    <textarea class="comment-input-area" id="comment-input" placeholder="저작권 침해, 악성 비방 및 욕설 댓글은 통보 없이 삭제되며 제재 조치될 수 있습니다."></textarea>
+                    <div class="comment-submit-row">
+                        <span style="font-size: 11px; color: #868e96;">로그인 상태: <strong>GUEST_8921</strong></span>
+                        <button type="submit" class="comment-btn">댓글 등록</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- User Info Panel -->
+            <div class="widget">
+                <div class="widget-title">내 정보 (My Account)</div>
+                <div class="widget-body">
+                    <div class="user-status-card">
+                        <div class="user-avatar-placeholder">G</div>
+                        <div class="user-info">
+                            <p><strong>GUEST_8921</strong> 님</p>
+                            <span class="user-point-badge">포인트: 1,450 P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Fast Access -->
+            <div class="widget">
+                <div class="widget-title">영화 실시간 랭킹 (Top 5)</div>
+                <div class="widget-body">
+                    <ul class="ranking-list">
+                        <li class="ranking-item">
+                            <span class="ranking-num">1</span>
+                            <a href="#" class="ranking-link">듄: 파트 2 (Dune: Part Two.2024.2160p)</a>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="ranking-num">2</span>
+                            <a href="#" class="ranking-link">파묘 (Exhuma.2024.1080p.FHDRip)</a>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="ranking-num">3</span>
+                            <a href="#" class="ranking-link">오펜하이머 (Oppenheimer.1080p.Remux)</a>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="ranking-num">4</span>
+                            <a href="#" class="ranking-link">스타워즈 에피소드 1 (Phantom Menace.Remux)</a>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="ranking-num">5</span>
+                            <a href="#" class="ranking-link">인터스텔라 10주년 리마스터 (1080p.x264)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Site Rules Banner -->
+            <div class="widget">
+                <div class="widget-title">알림 및 이용규칙</div>
+                <div class="widget-body" style="font-size: 12px; color: #64748b; line-height: 1.6;">
+                    • 토렌트 다운로드 완료 후 최소 <strong>1:1 이상의 배포(Seeding) 비율</strong>을 권장합니다.<br>
+                    • 마그넷 링크 복사 시 클라이언트의 DHT 및 PEX 설정을 활성화해주세요.<br>
+                    • 자막 관련 문의는 자막 자료실 게시판을 이용해 주시기 바랍니다.
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="#">사이트 소개</a>
+                <span>|</span>
+                <a href="#">이용약관</a>
+                <span>|</span>
+                <a href="#">개인정보처리방침</a>
+                <span>|</span>
+                <a href="#">게시물 중단요청 (DMCA)</a>
+                <span>|</span>
+                <a href="#">광고 및 제휴문의</a>
+            </div>
+            <p class="footer-warning">
+                본 사이트는 웹호스팅 제공업체로서 인터넷상에 공개되어 있는 미디어 파일에 대한 링크 정보만을 제공하며, 저작권이 있는 어떠한 파일도 서버에 직접 저장하지 않습니다.
+            </p>
+            <p style="color: #64748b; font-size: 11px;">Copyright © TorrentRG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast-box" class="toast"></div>
+
+    <!-- JavaScript Actions -->
     <script>
-        // 자바스크립트 인터랙션 구현
-        document.addEventListener('DOMContentLoaded', function() {
-            const magnetBtn = document.getElementById('magnetBtn');
-            const torrentFileBtn = document.getElementById('torrentFileBtn');
-            const alertModal = document.getElementById('alertModal');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const submitCommentBtn = document.getElementById('submitComment');
-            const commentInput = document.getElementById('commentInput');
-            const commentList = document.getElementById('commentList');
+        const MAGNET_URI = "magnet:?xt=urn:btih:A10BC98FA12E8B93120FEAB9432098D8E9402C41&dn=Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce";
 
-            // 마그넷 다운로드 버튼 클릭 시뮬레이션
-            magnetBtn.addEventListener('click', function() {
-                const dummyMagnet = "magnet:?xt=urn:btih:5a9e8f7c6b4d3a2e1f0c9b8a7f6e5d4c3b2a1f0&dn=Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR";
-                
-                // 클립보드 복사 시도
-                navigator.clipboard.writeText(dummyMagnet).then(() => {
-                    document.getElementById('magnetTextDisplay').innerText = dummyMagnet;
-                    alertModal.style.display = 'flex';
-                }).catch(err => {
-                    alert('마그넷 링크 복사에 실패했습니다.');
-                });
+        function showToast(message) {
+            const toast = document.getElementById('toast-box');
+            toast.innerText = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        function copyMagnet() {
+            navigator.clipboard.writeText(MAGNET_URI).then(() => {
+                showToast("마그넷 주소가 클립보드에 복사되었습니다.");
+            }).catch(err => {
+                prompt("아래 마그넷 주소를 복사하세요:", MAGNET_URI);
             });
+        }
 
-            // 토렌트 파일 다운로드 버튼 클릭 시뮬레이션
-            torrentFileBtn.addEventListener('click', function() {
-                alert('토렌트 파일(.torrent) 다운로드가 시작되었습니다.');
+        function copyNfo() {
+            const nfoText = document.getElementById('nfo-text').innerText;
+            navigator.clipboard.writeText(nfoText).then(() => {
+                showToast("NFO 미디어인포 정보가 복사되었습니다.");
+            }).catch(err => {
+                alert("복사에 실패했습니다.");
             });
+        }
 
-            // 모달 닫기
-            closeModalBtn.addEventListener('click', function() {
-                alertModal.style.display = 'none';
-            });
+        function downloadNotice(type) {
+            showToast("토렌트 시드 파일을 다운로드합니다.");
+        }
 
-            // 모달 바깥 영역 클릭 시 닫기
-            window.addEventListener('click', function(event) {
-                if (event.target === alertModal) {
-                    alertModal.style.display = 'none';
-                }
-            });
-
-            // 댓글 작성 기능
-            submitCommentBtn.addEventListener('click', function() {
-                const text = commentInput.value.trim();
-                if (!text) {
-                    alert('댓글 내용을 입력해주세요.');
-                    return;
-                }
-
-                // 현재 시각 생성
-                const now = new Date();
-                const dateStr = now.getFullYear() + '-' + 
-                                String(now.getMonth() + 1).padStart(2, '0') + '-' + 
-                                String(now.getDate()).padStart(2, '0') + ' ' + 
-                                String(now.getHours()).padStart(2, '0') + ':' + 
-                                String(now.getMinutes()).padStart(2, '0');
-
-                // 새로운 댓글 요소 생성
-                const commentItem = document.createElement('div');
-                commentItem.className = 'comment-item';
-                commentItem.innerHTML = `
-                    <div class="comment-header">
-                        <span class="comment-author">JediMaster</span>
-                        <span>${dateStr}</span>
-                    </div>
-                    <div class="comment-body">${escapeHtml(text)}</div>
-                `;
-
-                commentList.prepend(commentItem);
-                commentInput.value = '';
-            });
-
-            // XSS 방지 간단 이스케이프 함수
-            function escapeHtml(str) {
-                return str.replace(/&/g, "&amp;")
-                          .replace(/</g, "&lt;")
-                          .replace(/>/g, "&gt;")
-                          .replace(/"/g, "&quot;")
-                          .replace(/'/g, "&#039;");
+        function handleVote(type) {
+            if (type === 'like') {
+                const likeCountEl = document.getElementById('like-count');
+                let count = parseInt(likeCountEl.innerText);
+                likeCountEl.innerText = count + 1;
+                showToast("게시글을 추천하였습니다.");
+            } else if (type === 'scrap') {
+                showToast("해당 게시글이 스크랩되었습니다.");
+            } else if (type === 'report') {
+                showToast("신고가 접수되었습니다.");
             }
-        });
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            const input = event.target.querySelector('input').value;
+            if (!input.trim()) {
+                alert("검색어를 입력해 주세요.");
+                return;
+            }
+            showToast(`'${input}' 검색 결과를 갱신합니다.`);
+        }
+
+        function addComment(event) {
+            event.preventDefault();
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+
+            if (!commentText) {
+                alert("댓글 내용을 입력해 주세요.");
+                return;
+            }
+
+            const commentList = document.getElementById('comment-list');
+            const newCommentItem = document.createElement('li');
+            newCommentItem.className = 'comment-item';
+            
+            const now = new Date();
+            const formattedDate = now.toISOString().slice(0, 16).replace('T', ' ');
+
+            newCommentItem.innerHTML = `
+                <div class="comment-avatar">ME</div>
+                <div class="comment-content-wrap">
+                    <div class="comment-meta">
+                        <span class="comment-author">GUEST_8921</span>
+                        <span class="comment-date">${formattedDate}</span>
+                    </div>
+                    <div class="comment-text">${escapeHtml(commentText)}</div>
+                </div>
+            `;
+
+            commentList.appendChild(newCommentItem);
+            commentInput.value = '';
+            showToast("댓글이 정상적으로 등록되었습니다.");
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
     </script>
 </body>
 </html>
