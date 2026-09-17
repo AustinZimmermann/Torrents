@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TorrentRG - 스타워즈 에피소드 1: 보이지 않는 위험 (1999)</title>
+    <style>
+        :root {
+            --bg-color: #0f1015;
+            --panel-bg: #181a22;
+            --panel-border: #2a2d3d;
+            --accent-color: #ffe81f; /* 스타워즈 시그니처 옐로우 */
+            --accent-hover: #ffdf00;
+            --text-main: #e0e0e0;
+            --text-muted: #8c92a4;
+            --link-color: #4da6ff;
+            --danger-color: #ff4d4d;
+            --success-color: #4bb543;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background: linear-gradient(135deg, #181a22 0%, #111319 100%);
+            border-bottom: 3px solid var(--accent-color);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #ffffff;
+            font-size: 14px;
+            margin-left: 8px;
+            opacity: 0.7;
+        }
+
+        .user-nav {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .user-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .user-nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 메인 콘텐츠 패널 */
+        .content-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-top: none;
+            padding: 30px;
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        /* 토렌트 타이틀 섹션 */
+        .torrent-title-area {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 20px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background-color: #25293c;
+            color: var(--accent-color);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 232, 31, 0.2);
+        }
+
+        h1.release-name {
+            font-size: 18px;
+            color: #ffffff;
+            word-break: break-all;
+            font-family: 'Courier New', Courier, monospace;
+            background: #111319;
+            padding: 12px;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* 정보 그리드 레이아웃 */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .poster-wrapper {
+            text-align: center;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+            border: 1px solid var(--panel-border);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-wrapper img:hover {
+            transform: scale(1.02);
+        }
+
+        .meta-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .spec-row {
+            display: flex;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 8px;
+        }
+
+        .spec-label {
+            width: 130px;
+            color: var(--text-muted);
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .spec-value {
+            flex: 1;
+            color: var(--text-main);
+            font-size: 14px;
+        }
+
+        .highlight-val {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* 다운로드 액션 박스 */
+        .download-box {
+            background-color: #111319;
+            border: 1px solid var(--panel-border);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .download-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+        }
+
+        .stat-item span {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .stat-item.seeders span { color: var(--success-color); }
+        .stat-item.leechers span { color: var(--danger-color); }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: #0f1015;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn-secondary {
+            background-color: #2a2d3d;
+            color: var(--text-main);
+            border: 1px solid #3e4259;
+        }
+
+        .btn-secondary:hover {
+            background-color: #3e4259;
+            color: #ffffff;
+        }
+
+        /* 상세 미디어 정보 및 시놉시스 */
+        .section-block {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--panel-border);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .synopsis-text {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.8;
+            background-color: #111319;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* 미디어 테크니컬 스펙 테이블 스타일 */
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            background-color: #111319;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--panel-border);
+        }
+
+        .tech-table th, .tech-table td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .tech-table th {
+            background-color: #181a22;
+            color: var(--text-muted);
+            width: 25%;
+        }
+
+        .tech-table td {
+            color: var(--text-main);
+        }
+
+        /* 댓글 영역 */
+        .comments-section {
+            margin-top: 40px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            height: 90px;
+            background-color: #111319;
+            border: 1px solid var(--panel-border);
+            border-radius: 4px;
+            padding: 12px;
+            color: var(--text-main);
+            resize: vertical;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .comment-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment-item {
+            background-color: #111319;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid var(--panel-border);
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .comment-author {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .comment-body {
+            font-size: 13px;
+            color: var(--text-main);
+        }
+
+        /* 모달 팝업 디자인 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(3px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 25px;
+            border-radius: 6px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .modal-content p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            word-break: break-all;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 웹사이트 헤더 -->
+        <header>
+            <a href="#" class="logo">TorrentRG <span>(ko-KR)</span></a>
+            <div class="user-nav">
+                환영합니다, <strong>JediMaster</strong>님 | <a href="#">마이페이지</a> | <a href="#">로그아웃</a>
+            </div>
+        </header>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <div class="content-panel">
+            
+            <!-- 토렌트 타이틀 -->
+            <div class="torrent-title-area">
+                <span class="category-tag">영화 / 블루레이 / Remux</span>
+                <h1 class="release-name">Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR</h1>
+            </div>
+
+            <!-- 정보 그리드 (포스터 + 메타데이터) -->
+            <div class="info-grid">
+                <!-- 포스터 이미지 -->
+                <div class="poster-wrapper">
+                    <img src="https://image.tmdb.org/t/p/original/pt7oxFkvQFzXD0ByCe1uJumL6vD.jpg" alt="스타워즈 에피소드 1: 보이지 않는 위험 포스터">
+                </div>
+
+                <!-- 상세 메타데이터 -->
+                <div class="meta-specs">
+                    <div class="spec-row">
+                        <div class="spec-label">원제 / 영제</div>
+                        <div class="spec-value">Star Wars: Episode I – The Phantom Menace (1999)</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">장르</div>
+                        <div class="spec-value">SF, 모험, 액션, 판타지</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">감독 / 출연</div>
+                        <div class="spec-value">조지 루카스 / 리암 니슨, 이완 맥그리거, 나탈리 포트만</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">릴리즈 그룹</div>
+                        <div class="spec-value highlight-val">FraMeSToR</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">용량</div>
+                        <div class="spec-value highlight-val">34.2 GB</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">등록일</div>
+                        <div class="spec-value">2026-06-06 14:22:01</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">오디오 언어</div>
+                        <div class="spec-value">영어, 태국어</div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-label">지원 자막</div>
+                        <div class="spec-value"><span class="highlight-val">한국어</span>, 영어, 태국어, 광둥어, 표준 중국어</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 다운로드 및 토렌트 상태 바 -->
+            <div class="download-box">
+                <div class="download-stats">
+                    <div class="stat-item seeders">시더(Seed): <span>142</span></div>
+                    <div class="stat-item leechers">리처(Leech): <span>3</span></div>
+                    <div class="stat-item">완료 횟수: <span>1,589회</span></div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" id="magnetBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v10m0 0l4-4m-4 4l-4-4M4 20h16"/></svg>
+                        마그넷 다운로드
+                    </button>
+                    <button class="btn btn-secondary" id="torrentFileBtn">토렌트 파일 (.torrent)</button>
+                </div>
+            </div>
+
+            <!-- 시놉시스 섹션 -->
+            <div class="section-block">
+                <div class="section-title">작품 소개 / 시놉시스</div>
+                <div class="synopsis-text">
+                    평화롭던 은하계 공화국에 무역 연합의 은하계 무역로 봉쇄라는 위기가 닥친다. 최고 의장은 분쟁 조정을 위해 두 명의 제다이 기사, 콰이곤 진(리암 니슨)과 그의 제자 오비완 케노비(이완 맥그리거)를 파견한다. 무역 연합 배후의 어둠의 세력(시스)을 피해 탈출하는 과정에서 이들은 나부 행성의 젊은 여왕 아미달라(나탈리 포트만)를 구출하고, 우연히 타투인 행성에서 놀라운 포스를 지닌 어린 소년 아나킨 스카이워커를 만나게 되는데... ‘보이지 않는 위험’이 은하계를 서서히 잠식하기 시작한다.
+                </div>
+            </div>
+
+            <!-- 미디어 테크니컬 상세 스펙 -->
+            <div class="section-block">
+                <div class="section-title">미디어 상세 정보 (MediaInfo)</div>
+                <table class="tech-table">
+                    <tr>
+                        <th>컨테이너 포맷</th>
+                        <td>Matroska / Blu-ray Remux</td>
+                    </tr>
+                    <tr>
+                        <th>비디오 코덱</th>
+                        <td>AVC (High @ L4.1) / 1920x1080 / 23.976 fps</td>
+                    </tr>
+                    <tr>
+                        <th>오디오 스트림</th>
+                        <td>English DTS-HD Master Audio 6.1 / Thai Dolby Digital 5.1</td>
+                    </tr>
+                    <tr>
+                        <th>자막 스트림</th>
+                        <td>한국어 (Korean), 영어 (English), 태국어 (Thai), 광둥어 (Cantonese), 표준 중국어 (Mandarin) - 모두 포함 외부/내부 PGS mux</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 댓글 및 피드백 섹션 -->
+            <div class="comments-section">
+                <div class="section-title">코멘트 (3)</div>
+                <div class="comment-form">
+                    <textarea id="commentInput" placeholder="이 릴리즈에 대한 의견을 남겨주세요. (클린 인터넷 환경 조성)"></textarea>
+                    <button class="btn btn-secondary" id="submitComment" style="float: right;">댓글 등록</button>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div class="comment-list" id="commentList">
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <span class="comment-author">DarthVader99</span>
+                            <span>2026-06-06 15:01</span>
+                        </div>
+                        <div class="comment-body">
+                            FraMeSToR 렘럭 화질, 음질 두말할 것 없이 최고네요. 한국어 자막 싱크도 완벽합니다. 감사합니다!
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <span class="comment-author">YodaMaster</span>
+                            <span>2026-06-06 18:30</span>
+                        </div>
+                        <div class="comment-body">
+                            DTS-HD MA 6.1 채널 분리도 훌륭합니다. 포스 가득한 명작을 고화질로 소장하네요. 시딩 유지하겠습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 푸터 -->
+        <footer>
+            &copy; 2026 TorrentRG(ko-KR) Community. All rights reserved. Non-profit metadata sharing platform.
+        </footer>
+    </div>
+
+    <!-- 마그넷 복사 안내 모달 팝업 -->
+    <div class="modal" id="alertModal">
+        <div class="modal-content">
+            <h3>마그넷 링크 복사 완료</h3>
+            <p id="magnetTextDisplay">magnet:?xt=urn:btih:STARWARSEP1REMUXFRAMESTOR19991080P</p>
+            <button class="btn" id="closeModalBtn" style="width: 100%; justify-content: center;">확인</button>
+        </div>
+    </div>
+
+    <script>
+        // 자바스크립트 인터랙션 구현
+        document.addEventListener('DOMContentLoaded', function() {
+            const magnetBtn = document.getElementById('magnetBtn');
+            const torrentFileBtn = document.getElementById('torrentFileBtn');
+            const alertModal = document.getElementById('alertModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const submitCommentBtn = document.getElementById('submitComment');
+            const commentInput = document.getElementById('commentInput');
+            const commentList = document.getElementById('commentList');
+
+            // 마그넷 다운로드 버튼 클릭 시뮬레이션
+            magnetBtn.addEventListener('click', function() {
+                const dummyMagnet = "magnet:?xt=urn:btih:5a9e8f7c6b4d3a2e1f0c9b8a7f6e5d4c3b2a1f0&dn=Star.Wars.Episode.I.The.Phantom.Menace.1999.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR";
+                
+                // 클립보드 복사 시도
+                navigator.clipboard.writeText(dummyMagnet).then(() => {
+                    document.getElementById('magnetTextDisplay').innerText = dummyMagnet;
+                    alertModal.style.display = 'flex';
+                }).catch(err => {
+                    alert('마그넷 링크 복사에 실패했습니다.');
+                });
+            });
+
+            // 토렌트 파일 다운로드 버튼 클릭 시뮬레이션
+            torrentFileBtn.addEventListener('click', function() {
+                alert('토렌트 파일(.torrent) 다운로드가 시작되었습니다.');
+            });
+
+            // 모달 닫기
+            closeModalBtn.addEventListener('click', function() {
+                alertModal.style.display = 'none';
+            });
+
+            // 모달 바깥 영역 클릭 시 닫기
+            window.addEventListener('click', function(event) {
+                if (event.target === alertModal) {
+                    alertModal.style.display = 'none';
+                }
+            });
+
+            // 댓글 작성 기능
+            submitCommentBtn.addEventListener('click', function() {
+                const text = commentInput.value.trim();
+                if (!text) {
+                    alert('댓글 내용을 입력해주세요.');
+                    return;
+                }
+
+                // 현재 시각 생성
+                const now = new Date();
+                const dateStr = now.getFullYear() + '-' + 
+                                String(now.getMonth() + 1).padStart(2, '0') + '-' + 
+                                String(now.getDate()).padStart(2, '0') + ' ' + 
+                                String(now.getHours()).padStart(2, '0') + ':' + 
+                                String(now.getMinutes()).padStart(2, '0');
+
+                // 새로운 댓글 요소 생성
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+                commentItem.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-author">JediMaster</span>
+                        <span>${dateStr}</span>
+                    </div>
+                    <div class="comment-body">${escapeHtml(text)}</div>
+                `;
+
+                commentList.prepend(commentItem);
+                commentInput.value = '';
+            });
+
+            // XSS 방지 간단 이스케이프 함수
+            function escapeHtml(str) {
+                return str.replace(/&/g, "&amp;")
+                          .replace(/</g, "&lt;")
+                          .replace(/>/g, "&gt;")
+                          .replace(/"/g, "&quot;")
+                          .replace(/'/g, "&#039;");
+            }
+        });
+    </script>
+</body>
+</html>
