@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ralph Breaks the Internet (2018) 1080p Blu-ray Remux AVC DTS-HD MA 7.1-EPSiLON Download | 1337x</title>
+    <style>
+        :root {
+            --bg-base: #111111;
+            --bg-surface: #181818;
+            --bg-elevated: #222222;
+            --border-color: #2e2e2e;
+            --accent-red: #da3a04;
+            --accent-red-hover: #b83002;
+            --text-main: #dcdcdc;
+            --text-muted: #8e8e8e;
+            --text-white: #ffffff;
+            --table-row-alt: #1c1c1c;
+            --btn-green: #378b2c;
+            --btn-green-hover: #2e7425;
+            --btn-blue: #1c6ba0;
+            --btn-blue-hover: #16547e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top Navigation Bar */
+        header {
+            background-color: #0b0b0b;
+            border-bottom: 2px solid var(--accent-red);
+            padding: 10px 0;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .brand-logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--accent-red);
+            letter-spacing: -1px;
+        }
+
+        .brand-logo span {
+            color: var(--text-white);
+        }
+
+        .search-box-container {
+            display: flex;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-box-container input {
+            width: 100%;
+            background-color: #000;
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            color: var(--text-white);
+            font-size: 13px;
+            border-radius: 2px 0 0 2px;
+            outline: none;
+        }
+
+        .search-box-container button {
+            background-color: var(--accent-red);
+            border: none;
+            color: #fff;
+            padding: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .search-box-container button:hover {
+            background-color: var(--accent-red-hover);
+        }
+
+        .nav-links a {
+            color: #aaa;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-white);
+            text-decoration: none;
+        }
+
+        /* Main Container */
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .content-box {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .header-title-bar {
+            background-color: var(--bg-elevated);
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .header-title-bar h1 {
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--text-white);
+            word-break: break-all;
+        }
+
+        /* Layout Columns */
+        .torrent-body {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Poster Area */
+        .poster-pane {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .poster-pane img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Details Metadata Table */
+        .details-pane {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .download-action-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            transition: background 0.15s ease-in-out;
+        }
+
+        .btn-action:hover {
+            text-decoration: none;
+        }
+
+        .btn-download-torrent {
+            background-color: var(--btn-green);
+        }
+        .btn-download-torrent:hover {
+            background-color: var(--btn-green-hover);
+        }
+
+        .btn-magnet {
+            background-color: var(--accent-red);
+        }
+        .btn-magnet:hover {
+            background-color: var(--accent-red-hover);
+        }
+
+        .btn-direct {
+            background-color: var(--btn-blue);
+        }
+        .btn-direct:hover {
+            background-color: var(--btn-blue-hover);
+        }
+
+        .torrent-meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            background-color: #151515;
+            border: 1px solid var(--border-color);
+        }
+
+        .torrent-meta-table th, 
+        .torrent-meta-table td {
+            padding: 9px 14px;
+            border: 1px solid var(--border-color);
+        }
+
+        .torrent-meta-table th {
+            text-align: left;
+            background-color: #1d1d1d;
+            color: #aaa;
+            font-weight: normal;
+            width: 25%;
+        }
+
+        .torrent-meta-table td {
+            color: #eee;
+            width: 25%;
+        }
+
+        .seeders {
+            color: #5bb75b;
+            font-weight: bold;
+        }
+
+        .leechers {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        /* Description Box */
+        .description-wrapper {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background-color: #151515;
+        }
+
+        .section-header {
+            font-size: 14px;
+            color: var(--accent-red);
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .mediainfo-box {
+            background: #0d0d0d;
+            border: 1px solid #282828;
+            border-radius: 3px;
+            padding: 15px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #bcbcbc;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .mediainfo-box span.section-title {
+            color: #da3a04;
+            font-weight: bold;
+        }
+
+        .file-list {
+            list-style-type: none;
+            border: 1px solid var(--border-color);
+            background-color: #121212;
+            border-radius: 3px;
+            padding: 10px 15px;
+        }
+
+        .file-list li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #222;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+
+        .file-list .file-size {
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 10px;
+            color: #666;
+            font-size: 11px;
+            border-top: 1px solid #222;
+        }
+
+        footer a {
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .torrent-body {
+                grid-template-columns: 1fr;
+            }
+            .poster-pane {
+                margin-bottom: 15px;
+            }
+            .navbar {
+                flex-wrap: wrap;
+            }
+            .search-box-container {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="#" class="brand-logo">1337<span>X</span></a>
+        <div class="search-box-container">
+            <input type="text" placeholder="Search for torrents...">
+            <button type="button">Search</button>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Top 100</a>
+            <a href="#">Trending</a>
+            <a href="#">Upload</a>
+            <a href="#">Rules</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page-wrapper">
+    <div class="content-box">
+        <div class="header-title-bar">
+            <h1>Ralph.Breaks.the.Internet.2018.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.7.1-EPSiLON</h1>
+        </div>
+
+        <div class="torrent-body">
+            <!-- Left Poster Area -->
+            <div class="poster-pane">
+                <img src="https://image.tmdb.org/t/p/original/qEnH5meR381iMpmCumAIMswcQw2.jpg" alt="Ralph Breaks the Internet Poster">
+            </div>
+
+            <!-- Right Details Area -->
+            <div class="details-pane">
+                <div class="download-action-group">
+                    <button class="btn-action btn-magnet" id="magnetBtn">
+                        🧲 Magnet Download
+                    </button>
+                    <button class="btn-action btn-download-torrent" id="torrentFileBtn">
+                        ⬇ Torrent Download
+                    </button>
+                    <button class="btn-action btn-direct" id="directBtn">
+                        Direct Download
+                    </button>
+                </div>
+
+                <table class="torrent-meta-table">
+                    <tbody>
+                        <tr>
+                            <th>Category</th>
+                            <td>Movies / Full HD</td>
+                            <th>Total Size</th>
+                            <td>28.4 GB</td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>Remux</td>
+                            <th>Language</th>
+                            <td>English (en-US)</td>
+                        </tr>
+                        <tr>
+                            <th>Audio Channels</th>
+                            <td>English DTS-HD MA 7.1</td>
+                            <th>Uploaded By</th>
+                            <td><strong style="color: #ff9900;">EPSiLON</strong> (VIP)</td>
+                        </tr>
+                        <tr>
+                            <th>Downloads</th>
+                            <td>12,482</td>
+                            <th>Date Added</th>
+                            <td>Feb 26, 2019</td>
+                        </tr>
+                        <tr>
+                            <th>Seeders</th>
+                            <td><span class="seeders" id="seedCount">142</span></td>
+                            <th>Leechers</th>
+                            <td><span class="leechers" id="leechCount">11</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <h3 class="section-header">Movie Synopsis</h3>
+                    <p style="color: #bbb; line-height: 1.6;">
+                        Taking place six years after saving the arcade from Turbo’s vengeance, the <i>Sugar Rush</i> arcade cabinet has broken, forcing Ralph and Vanellope to venture into the uncharted expanse of the World Wide Web via the newly plugged-in Wi-Fi router. Their goal is to track down a replacement steering wheel and save Sugar Rush before it gets decommissioned for good.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description and Mediainfo Technical Data -->
+        <div class="description-wrapper">
+            <h3 class="section-header">Description & Technical Details</h3>
+            
+            <div class="mediainfo-box">
+<span class="section-title">RELEASE INFORMATION:</span>
+RELEASE NAME...: Ralph.Breaks.the.Internet.2018.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.7.1-EPSiLON
+RELEASE SIZE...: 28.4 GiB
+CONTAINER......: Matroska (MKV)
+RUN TIME.......: 01:52:05
+
+<span class="section-title">VIDEO:</span>
+CODEC..........: AVC Baseline@L4.1
+RESOLUTION.....: 1920x1080
+FRAME RATE.....: 23.976 (24000/1001) FPS
+BITRATE........: 27.2 Mb/s
+
+<span class="section-title">AUDIO TRACKS:</span>
+Track 1 (Default)..: English / DTS-HD Master Audio / 7.1 / 48 kHz / 24-bit
+Track 2............: French (Canadian) / Dolby Digital Audio / 5.1 / 48 kHz / 640 kbps
+Track 3............: Spanish / Dolby Digital Audio / 5.1 / 48 kHz / 640 kbps
+
+<span class="section-title">SUBTITLES:</span>
+Track 1............: English [SDH] (PGS)
+Track 2............: French (PGS)
+Track 3............: Spanish (PGS)
+            </div>
+
+            <br>
+            <h3 class="section-header">Files Included</h3>
+            <ul class="file-list">
+                <li>
+                    <span>Ralph.Breaks.the.Internet.2018.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.7.1-EPSiLON.mkv</span>
+                    <span class="file-size">28.4 GB</span>
+                </li>
+                <li>
+                    <span>EPSiLON.nfo</span>
+                    <span class="file-size">4.2 KB</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>1337x clone demonstration interface built for educational web development purposes.</p>
+    <p style="margin-top: 5px;"><a href="#">Privacy Policy</a> - <a href="#">DMCA Policy</a> - <a href="#">API</a> - <a href="#">Contact</a></p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Construct the magnet URI scheme
+        const torrentHash = "A2F807B4A4B1393661CF6AA14197EF52BE447A55";
+        const torrentName = "Ralph.Breaks.the.Internet.2018.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.7.1-EPSiLON";
+        const trackers = [
+            "udp://tracker.opentrackr.org:1337/announce",
+            "udp://9.rarbg.to:2920/announce",
+            "udp://tracker.openbittorrent.com:80/announce"
+        ];
+
+        let magnetURI = `magnet:?xt=urn:btih:${torrentHash}&dn=${encodeURIComponent(torrentName)}`;
+        trackers.forEach(tr => {
+            magnetURI += `&tr=${encodeURIComponent(tr)}`;
+        });
+
+        // Magnet button click
+        document.getElementById('magnetBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = magnetURI;
+        });
+
+        // Torrent file generation and prompt simulation
+        document.getElementById('torrentFileBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            alert("Generating .torrent payload metadata:\n" + torrentName + ".torrent");
+        });
+
+        // Direct Download simulation
+        document.getElementById('directBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            alert("No direct download mirrors configured on this server node.");
+        });
+
+        // Minor client-side real-time count jitter
+        setInterval(() => {
+            const seedElem = document.getElementById('seedCount');
+            const leechElem = document.getElementById('leechCount');
+
+            let seeds = parseInt(seedElem.textContent, 10);
+            let leeches = parseInt(leechElem.textContent, 10);
+
+            // Small fluctuation simulator
+            seeds += Math.floor(Math.random() * 3) - 1;
+            leeches += Math.floor(Math.random() * 3) - 1;
+
+            seedElem.textContent = seeds > 0 ? seeds : 1;
+            leechElem.textContent = leeches > 0 ? leeches : 0;
+        }, 8000);
+    });
+</script>
+
+</body>
+</html>
