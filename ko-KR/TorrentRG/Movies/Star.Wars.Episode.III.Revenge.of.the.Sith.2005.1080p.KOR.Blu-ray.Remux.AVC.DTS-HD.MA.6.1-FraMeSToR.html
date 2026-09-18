@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[영화] 스타워즈 에피소드 3: 시스의 복수 - 토렌트알지 (TorrentRG)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rg: {
+              navy: '#1d273b',
+              blue: '#2c6cb0',
+              accent: '#e35824',
+              gray: '#f5f6f8',
+              border: '#dcdfe6',
+              darkBorder: '#cbd5e1'
+            }
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Malgun Gothic', 'Dotum', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      color: #333333;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .rg-table th {
+      background-color: #f7f9fa;
+      border: 1px solid #e1e4e8;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    .rg-table td {
+      border: 1px solid #e1e4e8;
+      background-color: #ffffff;
+    }
+    .toast-popup {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+      transform: translateY(120%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast-popup.show {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <header class="w-full bg-rg-navy text-white shadow-md">
+    <!-- Top utility row -->
+    <div class="max-w-6xl mx-auto px-3 py-1.5 flex justify-between items-center text-xs text-gray-300 border-b border-gray-700">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-green-400"></span>
+        <span>토렌트알지 최신 도메인 안내: <strong class="text-yellow-300">torrentrg.to</strong></span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="hover:text-white"><i class="fa-solid fa-lock mr-1"></i>로그인</a>
+        <a href="#" class="hover:text-white"><i class="fa-solid fa-user-plus mr-1"></i>회원가입</a>
+        <a href="#" class="hover:text-white"><i class="fa-solid fa-bookmark mr-1"></i>즐겨찾기</a>
+      </div>
+    </div>
+
+    <!-- Main Header Bar -->
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <a href="#" class="flex items-center space-x-2 group">
+          <div class="bg-rg-accent text-white font-black px-2.5 py-1 rounded text-xl shadow tracking-tighter">TRG</div>
+          <div>
+            <span class="text-xl font-bold tracking-tight text-white group-hover:text-yellow-400 transition">TorrentRG</span>
+            <span class="text-[10px] block text-gray-400">국내 최대 고화질 토렌트 공유 커뮤니티</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="mt-2 sm:mt-0 flex items-center">
+        <div class="relative flex">
+          <input type="text" id="topSearchInput" value="스타워즈 1080p remux" class="bg-gray-800 text-white placeholder-gray-400 text-xs px-3 py-1.5 rounded-l border border-gray-600 focus:outline-none focus:border-blue-400 w-52 sm:w-64" placeholder="자료 검색...">
+          <button onclick="handleSearch()" class="bg-rg-blue hover:bg-blue-600 text-white px-3 py-1.5 rounded-r text-xs font-semibold flex items-center space-x-1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>검색</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu Bar -->
+    <nav class="bg-[#151c2a] border-t border-gray-700">
+      <div class="max-w-6xl mx-auto px-4 flex flex-wrap gap-1 text-xs sm:text-sm font-medium">
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">홈</a>
+        <a href="#" class="px-3 py-2 bg-rg-blue text-white font-bold rounded">영화</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">드라마</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">예능/오락</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">애니메이션</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">음악</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">유틸/소프트</a>
+        <a href="#" class="px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded">자유게시판</a>
+        <a href="#" class="px-3 py-2 text-yellow-400 hover:text-yellow-300 hover:bg-gray-800 rounded ml-auto"><i class="fa-solid fa-bolt mr-1"></i>인기자료 TOP 100</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-3 py-4 w-full flex-grow">
+    <!-- Breadcrumb & Path -->
+    <div class="text-xs text-gray-500 mb-3 flex items-center space-x-1.5">
+      <a href="#" class="hover:underline text-gray-700"><i class="fa-solid fa-house mr-1"></i>홈</a>
+      <span>&gt;</span>
+      <a href="#" class="hover:underline text-gray-700">토렌트 영화</a>
+      <span>&gt;</span>
+      <span class="text-rg-blue font-semibold">해외영화 (고화질 Remux)</span>
+    </div>
+
+    <!-- Content Columns -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      
+      <!-- Primary Article Column (3 of 4) -->
+      <section class="lg:col-span-3 bg-white border border-rg-border rounded shadow-sm overflow-hidden">
+        
+        <!-- Post Title & Meta Header -->
+        <div class="border-b border-rg-border p-4 bg-[#fbfbfb]">
+          <div class="mb-2">
+            <span class="inline-block bg-blue-100 text-rg-blue font-bold px-2 py-0.5 rounded text-[11px] mr-1">[외화 / REMUX]</span>
+            <span class="inline-block bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[11px]">완역자막포함</span>
+          </div>
+          <h1 class="text-base sm:text-lg font-bold text-gray-900 leading-snug break-words">
+            [영화] 스타워즈 에피소드 3: 시스의 복수 (Star.Wars.Episode.III.Revenge.of.the.Sith.2005.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR)
+          </h1>
+          
+          <div class="mt-3 pt-2 border-t border-dashed border-gray-200 flex flex-wrap justify-between items-center text-xs text-gray-500 gap-y-2">
+            <div class="flex items-center space-x-3">
+              <span class="font-semibold text-gray-700 flex items-center">
+                <span class="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center text-[9px] mr-1.5 font-bold">R</span>
+                포스마스터
+              </span>
+              <span><i class="fa-regular fa-clock mr-1"></i>2026-09-18 08:30</span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-500">
+              <span><i class="fa-solid fa-eye mr-1"></i>조회 <b id="viewCount" class="text-gray-800">4,982</b></span>
+              <span><i class="fa-solid fa-thumbs-up mr-1 text-red-500"></i>추천 <b id="recommendCount" class="text-red-500">184</b></span>
+              <span><i class="fa-solid fa-comment-dots mr-1 text-blue-500"></i>댓글 <b id="commentHeaderCount" class="text-blue-500">8</b></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="m-4 p-3 bg-sky-50/70 border border-sky-200 rounded text-xs space-y-2.5">
+          <div class="flex items-center justify-between font-bold text-sky-900 pb-1.5 border-b border-sky-200">
+            <span class="flex items-center"><i class="fa-solid fa-download mr-1.5 text-blue-600"></i>첨부파일 및 마그넷 다운로드</span>
+            <span class="text-gray-500 font-normal">총 1개 파일 (35.42 GB)</span>
+          </div>
+
+          <!-- Torrent seed item -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white p-2.5 rounded border border-sky-100 shadow-sm">
+            <div class="flex items-center space-x-2.5 overflow-hidden w-full sm:w-auto">
+              <i class="fa-solid fa-file-video text-red-500 text-lg"></i>
+              <div class="truncate">
+                <p class="font-semibold text-gray-800 text-xs truncate">Star.Wars.Episode.III.Revenge.of.the.Sith.2005.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.torrent</p>
+                <p class="text-[11px] text-gray-500">용량: <b class="text-blue-600 font-semibold">35.42 GB</b> | 시더: <span class="text-green-600 font-semibold">142</span> | 피어: <span class="text-orange-600 font-semibold">28</span></p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-1.5 w-full sm:w-auto justify-end">
+              <button onclick="downloadTorrentMock()" class="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium text-xs flex items-center space-x-1 shadow-sm transition">
+                <i class="fa-solid fa-download"></i>
+                <span>토렌트 받기</span>
+              </button>
+              <button onclick="copyMagnetLink()" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-medium text-xs flex items-center space-x-1 shadow-sm transition">
+                <i class="fa-solid fa-magnet"></i>
+                <span>마그넷 복사</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tracker / Hash Info Box -->
+          <div class="bg-gray-100 p-2 rounded text-[11px] text-gray-600 font-mono flex flex-wrap justify-between items-center">
+            <span><strong>Info Hash:</strong> e7d94fbc2818aa40d2105c3c0fae28f3a9e04812</span>
+            <button onclick="copyHash()" class="text-blue-600 hover:underline"><i class="fa-regular fa-copy mr-1"></i>해시복사</button>
+          </div>
+        </div>
+
+        <article class="p-4 sm:p-6 space-y-6 text-gray-800">
+          
+          <!-- Movie Poster & Main Specs Card -->
+          <div class="flex flex-col md:flex-row gap-5 items-start bg-slate-50 p-4 rounded border border-slate-200">
+            <div class="w-full md:w-52 shrink-0 text-center">
+              <img 
+                src="https://image.tmdb.org/t/p/original/cKrtSemvrt2tOeHLgxCWauJ3URr.jpg" 
+                alt="스타워즈 에피소드 3: 시스의 복수 포스터" 
+                class="w-full max-w-[210px] mx-auto rounded shadow-md border border-gray-300 object-cover"
+                onerror="this.src='https://placehold.co/300x450/1e293b/ffffff?text=Star+Wars+EP3'"
+              />
+              <p class="text-[11px] text-gray-500 mt-1.5">극장 개봉 공식 오리지널 포스터</p>
+            </div>
+
+            <div class="w-full flex-grow text-xs space-y-3">
+              <h2 class="text-base font-bold text-gray-900 border-b pb-1.5 border-gray-300 flex items-center justify-between">
+                <span>스타워즈 에피소드 3: 시스의 복수 (2005)</span>
+                <span class="text-amber-600 font-semibold text-xs"><i class="fa-solid fa-star mr-1"></i>평점 8.0 / 10</span>
+              </h2>
+
+              <table class="w-full rg-table text-xs border-collapse">
+                <tbody>
+                  <tr>
+                    <th class="w-24 p-2 text-left">원제</th>
+                    <td class="p-2 font-medium">Star Wars: Episode III – Revenge of the Sith</td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">감독 / 각본</th>
+                    <td class="p-2">조지 루카스 (George Lucas)</td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">출연진</th>
+                    <td class="p-2">이완 맥그리거 (오비완 케노비), 헤이든 크리스텐슨 (아나킨 스카이워커), 나탈리 포트만 (파드메 아미달라), 이언 맥디어미드 (펠퍼틴/다스 시디어스), 사무엘 L. 잭슨 (메이스 윈두)</td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">장르 / 러닝타임</th>
+                    <td class="p-2">SF, 액션, 모험, 판타지 | 140분 (02:20:06)</td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">비디오 규격</th>
+                    <td class="p-2"><span class="font-bold text-blue-700">1080p Full HD AVC Remux</span> / 1920x1080 / 23.976 fps / High@L4.1</td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">오디오 (Audio)</th>
+                    <td class="p-2 space-y-0.5">
+                      <div><strong class="text-gray-900">Audio 1:</strong> English DTS-HD Master Audio 6.1 (48.0 kHz / 24-bit)</div>
+                      <div><strong class="text-gray-700">Audio 2:</strong> Thai Dolby Digital Audio 5.1 (48.0 kHz / 640 kbps)</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="p-2 text-left">자막 (Subtitles)</th>
+                    <td class="p-2">
+                      <span class="inline-block bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded border border-emerald-200 font-semibold mr-1">한국어 (Korean 완역 PGS & SRT 포함)</span>
+                      <span>English, Thai, Cantonese, Mandarin (중문 간/번체)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Movie Synopsis -->
+          <div class="space-y-2">
+            <h3 class="font-bold text-sm text-gray-800 border-l-4 border-rg-accent pl-2">영화 줄거리 (Synopsis)</h3>
+            <div class="bg-gray-50 p-3.5 rounded text-gray-700 leading-relaxed text-xs border border-gray-200">
+              클론 전쟁이 발발한 지 수년, 은하공화국은 분리주의자 군대와의 치열한 전황에 휩싸여 있다. 오비완 케노비와 아나킨 스카이워커는 납치된 팰퍼틴 의장을 구출하는 임무에 성공하지만, 아나킨은 사랑하는 아내 파드메가 출산 중 목숨을 잃는 악몽을 반복해서 꾸며 깊은 두려움에 사로잡힌다.<br><br>
+              제다이 평의회에 대한 불신과 어둠의 유혹 속에서, 시스의 군주 다스 시디어스는 아나킨의 마음을 파고들며 ‘죽음을 막는 포스의 어두운 능력’을 제시하는데… 은하계의 운명을 뒤바꿀 오더 66과 제다이 기사단의 몰락, 그리고 다스 베이더의 탄생을 알리는 마지막 비극의 서사시!
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-sm text-gray-800 border-l-4 border-blue-600 pl-2">상세 미디어정보 (MediaInfo Spec)</h3>
+              <button onclick="toggleMediaInfo()" class="text-xs text-blue-600 hover:text-blue-800 font-medium">
+                <span id="mediaInfoToggleText">[접기]</span>
+              </button>
+            </div>
+
+            <div id="mediaInfoBlock" class="bg-gray-900 text-gray-200 p-4 rounded font-mono text-[11px] overflow-x-auto leading-relaxed border border-gray-800">
+<pre class="whitespace-pre">General
+Unique ID                                : 2398402938472938472093847230492834
+Complete name                            : Star.Wars.Episode.III.Revenge.of.the.Sith.2005.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.mkv
+Format                                   : Matroska
+Format version                           : Version 4
+File size                                : 35.4 GiB
+Duration                                 : 2 h 20 min 6 s
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 36.1 Mb/s
+Movie name                               : Star Wars: Episode III – Revenge of the Sith (2005)
+Encoded date                             : 2026-09-17 19:40:12 UTC
+Writing application                      : mkvmerge v84.0 ('The Great Gig in the Sky') 64-bit
+
+Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4.1
+Bit rate mode                            : Variable
+Bit rate                                 : 30.2 Mb/s
+Maximum bit rate                         : 38.0 Mb/s
+Width                                    : 1 920 pixels
+Height                                   : 1 080 pixels
+Display aspect ratio                     : 16:9
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+
+Audio #1
+ID                                       : 2
+Format                                   : DTS XLL
+Format/Info                              : Digital Theater Systems
+Commercial name                          : DTS-HD Master Audio
+Codec ID                                 : A_DTS
+Bit rate mode                            : Variable
+Bit rate                                 : 4 480 kbps
+Channel(s)                               : 7 channels / 6.1 Discrete
+Sampling rate                            : 48.0 kHz
+Bit depth                                : 24 bits
+Title                                    : English DTS-HD MA 6.1 @ 4480 kbps
+Language                                 : English (en)
+Default                                  : Yes
+
+Audio #2
+ID                                       : 3
+Format                                   : AC-3
+Format/Info                              : Audio Coding 3
+Bit rate                                 : 640 kbps
+Channel(s)                               : 6 channels (5.1)
+Language                                 : Thai (th)
+
+Text #1
+ID                                       : 4
+Format                                   : PGS
+Muxing mode                              : zlib
+Title                                    : Korean Blu-ray Official (한국어 완역)
+Language                                 : Korean (ko)
+Default                                  : Yes
+
+Text #2
+ID                                       : 5
+Format                                   : UTF-8 (SRT)
+Title                                    : Korean Subtitles (동기화 완료)
+Language                                 : Korean (ko)
+
+Text #3
+ID                                       : 6
+Format                                   : PGS
+Language                                 : English (en)
+
+Text #4
+ID                                       : 7
+Format                                   : PGS
+Language                                 : Thai (th)
+
+Text #5
+ID                                       : 8
+Format                                   : PGS
+Language                                 : Chinese (zh-Cantonese)
+
+Text #6
+ID                                       : 9
+Format                                   : PGS
+Language                                 : Chinese (zh-Mandarin)</pre>
+            </div>
+          </div>
+
+          <!-- Note & Release Checklist -->
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs text-amber-900 space-y-1.5">
+            <div class="font-bold flex items-center text-amber-800">
+              <i class="fa-solid fa-circle-exclamation mr-1.5"></i>업로더 안내 사항
+            </div>
+            <ul class="list-disc list-inside space-y-0.5 text-gray-700">
+              <li>정식 블루레이 원본에서 추출한 무손실 리먹스(Remux) 파일로 인코딩 열화가 전혀 없습니다.</li>
+              <li>한국어 공식 자막(PGS) 및 가독성을 위한 외부 SRT 자막 트랙이 모두 기본 내장되어 있습니다.</li>
+              <li>DTS-HD MA 6.1 채널 오디오 재생을 위해 PotPlayer(팟플레이어) 또는 VLC 최신 버전을 권장합니다.</li>
+              <li>다운로드 완료 후 24시간 이상 시딩(배포 유지) 동참 부탁드립니다!</li>
+            </ul>
+          </div>
+
+          <!-- Interactive Recommendation Section -->
+          <div class="pt-4 flex flex-col items-center justify-center space-y-2 border-t border-gray-200">
+            <div class="flex items-center space-x-3">
+              <button onclick="handleRecommend()" class="flex items-center space-x-2 px-4 py-2 bg-red-500 hover:bg-red-600 active:scale-95 text-white rounded font-bold shadow-md transition">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <span>추천하기</span>
+                <span id="btnRecommendNum" class="bg-red-700 px-1.5 py-0.2 text-xs rounded-full">184</span>
+              </button>
+              <button onclick="handleScrap()" class="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 rounded font-medium transition">
+                <i class="fa-regular fa-bookmark"></i>
+                <span>스크랩</span>
+              </button>
+              <button onclick="handleShare()" class="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 rounded font-medium transition">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>공유</span>
+              </button>
+            </div>
+            <p class="text-[11px] text-gray-400">게시글이 마음에 드셨다면 추천을 눌러 업로더를 응원해주세요.</p>
+          </div>
+
+        </article>
+
+        <section class="bg-gray-50 border-t border-rg-border p-4 sm:p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-gray-900 flex items-center">
+              <i class="fa-solid fa-comments text-rg-blue mr-1.5"></i>
+              댓글 <span id="commentTotalCount" class="text-rg-blue ml-1 font-extrabold">3</span>개
+            </h3>
+            <span class="text-xs text-gray-500">욕설 및 비방글은 통보 없이 삭제됩니다.</span>
+          </div>
+
+          <!-- Comment Input Form -->
+          <div class="bg-white border border-gray-300 rounded p-3 mb-5 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-gray-700">익명 제다이</span>
+              <span class="text-[11px] text-gray-400">HTML 태그 사용 불가</span>
+            </div>
+            <textarea id="commentInput" rows="2" class="w-full text-xs p-2.5 border border-gray-200 rounded focus:outline-none focus:border-blue-500 placeholder-gray-400" placeholder="자료에 대한 감사 인사 및 감상평을 남겨주세요."></textarea>
+            <div class="flex justify-between items-center mt-2">
+              <div class="text-[11px] text-gray-400">
+                <span id="charCount">0</span> / 300자
+              </div>
+              <button onclick="submitComment()" class="px-4 py-1.5 bg-rg-blue hover:bg-blue-700 text-white text-xs font-semibold rounded shadow transition">
+                댓글등록
+              </button>
+            </div>
+          </div>
+
+          <!-- Existing Comments Stream -->
+          <div id="commentsContainer" class="space-y-3 text-xs">
+            <!-- Sample Comment 1 -->
+            <div class="bg-white p-3 rounded border border-gray-200 shadow-sm flex flex-col space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-gray-800">무스타파용암 (LV.24)</span>
+                <span class="text-gray-400 text-[11px]">2026-09-18 08:35</span>
+              </div>
+              <p class="text-gray-700">시스의 복수 리먹스 고화질 기다리고 있었는데 드디어 올라왔네요! 시더 빠방합니다. 40MB/s 뽑아주네요 감사합니다~</p>
+            </div>
+
+            <!-- Sample Comment 2 -->
+            <div class="bg-white p-3 rounded border border-gray-200 shadow-sm flex flex-col space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-gray-800">오더66 (LV.19)</span>
+                <span class="text-gray-400 text-[11px]">2026-09-18 08:41</span>
+              </div>
+              <p class="text-gray-700">DTS-HD 6.1 오디오 트랙 포함이라 홈시어터 사운드 웅장합니다. 오비완과 아나킨 무스타파 결투씬은 전설입니다.</p>
+            </div>
+
+            <!-- Sample Comment 3 -->
+            <div class="bg-white p-3 rounded border border-gray-200 shadow-sm flex flex-col space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-gray-800">시네마천국 (LV.32)</span>
+                <span class="text-gray-400 text-[11px]">2026-09-18 08:52</span>
+              </div>
+              <p class="text-gray-700">자막 싱크 및 오역 수정본 잘 들어있습니다. 잘 보겠습니다. 배포 100% 완료 후 유지할게요.</p>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <aside class="space-y-4">
+        
+        <!-- User Info / Quick Status Panel -->
+        <div class="bg-white border border-rg-border rounded p-3 text-xs shadow-sm">
+          <div class="flex items-center space-x-3 pb-3 border-b border-gray-200">
+            <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-base">
+              G
+            </div>
+            <div>
+              <p class="font-bold text-gray-800">게스트 방문자</p>
+              <p class="text-[11px] text-gray-500">포인트: <span class="text-blue-600 font-semibold">1,000 P</span></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-2 pt-1 text-center">
+            <a href="#" class="py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded text-[11px] font-medium">내 다운로드</a>
+            <a href="#" class="py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded text-[11px] font-medium">출석체크</a>
+          </div>
+        </div>
+
+        <!-- Real-time Popular Movies Box -->
+        <div class="bg-white border border-rg-border rounded overflow-hidden shadow-sm text-xs">
+          <div class="bg-rg-navy text-white px-3 py-2 font-bold flex items-center justify-between">
+            <span><i class="fa-solid fa-fire mr-1 text-orange-400"></i>실시간 영화 인기 순위</span>
+            <span class="text-[10px] text-gray-400 font-normal">오늘 기준</span>
+          </div>
+          <ol class="divide-y divide-gray-100">
+            <li class="p-2.5 flex items-center justify-between hover:bg-gray-50">
+              <div class="flex items-center space-x-2 truncate">
+                <span class="w-4 font-bold text-center text-rg-accent">1</span>
+                <span class="truncate font-medium text-gray-800">스타워즈 에피소드 3 Remux</span>
+              </div>
+              <span class="text-[11px] text-green-600 font-semibold shrink-0">NEW</span>
+            </li>
+            <li class="p-2.5 flex items-center justify-between hover:bg-gray-50">
+              <div class="flex items-center space-x-2 truncate">
+                <span class="w-4 font-bold text-center text-gray-700">2</span>
+                <span class="truncate text-gray-700">인터스텔라 IMAX 2160p HDR</span>
+              </div>
+              <span class="text-[11px] text-gray-400 shrink-0">▲ 2</span>
+            </li>
+            <li class="p-2.5 flex items-center justify-between hover:bg-gray-50">
+              <div class="flex items-center space-x-2 truncate">
+                <span class="w-4 font-bold text-center text-gray-700">3</span>
+                <span class="truncate text-gray-700">듄: 파트 2 (Dune: Part Two) 4K</span>
+              </div>
+              <span class="text-[11px] text-gray-400 shrink-0">▼ 1</span>
+            </li>
+            <li class="p-2.5 flex items-center justify-between hover:bg-gray-50">
+              <div class="flex items-center space-x-2 truncate">
+                <span class="w-4 font-bold text-center text-gray-700">4</span>
+                <span class="truncate text-gray-700">다크 나이트 트릴로지 BDRip 1080p</span>
+              </div>
+              <span class="text-[11px] text-gray-400 shrink-0">-</span>
+            </li>
+            <li class="p-2.5 flex items-center justify-between hover:bg-gray-50">
+              <div class="flex items-center space-x-2 truncate">
+                <span class="w-4 font-bold text-center text-gray-700">5</span>
+                <span class="truncate text-gray-700">반지의 제왕: 왕의 귀환 확장판 Remux</span>
+              </div>
+              <span class="text-[11px] text-gray-400 shrink-0">▲ 4</span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Safety / P2P Guide Box -->
+        <div class="bg-gray-50 border border-gray-300 rounded p-3 text-xs text-gray-600 space-y-2">
+          <div class="font-bold text-gray-800 flex items-center">
+            <i class="fa-solid fa-shield-halved text-green-600 mr-1.5"></i>P2P 안전 수칙
+          </div>
+          <p class="text-[11px] leading-relaxed">
+            토렌트 클라이언트 사용 시 VPN(가상 사설망) 사용을 권장하며, 배포 완료 후에도 원활한 공유 생태계를 위해 레이쇼(Ratio) 1.0 이상을 유지해 주세요.
+          </p>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-popup bg-gray-900/95 text-white text-xs px-4 py-3 rounded shadow-xl border border-gray-700 flex items-center space-x-2.5">
+    <i id="toastIcon" class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+    <span id="toastMessage">클립보드에 복사되었습니다.</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#1e2533] text-gray-400 text-xs mt-8 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto px-4 py-6 space-y-3">
+      <div class="flex flex-wrap justify-between gap-2 border-b border-gray-700 pb-3">
+        <div class="space-x-4">
+          <a href="#" class="hover:text-white">이용약관</a>
+          <a href="#" class="hover:text-white">개인정보처리방침</a>
+          <a href="#" class="hover:text-white">게시판 운영원칙</a>
+          <a href="#" class="hover:text-white">자료요청 게시판</a>
+        </div>
+        <div>
+          <span>문의 및 DMCA 신고: <strong>contact@torrentrg.to</strong></span>
+        </div>
+      </div>
+      <p class="text-[11px] text-gray-400 leading-normal">
+        토렌트알지(TorrentRG)는 웹상에 공개되어 있는 토렌트 마그넷 및 메타데이터 정보를 수집하여 인덱싱하는 커뮤니티 정보 공유 사이트입니다.<br>
+        본 사이트는 서버 내에 어떠한 영상 파일이나 저작권 침해 자료도 직접 호스팅하거나 보관하지 않습니다.
+      </p>
+      <div class="text-[11px] text-gray-400 pt-1">
+        Copyright © 2026 TorrentRG. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Magnet URI constant for this release
+    const MAGNET_LINK = "magnet:?xt=urn:btih:e7d94fbc2818aa40d2105c3c0fae28f3a9e04812&dn=Star.Wars.Episode.III.Revenge.of.the.Sith.2005.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce";
+    const INFO_HASH = "e7d94fbc2818aa40d2105c3c0fae28f3a9e04812";
+
+    let hasRecommended = false;
+    let recommendCount = 184;
+
+    // Toast helper
+    function showToast(message, isError = false) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+
+      toastMsg.innerText = message;
+      if (isError) {
+        toastIcon.className = "fa-solid fa-circle-exclamation text-amber-400 text-sm";
+      } else {
+        toastIcon.className = "fa-solid fa-circle-check text-green-400 text-sm";
+      }
+
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Copy to clipboard fallback using execCommand
+    function copyTextToClipboard(text, successMsg) {
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = text;
+      tempTextArea.style.position = 'fixed';
+      tempTextArea.style.top = '-9999px';
+      tempTextArea.style.left = '-9999px';
+      document.body.appendChild(tempTextArea);
+      tempTextArea.focus();
+      tempTextArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast(successMsg);
+        } else {
+          showToast('복사에 실패했습니다.', true);
+        }
+      } catch (err) {
+        showToast('클립보드 접근 권한이 없습니다.', true);
+      }
+      document.body.removeChild(tempTextArea);
+    }
+
+    // Torrent actions
+    function copyMagnetLink() {
+      copyTextToClipboard(MAGNET_LINK, '마그넷(Magnet) 링크가 클립보드에 복사되었습니다.');
+    }
+
+    function copyHash() {
+      copyTextToClipboard(INFO_HASH, '인포 해시(Info Hash)가 복사되었습니다.');
+    }
+
+    function downloadTorrentMock() {
+      showToast('토렌트 시드 파일 (.torrent) 다운로드를 시작합니다.');
+    }
+
+    // Recommendation logic
+    function handleRecommend() {
+      if (hasRecommended) {
+        showToast('이미 이 게시물에 추천하셨습니다.', true);
+        return;
+      }
+      hasRecommended = true;
+      recommendCount++;
+      document.getElementById('recommendCount').innerText = recommendCount;
+      document.getElementById('btnRecommendNum').innerText = recommendCount;
+      showToast('이 게시물을 추천하였습니다!');
+    }
+
+    function handleScrap() {
+      showToast('내 보관함에 게시글이 스크랩되었습니다.');
+    }
+
+    function handleShare() {
+      copyTextToClipboard(window.location.href, '현재 게시글 URL이 복사되었습니다.');
+    }
+
+    // MediaInfo toggle
+    function toggleMediaInfo() {
+      const block = document.getElementById('mediaInfoBlock');
+      const toggleText = document.getElementById('mediaInfoToggleText');
+      if (block.classList.contains('hidden')) {
+        block.classList.remove('hidden');
+        toggleText.innerText = '[접기]';
+      } else {
+        block.classList.add('hidden');
+        toggleText.innerText = '[펼치기]';
+      }
+    }
+
+    // Comment submission
+    const commentInput = document.getElementById('commentInput');
+    const charCount = document.getElementById('charCount');
+
+    commentInput.addEventListener('input', function() {
+      charCount.innerText = this.value.length;
+    });
+
+    function submitComment() {
+      const text = commentInput.value.trim();
+      if (!text) {
+        showToast('댓글 내용을 입력해주세요.', true);
+        return;
+      }
+
+      const container = document.getElementById('commentsContainer');
+      const newComment = document.createElement('div');
+      newComment.className = "bg-white p-3 rounded border border-blue-200 shadow-sm flex flex-col space-y-1.5 animate-fadeIn";
+      
+      const now = new Date();
+      const timeStr = now.getFullYear() + '-' + 
+                      String(now.getMonth() + 1).padStart(2, '0') + '-' + 
+                      String(now.getDate()).padStart(2, '0') + ' ' + 
+                      String(now.getHours()).padStart(2, '0') + ':' + 
+                      String(now.getMinutes()).padStart(2, '0');
+
+      newComment.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="font-bold text-blue-700">방문자 (LV.1) <span class="text-[10px] bg-blue-100 text-blue-800 px-1 py-0.2 rounded ml-1">작성자</span></span>
+          <span class="text-gray-400 text-[11px]">${timeStr}</span>
+        </div>
+        <p class="text-gray-800">${escapeHtml(text)}</p>
+      `;
+
+      container.prepend(newComment);
+      commentInput.value = '';
+      charCount.innerText = '0';
+
+      const totalCountSpan = document.getElementById('commentTotalCount');
+      const headerCountSpan = document.getElementById('commentHeaderCount');
+      const curCount = parseInt(totalCountSpan.innerText, 10) || 3;
+      totalCountSpan.innerText = curCount + 1;
+      headerCountSpan.innerText = curCount + 1;
+
+      showToast('댓글이 성공적으로 등록되었습니다.');
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('topSearchInput').value.trim();
+      if (q) {
+        showToast(`'${q}' 검색 결과를 조회합니다.`);
+      }
+    }
+  </script>
+</body>
+</html>
