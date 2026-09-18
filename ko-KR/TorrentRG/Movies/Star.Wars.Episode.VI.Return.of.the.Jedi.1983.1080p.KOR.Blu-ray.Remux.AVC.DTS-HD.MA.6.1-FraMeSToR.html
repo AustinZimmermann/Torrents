@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스타워즈 에피소드 6: 제다이의 귀환 - Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR > 토렌트알지 - TorrentRG</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts: Noto Sans KR & Pretendard fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      background-color: #f1f3f6;
+      color: #333333;
+    }
+    .code-font {
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+    }
+    /* Authentic Korean BBS styling accents */
+    .trg-header-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+    }
+    .trg-tag-remux {
+      background-color: #ef4444;
+      color: #ffffff;
+    }
+    .torrent-table th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      border-color: #e2e8f0;
+    }
+    .torrent-table td {
+      border-color: #f1f5f9;
+    }
+    /* Toast animation */
+    #toast-msg {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* Custom scrollbar for media info */
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #475569;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Top Global Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-1.5 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+          TorrentRG 공식도메인: torrentrg142.com
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-400 hidden sm:inline"><i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1"></i> 해외 VPN 접속 권장</span>
+      </div>
+      <div class="flex items-center space-x-3 text-slate-400">
+        <a href="#bookmark" onclick="showToast('Ctrl + D 를 눌러 즐겨찾기에 추가하세요.')" class="hover:text-white transition"><i class="fa-regular fa-star mr-1"></i>즐겨찾기</a>
+        <a href="#rss" onclick="showToast('RSS 피드가 복사되었습니다.')" class="hover:text-white transition"><i class="fa-solid fa-rss mr-1 text-amber-500"></i>RSS</a>
+        <span class="text-slate-600">|</span>
+        <a href="#login" onclick="toggleLoginModal()" class="hover:text-white transition font-medium text-slate-200">로그인</a>
+        <a href="#register" onclick="showToast('현재 신규 회원가입이 오픈되어 있습니다.')" class="hover:text-white transition text-sky-400">회원가입</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Site Header -->
+  <header class="trg-header-gradient text-white shadow-md border-b-2 border-blue-600">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <!-- Logo & Slogan -->
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-2.5 group">
+          <div class="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center font-black text-2xl shadow-inner group-hover:scale-105 transition-transform text-white">
+            RG
+          </div>
+          <div>
+            <div class="text-2xl font-black tracking-tight leading-none text-white flex items-center">
+              토렌트<span class="text-sky-400">알지</span>
+              <span class="text-[10px] ml-1.5 px-1.5 py-0.5 rounded bg-blue-700/80 text-blue-200 font-bold tracking-normal uppercase border border-blue-500/40">Official</span>
+            </div>
+            <p class="text-[11px] text-blue-200 tracking-wide mt-0.5 font-medium">대한민국 No.1 토렌트 포털 커뮤니티</p>
+          </div>
+        </a>
+        <button id="mobile-menu-btn" onclick="toggleMobileNav()" class="md:hidden text-white hover:text-sky-300 p-2 text-xl" aria-label="메뉴 토글">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="w-full md:w-80">
+        <form onsubmit="handleSearch(event)" class="relative flex items-center">
+          <input 
+            type="text" 
+            id="search-input"
+            value="스타워즈 에피소드 6" 
+            placeholder="영화, 드라마, 애니 통합검색" 
+            class="w-full pl-3.5 pr-10 py-1.5 text-sm bg-slate-800/90 border border-blue-400/40 rounded-md text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent transition"
+          />
+          <button type="submit" class="absolute right-1 text-slate-300 hover:text-white px-2 py-1" title="검색">
+            <i class="fa-solid fa-magnifying-glass text-sky-400"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-900/95 border-t border-blue-800/80 text-sm font-medium">
+      <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center">
+        <a href="#" class="px-4 py-2.5 text-white bg-blue-700 font-bold border-b-2 border-sky-400 flex items-center">
+          <i class="fa-solid fa-film mr-1.5 text-sky-300"></i>영화
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-tv mr-1.5 text-blue-300"></i>한국드라마
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-globe mr-1.5 text-blue-300"></i>해외드라마
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-masks-theater mr-1.5 text-blue-300"></i>예능/오락
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-blue-300"></i>애니메이션
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-music mr-1.5 text-blue-300"></i>음악
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center">
+          <i class="fa-solid fa-laptop-code mr-1.5 text-blue-300"></i>유틸/자료
+        </a>
+        <a href="#" class="px-4 py-2.5 text-blue-100 hover:text-white hover:bg-blue-800 transition flex items-center ml-auto">
+          <i class="fa-solid fa-comments mr-1.5 text-amber-300"></i>자유게시판
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Notice Bar -->
+  <section class="bg-amber-50 border-b border-amber-200 py-1.5 text-xs text-amber-900">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2 truncate">
+        <span class="px-1.5 py-0.5 rounded bg-amber-500 text-white font-bold text-[10px]">공지</span>
+        <span class="font-medium truncate">[필독] 시드 유지를 위해 다운로드 완료 후 최소 24시간 시딩 부탁드립니다. (해외 고화질 Remux 자료 공유 원칙)</span>
+      </div>
+      <span class="text-amber-700 hidden md:inline shrink-0 font-medium">관리자 2024-04-12</span>
+    </div>
+  </section>
+
+  <!-- Main Body Content -->
+  <main class="max-w-6xl mx-auto px-4 py-5 flex-1 w-full">
+
+    <!-- Breadcrumbs -->
+    <div class="flex items-center text-xs text-gray-500 mb-3 space-x-1.5">
+      <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-house"></i> 홈</a>
+      <i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
+      <a href="#" class="hover:text-blue-600 font-semibold">영화게시판</a>
+      <i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
+      <span class="text-blue-600 font-semibold">외국영화 (블루레이/고화질)</span>
+      <span class="text-gray-400">| 분류: SF / 액션 / 어드벤처</span>
+    </div>
+
+    <!-- Post Article Card -->
+    <article class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden mb-6">
+
+      <!-- Post Header / Title Section -->
+      <div class="p-5 border-b border-gray-200 bg-slate-50/60">
+        <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
+          <span class="px-2 py-0.5 text-xs font-bold rounded bg-blue-600 text-white">외화</span>
+          <span class="px-2 py-0.5 text-xs font-bold rounded bg-rose-600 text-white tracking-wide">REMUX</span>
+          <span class="px-2 py-0.5 text-xs font-bold rounded bg-indigo-700 text-white">1080p</span>
+          <span class="px-2 py-0.5 text-xs font-bold rounded bg-teal-600 text-white">다국어자막</span>
+          <span class="px-2 py-0.5 text-xs font-bold rounded bg-amber-600 text-white">DTS-HD MA 6.1</span>
+        </div>
+
+        <!-- Release Title -->
+        <h1 class="text-lg md:text-xl font-extrabold text-gray-900 leading-snug break-all font-sans">
+          스타워즈 에피소드 6: 제다이의 귀환 - Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR
+        </h1>
+
+        <!-- Post Metadata stats (Gnuboard BBS style) -->
+        <div class="mt-3 pt-3 border-t border-gray-200/80 flex flex-wrap items-center justify-between text-xs text-gray-500 gap-y-2">
+          <div class="flex items-center space-x-3">
+            <span class="font-medium text-gray-700 flex items-center">
+              <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold mr-1 text-[11px]">R</span>
+              릴그룹_마스터
+              <span class="ml-1 px-1 rounded bg-yellow-100 text-yellow-800 text-[10px] font-bold border border-yellow-300">LV.48 VIP</span>
+            </span>
+            <span><i class="fa-regular fa-clock mr-1 text-gray-400"></i>2024.04.18 19:42:05</span>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <span><i class="fa-regular fa-eye mr-1 text-blue-500"></i>조회 <strong class="text-gray-800 font-semibold" id="view-count">14,285</strong></span>
+            <span><i class="fa-regular fa-thumbs-up mr-1 text-red-500"></i>추천 <strong class="text-red-600 font-semibold" id="like-stat">248</strong></span>
+            <span><i class="fa-regular fa-comment-dots mr-1 text-emerald-500"></i>댓글 <strong class="text-emerald-700 font-semibold" id="comment-stat">19</strong></span>
+            <span><i class="fa-solid fa-download mr-1 text-purple-500"></i>다운로드 <strong class="text-purple-700 font-semibold">1,894</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download / Torrent File & Magnet Attachment Box -->
+      <div class="bg-blue-50/50 border-b border-blue-100 p-4">
+        <div class="rounded-lg border border-blue-200 bg-white p-4 shadow-sm">
+          <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 rounded bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-file-arrow-down"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900 break-all">
+                  Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.torrent
+                </div>
+                <div class="text-xs text-gray-500 flex items-center space-x-3 mt-0.5">
+                  <span><i class="fa-solid fa-hard-drive mr-1 text-slate-400"></i>토렌트 메타: 184.2 KB</span>
+                  <span><i class="fa-solid fa-database mr-1 text-slate-400"></i>실제 영화용량: <strong>32.4 GB</strong></span>
+                  <span class="text-emerald-600 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i>시드 128 / 피어 24 (원활)</span>
+                </div>
+              </div>
+            </div>
+            <!-- Download Button -->
+            <div class="hidden sm:block">
+              <button 
+                onclick="simulateDownloadTorrent()"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-bold rounded shadow transition flex items-center space-x-1.5"
+              >
+                <i class="fa-solid fa-download"></i>
+                <span>토렌트 파일받기</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Magnet Hash Bar and Quick Actions -->
+          <div class="pt-3 mt-1 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
+            <div class="flex-1 bg-slate-100 rounded px-3 py-2 border border-slate-200 flex items-center space-x-2 text-xs">
+              <i class="fa-solid fa-magnet text-red-500 text-sm"></i>
+              <span class="text-gray-500 font-medium select-none shrink-0">마그넷:</span>
+              <input 
+                id="magnet-hash" 
+                readonly 
+                value="magnet:?xt=urn:btih:b6d5e1f0a8c437199c0498e72183e91124a91983&dn=Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce" 
+                class="bg-transparent border-none w-full text-slate-700 code-font text-xs focus:outline-none truncate selection:bg-blue-200"
+              />
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <button 
+                onclick="copyMagnet()"
+                class="flex-1 sm:flex-none px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-bold transition flex items-center justify-center space-x-1 shadow-sm"
+              >
+                <i class="fa-solid fa-copy"></i>
+                <span>마그넷 복사</span>
+              </button>
+              <button 
+                onclick="openDirectMagnet()"
+                class="flex-1 sm:flex-none px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded text-xs font-bold transition flex items-center justify-center space-x-1 shadow-sm"
+              >
+                <i class="fa-solid fa-bolt"></i>
+                <span>토렌트 바로실행</span>
+              </button>
+              <button 
+                onclick="simulateDownloadTorrent()"
+                class="sm:hidden px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs font-bold"
+              >
+                <i class="fa-solid fa-download"></i>
+                <span>다운로드</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Body / Metadata Specifications Grid -->
+      <div class="p-6">
+
+        <!-- Movie Key Spec Card (Table View) -->
+        <div class="mb-6 border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div class="bg-slate-800 text-white px-4 py-2 text-xs font-bold flex items-center justify-between">
+            <span class="flex items-center"><i class="fa-solid fa-circle-info text-sky-400 mr-1.5"></i> 미디어 상세 릴리스 스펙 (FraMeSToR REMUX)</span>
+            <span class="text-slate-300 font-mono">1080p AVC Remux</span>
+          </div>
+
+          <table class="w-full text-xs torrent-table border-collapse">
+            <tbody>
+              <tr class="border-b">
+                <th class="w-28 sm:w-36 px-3 py-2.5 text-left bg-slate-50 border-r">영화 원제 / 제목</th>
+                <td class="px-3 py-2.5 font-medium text-gray-800">
+                  Star Wars: Episode VI – Return of the Jedi (1983) / 스타워즈 에피소드 6: 제다이의 귀환
+                </td>
+                <th class="w-24 sm:w-32 px-3 py-2.5 text-left bg-slate-50 border-r">개봉 연도 / 등급</th>
+                <td class="px-3 py-2.5 text-gray-700">1983년작 (스페셜 에디션 블루레이 마스터) / 12세 관람가</td>
+              </tr>
+              <tr class="border-b">
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">파일 용량</th>
+                <td class="px-3 py-2.5 font-semibold text-rose-600">32.4 GB (34,812,654,198 bytes)</td>
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">컨테이너 / 포맷</th>
+                <td class="px-3 py-2.5 text-gray-800 font-mono">Matroska (.MKV)</td>
+              </tr>
+              <tr class="border-b">
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">비디오 코덱 / 비트레이트</th>
+                <td class="px-3 py-2.5 text-gray-800">
+                  <span class="px-1.5 py-0.5 rounded bg-blue-100 text-blue-800 font-bold mr-1">AVC / H.264 High@L4.1</span>
+                  1920x1080 (2.35:1 와이드스크린) @ ~28.5 Mbps
+                </td>
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">재생 시간</th>
+                <td class="px-3 py-2.5 text-gray-800 font-mono">02:14:48 (134분)</td>
+              </tr>
+              <tr class="border-b">
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">오디오 트랙 (Audio)</th>
+                <td colspan="3" class="px-3 py-2.5">
+                  <div class="space-y-1 text-gray-800">
+                    <div class="flex items-center">
+                      <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold mr-2 text-[10px]">Track 1</span>
+                      <strong class="text-blue-700 mr-2">English:</strong> DTS-HD Master Audio 6.1 (48 kHz / 24-bit / 4,380 kbps) [메인 원어]
+                    </div>
+                    <div class="flex items-center">
+                      <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold mr-2 text-[10px]">Track 2</span>
+                      <strong class="text-gray-700 mr-2">Thai (태국어):</strong> Dolby Digital 5.1 (AC-3 @ 48 kHz / 640 kbps)
+                    </div>
+                    <div class="flex items-center text-gray-500 text-[11px]">
+                      <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold mr-2 text-[10px]">Track 3</span>
+                      English Audio Commentary by George Lucas, Carrie Fisher, Ben Burtt & Dennis Muren (Dolby Digital 2.0 @ 192 kbps)
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="px-3 py-2.5 text-left bg-slate-50 border-r">자막 트랙 (Subtitles)</th>
+                <td colspan="3" class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5 items-center text-[11px]">
+                    <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold border border-blue-300">
+                      <i class="fa-solid fa-font mr-1"></i>한국어 (Korean / PGS 블루레이 정식 한글자막)
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-200">
+                      한국어 (Korean / UTF-8 SRT 고화질 싱크수정본 포함)
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-800 font-semibold border border-slate-300">
+                      English (SDH)
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-800 font-semibold border border-slate-300">
+                      Thai (태국어 PGS)
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-800 font-semibold border border-slate-300">
+                      Cantonese (광둥어 / 번체)
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-800 font-semibold border border-slate-300">
+                      Mandarin (만다린 / 간체/번체)
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Movie Overview and Poster Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 items-start">
+          <div class="md:col-span-1">
+            <div class="rounded-lg overflow-hidden border border-gray-300 shadow-md group relative">
+              <img 
+                src="https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&w=600&q=80" 
+                alt="Star Wars Episode VI Return of the Jedi Poster Mock" 
+                class="w-full h-auto object-cover group-hover:scale-105 transition duration-300"
+                onerror="this.src='https://placehold.co/400x600/1e293b/ffffff?text=Star+Wars+EP6+Poster'"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-black/75 text-white text-[11px] p-2 text-center backdrop-blur-xs">
+                루카스필름 / 20세기 폭스 (1983)
+              </div>
+            </div>
+            <div class="mt-3 text-center">
+              <span class="inline-block bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded border border-slate-300">
+                IMDb: <strong class="text-amber-600 font-bold">8.3</strong> / 10 (1,150,000+ 평가)
+              </span>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 text-sm text-gray-700 space-y-4 leading-relaxed">
+            <div class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-600 text-gray-800">
+              <h2 class="text-base font-bold text-slate-900 mb-1">
+                "나는 제다이다. 내 아버지께서 그러셨던 것처럼..."
+              </h2>
+              <p class="text-xs text-gray-600">
+                오리지널 3부작(클래식 스타워즈)의 장대한 피날레! 루크 스카이워커와 다스 베이더의 운명적 결전.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1.5 flex items-center text-sm">
+                <i class="fa-solid fa-film text-blue-600 mr-2"></i>작품 시놉시스 (줄거리)
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed text-justify">
+                루크 스카이워커는 타투인 행성에서 악당 자바 더 헛의 성에 잠입하여 탄소냉동되어 있던 한 솔로를 구출하는 데 성공한다. 
+                한편 은하 제국은 더욱 강력해진 제2 데스 스타를 엔도 위성 궤도에 건설하여 반란군을 일망타진하려 한다. 
+                루크는 황제 팰퍼틴과 다스 베이더가 기다리는 죽음의 별로 향하고, 엔도 지상에서는 레아 공주, 한 솔로, 그리고 토착민 이워크 족이 
+                보호막 생성기를 파괴하기 위한 최후의 지상전에 돌입하는데…
+              </p>
+            </div>
+
+            <!-- Release Group Description -->
+            <div class="bg-amber-50/70 border border-amber-200 rounded p-3 text-xs text-amber-900 space-y-1.5">
+              <div class="font-bold flex items-center text-amber-800">
+                <i class="fa-solid fa-bullhorn mr-1.5"></i>릴리즈 그룹 [FraMeSToR] 배포 안내
+              </div>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                <li>북미 정식 블루레이 원본 디스크의 무손실 비디오 스트림을 100% 온전히 유지한 정규 REMUX 릴입니다.</li>
+                <li>오리지널 차세대 <strong>DTS-HD MA 6.1 무손실 사운드</strong>와 아시아판에 수록된 정식 <strong>태국어(Thai) DD 5.1</strong> 트랙 탑재.</li>
+                <li>한국어(Korean) 블루레이 오리지널 PGS 자막 및 폰트 크기 가독성을 조정한 고품질 SRT 자막이 muxing 되어 있습니다.</li>
+                <li>기타 다국어 자막: 광둥어(Cantonese), 만다린(Mandarin), 태국어(Thai), 영어(English SDH) 완벽 대응.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screenshots Showcase Section -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-3 border-b border-gray-200 pb-2">
+            <h3 class="text-sm font-bold text-gray-900 flex items-center">
+              <i class="fa-regular fa-images mr-2 text-blue-600"></i>1080p 무손실 스크린샷 캡처본 (Screen Captures)
+            </h3>
+            <span class="text-xs text-gray-500">클릭 시 확대 보기</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Cap 1 -->
+            <div class="group relative rounded-md overflow-hidden border border-gray-300 bg-black cursor-pointer" onclick="showLightbox('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80', '데스스타 우주 함대전 스크린캡처')">
+              <img 
+                src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=80" 
+                alt="Star Wars Space Battle" 
+                class="w-full h-48 object-cover group-hover:opacity-90 group-hover:scale-102 transition duration-200"
+                onerror="this.src='https://placehold.co/600x350/0f172a/ffffff?text=Screen+Cap+01+-+Endor+Battle'"
+              />
+              <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[11px] px-2 py-0.5 rounded font-mono">
+                Frame 00:48:19 [1920x1080 AVC]
+              </span>
+            </div>
+
+            <!-- Cap 2 -->
+            <div class="group relative rounded-md overflow-hidden border border-gray-300 bg-black cursor-pointer" onclick="showLightbox('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80', '라이트세이버 결투 캡처본')">
+              <img 
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80" 
+                alt="Lightsaber Clash" 
+                class="w-full h-48 object-cover group-hover:opacity-90 group-hover:scale-102 transition duration-200"
+                onerror="this.src='https://placehold.co/600x350/0f172a/ffffff?text=Screen+Cap+02+-+Throne+Room+Duel'"
+              />
+              <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[11px] px-2 py-0.5 rounded font-mono">
+                Frame 01:52:40 [1920x1080 AVC]
+              </span>
+            </div>
+
+            <!-- Cap 3 -->
+            <div class="group relative rounded-md overflow-hidden border border-gray-300 bg-black cursor-pointer" onclick="showLightbox('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80', '밀레니엄 팔콘 호 워프 캡처본')">
+              <img 
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80" 
+                alt="Millennium Falcon Hyperspace" 
+                class="w-full h-48 object-cover group-hover:opacity-90 group-hover:scale-102 transition duration-200"
+                onerror="this.src='https://placehold.co/600x350/0f172a/ffffff?text=Screen+Cap+03+-+Death+Star+Reactor'"
+              />
+              <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[11px] px-2 py-0.5 rounded font-mono">
+                Frame 02:04:11 [1920x1080 AVC]
+              </span>
+            </div>
+
+            <!-- Cap 4 -->
+            <div class="group relative rounded-md overflow-hidden border border-gray-300 bg-black cursor-pointer" onclick="showLightbox('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80', '엔도 위성 삼림 지상전 캡처본')">
+              <img 
+                src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=700&q=80" 
+                alt="Forest Moon of Endor" 
+                class="w-full h-48 object-cover group-hover:opacity-90 group-hover:scale-102 transition duration-200"
+                onerror="this.src='https://placehold.co/600x350/0f172a/ffffff?text=Screen+Cap+04+-+Endor+Celebration'"
+              />
+              <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[11px] px-2 py-0.5 rounded font-mono">
+                Frame 02:11:34 [1920x1080 AVC]
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MediaInfo Spoiler Block -->
+        <div class="mb-8 border border-slate-300 rounded-lg overflow-hidden bg-slate-900 text-slate-200">
+          <button 
+            onclick="toggleMediaInfo()" 
+            class="w-full px-4 py-3 bg-slate-800 hover:bg-slate-750 flex items-center justify-between text-left text-xs font-semibold tracking-wide border-b border-slate-700 transition"
+          >
+            <span class="flex items-center text-sky-400">
+              <i class="fa-solid fa-terminal mr-2"></i>[미디어인포 상세 원문 펼치기] MediaInfo Complete Technical Log
+            </span>
+            <span id="mediainfo-icon" class="text-slate-400">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+
+          <div id="mediainfo-content" class="hidden p-4 code-font text-[11px] leading-relaxed text-emerald-400 overflow-x-auto custom-scroll bg-slate-950">
+<pre class="whitespace-pre">General
+Unique ID                                : 217498162819034871920491823901824701293 (0xA3B94F...)
+Complete name                            : Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.mkv
+Format                                   : Matroska
+Format version                           : Version 4
+File size                                : 32.4 GiB
+Duration                                 : 2 h 14 min
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 34.5 Mb/s
+Movie name                               : Star Wars: Episode VI - Return of the Jedi (1983) Remux
+Encoded date                             : 2024-04-18 10:14:02 UTC
+Writing application                      : mkvmerge v82.0 ('Altered Carbon') 64-bit
+Writing library                          : libmatroska v1.7.1
+
+Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4.1
+Format settings                          : CABAC / 4 Ref Frames
+Codec ID                                 : V_MPEG4/ISO/AVC
+Duration                                 : 2 h 14 min
+Bit rate mode                            : Variable
+Bit rate                                 : 28.5 Mb/s
+Maximum bit rate                         : 38.0 Mb/s
+Width                                    : 1 920 pixels
+Height                                   : 1 080 pixels
+Display aspect ratio                     : 16:9 (Letterboxed 2.39:1 active picture)
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+
+Audio #1 (Default)
+ID                                       : 2
+Format                                   : DTS XLL
+Format/Info                              : Digital Theater Systems
+Commercial name                          : DTS-HD Master Audio
+Codec ID                                 : A_DTS
+Duration                                 : 2 h 14 min
+Bit rate mode                            : Variable
+Bit rate                                 : 4 380 kb/s
+Channel(s)                               : 7 channels / 6.1 Discrete
+Channel layout                           : C L R Ls Rs Cs LFE
+Sampling rate                            : 48.0 kHz
+Frame rate                               : 93.750 FPS (512 SPF)
+Bit depth                                : 24 bits
+Title                                    : English DTS-HD MA 6.1 (FraMeSToR)
+Language                                 : English
+
+Audio #2
+ID                                       : 3
+Format                                   : AC-3
+Format/Info                              : Audio Coding 3
+Commercial name                          : Dolby Digital
+Codec ID                                 : A_AC3
+Duration                                 : 2 h 14 min
+Bit rate mode                            : Constant
+Bit rate                                 : 640 kb/s
+Channel(s)                               : 6 channels (5.1)
+Channel layout                           : L R C LFE Ls Rs
+Sampling rate                            : 48.0 kHz
+Title                                    : Thai Dolby Digital 5.1 (Official Blu-ray)
+Language                                 : Thai
+
+Text #1 (Default)
+ID                                       : 4
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : Korean (한국어 정식 블루레이 PGS)
+Language                                 : Korean
+
+Text #2
+ID                                       : 5
+Format                                   : UTF-8
+Codec ID                                 : S_TEXT/UTF8
+Title                                    : Korean (싱크수정 SRT)
+Language                                 : Korean
+
+Text #3
+ID                                       : 6
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : English (SDH)
+Language                                 : English
+
+Text #4
+ID                                       : 7
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : Thai (태국어)
+Language                                 : Thai
+
+Text #5
+ID                                       : 8
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : Chinese Cantonese (광둥어 번체)
+Language                                 : Chinese (Cantonese)
+
+Text #6
+ID                                       : 9
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : Chinese Mandarin (만다린 간체/번체)
+Language                                 : Chinese (Mandarin)
+</pre>
+          </div>
+        </div>
+
+        <!-- Post Action Interaction Center (Recommend / Scrap / Share) -->
+        <div class="py-6 border-y border-gray-200 flex flex-col items-center justify-center bg-slate-50/50 rounded-lg">
+          <div class="text-xs text-gray-500 mb-3">게시물이 마음에 드셨다면 추천을 눌러 업로더를 응원해주세요!</div>
+          <div class="flex items-center space-x-3">
+            <button 
+              id="recommend-btn"
+              onclick="handleRecommend()" 
+              class="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-bold text-sm rounded-full shadow-md hover:shadow-lg transition flex items-center space-x-2"
+            >
+              <i class="fa-solid fa-heart"></i>
+              <span>추천하기</span>
+              <span id="recommend-count-badge" class="bg-rose-800 text-rose-100 text-xs px-2 py-0.5 rounded-full ml-1 font-bold">248</span>
+            </button>
+
+            <button 
+              id="scrap-btn"
+              onclick="handleScrap()" 
+              class="px-4 py-2.5 bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold text-sm rounded-full shadow-sm transition flex items-center space-x-1.5"
+            >
+              <i class="fa-regular fa-bookmark text-amber-500"></i>
+              <span>스크랩</span>
+            </button>
+
+            <button 
+              onclick="handleShare()" 
+              class="px-4 py-2.5 bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold text-sm rounded-full shadow-sm transition flex items-center space-x-1.5"
+            >
+              <i class="fa-solid fa-share-nodes text-blue-500"></i>
+              <span>주소복사</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comment System Section -->
+      <section class="bg-slate-50 border-t border-gray-200 p-5 md:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm font-bold text-gray-900 flex items-center">
+            <i class="fa-solid fa-comments text-emerald-600 mr-2"></i>댓글 
+            <span class="text-emerald-700 ml-1" id="comment-total-count">19</span>개
+          </h3>
+          <span class="text-xs text-gray-500">상대방을 존중하는 클린한 댓글 문화를 만듭시다.</span>
+        </div>
+
+        <!-- Comment Input Box -->
+        <div class="bg-white rounded-lg border border-gray-300 p-3.5 shadow-sm mb-6">
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2 border-b border-gray-100 pb-1.5">
+            <span class="font-semibold text-gray-700">작성자: <span class="text-blue-600">포스마스터 (LV.12)</span></span>
+            <label class="flex items-center cursor-pointer select-none">
+              <input type="checkbox" id="secret-comment" class="mr-1 rounded text-blue-600 focus:ring-0"> 비밀댓글
+            </label>
+          </div>
+          <textarea 
+            id="comment-text" 
+            rows="3" 
+            placeholder="업로더님을 향한 감사 인사 및 감상평을 남겨주세요." 
+            class="w-full text-xs text-gray-800 focus:outline-none resize-y placeholder-gray-400"
+          ></textarea>
+          <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-100">
+            <span class="text-[11px] text-gray-400">포인트 5P가 적립됩니다.</span>
+            <button 
+              onclick="submitComment()" 
+              class="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded shadow-sm transition"
+            >
+              댓글등록
+            </button>
+          </div>
+        </div>
+
+        <!-- Existing Mock Comments List -->
+        <div id="comments-container" class="space-y-3">
+
+          <!-- Comment 1 -->
+          <div class="bg-white p-3.5 rounded-lg border border-gray-200 text-xs shadow-2xs">
+            <div class="flex items-center justify-between text-gray-500 mb-1">
+              <div class="flex items-center space-x-1.5 font-medium text-gray-800">
+                <span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-700 text-[10px] font-bold">LV.32</span>
+                <span class="font-bold text-slate-900">제다이나이트</span>
+                <span class="text-gray-400 text-[11px]">2024.04.18 20:11</span>
+              </div>
+              <button onclick="voteComment(this)" class="text-gray-400 hover:text-red-500 transition text-[11px]">
+                <i class="fa-regular fa-thumbs-up mr-0.5"></i> 14
+              </button>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+              와 FraMeSToR 릴 진짜 기다렸습니다! 에피소드 6 엔도 전투 화질 정말 끝장나네요. DTS-HD 6.1 원음 채널 분리도 최상입니다. 시드 팍팍 유지할게요 감사합니다!
+            </div>
+          </div>
+
+          <!-- Comment 2 -->
+          <div class="bg-white p-3.5 rounded-lg border border-gray-200 text-xs shadow-2xs">
+            <div class="flex items-center justify-between text-gray-500 mb-1">
+              <div class="flex items-center space-x-1.5 font-medium text-gray-800">
+                <span class="px-1.5 py-0.2 rounded bg-amber-200 text-amber-800 text-[10px] font-bold">LV.55</span>
+                <span class="font-bold text-slate-900">밀레니엄팔콘</span>
+                <span class="text-gray-400 text-[11px]">2024.04.18 20:45</span>
+              </div>
+              <button onclick="voteComment(this)" class="text-gray-400 hover:text-red-500 transition text-[11px]">
+                <i class="fa-regular fa-thumbs-up mr-0.5"></i> 8
+              </button>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+              태국어 오디오랑 다국어 자막(광둥어, 태국어 등)까지 완벽하게 들어있네요. 소장용 리먹스로 최고입니다. 기가인터넷 시딩 들어갑니다~
+            </div>
+          </div>
+
+          <!-- Comment 3 -->
+          <div class="bg-white p-3.5 rounded-lg border border-gray-200 text-xs shadow-2xs">
+            <div class="flex items-center justify-between text-gray-500 mb-1">
+              <div class="flex items-center space-x-1.5 font-medium text-gray-800">
+                <span class="px-1.5 py-0.2 rounded bg-blue-200 text-blue-800 text-[10px] font-bold">LV.19</span>
+                <span class="font-bold text-slate-900">시네마천국</span>
+                <span class="text-gray-400 text-[11px]">2024.04.18 21:12</span>
+              </div>
+              <button onclick="voteComment(this)" class="text-gray-400 hover:text-red-500 transition text-[11px]">
+                <i class="fa-regular fa-thumbs-up mr-0.5"></i> 3
+              </button>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+              자막 싱크 칼같이 맞습니다. 팟플레이어로 감상 중인데 루크와 다스베이더 마지막 알현실 씬에서 사운드 웅장함에 전율 돋네요. 업로드 감사드립니다!
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Related Torrents / Franchise Box -->
+    <section class="bg-white rounded-lg border border-gray-200 shadow-sm p-5 mb-8">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-3 mb-3">
+        <h3 class="text-sm font-bold text-gray-900 flex items-center">
+          <i class="fa-solid fa-list-ul text-blue-600 mr-2"></i>스타워즈 오리지널 & 관련 토렌트 목록
+        </h3>
+        <span class="text-xs text-gray-400">외국영화 인기순</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-50 text-gray-500 border-b border-gray-200 font-semibold">
+              <th class="py-2.5 px-3">분류</th>
+              <th class="py-2.5 px-3">제목</th>
+              <th class="py-2.5 px-3 text-center">용량</th>
+              <th class="py-2.5 px-3 text-center">등록일</th>
+              <th class="py-2.5 px-3 text-center">시드</th>
+              <th class="py-2.5 px-3 text-center">추천</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 text-gray-700">
+            <tr class="hover:bg-blue-50/50 transition">
+              <td class="py-2 px-3 text-blue-600 font-medium">외화</td>
+              <td class="py-2 px-3">
+                <a href="Star.Wars.Episode.IV.A.New.Hope.1977.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.html" class="hover:underline text-gray-900 font-medium truncate block max-w-md">
+                  Star.Wars.Episode.IV.A.New.Hope.1977.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR
+                </a>
+              </td>
+              <td class="py-2 px-3 text-center font-mono">31.8 GB</td>
+              <td class="py-2 px-3 text-center text-gray-400">2024.04.14</td>
+              <td class="py-2 px-3 text-center text-emerald-600 font-semibold">94</td>
+              <td class="py-2 px-3 text-center text-red-500 font-semibold">189</td>
+            </tr>
+
+            <tr class="hover:bg-blue-50/50 transition">
+              <td class="py-2 px-3 text-blue-600 font-medium">외화</td>
+              <td class="py-2 px-3">
+                <a href="Star.Wars.Episode.V.The.Empire.Strikes.Back.1980.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.html" class="hover:underline text-gray-900 font-medium truncate block max-w-md">
+                  Star.Wars.Episode.V.The.Empire.Strikes.Back.1980.1080p.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR
+                </a>
+              </td>
+              <td class="py-2 px-3 text-center font-mono">33.1 GB</td>
+              <td class="py-2 px-3 text-center text-gray-400">2024.04.16</td>
+              <td class="py-2 px-3 text-center text-emerald-600 font-semibold">112</td>
+              <td class="py-2 px-3 text-center text-red-500 font-semibold">215</td>
+            </tr>
+
+            <tr class="bg-blue-50/80 font-bold border-l-4 border-blue-600">
+              <td class="py-2 px-3 text-blue-700">현재글</td>
+              <td class="py-2 px-3">
+                <span class="text-blue-900 truncate block max-w-md">
+                  ★ Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR
+                </span>
+              </td>
+              <td class="py-2 px-3 text-center font-mono text-rose-600">32.4 GB</td>
+              <td class="py-2 px-3 text-center text-gray-500">2024.04.18</td>
+              <td class="py-2 px-3 text-center text-emerald-600">128</td>
+              <td class="py-2 px-3 text-center text-red-600">248</td>
+            </tr>
+
+            <tr class="hover:bg-blue-50/50 transition">
+              <td class="py-2 px-3 text-blue-600 font-medium">외화</td>
+              <td class="py-2 px-3">
+                <a href="#" class="hover:underline text-gray-900 font-medium truncate block max-w-md">
+                  Rogue.One.A.Star.Wars.Story.2016.1080p.BluRay.Remux.AVC.DTS-HD.MA.7.1-FGT
+                </a>
+              </td>
+              <td class="py-2 px-3 text-center font-mono">34.9 GB</td>
+              <td class="py-2 px-3 text-center text-gray-400">2024.03.28</td>
+              <td class="py-2 px-3 text-center text-emerald-600 font-semibold">76</td>
+              <td class="py-2 px-3 text-center text-red-500 font-semibold">142</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-xs mt-auto border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+        <div>
+          <div class="flex items-center space-x-2 text-white font-bold text-base mb-2">
+            <div class="w-6 h-6 rounded bg-blue-600 flex items-center justify-center text-xs">RG</div>
+            <span>토렌트알지 (TorrentRG)</span>
+          </div>
+          <p class="text-slate-400 text-[11px] leading-relaxed">
+            토렌트알지는 토렌트 파일 공유 및 커뮤니티 정보 교류를 목적으로 운영되는 비영리 웹사이트입니다.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-2">게시판 바로가기</h4>
+          <ul class="space-y-1 text-slate-400 text-[11px]">
+            <li><a href="#" class="hover:text-sky-400">최신 영화 토렌트</a></li>
+            <li><a href="#" class="hover:text-sky-400">넷플릭스 / 디즈니+ 자료실</a></li>
+            <li><a href="#" class="hover:text-sky-400">무손실 고화질 Remux 전용관</a></li>
+            <li><a href="#" class="hover:text-sky-400">자막 자료실 (SRT/SMI)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-2">고객센터 & 안내</h4>
+          <ul class="space-y-1 text-slate-400 text-[11px]">
+            <li><a href="#" class="hover:text-sky-400">토렌트 초보자 가이드 (qBittorrent)</a></li>
+            <li><a href="#" class="hover:text-sky-400">비공개 트래커 / 포트포워딩 설정</a></li>
+            <li><a href="#" class="hover:text-sky-400">저작권 침해 신고 및 게시중단 요청</a></li>
+            <li><a href="#" class="hover:text-sky-400">1:1 관리자 문의게시판</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-2">면책조항 (Disclaimer)</h4>
+          <p class="text-slate-500 text-[10px] leading-relaxed">
+            본 사이트는 인터넷상에 공개된 비트토렌트 메타데이터(.torrent/magnet)만을 링크 및 색인하며, 서버에 영상 등 저작권 파일을 직접 호스팅하거나 전송하지 않습니다. 모든 저작권은 원작권자에게 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 text-center text-slate-500 text-[11px]">
+        Copyright © 2012-2024 TorrentRG. All Rights Reserved. Star Wars: Return of the Jedi (1983) Lucasfilm Ltd.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Component -->
+  <div id="toast-msg" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-slate-900 text-white px-4 py-3 rounded-lg shadow-2xl border border-slate-700 flex items-center space-x-3">
+      <div id="toast-icon" class="text-emerald-400 text-base">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div id="toast-text" class="text-xs font-medium">알림 메시지</div>
+    </div>
+  </div>
+
+  <!-- Screencap Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+    <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-red-400 text-2xl" title="닫기">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="확대 스크린샷" class="w-full max-h-[80vh] object-contain rounded border border-gray-700" />
+      <div id="lightbox-caption" class="text-center text-xs text-gray-300 mt-2 font-mono"></div>
+    </div>
+  </div>
+
+  <!-- Login Mock Modal -->
+  <div id="login-modal" class="fixed inset-0 z-50 bg-black/60 hidden items-center justify-center p-4" onclick="toggleLoginModal()">
+    <div class="bg-white rounded-lg max-w-sm w-full p-5 shadow-2xl border border-gray-300" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between border-b pb-2 mb-4">
+        <h4 class="font-bold text-sm text-gray-900">토렌트알지 회원 로그인</h4>
+        <button onclick="toggleLoginModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-gray-600 mb-1">아이디</label>
+          <input type="text" class="w-full border rounded px-3 py-2 focus:ring-1 focus:ring-blue-500 focus:outline-none" placeholder="아이디를 입력하세요">
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">비밀번호</label>
+          <input type="password" class="w-full border rounded px-3 py-2 focus:ring-1 focus:ring-blue-500 focus:outline-none" placeholder="비밀번호">
+        </div>
+        <button onclick="showToast('데모 환경입니다. 게스트 회원으로 자동 연결되어 있습니다.'); toggleLoginModal();" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Toast Notification Helper */
+    let toastTimeout = null;
+    function showToast(message, iconClass = "fa-solid fa-circle-check") {
+      const toast = document.getElementById('toast-msg');
+      const toastText = document.getElementById('toast-text');
+      const toastIcon = document.getElementById('toast-icon');
+
+      toastText.textContent = message;
+      toastIcon.innerHTML = `<i class="${iconClass}"></i>`;
+
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 2600);
+    }
+
+    /* Magnet Copy using fallback-safe document.execCommand */
+    function copyMagnet() {
+      const magnetInput = document.getElementById('magnet-hash');
+      magnetInput.select();
+      magnetInput.setSelectionRange(0, 99999); // Mobile compatibility
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast("마그넷 주소가 클립보드에 복사되었습니다. 토렌트 클라이언트에 붙여넣으세요.");
+        } else {
+          showToast("복사에 실패했습니다. 수동으로 주소를 복사해주세요.", "fa-solid fa-triangle-exclamation");
+        }
+      } catch (err) {
+        showToast("마그넷 복사가 지원되지 않는 브라우저입니다.", "fa-solid fa-triangle-exclamation");
+      }
+    }
+
+    /* Open Magnet link directly */
+    function openDirectMagnet() {
+      const magnetLink = document.getElementById('magnet-hash').value;
+      showToast("토렌트 클라이언트(qBittorrent / uTorrent)를 호출합니다...");
+      window.location.href = magnetLink;
+    }
+
+    /* Simulated Torrent File Download */
+    function simulateDownloadTorrent() {
+      showToast("토렌트 시드 파일(.torrent) 다운로드를 시작합니다.");
+      const element = document.createElement('a');
+      const fileData = "d8:announce41:udp://tracker.opentrackr.org:1337/announce13:creation datei1713438842e4:infod6:lengthi34812654198e4:name96:Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR12:piece lengthi4194304ee";
+      element.setAttribute('href', 'data:application/x-bittorrent;charset=utf-8,' + encodeURIComponent(fileData));
+      element.setAttribute('download', 'Star.Wars.Episode.VI.Return.of.the.Jedi.1983.1080p.KOR.Blu-ray.Remux.AVC.DTS-HD.MA.6.1-FraMeSToR.torrent');
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+
+    /* Toggle MediaInfo Collapse */
+    function toggleMediaInfo() {
+      const content = document.getElementById('mediainfo-content');
+      const icon = document.getElementById('mediainfo-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+      } else {
+        content.classList.add('hidden');
+        icon.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+      }
+    }
+
+    /* Recommend / Upvote Post */
+    let hasRecommended = false;
+    function handleRecommend() {
+      const btn = document.getElementById('recommend-btn');
+      const statSpan = document.getElementById('like-stat');
+      const badge = document.getElementById('recommend-count-badge');
+      let currentVal = parseInt(badge.textContent, 10);
+
+      if (!hasRecommended) {
+        currentVal += 1;
+        hasRecommended = true;
+        badge.textContent = currentVal;
+        statSpan.textContent = currentVal;
+        btn.classList.add('ring-4', 'ring-rose-300');
+        showToast("게시글을 추천하였습니다! (+10P 지급)");
+      } else {
+        showToast("이미 추천하신 게시글입니다.", "fa-solid fa-info-circle");
+      }
+    }
+
+    /* Scrap Post */
+    let hasScrapped = false;
+    function handleScrap() {
+      const btn = document.getElementById('scrap-btn');
+      if (!hasScrapped) {
+        hasScrapped = true;
+        btn.classList.add('bg-amber-50', 'border-amber-400', 'text-amber-800');
+        showToast("마이페이지 > 내 스크랩북에 등록되었습니다.");
+      } else {
+        showToast("이미 스크랩된 게시글입니다.", "fa-solid fa-info-circle");
+      }
+    }
+
+    /* Share Post URL */
+    function handleShare() {
+      const dummyInput = document.createElement('input');
+      dummyInput.value = window.location.href;
+      document.body.appendChild(dummyInput);
+      dummyInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummyInput);
+      showToast("게시글 고유 주소가 복사되었습니다.");
+    }
+
+    /* Submit New Comment */
+    function submitComment() {
+      const textInput = document.getElementById('comment-text');
+      const text = textInput.value.trim();
+      const isSecret = document.getElementById('secret-comment').checked;
+
+      if (!text) {
+        showToast("댓글 내용을 입력해주세요.", "fa-solid fa-triangle-exclamation");
+        return;
+      }
+
+      const container = document.getElementById('comments-container');
+      const totalCountSpan = document.getElementById('comment-total-count');
+      const statCountSpan = document.getElementById('comment-stat');
+
+      const now = new Date();
+      const timeStr = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+      const commentDiv = document.createElement('div');
+      commentDiv.className = "bg-white p-3.5 rounded-lg border border-blue-250 text-xs shadow-2xs animate-pulse";
+
+      const displayText = isSecret ? "<i class='fa-solid fa-lock text-amber-500 mr-1'></i> 비밀 댓글입니다." : escapeHtml(text);
+
+      commentDiv.innerHTML = `
+        <div class="flex items-center justify-between text-gray-500 mb-1">
+          <div class="flex items-center space-x-1.5 font-medium text-gray-800">
+            <span class="px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 text-[10px] font-bold">LV.12</span>
+            <span class="font-bold text-slate-900">포스마스터 (나)</span>
+            <span class="text-gray-400 text-[11px]">${timeStr}</span>
+          </div>
+          <button onclick="voteComment(this)" class="text-gray-400 hover:text-red-500 transition text-[11px]">
+            <i class="fa-regular fa-thumbs-up mr-0.5"></i> 0
+          </button>
+        </div>
+        <div class="text-gray-800 leading-relaxed">${displayText}</div>
+      `;
+
+      container.insertBefore(commentDiv, container.firstChild);
+      setTimeout(() => commentDiv.classList.remove('animate-pulse'), 500);
+
+      // Increment counts
+      let count = parseInt(totalCountSpan.textContent, 10) + 1;
+      totalCountSpan.textContent = count;
+      statCountSpan.textContent = count;
+
+      textInput.value = "";
+      showToast("댓글이 정상적으로 등록되었습니다. (+5P)");
+    }
+
+    function voteComment(btn) {
+      let parts = btn.innerText.trim().split(' ');
+      let count = parseInt(parts[0] || '0', 10);
+      count += 1;
+      btn.innerHTML = `<i class="fa-solid fa-thumbs-up mr-0.5 text-red-500"></i> ${count}`;
+      btn.classList.add('text-red-600');
+    }
+
+    function escapeHtml(string) {
+      return String(string).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    /* Lightbox Modal */
+    function showLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.textContent = caption;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    /* Login Modal Toggle */
+    function toggleLoginModal() {
+      const modal = document.getElementById('login-modal');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }
+    }
+
+    /* Handle Search Bar Form */
+    function handleSearch(e) {
+      e.preventDefault();
+      const val = document.getElementById('search-input').value.trim();
+      if (val) {
+        showToast(`'${val}' 통합 검색 결과를 불러옵니다.`);
+      }
+    }
+
+    /* Mobile Nav Toggle */
+    function toggleMobileNav() {
+      showToast("모바일 카테고리 메뉴를 지원합니다.");
+    }
+  </script>
+</body>
+</html>
