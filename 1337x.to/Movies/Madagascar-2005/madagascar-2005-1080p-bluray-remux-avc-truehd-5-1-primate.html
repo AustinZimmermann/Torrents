@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madagascar (2005) 1080p BluRay REMUX AVC TrueHD 5.1-PRiMATE - 1337x</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#da3a04',
+              hover: '#b52f02',
+              dark: '#1c1b1b',
+              panel: '#242323',
+              border: '#383636',
+              accent: '#f05a28'
+            },
+            tracker: {
+              seed: '#5cb85c',
+              leech: '#d9534f',
+              blue: '#0275d8',
+              gold: '#f0ad4e'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #171616;
+      color: #dfdfdf;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* 1337x signature scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1c1b1b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3c3a3a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #da3a04;
+    }
+
+    .nfo-viewer {
+      background: #0f0f10;
+      color: #9cdcfe;
+      text-shadow: 0 0 2px rgba(156, 220, 254, 0.2);
+    }
+    
+    .tab-active {
+      background-color: #da3a04 !important;
+      color: #ffffff !important;
+      border-color: #da3a04 !important;
+    }
+
+    .health-bar-fill {
+      background: linear-gradient(90deg, #5cb85c 0%, #4cae4c 100%);
+    }
+
+    .toast-animate {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast-hidden {
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-red selection:text-white">
+
+  <header class="bg-[#1e1d1d] border-b border-brand-border sticky top-0 z-40 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <a href="#" class="flex items-center space-x-2 group">
+            <span class="text-3xl font-extrabold tracking-tight text-white flex items-center">
+              1337<span class="text-brand-red group-hover:scale-110 transition-transform">X</span>
+            </span>
+            <span class="hidden sm:inline-block text-[10px] bg-brand-red/20 text-brand-accent px-1.5 py-0.5 rounded font-mono font-bold tracking-wider uppercase border border-brand-red/30">
+              REDUX
+            </span>
+          </a>
+        </div>
+
+        <!-- Search Bar with Category Select -->
+        <div class="hidden md:flex flex-1 max-w-xl mx-8">
+          <div class="relative w-full flex">
+            <div class="relative flex-grow">
+              <input 
+                type="text" 
+                id="headerSearch" 
+                value="Madagascar 2005 Remux TrueHD" 
+                class="w-full bg-[#141313] text-gray-200 border border-brand-border rounded-l-md px-4 py-2 text-sm focus:outline-none focus:border-brand-red transition-colors placeholder-gray-500 font-sans"
+                placeholder="Search for torrents..."
+              >
+            </div>
+            <select class="bg-[#242323] text-gray-300 border-y border-brand-border px-3 text-xs focus:outline-none cursor-pointer">
+              <option>Movies</option>
+              <option>All Categories</option>
+              <option>Television</option>
+              <option>Animation</option>
+            </select>
+            <button class="bg-brand-red hover:bg-brand-hover text-white px-5 rounded-r-md flex items-center justify-center transition-colors">
+              <i class="fa-solid fa-magnifying-glass text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Top Navigation Links & Actions -->
+        <div class="flex items-center space-x-3 text-xs sm:text-sm">
+          <div class="hidden lg:flex items-center space-x-4 text-gray-300">
+            <a href="#" class="hover:text-brand-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-fire text-amber-500"></i> Trending</a>
+            <a href="#" class="hover:text-brand-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-ranking-star text-tracker-gold"></i> Top 100</a>
+            <a href="#" class="hover:text-brand-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-cloud-arrow-up text-tracker-blue"></i> Upload</a>
+          </div>
+          
+          <button 
+            id="customizeGroupBtn" 
+            class="bg-brand-panel hover:bg-[#2d2c2c] text-brand-accent border border-brand-border px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm"
+            title="Configure release group & specs"
+          >
+            <i class="fa-solid fa-sliders"></i>
+            <span>Group Config</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="bg-[#121111] border-b border-brand-border py-2 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-2">
+      <nav class="flex items-center space-x-2 text-gray-400">
+        <a href="#" class="hover:text-brand-red transition-colors"><i class="fa-solid fa-house"></i></a>
+        <span>/</span>
+        <a href="#" class="hover:text-white transition-colors">Movies</a>
+        <span>/</span>
+        <a href="#" class="hover:text-white transition-colors">Remux</a>
+        <span>/</span>
+        <span class="text-gray-200 font-medium">Madagascar (2005)</span>
+      </nav>
+      <div class="flex items-center space-x-3 text-gray-400">
+        <span class="flex items-center gap-1 text-emerald-400 font-medium">
+          <i class="fa-solid fa-shield-halved text-xs"></i> 100% Verified Release Group
+        </span>
+        <span class="hidden sm:inline text-gray-600">|</span>
+        <span class="hidden sm:inline font-mono">MD5 Checksum Verified</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
+    
+    <!-- Title Card -->
+    <div class="bg-brand-panel rounded-lg border border-brand-border p-5 mb-6 shadow-md relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1.5 h-full bg-brand-red"></div>
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="bg-brand-red text-white text-xs font-bold px-2 py-0.5 rounded tracking-wide uppercase">
+              REMUX
+            </span>
+            <span class="bg-[#151414] text-gray-300 border border-brand-border text-xs px-2 py-0.5 rounded font-mono">
+              1080p AVC
+            </span>
+            <span class="bg-[#151414] text-amber-400 border border-brand-border text-xs px-2 py-0.5 rounded font-mono font-medium">
+              Dolby TrueHD 5.1
+            </span>
+            <span class="bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 text-xs px-2 py-0.5 rounded flex items-center gap-1">
+              <i class="fa-solid fa-check-circle text-[10px]"></i> Lossless BD
+            </span>
+          </div>
+
+          <h1 id="releaseTitle" class="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight break-all font-mono">
+            Madagascar.2005.1080p.BluRay.REMUX.AVC.TrueHD.5.1-PRiMATE
+          </h1>
+          <p class="text-xs text-gray-400 mt-1 flex items-center gap-2">
+            <span>Posted by <span id="uploaderName" class="text-brand-accent font-semibold hover:underline cursor-pointer">KingJulien_BD</span></span>
+            <span>•</span>
+            <span>Release Date: May 27, 2005</span>
+            <span>•</span>
+            <span>Remuxed: <span id="remuxDate">Today</span></span>
+          </p>
+        </div>
+
+        <!-- Health and Quick Stats Indicator -->
+        <div class="flex md:flex-col items-center md:items-end justify-between border-t md:border-t-0 border-brand-border pt-3 md:pt-0 gap-2 shrink-0">
+          <div class="flex items-center gap-4 text-center">
+            <div class="bg-[#181717] px-3 py-1.5 rounded border border-brand-border">
+              <div class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Seeders</div>
+              <div class="text-lg font-bold text-tracker-seed font-mono" id="seederCount">428</div>
+            </div>
+            <div class="bg-[#181717] px-3 py-1.5 rounded border border-brand-border">
+              <div class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Leechers</div>
+              <div class="text-lg font-bold text-tracker-leech font-mono" id="leecherCount">24</div>
+            </div>
+            <div class="bg-[#181717] px-3 py-1.5 rounded border border-brand-border">
+              <div class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Health</div>
+              <div class="w-16 h-2 bg-[#2c2b2b] rounded-full mt-2 overflow-hidden">
+                <div class="h-full health-bar-fill w-[95%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-5 border-t border-brand-border/70 flex flex-wrap items-center gap-3">
+        <!-- Magnet Download Button -->
+        <button 
+          id="btnMagnetDownload" 
+          class="flex-1 sm:flex-none bg-brand-red hover:bg-brand-hover active:scale-[0.98] text-white px-6 py-2.5 rounded font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all"
+        >
+          <i class="fa-solid fa-magnet text-base"></i>
+          <span>MAGNET DOWNLOAD</span>
+        </button>
+
+        <!-- Direct Torrent Download Button -->
+        <button 
+          id="btnTorrentDownload" 
+          class="flex-1 sm:flex-none bg-[#2c2b2b] hover:bg-[#383737] active:scale-[0.98] text-gray-200 border border-brand-border px-5 py-2.5 rounded font-semibold text-sm flex items-center justify-center gap-2 transition-all"
+        >
+          <i class="fa-solid fa-download text-tracker-blue"></i>
+          <span>TORRENT DOWNLOAD</span>
+        </button>
+
+        <!-- Copy Magnet Link Button -->
+        <button 
+          id="btnCopyMagnet" 
+          class="bg-[#181717] hover:bg-[#252424] text-gray-300 hover:text-white border border-brand-border px-4 py-2.5 rounded text-sm flex items-center gap-2 transition-colors"
+          title="Copy raw magnet URI"
+        >
+          <i class="fa-regular fa-copy"></i>
+          <span class="hidden sm:inline">Copy Magnet</span>
+        </button>
+
+        <!-- Bookmark / Favorite -->
+        <button 
+          id="btnBookmark" 
+          class="bg-[#181717] hover:bg-[#252424] text-gray-400 hover:text-brand-accent border border-brand-border px-3.5 py-2.5 rounded text-sm transition-colors ml-auto"
+          title="Save to bookmarks"
+        >
+          <i class="fa-regular fa-bookmark"></i>
+        </button>
+
+        <!-- Report Button -->
+        <button 
+          class="bg-[#181717] hover:bg-[#252424] text-gray-400 hover:text-tracker-leech border border-brand-border px-3.5 py-2.5 rounded text-sm transition-colors"
+          title="Report torrent"
+        >
+          <i class="fa-regular fa-flag"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+      <!-- LEFT 8 COLS: Detailed Torrent Specifications & Tabbed Views -->
+      <div class="lg:col-span-8 space-y-6">
+
+        <!-- Technical Metadata Summary Grid -->
+        <div class="bg-brand-panel rounded-lg border border-brand-border overflow-hidden shadow">
+          <div class="bg-[#1a1919] px-4 py-2.5 border-b border-brand-border flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-gray-300 flex items-center gap-2">
+              <i class="fa-solid fa-circle-info text-brand-red"></i> Torrent Metadata Overview
+            </span>
+            <span class="text-[11px] text-gray-400 font-mono">100% Untouched Video/Audio Bitstream</span>
+          </div>
+
+          <div class="p-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Category</span>
+              <span class="font-medium text-white text-sm mt-0.5 block">Movies / Remux</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Total Size</span>
+              <span class="font-medium text-amber-400 font-mono text-sm mt-0.5 block" id="fileSize">21.84 GB</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Video Codec</span>
+              <span class="font-medium text-white font-mono text-sm mt-0.5 block">MPEG-4 AVC</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Primary Audio</span>
+              <span class="font-medium text-white font-mono text-sm mt-0.5 block">TrueHD 5.1</span>
+            </div>
+
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Resolution</span>
+              <span class="font-medium text-white font-mono text-sm mt-0.5 block">1920 × 1080p</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Frame Rate</span>
+              <span class="font-medium text-white font-mono text-sm mt-0.5 block">23.976 FPS</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Container</span>
+              <span class="font-medium text-white font-mono text-sm mt-0.5 block">Matroska (.mkv)</span>
+            </div>
+            <div class="bg-[#191818] p-3 rounded border border-brand-border/60">
+              <span class="text-gray-400 block text-[10px] uppercase font-semibold">Languages</span>
+              <span class="font-medium text-white text-sm mt-0.5 block">English (Multi-Sub)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-panel rounded-lg border border-brand-border shadow overflow-hidden">
+          <div class="flex border-b border-brand-border overflow-x-auto bg-[#1b1a1a]">
+            <button 
+              data-tab="overview" 
+              class="tab-btn tab-active px-4 py-3 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2"
+            >
+              <i class="fa-solid fa-film"></i> Overview & Specs
+            </button>
+            <button 
+              data-tab="mediainfo" 
+              class="tab-btn text-gray-400 hover:text-white px-4 py-3 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2 border-transparent"
+            >
+              <i class="fa-solid fa-code"></i> MediaInfo / NFO
+            </button>
+            <button 
+              data-tab="screens" 
+              class="tab-btn text-gray-400 hover:text-white px-4 py-3 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2 border-transparent"
+            >
+              <i class="fa-solid fa-images"></i> Full HD Stills (4)
+            </button>
+            <button 
+              data-tab="files" 
+              class="tab-btn text-gray-400 hover:text-white px-4 py-3 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2 border-transparent"
+            >
+              <i class="fa-solid fa-folder-tree"></i> Files (3)
+            </button>
+            <button 
+              data-tab="comments" 
+              class="tab-btn text-gray-400 hover:text-white px-4 py-3 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2 border-transparent"
+            >
+              <i class="fa-solid fa-comments"></i> Comments <span class="bg-[#121212] px-1.5 py-0.5 rounded text-[10px] text-gray-300">18</span>
+            </button>
+          </div>
+
+          <div id="tab-overview" class="tab-pane p-5 space-y-6">
+            
+            <!-- Movie synopsis & story -->
+            <div class="flex flex-col sm:flex-row gap-5 items-start">
+              <div class="w-full sm:w-44 shrink-0 rounded-lg overflow-hidden border border-brand-border bg-black shadow-md">
+                <img 
+                  src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" 
+                  alt="Madagascar Poster Backdrop" 
+                  class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://placehold.co/400x600/1a1a1a/da3a04?text=Madagascar+2005'"
+                >
+                <div class="p-2 bg-[#121111] text-center text-[11px] font-mono text-gray-400 border-t border-brand-border">
+                  DreamWorks Animation
+                </div>
+              </div>
+
+              <div class="space-y-3 flex-1">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-xs bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
+                    <i class="fa-solid fa-star text-xs mr-1"></i> IMDb: 6.9/10
+                  </span>
+                  <span class="text-xs bg-rose-500/20 text-rose-400 border border-rose-500/30 px-2 py-0.5 rounded font-bold">
+                    Rotten Tomatoes: 55%
+                  </span>
+                  <span class="text-xs bg-sky-500/20 text-sky-400 border border-sky-500/30 px-2 py-0.5 rounded font-bold">
+                    Runtime: 86 mins
+                  </span>
+                  <span class="text-xs bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 rounded font-bold">
+                    Rated: PG
+                  </span>
+                </div>
+
+                <h3 class="text-lg font-bold text-white">Plot Summary</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  At New York’s Central Park Zoo, Alex the Lion, Marty the Zebra, Melman the Giraffe, and Gloria the Hippo are best friends and the stars of the show. But when one of the animals goes missing from their cage, the other three break out to look for him, only to find themselves reunited ... on a ship to Africa. When their vessel is hijacked by four calculating penguins, the four civilized New Yorkers are shipwrecked on the exotic island of Madagascar.
+                </p>
+
+                <div class="pt-2 text-xs space-y-1.5 text-gray-400">
+                  <div><strong class="text-gray-200">Directors:</strong> Eric Darnell, Tom McGrath</div>
+                  <div><strong class="text-gray-200">Starring:</strong> Ben Stiller (Alex), Chris Rock (Marty), David Schwimmer (Melman), Jada Pinkett Smith (Gloria), Sacha Baron Cohen (King Julien)</div>
+                  <div><strong class="text-gray-200">Release Group:</strong> <span id="groupTagLabel" class="text-brand-accent font-semibold">PRiMATE</span> (High-Def Remux Archival Crew)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed release highlights -->
+            <div class="border-t border-brand-border pt-4">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-gray-300 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-brand-red"></i> Remux Quality Guarantee
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div class="bg-[#161515] p-3 rounded border border-brand-border/60 flex items-start gap-2.5">
+                  <i class="fa-solid fa-compact-disc text-brand-accent text-base mt-0.5"></i>
+                  <div>
+                    <span class="font-bold text-white block">Lossless AVC Video</span>
+                    <span class="text-gray-400">Remuxed straight from retail Blu-ray disc without re-encoding. 100% original 1080p frame fidelity.</span>
+                  </div>
+                </div>
+                <div class="bg-[#161515] p-3 rounded border border-brand-border/60 flex items-start gap-2.5">
+                  <i class="fa-solid fa-volume-high text-brand-accent text-base mt-0.5"></i>
+                  <div>
+                    <span class="font-bold text-white block">Dolby TrueHD 5.1 Surround</span>
+                    <span class="text-gray-400">Preserved original multi-channel uncompressed TrueHD bitstream with embedded Dolby Digital 640 kbps fallback.</span>
+                  </div>
+                </div>
+                <div class="bg-[#161515] p-3 rounded border border-brand-border/60 flex items-start gap-2.5">
+                  <i class="fa-solid fa-closed-captioning text-brand-accent text-base mt-0.5"></i>
+                  <div>
+                    <span class="font-bold text-white block">Full Subtitles & Commentary</span>
+                    <span class="text-gray-400">Includes English SDH, French, Spanish, German, Italian, Portuguese PGS subs and filmmakers’ audio commentary.</span>
+                  </div>
+                </div>
+                <div class="bg-[#161515] p-3 rounded border border-brand-border/60 flex items-start gap-2.5">
+                  <i class="fa-solid fa-list-ol text-brand-accent text-base mt-0.5"></i>
+                  <div>
+                    <span class="font-bold text-white block">Original Blu-ray Chapters</span>
+                    <span class="text-gray-400">All 16 original authored scene markers named and preserved for seamless skip navigation.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-mediainfo" class="tab-pane hidden p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400 flex items-center gap-2">
+                <i class="fa-solid fa-terminal text-brand-accent"></i> Raw MediaInfo v24.01 Analysis
+              </span>
+              <button 
+                id="btnCopyNFO" 
+                class="bg-[#171616] hover:bg-[#252424] text-xs text-brand-accent border border-brand-border px-3 py-1.5 rounded flex items-center gap-1.5 transition-colors font-mono"
+              >
+                <i class="fa-regular fa-copy"></i> Copy NFO
+              </button>
+            </div>
+
+            <pre id="nfoContent" class="nfo-viewer p-4 rounded-lg font-mono text-[11px] sm:text-xs leading-relaxed overflow-x-auto border border-brand-border/80 shadow-inner">
+.----------------------------------------------------------------------------.
+|                           P  R  i  M  A  T  E                              |
+|                   Quality Remuxes for Home Theater Purists                 |
+'----------------------------------------------------------------------------'
+
+RELEASE NAME ......: Madagascar.2005.1080p.BluRay.REMUX.AVC.TrueHD.5.1-PRiMATE
+RELEASE DATE ......: 2026-10-06
+THEATRICAL DATE ...: 2005-05-27
+GENRE .............: Animation / Adventure / Comedy / Family
+SOURCE ............: Madagascar 2005 1080p Blu-ray AVC TrueHD 5.1-Retail (US)
+CONTAINER .........: Matroska (.MKV)
+TOTAL SIZE ........: 21.84 GiB (23,450,118,240 bytes)
+DURATION ..........: 1 h 25 min 54 s
+
+[ VIDEO ]
+Codec .............: MPEG-4 AVC Video / High@L4.1
+Resolution ........: 1920x1080 pixels
+Aspect Ratio ......: 16:9 (1.85:1)
+Bitrate ...........: 31.8 Mbps
+Framerate .........: 23.976 (24000/1001) FPS
+Color Space .......: YUV 4:2:0 / 8-bit / Progressive
+
+[ AUDIO #1 - PRIMARY ]
+Format ............: Dolby TrueHD Audio
+Channels ..........: 5.1 Surround (L, R, C, LFE, Ls, Rs)
+Bit Rate ..........: 3,421 kbps (Peak: 4,890 kbps)
+Sampling Rate .....: 48.0 kHz
+Bit Depth .........: 24 bits
+Language ..........: English
+
+[ AUDIO #2 - EMBEDDED CORE COMPATIBILITY ]
+Format ............: AC-3 (Dolby Digital)
+Channels ..........: 5.1 channels
+Bit Rate ..........: 640 kbps
+Sampling Rate .....: 48.0 kHz
+Language ..........: English
+
+[ AUDIO #3 - COMMENTARY ]
+Format ............: AC-3 (Dolby Digital)
+Channels ..........: 2.0 Stereo
+Bit Rate ..........: 224 kbps
+Language ..........: English
+Title .............: Filmmakers’ Commentary with Directors Eric Darnell & Tom McGrath
+
+[ SUBTITLES ]
+Format ............: PGS (Presentation Graphics)
+Languages .........: English (SDH), French, Spanish (Latin America), German,
+                     Italian, Dutch, Portuguese (Brazil), Japanese
+
+[ CHAPTERS ]
+Included ..........: Yes (16 authored named chapters from original Blu-ray disc)
+
+[ NOTES ]
+* Uncompressed bit-for-bit video and master TrueHD audio preservation.
+* Redundant duplicate menus and trailer assets purged.
+* Verified strictly via BDInfo and MKVToolNix 88.0.
+* Enjoy the wild ride! “I like to move it, move it!”
+------------------------------------------------------------------------------</pre>
+          </div>
+
+          <div id="tab-screens" class="tab-pane hidden p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <p class="text-xs text-gray-300">
+                Click any thumbnail to launch the 1080p high-resolution frame inspect modal.
+              </p>
+              <span class="text-[11px] text-brand-accent font-mono">Lossless PNG Grabs</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Screenshot 1 -->
+              <div class="group relative rounded-lg overflow-hidden border border-brand-border bg-black cursor-pointer screenshot-item" data-caption="Alex & The Central Park Crew in New York City">
+                <img 
+                  src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Madagascar Screenshot Frame 1"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  onerror="this.src='https://placehold.co/800x450/111111/da3a04?text=Central+Park+Zoo'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-expand text-brand-red"></i> 00:12:44 - Central Park Grandeur
+                  </span>
+                </div>
+              </div>
+
+              <!-- Screenshot 2 -->
+              <div class="group relative rounded-lg overflow-hidden border border-brand-border bg-black cursor-pointer screenshot-item" data-caption="Marty & The Penguins plotting the escape">
+                <img 
+                  src="https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&fit=crop&w=800&q=80" 
+                  alt="Madagascar Screenshot Frame 2"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  onerror="this.src='https://placehold.co/800x450/111111/da3a04?text=Penguins+Conspiracy'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-expand text-brand-red"></i> 00:28:19 - Skipper & Private
+                  </span>
+                </div>
+              </div>
+
+              <!-- Screenshot 3 -->
+              <div class="group relative rounded-lg overflow-hidden border border-brand-border bg-black cursor-pointer screenshot-item" data-caption="Shipwreck on the exotic sands of Madagascar">
+                <img 
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+                  alt="Madagascar Screenshot Frame 3"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  onerror="this.src='https://placehold.co/800x450/111111/da3a04?text=Madagascar+Beach'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-expand text-brand-red"></i> 00:39:52 - Crate Shoreline Arrival
+                  </span>
+                </div>
+              </div>
+
+              <!-- Screenshot 4 -->
+              <div class="group relative rounded-lg overflow-hidden border border-brand-border bg-black cursor-pointer screenshot-item" data-caption="King Julien and the Lemur Tribe coronation feast">
+                <img 
+                  src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=800&q=80" 
+                  alt="Madagascar Screenshot Frame 4"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  onerror="this.src='https://placehold.co/800x450/111111/da3a04?text=King+Julien+Party'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-expand text-brand-red"></i> 00:54:10 - Lemur Baobab Rave
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-files" class="tab-pane hidden p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs text-gray-400 pb-2 border-b border-brand-border">
+              <span>Directory: <span class="text-white font-mono" id="folderName">Madagascar.2005.1080p.BluRay.REMUX.AVC.TrueHD.5.1-PRiMATE/</span></span>
+              <span>3 Files (21.84 GB)</span>
+            </div>
+
+            <div class="space-y-2 font-mono text-xs">
+              <!-- File 1: MKV -->
+              <div class="flex items-center justify-between p-2.5 rounded bg-[#181717] border border-brand-border/60 hover:border-brand-border transition-colors">
+                <div class="flex items-center gap-3 truncate">
+                  <i class="fa-solid fa-file-video text-brand-red text-base shrink-0"></i>
+                  <span class="text-gray-200 truncate" id="mkvFileName">Madagascar.2005.1080p.BluRay.REMUX.AVC.TrueHD.5.1-PRiMATE.mkv</span>
+                </div>
+                <span class="text-amber-400 font-semibold shrink-0 ml-4">21.83 GB</span>
+              </div>
+
+              <!-- File 2: NFO -->
+              <div class="flex items-center justify-between p-2.5 rounded bg-[#181717] border border-brand-border/60 hover:border-brand-border transition-colors">
+                <div class="flex items-center gap-3 truncate">
+                  <i class="fa-solid fa-file-lines text-sky-400 text-base shrink-0"></i>
+                  <span class="text-gray-200 truncate" id="nfoFileName">Madagascar.2005.1080p.BluRay.REMUX.AVC.TrueHD.5.1-PRiMATE.nfo</span>
+                </div>
+                <span class="text-gray-400 shrink-0 ml-4">8.42 KB</span>
+              </div>
+
+              <!-- File 3: Sample / BDInfo txt -->
+              <div class="flex items-center justify-between p-2.5 rounded bg-[#181717] border border-brand-border/60 hover:border-brand-border transition-colors">
+                <div class="flex items-center gap-3 truncate">
+                  <i class="fa-solid fa-file-waveform text-emerald-400 text-base shrink-0"></i>
+                  <span class="text-gray-200 truncate">BDInfo_Disc_Scan_Summary.txt</span>
+                </div>
+                <span class="text-gray-400 shrink-0 ml-4">32.10 KB</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-comments" class="tab-pane hidden p-5 space-y-5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-comments text-brand-red"></i> Community Discussions
+              </h3>
+              <span class="text-xs text-tracker-seed flex items-center gap-1 font-semibold">
+                <i class="fa-solid fa-user-check text-[11px]"></i> Remux Confirmed Clean & In Sync
+              </span>
+            </div>
+
+            <!-- New Comment Box -->
+            <div class="bg-[#181717] p-3.5 rounded-lg border border-brand-border">
+              <label class="block text-xs font-semibold text-gray-300 mb-2">Leave feedback for this release:</label>
+              <textarea 
+                id="commentInput" 
+                rows="2" 
+                placeholder="Share bitrate details, AV sync confirmation, or thank the release crew..." 
+                class="w-full bg-[#121111] text-xs text-gray-200 border border-brand-border rounded p-2.5 focus:outline-none focus:border-brand-red transition-colors"
+              ></textarea>
+              <div class="flex justify-end mt-2">
+                <button 
+                  id="btnPostComment" 
+                  class="bg-brand-red hover:bg-brand-hover text-white text-xs font-bold px-4 py-1.5 rounded transition-colors flex items-center gap-1.5"
+                >
+                  <i class="fa-regular fa-paper-plane"></i> Post Comment
+                </button>
+              </div>
+            </div>
+
+            <!-- Existing comments stream -->
+            <div class="space-y-3" id="commentsContainer">
+              <!-- Comment 1 -->
+              <div class="bg-[#181717] p-3 rounded border border-brand-border text-xs">
+                <div class="flex items-center justify-between text-gray-400 mb-1.5">
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-tracker-blue flex items-center gap-1">
+                      <i class="fa-solid fa-crown text-[10px] text-amber-400"></i> RemuxEnthusiast
+                    </span>
+                    <span class="text-[10px] bg-brand-border px-1.5 py-0.2 rounded text-gray-300">VIP</span>
+                  </div>
+                  <span class="text-[10px]">2 hours ago</span>
+                </div>
+                <p class="text-gray-300 leading-normal">
+                  Checked the TrueHD 5.1 stream on my Denon AVR-X3800H receiver with a 5.1 Klipsch setup: dialogue is crisp center-channel, and the bass during the crate tumble sequence shakes the floor. Video bitrates maxing out near 34 Mbps without a single dropped frame. Perfect remux!
+                </p>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="bg-[#181717] p-3 rounded border border-brand-border text-xs">
+                <div class="flex items-center justify-between text-gray-400 mb-1.5">
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-200">Kowalski_Analysis</span>
+                    <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/40 px-1 rounded">Seedbox 10G</span>
+                  </div>
+                  <span class="text-[10px]">5 hours ago</span>
+                </div>
+                <p class="text-gray-300 leading-normal">
+                  Seeding this 24/7 on my Netherlands 10Gbps box. The penguins would be proud. Thanks for keeping the TrueHD master audio untouched.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bg-[#191818] p-4 rounded-lg border border-brand-border text-xs font-mono space-y-2">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-gray-400">
+            <span>INFO HASH:</span>
+            <span id="infoHashDisplay" class="text-brand-accent select-all break-all">4a9f82d1c08e56b4329a10fc2b3e419876d2015c</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-gray-400">
+            <span>TRACKER ANNOUNCE:</span>
+            <span class="text-gray-300 truncate">udp://tracker.opentrackr.org:1337/announce</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT 4 COLS: Release Group Card, Uploader Badge & Similar Torrents -->
+      <div class="lg:col-span-4 space-y-6">
+
+        <!-- Release Group Profile Card -->
+        <div class="bg-brand-panel rounded-lg border border-brand-border overflow-hidden shadow">
+          <div class="bg-gradient-to-r from-brand-red to-orange-700 p-4 text-white">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-black/30 px-2 py-0.5 rounded">
+                Official Release Crew
+              </span>
+              <span class="text-xs bg-emerald-500/90 text-black font-extrabold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <i class="fa-solid fa-check"></i> VERIFIED
+              </span>
+            </div>
+            <h2 class="text-2xl font-black mt-2 tracking-tight flex items-center gap-2" id="sidebarGroupTitle">
+              <i class="fa-solid fa-film text-amber-300 text-lg"></i> PRiMATE
+            </h2>
+            <p class="text-xs text-orange-100 opacity-90 mt-0.5">High Fidelity 1080p & 2160p Remux Group</p>
+          </div>
+
+          <div class="p-4 space-y-4 text-xs">
+            <p class="text-gray-300 leading-relaxed">
+              Specialized in lossless Bit-for-Bit remuxes from retail physical UHD & Blu-ray discs. Strictly uncompressed TrueHD, DTS-HD MA, and LPCM tracks with pristine MKV structural container integrity.
+            </p>
+
+            <div class="grid grid-cols-2 gap-2 text-center font-mono">
+              <div class="bg-[#171616] p-2 rounded border border-brand-border">
+                <span class="text-gray-400 block text-[10px] uppercase">Releases</span>
+                <span class="font-bold text-white text-sm">1,248</span>
+              </div>
+              <div class="bg-[#171616] p-2 rounded border border-brand-border">
+                <span class="text-gray-400 block text-[10px] uppercase">Reputation</span>
+                <span class="font-bold text-tracker-seed text-sm">+89,410</span>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-brand-border/60 flex items-center justify-between text-[11px] text-gray-400">
+              <span>Member Since: May 2012</span>
+              <span class="text-brand-accent hover:underline cursor-pointer">View All Torrents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Audio & Video Technical Spec Card -->
+        <div class="bg-brand-panel rounded-lg border border-brand-border p-4 shadow space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-gray-300 flex items-center gap-2">
+            <i class="fa-solid fa-circle-nodes text-brand-red"></i> Remux Master Specifications
+          </h3>
+
+          <ul class="text-xs space-y-2 text-gray-300">
+            <li class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+              <span class="text-gray-400">Disc Type</span>
+              <span class="font-mono font-medium text-white">BD-50 Dual Layer</span>
+            </li>
+            <li class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+              <span class="text-gray-400">Video Profile</span>
+              <span class="font-mono font-medium text-white">High@L4.1</span>
+            </li>
+            <li class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+              <span class="text-gray-400">Master Bitrate</span>
+              <span class="font-mono font-medium text-amber-400">31.8 Mbps AVC</span>
+            </li>
+            <li class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+              <span class="text-gray-400">Audio Channels</span>
+              <span class="font-mono font-medium text-white">6 Channels (3/2.1)</span>
+            </li>
+            <li class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+              <span class="text-gray-400">Bit Depth / Rate</span>
+              <span class="font-mono font-medium text-white">24-bit / 48.0 kHz</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-gray-400">Strict NFO Validated</span>
+              <span class="text-tracker-seed font-semibold"><i class="fa-solid fa-check"></i> Passed</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Related / Similar Releases on 1337x -->
+        <div class="bg-brand-panel rounded-lg border border-brand-border overflow-hidden shadow">
+          <div class="bg-[#1a1919] px-4 py-2.5 border-b border-brand-border flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-gray-300 flex items-center gap-1.5">
+              <i class="fa-solid fa-clone text-brand-red"></i> Related Franchise Torrents
+            </span>
+          </div>
+
+          <div class="divide-y divide-brand-border text-xs">
+            <a href="#" class="p-3 block hover:bg-[#201f1f] transition-colors group">
+              <div class="font-medium text-gray-200 group-hover:text-brand-accent line-clamp-1">
+                Madagascar: Escape 2 Africa (2008) 1080p BluRay REMUX AVC TrueHD 5.1
+              </div>
+              <div class="flex items-center justify-between mt-1 text-[11px] text-gray-400 font-mono">
+                <span>24.10 GB</span>
+                <span class="text-tracker-seed">S: 284</span>
+                <span class="text-tracker-leech">L: 12</span>
+              </div>
+            </a>
+
+            <a href="#" class="p-3 block hover:bg-[#201f1f] transition-colors group">
+              <div class="font-medium text-gray-200 group-hover:text-brand-accent line-clamp-1">
+                Madagascar 3: Europe's Most Wanted (2012) 1080p BluRay REMUX AVC TrueHD 7.1
+              </div>
+              <div class="flex items-center justify-between mt-1 text-[11px] text-gray-400 font-mono">
+                <span>26.45 GB</span>
+                <span class="text-tracker-seed">S: 310</span>
+                <span class="text-tracker-leech">L: 19</span>
+              </div>
+            </a>
+
+            <a href="#" class="p-3 block hover:bg-[#201f1f] transition-colors group">
+              <div class="font-medium text-gray-200 group-hover:text-brand-accent line-clamp-1">
+                Penguins of Madagascar (2014) 1080p BluRay REMUX AVC DTS-HD MA 7.1
+              </div>
+              <div class="flex items-center justify-between mt-1 text-[11px] text-gray-400 font-mono">
+                <span>22.90 GB</span>
+                <span class="text-tracker-seed">S: 192</span>
+                <span class="text-tracker-leech">L: 8</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div id="customizeModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-brand-panel border border-brand-border rounded-xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-brand-border pb-3">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-sliders text-brand-red"></i> Configure Release Group Tag
+        </h3>
+        <button id="closeModalBtn" class="text-gray-400 hover:text-white text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-300">
+        Switch or customize the release group name, primary audio preset, and seed count for this simulated 1337x release.
+      </p>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Release Group Name:</label>
+          <select id="groupPresetSelect" class="w-full bg-[#161515] border border-brand-border rounded px-3 py-2 text-white focus:outline-none focus:border-brand-red font-mono">
+            <option value="PRiMATE">PRiMATE (Default Custom Crew)</option>
+            <option value="FraMeSToR">FraMeSToR</option>
+            <option value="EPSiLON">EPSiLON</option>
+            <option value="CiNEFiLE">CiNEFiLE</option>
+            <option value="CtrlHD">CtrlHD</option>
+            <option value="DON">DON</option>
+            <option value="CUSTOM">Custom Name...</option>
+          </select>
+        </div>
+
+        <div id="customGroupInputDiv" class="hidden">
+          <label class="block text-gray-300 font-semibold mb-1">Custom Group Tag:</label>
+          <input type="text" id="customGroupName" placeholder="e.g. WiKi or ARCHiVE" class="w-full bg-[#161515] border border-brand-border rounded px-3 py-2 text-white font-mono focus:outline-none focus:border-brand-red">
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-semibold mb-1">Uploader Alias:</label>
+          <input type="text" id="customUploader" value="KingJulien_BD" class="w-full bg-[#161515] border border-brand-border rounded px-3 py-2 text-white font-mono focus:outline-none focus:border-brand-red">
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2 pt-3 border-t border-brand-border">
+        <button id="cancelModalBtn" class="bg-[#1f1e1e] hover:bg-[#2b2a2a] text-gray-300 px-4 py-2 rounded text-xs">Cancel</button>
+        <button id="saveModalBtn" class="bg-brand-red hover:bg-brand-hover text-white font-bold px-4 py-2 rounded text-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-check"></i> Apply to Release
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-4 hidden">
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      <div class="w-full flex items-center justify-between text-white pb-2 px-2">
+        <span id="lightboxCaption" class="text-sm font-medium font-mono text-gray-300">1080p Screen</span>
+        <button id="closeLightboxBtn" class="text-gray-400 hover:text-white text-xl">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <img id="lightboxImg" src="" alt="Zoomed Screenshot" class="max-h-[80vh] w-auto rounded-lg border border-brand-border object-contain shadow-2xl">
+      <p class="text-[11px] text-gray-400 mt-2 font-mono">Original Blu-ray 1920x1080 Frame (1:1 Pixel Aspect)</p>
+    </div>
+  </div>
+
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-[#1f1e1e] border border-brand-red text-white px-4 py-3 rounded-lg shadow-2xl flex items-center gap-3 toast-hidden">
+    <div class="w-8 h-8 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+      <i class="fa-solid fa-check text-sm" id="toastIcon"></i>
+    </div>
+    <div class="text-xs">
+      <div class="font-bold text-white" id="toastTitle">Copied to Clipboard</div>
+      <div class="text-gray-300 text-[11px]" id="toastMessage">Magnet link ready to paste in your client.</div>
+    </div>
+  </div>
+
+  <footer class="bg-[#121111] border-t border-brand-border mt-12 py-8 text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <div class="flex flex-wrap justify-center gap-4 text-gray-400">
+        <a href="#" class="hover:text-brand-red transition-colors">Home</a>
+        <a href="#" class="hover:text-brand-red transition-colors">Rules</a>
+        <a href="#" class="hover:text-brand-red transition-colors">Contact</a>
+        <a href="#" class="hover:text-brand-red transition-colors">MediaInfo Guide</a>
+        <a href="#" class="hover:text-brand-red transition-colors">Remux Standards (2026)</a>
+      </div>
+      <p class="max-w-xl mx-auto text-[11px] text-gray-500 leading-normal">
+        1337x does not host any torrent or media files directly. This page presents standard technical metadata, NFO structures, and BDInfo diagnostics for high-definition home theater remux collections.
+      </p>
+      <div class="text-[10px] font-mono text-gray-600">
+        Render Engine: HTML5 / TailwindCSS • Release: Madagascar (2005) 1080p TrueHD
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // State management
+    const state = {
+      groupName: 'PRiMATE',
+      uploader: 'KingJulien_BD',
+      movieTitle: 'Madagascar',
+      year: '2005',
+      resolution: '1080p',
+      source: 'BluRay',
+      type: 'REMUX',
+      codec: 'AVC',
+      audio: 'TrueHD.5.1',
+      hash: '4a9f82d1c08e56b4329a10fc2b3e419876d2015c',
+      size: '21.84 GB'
+    };
+
+    // Helper: update all rendered titles and filenames
+    function refreshReleaseNames() {
+      const fullTag = `${state.movieTitle}.${state.year}.${state.resolution}.${state.source}.${state.type}.${state.codec}.${state.audio}-${state.groupName}`;
+      
+      document.getElementById('releaseTitle').textContent = fullTag;
+      document.getElementById('mkvFileName').textContent = `${fullTag}.mkv`;
+      document.getElementById('nfoFileName').textContent = `${fullTag}.nfo`;
+      document.getElementById('folderName').textContent = `${fullTag}/`;
+      document.getElementById('groupTagLabel').textContent = state.groupName;
+      document.getElementById('sidebarGroupTitle').innerHTML = `<i class="fa-solid fa-film text-amber-300 text-lg"></i> ${state.groupName}`;
+      document.getElementById('uploaderName').textContent = state.uploader;
+
+      // Update NFO template
+      const nfoEl = document.getElementById('nfoContent');
+      if (nfoEl) {
+        nfoEl.textContent = generateNFOText(fullTag);
+      }
+    }
+
+    // Helper: generate formatted NFO
+    function generateNFOText(fullTag) {
+      return `.----------------------------------------------------------------------------.
+|                           ${state.groupName.padEnd(10, ' ')}                                   |
+|                   Quality Remuxes for Home Theater Purists                 |
+'----------------------------------------------------------------------------'
+
+RELEASE NAME ......: ${fullTag}
+RELEASE DATE ......: 2026-10-06
+THEATRICAL DATE ...: 2005-05-27
+GENRE .............: Animation / Adventure / Comedy / Family
+SOURCE ............: Madagascar 2005 1080p Blu-ray AVC TrueHD 5.1-Retail (US)
+CONTAINER .........: Matroska (.MKV)
+TOTAL SIZE ........: 21.84 GiB (23,450,118,240 bytes)
+DURATION ..........: 1 h 25 min 54 s
+
+[ VIDEO ]
+Codec .............: MPEG-4 AVC Video / High@L4.1
+Resolution ........: 1920x1080 pixels
+Aspect Ratio ......: 16:9 (1.778)
+Bitrate ...........: 31.8 Mbps
+Framerate .........: 23.976 (24000/1001) FPS
+Color Space .......: YUV 4:2:0 / 8-bit / Progressive
+
+[ AUDIO #1 - PRIMARY ]
+Format ............: Dolby TrueHD Audio
+Channels ..........: 5.1 Surround (L, R, C, LFE, Ls, Rs)
+Bit Rate ..........: 3,421 kbps (Peak: 4,890 kbps)
+Sampling Rate .....: 48.0 kHz
+Bit Depth .........: 24 bits
+Language ..........: English
+
+[ AUDIO #2 - EMBEDDED CORE COMPATIBILITY ]
+Format ............: AC-3 (Dolby Digital)
+Channels ..........: 5.1 channels
+Bit Rate ..........: 640 kbps
+Sampling Rate .....: 48.0 kHz
+Language ..........: English
+
+[ AUDIO #3 - COMMENTARY ]
+Format ............: AC-3 (Dolby Digital)
+Channels ..........: 2.0 Stereo
+Bit Rate ..........: 224 kbps
+Language ..........: English
+Title .............: Filmmakers' Commentary with Directors Eric Darnell & Tom McGrath
+
+[ SUBTITLES ]
+Format ............: PGS (Presentation Graphics)
+Languages .........: English (SDH), French, Spanish (Latin America), German,
+                     Italian, Dutch, Portuguese (Brazil), Japanese
+
+[ CHAPTERS ]
+Included ..........: Yes (16 authored named chapters from original Blu-ray disc)
+
+[ NOTES ]
+* Uncompressed bit-for-bit video and master TrueHD audio preservation.
+* Redundant duplicate menus and trailer assets purged.
+* Verified strictly via BDInfo and MKVToolNix 88.0.
+* Release crew signature: -${state.groupName}
+------------------------------------------------------------------------------`;
+    }
+
+    function showToast(title, message, isSuccess = true) {
+      const toast = document.getElementById('toastNotification');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMsg = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+
+      toastTitle.textContent = title;
+      toastMsg.textContent = message;
+      
+      if (isSuccess) {
+        toastIcon.className = 'fa-solid fa-check text-sm';
+      } else {
+        toastIcon.className = 'fa-solid fa-info text-sm';
+      }
+
+      toast.classList.remove('toast-hidden');
+      toast.classList.add('toast-animate');
+
+      setTimeout(() => {
+        toast.classList.remove('toast-animate');
+        toast.classList.add('toast-hidden');
+      }, 3200);
+    }
+
+    function copyToClipboard(text, successTitle, successMsg) {
+      // Use fallback document.execCommand('copy') for guaranteed iframe compatibility
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = text;
+      tempTextArea.style.position = 'fixed';
+      tempTextArea.style.left = '-9999px';
+      tempTextArea.style.top = '-9999px';
+      document.body.appendChild(tempTextArea);
+      tempTextArea.focus();
+      tempTextArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast(successTitle, successMsg);
+        } else {
+          showToast('Copy Failed', 'Please manually highlight and copy the text.', false);
+        }
+      } catch (err) {
+        showToast('Clipboard Error', 'Could not access clipboard automatically.', false);
+      } finally {
+        document.body.removeChild(tempTextArea);
+      }
+    }
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = `tab-${btn.dataset.tab}`;
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('tab-active');
+          b.classList.add('text-gray-400', 'border-transparent');
+        });
+
+        tabPanes.forEach(p => p.classList.add('hidden'));
+
+        btn.classList.add('tab-active');
+        btn.classList.remove('text-gray-400', 'border-transparent');
+        
+        const activePane = document.getElementById(targetId);
+        if (activePane) {
+          activePane.classList.remove('hidden');
+        }
+      });
+    });
+
+    const btnMagnetDownload = document.getElementById('btnMagnetDownload');
+    const btnCopyMagnet = document.getElementById('btnCopyMagnet');
+    const btnTorrentDownload = document.getElementById('btnTorrentDownload');
+    const btnCopyNFO = document.getElementById('btnCopyNFO');
+    const btnBookmark = document.getElementById('btnBookmark');
+
+    function getMagnetUri() {
+      const fullTag = `${state.movieTitle}.${state.year}.${state.resolution}.${state.source}.${state.type}.${state.codec}.${state.audio}-${state.groupName}`;
+      return `magnet:?xt=urn:btih:${state.hash}&dn=${encodeURIComponent(fullTag)}&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce`;
+    }
+
+    btnMagnetDownload.addEventListener('click', () => {
+      const magnet = getMagnetUri();
+      copyToClipboard(magnet, 'Magnet Handshake Initialized', 'Simulated magnet URI copied to clipboard.');
+    });
+
+    btnCopyMagnet.addEventListener('click', () => {
+      const magnet = getMagnetUri();
+      copyToClipboard(magnet, 'Magnet URI Copied', 'Direct torrent magnet link copied.');
+    });
+
+    btnTorrentDownload.addEventListener('click', () => {
+      const fullTag = `${state.movieTitle}.${state.year}.${state.resolution}.${state.source}.${state.type}.${state.codec}.${state.audio}-${state.groupName}`;
+      showToast('Mock .torrent Generated', `Initiating download of "${fullTag}.torrent"`);
+    });
+
+    btnCopyNFO.addEventListener('click', () => {
+      const nfoContent = document.getElementById('nfoContent').textContent;
+      copyToClipboard(nfoContent, 'NFO Text Copied', 'Full MediaInfo specifications copied to clipboard.');
+    });
+
+    btnBookmark.addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('fa-regular')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid', 'text-brand-accent');
+        showToast('Saved to Bookmarks', 'Release added to your favorite torrents.');
+      } else {
+        icon.classList.remove('fa-solid', 'text-brand-accent');
+        icon.classList.add('fa-regular');
+        showToast('Bookmark Removed', 'Release removed from favorites.');
+      }
+    });
+
+    const customizeGroupBtn = document.getElementById('customizeGroupBtn');
+    const customizeModal = document.getElementById('customizeModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const saveModalBtn = document.getElementById('saveModalBtn');
+    const groupPresetSelect = document.getElementById('groupPresetSelect');
+    const customGroupInputDiv = document.getElementById('customGroupInputDiv');
+    const customGroupName = document.getElementById('customGroupName');
+    const customUploader = document.getElementById('customUploader');
+
+    customizeGroupBtn.addEventListener('click', () => {
+      customizeModal.classList.remove('hidden');
+    });
+
+    function hideModal() {
+      customizeModal.classList.add('hidden');
+    }
+
+    closeModalBtn.addEventListener('click', hideModal);
+    cancelModalBtn.addEventListener('click', hideModal);
+
+    groupPresetSelect.addEventListener('change', (e) => {
+      if (e.target.value === 'CUSTOM') {
+        customGroupInputDiv.classList.remove('hidden');
+        customGroupName.focus();
+      } else {
+        customGroupInputDiv.classList.add('hidden');
+      }
+    });
+
+    saveModalBtn.addEventListener('click', () => {
+      let chosenGroup = groupPresetSelect.value;
+      if (chosenGroup === 'CUSTOM') {
+        chosenGroup = customGroupName.value.trim() || 'CUSTOM-CREW';
+      }
+      state.groupName = chosenGroup;
+      state.uploader = customUploader.value.trim() || 'RemuxMaster';
+
+      refreshReleaseNames();
+      hideModal();
+      showToast('Configuration Updated', `Release adjusted to group [${state.groupName}]`);
+    });
+
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+
+    screenshotItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const caption = item.getAttribute('data-caption');
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = caption;
+        lightboxModal.classList.remove('hidden');
+      });
+    });
+
+    closeLightboxBtn.addEventListener('click', () => {
+      lightboxModal.classList.add('hidden');
+    });
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.add('hidden');
+      }
+    });
+
+    const btnPostComment = document.getElementById('btnPostComment');
+    const commentInput = document.getElementById('commentInput');
+    const commentsContainer = document.getElementById('commentsContainer');
+
+    btnPostComment.addEventListener('click', () => {
+      const text = commentInput.value.trim();
+      if (!text) {
+        showToast('Empty Comment', 'Please write something before posting.', false);
+        return;
+      }
+
+      const commentCard = document.createElement('div');
+      commentCard.className = 'bg-[#181717] p-3 rounded border border-brand-border text-xs animate-fade-in';
+      commentCard.innerHTML = `
+        <div class="flex items-center justify-between text-gray-400 mb-1.5">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-brand-accent flex items-center gap-1">
+              <i class="fa-solid fa-user text-[10px]"></i> You
+            </span>
+            <span class="text-[10px] bg-brand-border px-1.5 py-0.2 rounded text-gray-300">Member</span>
+          </div>
+          <span class="text-[10px]">Just now</span>
+        </div>
+        <p class="text-gray-200 leading-normal">${escapeHtml(text)}</p>
+      `;
+
+      commentsContainer.prepend(commentCard);
+      commentInput.value = '';
+      showToast('Comment Posted', 'Your feedback is now visible in the discussion.');
+    });
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Set today's date
+    document.getElementById('remuxDate').textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+
+    // Initial render
+    refreshReleaseNames();
+  </script>
+</body>
+</html>
