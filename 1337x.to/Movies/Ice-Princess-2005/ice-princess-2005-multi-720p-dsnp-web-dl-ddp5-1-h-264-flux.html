@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Princess (2005) MULTi 720p DSNP WEB-DL DDP5.1 H.264 - FLUX - 1337x</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#141414',
+              surface: '#1e1e1e',
+              panel: '#252525',
+              border: '#333333',
+              red: '#da3a04',
+              redHover: '#b52f02',
+              accent: '#ff5722',
+              green: '#5cb85c',
+              dimText: '#999999',
+              gold: '#f0ad4e'
+            }
+          },
+          fontFamily: {
+            mono: ['Consolas', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
+            sans: ['Inter', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom styling matching the iconic 1337x dark interface */
+    body {
+      background-color: #121212;
+      color: #cccccc;
+      font-family: 'Inter', sans-serif;
+    }
+    .torrent-title-bar {
+      background: linear-gradient(180deg, #2b2b2b 0%, #1e1e1e 100%);
+      border-left: 5px solid #da3a04;
+    }
+    .btn-download-primary {
+      background: linear-gradient(180deg, #e4430d 0%, #b82d02 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    .btn-download-primary:hover {
+      background: linear-gradient(180deg, #ff4c10 0%, #cf3200 100%);
+    }
+    .btn-magnet {
+      background: linear-gradient(180deg, #444444 0%, #2f2f2f 100%);
+    }
+    .btn-magnet:hover {
+      background: linear-gradient(180deg, #555555 0%, #3a3a3a 100%);
+    }
+    .tab-active {
+      border-bottom: 3px solid #da3a04;
+      color: #ffffff !important;
+      background-color: #272727;
+    }
+    /* Monospace NFO box */
+    .nfo-viewer {
+      background-color: #0d0d0d;
+      color: #38ef7d;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.82rem;
+      line-height: 1.35;
+      text-shadow: 0 0 2px rgba(56, 239, 125, 0.4);
+      white-space: pre;
+      overflow-x: auto;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #191919;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a3a3a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #da3a04;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-red selection:text-white">
+
+  <header class="bg-[#181818] border-b border-[#2d2d2d] sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <!-- Logo & Brand -->
+      <div class="flex items-center space-x-3">
+        <a href="#" class="flex items-center space-x-2 text-2xl font-black tracking-tight text-white group">
+          <span class="bg-gradient-to-r from-brand-red to-orange-500 text-white px-2 py-0.5 rounded shadow">1337x</span>
+          <span class="text-sm font-semibold tracking-normal text-gray-400 group-hover:text-gray-200">.to</span>
+        </a>
+        <span class="hidden md:inline-block text-xs bg-black/40 text-brand-dimText border border-[#333] px-2 py-0.5 rounded">
+          en-US Index
+        </span>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="flex-1 max-w-xl mx-auto w-full order-3 sm:order-2">
+        <form onsubmit="event.preventDefault(); triggerNotice('Search query simulated.');" class="flex items-center relative">
+          <input 
+            type="text" 
+            value="Ice Princess 2005" 
+            placeholder="Search for torrents..." 
+            class="w-full bg-[#242424] border border-[#3d3d3d] focus:border-brand-red rounded-l px-3.5 py-1.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none"
+          >
+          <button type="submit" class="bg-brand-red hover:bg-brand-redHover text-white px-4 py-1.5 rounded-r text-sm font-semibold transition-colors flex items-center gap-1.5">
+            <i class="fa fa-search text-xs"></i>
+            <span class="hidden sm:inline">Search</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Top Nav Badges / Categories -->
+      <div class="flex items-center space-x-2 sm:space-x-3 text-xs font-medium order-2 sm:order-3">
+        <a href="#" class="text-gray-300 hover:text-brand-accent py-1 px-2 rounded hover:bg-[#252525] transition"><i class="fa fa-fire text-amber-500 mr-1"></i>Top 100</a>
+        <a href="#" class="text-gray-300 hover:text-brand-accent py-1 px-2 rounded hover:bg-[#252525] transition"><i class="fa fa-chart-line text-blue-400 mr-1"></i>Trending</a>
+        <button onclick="toggleUploadModal()" class="bg-[#2d2d2d] hover:bg-[#383838] border border-[#444] text-white px-2.5 py-1 rounded transition flex items-center gap-1">
+          <i class="fa fa-cloud-upload-alt text-brand-red"></i> Upload
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Strip -->
+    <nav class="bg-[#121212] border-t border-[#262626] text-xs font-semibold overflow-x-auto whitespace-nowrap">
+      <div class="max-w-7xl mx-auto px-4 flex space-x-1 sm:space-x-4 py-1.5 text-gray-400">
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded text-brand-red font-bold"><i class="fa fa-film mr-1"></i>MOVIES</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-tv mr-1"></i>TELEVISION</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-gamepad mr-1"></i>GAMES</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-music mr-1"></i>MUSIC</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-laptop-code mr-1"></i>APPLICATIONS</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-dragon mr-1"></i>ANIME</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-book mr-1"></i>DOCUMENTARIES</a>
+        <a href="#" class="hover:text-brand-red px-2 py-0.5 rounded"><i class="fa fa-ellipsis-h mr-1"></i>OTHER</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto w-full px-3 sm:px-6 py-5 flex-1">
+    
+    <!-- Breadcrumb bar -->
+    <div class="flex items-center text-xs text-gray-400 mb-4 space-x-1.5 overflow-x-auto">
+      <a href="#" class="hover:text-white"><i class="fa fa-home mr-1"></i>Home</a>
+      <span>/</span>
+      <a href="#" class="hover:text-white">Movies</a>
+      <span>/</span>
+      <a href="#" class="hover:text-white">HD Movies</a>
+      <span>/</span>
+      <span class="text-brand-dimText truncate">Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX</span>
+    </div>
+
+    <div class="torrent-title-bar p-3.5 sm:p-4 rounded-t-lg bg-[#202020] border-t border-r border-[#303030]">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div>
+          <h1 class="text-base sm:text-xl font-bold text-white tracking-wide break-all">
+            Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX
+          </h1>
+          <div class="flex flex-wrap items-center gap-2 mt-1.5 text-xs text-gray-400">
+            <span class="bg-brand-red/20 text-brand-accent border border-brand-red/40 px-2 py-0.5 rounded font-mono font-bold">
+              VERIFIED RELEASE
+            </span>
+            <span class="bg-amber-500/20 text-brand-gold border border-amber-500/40 px-2 py-0.5 rounded font-bold flex items-center gap-1">
+              <i class="fa fa-globe text-xs"></i> MULTi (5 Audios)
+            </span>
+            <span class="bg-[#2c2c2c] text-gray-300 px-2 py-0.5 rounded border border-[#3e3e3e]">
+              <i class="fa fa-video mr-1 text-blue-400"></i>720p WEB-DL
+            </span>
+            <span class="bg-[#2c2c2c] text-gray-300 px-2 py-0.5 rounded border border-[#3e3e3e]">
+              <i class="fa fa-volume-up mr-1 text-green-400"></i>DDP 5.1
+            </span>
+            <span class="bg-[#2c2c2c] text-gray-300 px-2 py-0.5 rounded border border-[#3e3e3e]">
+              <i class="fa fa-film mr-1 text-sky-400"></i>Disney+ (DSNP)
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Stats Counters -->
+        <div class="flex items-center space-x-3 self-start md:self-auto bg-[#181818] px-3 py-1.5 rounded border border-[#2d2d2d] text-xs">
+          <div class="text-center px-1">
+            <span class="block font-bold text-green-400 text-sm" id="seeders-count">194</span>
+            <span class="text-[10px] text-gray-400 tracking-wider">SEEDERS</span>
+          </div>
+          <div class="h-6 w-[1px] bg-[#333]"></div>
+          <div class="text-center px-1">
+            <span class="block font-bold text-brand-red text-sm" id="leechers-count">29</span>
+            <span class="text-[10px] text-gray-400 tracking-wider">LEECHERS</span>
+          </div>
+          <div class="h-6 w-[1px] bg-[#333]"></div>
+          <div class="text-center px-1">
+            <span class="block font-bold text-blue-400 text-sm">4,510</span>
+            <span class="text-[10px] text-gray-400 tracking-wider">COMPLETED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#181818] border-x border-b border-[#2b2b2b] p-4 flex flex-wrap items-center justify-between gap-3 shadow-inner">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <!-- Torrent Download -->
+        <button onclick="downloadTorrentMock()" class="btn-download-primary text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded flex items-center gap-2 transition transform active:scale-95 shadow">
+          <i class="fa fa-download"></i>
+          <span>Torrent Download</span>
+        </button>
+
+        <!-- Magnet Download -->
+        <button onclick="copyMagnet()" class="btn-magnet border border-[#444] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded flex items-center gap-2 transition hover:border-[#666]">
+          <i class="fa fa-magnet text-red-500"></i>
+          <span>Magnet Download</span>
+        </button>
+
+        <!-- Copy Hash -->
+        <button onclick="copyHash()" title="Copy SHA-1 InfoHash" class="bg-[#242424] hover:bg-[#2e2e2e] border border-[#3b3b3b] text-gray-300 text-xs px-3 py-2 rounded flex items-center gap-1.5 transition">
+          <i class="fa fa-fingerprint text-brand-gold"></i>
+          <span class="hidden sm:inline">Copy Hash</span>
+        </button>
+      </div>
+
+      <!-- Release Group Tag -->
+      <div class="flex items-center gap-2 text-xs">
+        <span class="text-gray-400">Release Group:</span>
+        <span class="bg-[#2a2a2a] text-brand-accent px-2.5 py-1 rounded font-mono font-bold border border-[#3e3e3e]">
+          FLUX (P2P/Internal)
+        </span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+      
+      <!-- Left 2 Cols: Main Details & Tabs -->
+      <div class="lg:col-span-2 space-y-5">
+        
+        <!-- Torrent Specs Table -->
+        <div class="bg-[#1c1c1c] border border-[#2b2b2b] rounded overflow-hidden">
+          <div class="bg-[#222222] px-4 py-2.5 border-b border-[#303030] text-sm font-bold text-white flex justify-between items-center">
+            <span><i class="fa fa-info-circle text-brand-red mr-2"></i>Torrent Specifications</span>
+            <span class="text-xs font-normal text-gray-400">Disney+ (DSNP) Web Release</span>
+          </div>
+
+          <div class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Category:</span>
+              <span class="font-medium text-white"><i class="fa fa-film mr-1 text-gray-400"></i>Movies / HD</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Type:</span>
+              <span class="font-medium text-white">HD / 720p / WEB-DL / MULTi</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Languages (MULTi):</span>
+              <span class="font-medium text-amber-400">EN (Default), FR, ES, DE, IT</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Total Size:</span>
+              <span class="font-mono font-bold text-brand-accent">3.18 GB (3,414,484,992 Bytes)</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Uploaded By:</span>
+              <span class="font-semibold text-brand-green flex items-center gap-1">
+                <i class="fa fa-check-circle text-[10px]"></i> FLUX_Team
+              </span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Date Uploaded:</span>
+              <span class="text-gray-300">2026-03-12 14:22:08</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Video Codec:</span>
+              <span class="font-mono text-gray-300">H.264 / AVC High@L3.1 (720p)</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828]">
+              <span class="text-gray-400">Audio Codecs:</span>
+              <span class="font-mono text-gray-300">5x E-AC-3 (DDP 5.1 @ 256 kb/s each)</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-[#282828] sm:col-span-2">
+              <span class="text-gray-400">InfoHash:</span>
+              <span class="font-mono text-gray-300 text-[11px] truncate select-all" id="info-hash-val">
+                9c48b26ea8d11c7e903b412e6900f91ca24840e2
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#1c1c1c] border border-[#2b2b2b] rounded overflow-hidden">
+          <!-- Tab Navigation -->
+          <div class="flex border-b border-[#2d2d2d] bg-[#171717] text-xs font-semibold text-gray-400 overflow-x-auto">
+            <button onclick="switchTab('description')" id="tab-btn-description" class="px-4 py-3 hover:text-white tab-active transition flex items-center gap-2">
+              <i class="fa fa-align-left"></i> Description
+            </button>
+            <button onclick="switchTab('mediainfo')" id="tab-btn-mediainfo" class="px-4 py-3 hover:text-white transition flex items-center gap-2">
+              <i class="fa fa-terminal"></i> NFO / MediaInfo
+            </button>
+            <button onclick="switchTab('files')" id="tab-btn-files" class="px-4 py-3 hover:text-white transition flex items-center gap-2">
+              <i class="fa fa-folder-open"></i> File List (3)
+            </button>
+            <button onclick="switchTab('trackers')" id="tab-btn-trackers" class="px-4 py-3 hover:text-white transition flex items-center gap-2">
+              <i class="fa fa-server"></i> Trackers (6)
+            </button>
+            <button onclick="switchTab('comments')" id="tab-btn-comments" class="px-4 py-3 hover:text-white transition flex items-center gap-2">
+              <i class="fa fa-comments"></i> Comments (<span id="comment-counter">5</span>)
+            </button>
+          </div>
+
+          <!-- TAB CONTENT: Description -->
+          <div id="tab-description" class="p-5 space-y-6">
+            <!-- Movie synopsis & poster -->
+            <div class="flex flex-col sm:flex-row gap-5 items-start">
+              <!-- Poster with fallback -->
+              <div class="w-full sm:w-48 flex-shrink-0 bg-[#121212] border border-[#333] rounded overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=400&q=80" 
+                  alt="Ice Princess 2005" 
+                  class="w-full h-64 object-cover object-center"
+                  onerror="this.src='https://placehold.co/400x600/181818/da3a04?text=ICE+PRINCESS+(2005)+MULTI'"
+                >
+                <div class="p-2.5 bg-[#171717] text-center border-t border-[#2d2d2d]">
+                  <div class="text-xs font-bold text-white">Ice Princess (2005)</div>
+                  <div class="text-[11px] text-brand-gold mt-1 flex items-center justify-center gap-1">
+                    <i class="fa fa-star"></i> 6.0/10 IMDb
+                  </div>
+                </div>
+              </div>
+
+              <!-- Plot and info -->
+              <div class="flex-1 space-y-3 text-xs sm:text-sm text-gray-300">
+                <h2 class="text-lg font-bold text-white border-b border-[#2d2d2d] pb-2 flex items-center justify-between">
+                  <span>Ice Princess (2005) — Walt Disney Pictures</span>
+                  <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">MULTi-TRACK</span>
+                </h2>
+                <p class="leading-relaxed text-gray-300">
+                  With the help of an elaborate computer program to analyze figure skating spins and biomechanics, bookish high school student Casey Carlyle (Michelle Trachtenberg) works on a physics project for a scholarship to Harvard. Along the way, she discovers an unexpected passion for the sport herself, training under a disgraced former champion coach to chase a dream on the ice rink.
+                </p>
+
+                <!-- MULTi Audio Details Strip -->
+                <div class="bg-[#141414] p-3 rounded border border-[#2b2b2b] space-y-2">
+                  <div class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                    <i class="fa fa-volume-up"></i> MULTi-Language Audio Streams (Disney+ Untouched DDP 5.1):
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-gray-300 font-mono">
+                    <div class="flex items-center gap-1"><span class="w-16 text-gray-500">Audio 1:</span> <span class="text-white">English</span> (E-AC-3 5.1 @ 256 kb/s) [Default]</div>
+                    <div class="flex items-center gap-1"><span class="w-16 text-gray-500">Audio 2:</span> <span class="text-white">Français</span> (E-AC-3 5.1 @ 256 kb/s)</div>
+                    <div class="flex items-center gap-1"><span class="w-16 text-gray-500">Audio 3:</span> <span class="text-white">Español</span> (E-AC-3 5.1 @ 256 kb/s)</div>
+                    <div class="flex items-center gap-1"><span class="w-16 text-gray-500">Audio 4:</span> <span class="text-white">Deutsch</span> (E-AC-3 5.1 @ 256 kb/s)</div>
+                    <div class="flex items-center gap-1 sm:col-span-2"><span class="w-16 text-gray-500">Audio 5:</span> <span class="text-white">Italiano</span> (E-AC-3 5.1 @ 256 kb/s)</div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-[#141414] p-3 rounded border border-[#262626]">
+                  <div><strong class="text-gray-400">Director:</strong> <span class="text-white">Tim Fywell</span></div>
+                  <div><strong class="text-gray-400">Writers:</strong> <span class="text-white">Meg Cabot, Hadley Davis</span></div>
+                  <div><strong class="text-gray-400">Stars:</strong> <span class="text-white">Michelle Trachtenberg, Joan Cusack, Kim Cattrall, Hayden Panettiere</span></div>
+                  <div><strong class="text-gray-400">Genres:</strong> <span class="text-white">Comedy, Drama, Family, Sport</span></div>
+                  <div><strong class="text-gray-400">Runtime:</strong> <span class="text-white">1h 38m (98 mins)</span></div>
+                  <div><strong class="text-gray-400">Platform Source:</strong> <span class="text-blue-400 font-semibold">Disney+ (DSNP WEB-DL)</span></div>
+                </div>
+
+                <div class="pt-2">
+                  <span class="inline-block bg-[#242424] text-gray-300 text-xs px-2.5 py-1 rounded border border-[#383838] mr-1.5 mb-1.5">
+                    <i class="fa fa-check text-green-400 mr-1"></i>Remuxed from official Disney+ 1080p source downsampled to transparent 720p H.264
+                  </span>
+                  <span class="inline-block bg-[#242424] text-gray-300 text-xs px-2.5 py-1 rounded border border-[#383838] mr-1.5 mb-1.5">
+                    <i class="fa fa-check text-green-400 mr-1"></i>5 Untouched Dolby Digital Plus 5.1 streams (MULTi)
+                  </span>
+                  <span class="inline-block bg-[#242424] text-gray-300 text-xs px-2.5 py-1 rounded border border-[#383838] mr-1.5 mb-1.5">
+                    <i class="fa fa-check text-green-400 mr-1"></i>Full SDH & Forced Subtitles: EN, FR, ES, DE, IT, NL, PT
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screenshots Section -->
+            <div class="space-y-3 pt-3">
+              <div class="flex items-center justify-between border-b border-[#2d2d2d] pb-2">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                  <i class="fa fa-images text-brand-red"></i> Screen Captures (720p HD Quality)
+                </h3>
+                <span class="text-xs text-gray-400">Click to expand preview</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="group relative rounded overflow-hidden border border-[#333] cursor-pointer bg-black" onclick="openPreviewModal('Ice Princess - Scene 1 (Figure Skating Physics Routine)', 'https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&w=1200&q=80')">
+                  <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&w=500&q=70" class="w-full h-36 object-cover group-hover:scale-105 transition duration-300" alt="Frame 1" onerror="this.src='https://placehold.co/600x350/111/fff?text=Ice+Skating+Scene+1'">
+                  <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <i class="fa fa-search-plus text-white text-lg"></i>
+                  </div>
+                  <div class="absolute bottom-1 right-2 text-[10px] bg-black/70 text-gray-300 px-1.5 py-0.5 rounded">00:18:42</div>
+                </div>
+
+                <div class="group relative rounded overflow-hidden border border-[#333] cursor-pointer bg-black" onclick="openPreviewModal('Ice Princess - Scene 2 (Casey Practicing on the Pond)', 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1200&q=80')">
+                  <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=500&q=70" class="w-full h-36 object-cover group-hover:scale-105 transition duration-300" alt="Frame 2" onerror="this.src='https://placehold.co/600x350/111/fff?text=Frozen+Pond+Practice'">
+                  <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <i class="fa fa-search-plus text-white text-lg"></i>
+                  </div>
+                  <div class="absolute bottom-1 right-2 text-[10px] bg-black/70 text-gray-300 px-1.5 py-0.5 rounded">00:46:15</div>
+                </div>
+
+                <div class="group relative rounded overflow-hidden border border-[#333] cursor-pointer bg-black" onclick="openPreviewModal('Ice Princess - Scene 3 (Championship Final Program)', 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80')">
+                  <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=500&q=70" class="w-full h-36 object-cover group-hover:scale-105 transition duration-300" alt="Frame 3" onerror="this.src='https://placehold.co/600x350/111/fff?text=Championship+Routine'">
+                  <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <i class="fa fa-search-plus text-white text-lg"></i>
+                  </div>
+                  <div class="absolute bottom-1 right-2 text-[10px] bg-black/70 text-gray-300 px-1.5 py-0.5 rounded">01:29:50</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-mediainfo" class="p-4 hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">Official Group NFO file: <span class="text-brand-accent">Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX.nfo</span></span>
+              <button onclick="copyNfo()" class="bg-[#2a2a2a] hover:bg-[#333] border border-[#444] text-xs px-2.5 py-1 rounded text-white flex items-center gap-1 transition">
+                <i class="fa fa-copy"></i> Copy NFO
+              </button>
+            </div>
+            <pre class="nfo-viewer p-4 rounded border border-[#262626]" id="nfo-content">
+ ▄████████  ▄█       ███    █▄  ▀████    ▐████▀ 
+  ███    ███ ███       ███    ███   ███▌   ████▀  
+  ███    █▀  ███       ███    ███    ███▌ ████▀   
+ ▄███▄▄▄     ███       ███    ███     ███████     
+▀▀███▀▀▀     ███       ███    ███     ███████     
+  ███        ███       ███    ███    ████ ███▌    
+  ███        ███▌    ▄ ███    ███   ████   ███▌   
+  ███        █████▄▄██ ████████▀  ▄████     ███▌  
+             ▀                                    
+ ────────────────────────────────────────────────────────────
+  Release Name .....: Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX
+  Release Date .....: 2026-03-12
+  Theater Date .....: 2005-03-18
+  Source ...........: Disney+ (DSNP) WEB-DL (en-US / MULTi)
+  Container ........: Matroska (.mkv)
+  Duration .........: 01:38:22.400
+  File Size ........: 3.18 GiB (3,414,484,992 bytes)
+  Overall Bitrate ..: 4 624 kb/s
+
+ [ VIDEO ]
+  Codec ............: AVC / H.264 / MPEG-4 AVC
+  Profile ..........: High@L3.1
+  Resolution .......: 1280 x 720 (16:9 Aspect Ratio)
+  Frame Rate .......: 23.976 (24000/1001) FPS
+  Bitrate ..........: 3 124 kb/s
+  Color Space ......: YUV 4:2:0 8 bits (BT.709)
+
+ [ AUDIO - MULTi 5.1 TRACKS ]
+  Track #1 (Default): E-AC-3 (Dolby Digital Plus) 5.1 @ 256 kb/s [English - en-US]
+  Track #2 .........: E-AC-3 (Dolby Digital Plus) 5.1 @ 256 kb/s [French - fr-FR]
+  Track #3 .........: E-AC-3 (Dolby Digital Plus) 5.1 @ 256 kb/s [Spanish - es-ES]
+  Track #4 .........: E-AC-3 (Dolby Digital Plus) 5.1 @ 256 kb/s [German - de-DE]
+  Track #5 .........: E-AC-3 (Dolby Digital Plus) 5.1 @ 256 kb/s [Italian - it-IT]
+
+ [ SUBTITLES ]
+  1. UTF-8 SubRip ..: English [Full SDH]
+  2. UTF-8 SubRip ..: French (Français) [Full & Forced]
+  3. UTF-8 SubRip ..: Spanish (Castellano & Latino) [Full & Forced]
+  4. UTF-8 SubRip ..: German (Deutsch) [Full & Forced]
+  5. UTF-8 SubRip ..: Italian (Italiano) [Full & Forced]
+  6. UTF-8 SubRip ..: Dutch (Nederlands)
+  7. UTF-8 SubRip ..: Portuguese (Português)
+
+ [ GREETS & NOTES ]
+  Greets to all Scene & P2P peers preserving timeless family classics!
+  Official Disney+ direct extraction with untouched multi-channel surround streams.
+ ────────────────────────────────────────────────────────────</pre>
+          </div>
+
+          <div id="tab-files" class="p-4 hidden">
+            <div class="text-xs text-gray-400 mb-3 flex items-center justify-between">
+              <span>Directory Structure:</span>
+              <span class="text-white font-mono">3 files in 1 directory</span>
+            </div>
+            <div class="bg-[#141414] border border-[#2d2d2d] rounded overflow-hidden text-xs">
+              <div class="bg-[#1a1a1a] px-3 py-2 border-b border-[#2d2d2d] font-bold text-gray-300 flex items-center justify-between">
+                <span><i class="fa fa-folder text-brand-gold mr-2"></i>Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX</span>
+                <span class="font-mono text-gray-400">3.18 GB</span>
+              </div>
+              <ul class="divide-y divide-[#222]">
+                <li class="px-4 py-2.5 flex items-center justify-between hover:bg-[#1a1a1a] transition">
+                  <div class="flex items-center space-x-2 text-white truncate pr-4">
+                    <i class="fa fa-file-video text-blue-400"></i>
+                    <span class="font-mono text-xs truncate">Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX.mkv</span>
+                  </div>
+                  <span class="font-mono text-gray-400 text-xs flex-shrink-0">3.18 GB</span>
+                </li>
+                <li class="px-4 py-2.5 flex items-center justify-between hover:bg-[#1a1a1a] transition">
+                  <div class="flex items-center space-x-2 text-white truncate pr-4">
+                    <i class="fa fa-file-alt text-amber-400"></i>
+                    <span class="font-mono text-xs truncate">Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX.nfo</span>
+                  </div>
+                  <span class="font-mono text-gray-400 text-xs flex-shrink-0">9.12 KB</span>
+                </li>
+                <li class="px-4 py-2.5 flex items-center justify-between hover:bg-[#1a1a1a] transition">
+                  <div class="flex items-center space-x-2 text-white truncate pr-4">
+                    <i class="fa fa-file-video text-blue-300"></i>
+                    <span class="font-mono text-xs truncate">Sample/Ice.Princess.2005.MULTi.Sample.mkv</span>
+                  </div>
+                  <span class="font-mono text-gray-400 text-xs flex-shrink-0">29.10 MB</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="tab-trackers" class="p-4 hidden">
+            <div class="text-xs text-gray-400 mb-3 flex items-center justify-between">
+              <span>Active Announced Trackers:</span>
+              <button onclick="copyTrackers()" class="bg-[#242424] hover:bg-[#2c2c2c] text-white px-2 py-1 rounded border border-[#3d3d3d] text-xs">
+                <i class="fa fa-copy mr-1"></i>Copy All
+              </button>
+            </div>
+            <div class="bg-[#141414] border border-[#2d2d2d] rounded overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[#1c1c1c] text-gray-400 border-b border-[#2d2d2d]">
+                  <tr>
+                    <th class="p-2.5">Announce URL</th>
+                    <th class="p-2.5">Protocol</th>
+                    <th class="p-2.5 text-right">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[#242424] font-mono text-gray-300" id="trackers-tbody">
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://tracker.opentrackr.org:1337/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://open.demonii.com:1337/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://tracker.openbittorrent.com:6969/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://tracker.coppersurfer.tk:6969/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://exodus.desync.com:6969/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 text-blue-400">udp://tracker.torrent.eu.org:451/announce</td>
+                    <td class="p-2.5 text-gray-400">UDP</td>
+                    <td class="p-2.5 text-right text-green-400 font-sans font-semibold">Active (Working)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="tab-comments" class="p-4 hidden space-y-4">
+            <!-- Add comment box -->
+            <form onsubmit="handleCommentSubmit(event)" class="bg-[#151515] p-3 rounded border border-[#2d2d2d] space-y-2">
+              <label for="comment-input" class="block text-xs font-semibold text-gray-300">
+                Leave a comment regarding this release:
+              </label>
+              <textarea 
+                id="comment-input" 
+                rows="2" 
+                placeholder="Quality confirmation, audio sync report, or seed request..." 
+                class="w-full bg-[#202020] border border-[#333] focus:border-brand-red rounded p-2 text-xs text-white placeholder-gray-500 focus:outline-none"
+                required
+              ></textarea>
+              <div class="flex justify-between items-center">
+                <span class="text-[11px] text-gray-500">Posting as: <strong class="text-gray-300">Guest_IceFan</strong></span>
+                <button type="submit" class="bg-brand-red hover:bg-brand-redHover text-white px-3 py-1 rounded text-xs font-semibold transition">
+                  Post Comment
+                </button>
+              </div>
+            </form>
+
+            <!-- Comments List -->
+            <div id="comments-container" class="space-y-3">
+              <div class="bg-[#151515] p-3 rounded border border-[#242424] space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center space-x-2">
+                    <span class="font-bold text-brand-gold">SkateGeek99</span>
+                    <span class="bg-[#242424] text-[10px] text-gray-400 px-1.5 py-0.5 rounded border border-[#333]">VIP</span>
+                  </div>
+                  <span class="text-gray-500 text-[11px]">3 days ago</span>
+                </div>
+                <p class="text-xs text-gray-300">
+                  Audio sync and 5.1 spatial channels on the competition scenes are crystal clear. Thanks FLUX team for the Disney+ web-dl rip! Seeding at 1 Gbps.
+                </p>
+              </div>
+
+              <div class="bg-[#151515] p-3 rounded border border-[#242424] space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center space-x-2">
+                    <span class="font-bold text-gray-300">RetroCinematic</span>
+                    <span class="bg-[#242424] text-[10px] text-gray-400 px-1.5 py-0.5 rounded border border-[#333]">Member</span>
+                  </div>
+                  <span class="text-gray-500 text-[11px]">5 days ago</span>
+                </div>
+                <p class="text-xs text-gray-300">
+                  Great nostalgic movie from 2005. Michelle Trachtenberg and Joan Cusack are great. Verified bitrates match MediaInfo specs perfectly.
+                </p>
+              </div>
+
+              <div class="bg-[#151515] p-3 rounded border border-[#242424] space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center space-x-2">
+                    <span class="font-bold text-brand-green">NordicSeeder</span>
+                    <span class="bg-[#242424] text-[10px] text-gray-400 px-1.5 py-0.5 rounded border border-[#333]">Uploader</span>
+                  </div>
+                  <span class="text-gray-500 text-[11px]">1 week ago</span>
+                </div>
+                <p class="text-xs text-gray-300">
+                  Clean rip, zero dropped frames, subs in sync. Added to seedbox rotation indefinitely.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="space-y-5">
+        
+        <!-- Torrent Health Card -->
+        <div class="bg-[#1c1c1c] border border-[#2b2b2b] rounded p-4 space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider flex items-center justify-between border-b border-[#2d2d2d] pb-2">
+            <span><i class="fa fa-heartbeat text-red-500 mr-1.5"></i>Torrent Health</span>
+            <span class="text-brand-green">100% Healthy</span>
+          </div>
+
+          <!-- Health progress bar -->
+          <div class="space-y-1">
+            <div class="w-full bg-[#111] h-3 rounded-full overflow-hidden border border-[#333] flex">
+              <div class="bg-gradient-to-r from-emerald-500 to-green-400 h-full w-[88%]" title="Seeds: 148"></div>
+              <div class="bg-brand-red h-full w-[12%]" title="Leeches: 21"></div>
+            </div>
+            <div class="flex justify-between text-[11px] text-gray-400 pt-1">
+              <span class="text-green-400 font-semibold">148 Seeds (88%)</span>
+              <span class="text-brand-red font-semibold">21 Peers (12%)</span>
+            </div>
+          </div>
+
+          <div class="bg-[#141414] p-2.5 rounded border border-[#262626] text-[11px] text-gray-300 space-y-1">
+            <div class="flex justify-between">
+              <span class="text-gray-400">Download Speed:</span>
+              <span class="text-white font-mono">High (~25 MB/s)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-400">Availability:</span>
+              <span class="text-green-400 font-mono">9.8 copies</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-400">Last Seeder Seen:</span>
+              <span class="text-gray-300">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Release Group Profile Card -->
+        <div class="bg-[#1c1c1c] border border-[#2b2b2b] rounded p-4 space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2 border-b border-[#2d2d2d] pb-2">
+            <i class="fa fa-shield-alt text-brand-red"></i> Release Group Profile
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 rounded bg-gradient-to-br from-[#2a2a2a] to-[#161616] border border-[#3e3e3e] flex items-center justify-center font-black text-brand-red text-lg shadow">
+              FLUX
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">FLUX</div>
+              <div class="text-[11px] text-brand-gold flex items-center gap-1">
+                <i class="fa fa-medal"></i> Verified P2P Group
+              </div>
+              <div class="text-[10px] text-gray-400">Specialty: MULTi & DSNP / NF / AMZN WEB-DLs</div>
+            </div>
+          </div>
+          <div class="text-xs text-gray-400 leading-normal">
+            FLUX specializes in untouched multi-channel Disney+ and international streaming platform extractions, bundling pristine original-language and dubbed Dolby Digital Plus audio tracks with synchronized SDH subtitles.
+          </div>
+        </div>
+
+        <!-- Related Releases Widget -->
+        <div class="bg-[#1c1c1c] border border-[#2b2b2b] rounded p-4 space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider border-b border-[#2d2d2d] pb-2">
+            <i class="fa fa-compact-disc text-blue-400 mr-1.5"></i>Other Editions & Related
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <a href="#" onclick="event.preventDefault(); triggerNotice('Viewing 1080p MULTi listing.');" class="block p-2 rounded bg-[#161616] hover:bg-[#222] border border-[#262626] transition">
+              <div class="text-white font-medium truncate">Ice.Princess.2005.MULTi.1080p.DSNP.WEB-DL.DDP5.1.H.264-FLUX</div>
+              <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                <span>Size: 5.62 GB</span>
+                <span class="text-green-400"><i class="fa fa-arrow-up"></i> 112</span>
+              </div>
+            </a>
+
+            <a href="#" onclick="event.preventDefault(); triggerNotice('Viewing 2160p MULTi listing.');" class="block p-2 rounded bg-[#161616] hover:bg-[#222] border border-[#262626] transition">
+              <div class="text-white font-medium truncate">Ice.Princess.2005.MULTi.2160p.DSNP.WEB-DL.DDP5.1.HDR.HEVC-FLUX</div>
+              <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                <span>Size: 14.10 GB</span>
+                <span class="text-green-400"><i class="fa fa-arrow-up"></i> 58</span>
+              </div>
+            </a>
+
+            <a href="#" onclick="event.preventDefault(); triggerNotice('Viewing BluRay listing.');" class="block p-2 rounded bg-[#161616] hover:bg-[#222] border border-[#262626] transition">
+              <div class="text-white font-medium truncate">Ice.Princess.2005.720p.BluRay.x264-NeZu</div>
+              <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                <span>Size: 3.20 GB</span>
+                <span class="text-green-400"><i class="fa fa-arrow-up"></i> 18</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-[#1b1b1b] border border-[#333] rounded-lg overflow-hidden shadow-2xl relative">
+      <div class="flex items-center justify-between px-4 py-2.5 bg-[#242424] border-b border-[#333]">
+        <h4 id="modal-img-title" class="text-xs sm:text-sm font-semibold text-white truncate">Image Preview</h4>
+        <button onclick="closePreviewModal()" class="text-gray-400 hover:text-white text-base px-2">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="p-2 bg-black flex items-center justify-center">
+        <img id="modal-img-src" src="" alt="Capture full preview" class="max-h-[75vh] w-auto object-contain rounded">
+      </div>
+    </div>
+  </div>
+
+  <div id="upload-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+    <div class="max-w-md w-full bg-[#1e1e1e] border border-[#333] rounded-lg p-5 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-[#333] pb-2">
+        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+          <i class="fa fa-cloud-upload-alt text-brand-red"></i> 1337x Torrent Uploader
+        </h3>
+        <button onclick="toggleUploadModal()" class="text-gray-400 hover:text-white"><i class="fa fa-times"></i></button>
+      </div>
+      <p class="text-xs text-gray-300">
+        You are in read-only guest browsing mode on 1337x.to. To upload releases, please authenticate with your release group credentials.
+      </p>
+      <div class="flex justify-end space-x-2 pt-2">
+        <button onclick="toggleUploadModal()" class="bg-[#2d2d2d] hover:bg-[#383838] text-white px-3 py-1.5 rounded text-xs">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+  <footer class="bg-[#111111] border-t border-[#242424] text-gray-400 text-xs py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <span class="font-black text-brand-red text-base">1337x</span>
+        <span class="text-gray-500">|</span>
+        <span class="text-gray-400">Simulated index detail page for en-US</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 text-[11px] text-gray-400">
+        <a href="#" class="hover:text-white">Rules</a>
+        <a href="#" class="hover:text-white">Contact & DMCA</a>
+        <a href="#" class="hover:text-white">API</a>
+        <a href="#" class="hover:text-white">Chat (IRC)</a>
+        <a href="#" class="hover:text-white">Proxies</a>
+      </div>
+      <div class="text-[11px] text-gray-500 text-center md:text-right">
+        Ice Princess (2005) MULTi 720p DSNP WEB-DL DDP5.1 H.264-FLUX
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab switching controller
+    function switchTab(tabName) {
+      const tabs = ['description', 'mediainfo', 'files', 'trackers', 'comments'];
+      tabs.forEach(t => {
+        const contentEl = document.getElementById('tab-' + t);
+        const btnEl = document.getElementById('tab-btn-' + t);
+        if (contentEl) contentEl.classList.add('hidden');
+        if (btnEl) btnEl.classList.remove('tab-active');
+      });
+
+      const activeContent = document.getElementById('tab-' + tabName);
+      const activeBtn = document.getElementById('tab-btn-' + tabName);
+      if (activeContent) activeContent.classList.remove('hidden');
+      if (activeBtn) activeBtn.classList.add('tab-active');
+    }
+
+    // Modal preview controls
+    function openPreviewModal(title, src) {
+      const modal = document.getElementById('image-modal');
+      document.getElementById('modal-img-title').innerText = title;
+      document.getElementById('modal-img-src').src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePreviewModal() {
+      const modal = document.getElementById('image-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function toggleUploadModal() {
+      const modal = document.getElementById('upload-modal');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // Toast notification helper without alert()
+    function triggerNotice(msg, icon = 'fa-info-circle') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto bg-[#1f1f1f] text-white border-l-4 border-brand-red border border-[#333] px-3.5 py-2.5 rounded shadow-xl text-xs flex items-center space-x-2 animate-bounce-short';
+      toast.innerHTML = `<i class="fa ${icon} text-brand-red"></i> <span>${msg}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.transition = 'opacity 0.4s ease';
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 400);
+      }, 3000);
+    }
+
+    // Clipboard copy helper using execCommand for sandbox compatibility
+    function copyTextFallback(text, successMessage) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        triggerNotice(successMessage, 'fa-check');
+      } catch (err) {
+        triggerNotice('Failed to copy to clipboard', 'fa-times');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // Magnet Link Copy Action
+    function copyMagnet() {
+      const hash = '9c48b26ea8d11c7e903b412e6900f91ca24840e2';
+      const name = encodeURIComponent('Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX');
+      const tr = [
+        'udp://tracker.opentrackr.org:1337/announce',
+        'udp://open.demonii.com:1337/announce',
+        'udp://tracker.openbittorrent.com:6969/announce'
+      ].map(t => '&tr=' + encodeURIComponent(t)).join('');
+
+      const magnetURI = `magnet:?xt=urn:btih:${hash}&dn=${name}${tr}`;
+      copyTextFallback(magnetURI, 'MULTi Magnet URI copied to clipboard!');
+    }
+
+    // Download mock .torrent file
+    function downloadTorrentMock() {
+      const torrentFilename = "Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX.torrent";
+      const dummyContent = "d8:announce41:udp://tracker.opentrackr.org:1337/announce13:creation datei1773325328e4:infod6:lengthi3414484992e4:name62:Ice.Princess.2005.MULTi.720p.DSNP.WEB-DL.DDP5.1.H.264-FLUX.mkvee";
+      const blob = new Blob([dummyContent], { type: 'application/x-bittorrent' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = torrentFilename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      triggerNotice('Starting MULTi torrent file download...', 'fa-arrow-down');
+    }
+
+    // Copy InfoHash
+    function copyHash() {
+      const hash = document.getElementById('info-hash-val').innerText.trim();
+      copyTextFallback(hash, 'InfoHash copied to clipboard!');
+    }
+
+    // Copy NFO content
+    function copyNfo() {
+      const nfo = document.getElementById('nfo-content').innerText;
+      copyTextFallback(nfo, 'Complete NFO copied to clipboard!');
+    }
+
+    // Copy Trackers list
+    function copyTrackers() {
+      const trackers = [
+        "udp://tracker.opentrackr.org:1337/announce",
+        "udp://open.demonii.com:1337/announce",
+        "udp://tracker.openbittorrent.com:6969/announce",
+        "udp://tracker.coppersurfer.tk:6969/announce",
+        "udp://exodus.desync.com:6969/announce",
+        "udp://tracker.torrent.eu.org:451/announce"
+      ].join('\n\n');
+      copyTextFallback(trackers, 'All 6 tracker announce URLs copied!');
+    }
+
+    // Handle interactive comment submission
+    function handleCommentSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('comment-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      const container = document.getElementById('comments-container');
+      const newComment = document.createElement('div');
+      newComment.className = 'bg-[#151515] p-3 rounded border border-[#2d2d2d] space-y-1';
+      newComment.innerHTML = `
+        <div class="flex items-center justify-between text-xs">
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-white">Guest_IceFan</span>
+            <span class="bg-brand-red/20 text-brand-accent text-[10px] px-1.5 py-0.5 rounded border border-brand-red/30">Just Now</span>
+          </div>
+          <span class="text-gray-500 text-[11px]">Moments ago</span>
+        </div>
+        <p class="text-xs text-gray-200">${val.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+      `;
+
+      container.prepend(newComment);
+      input.value = '';
+
+      // Increment counter
+      const counterEl = document.getElementById('comment-counter');
+      if (counterEl) {
+        counterEl.innerText = parseInt(counterEl.innerText || '4', 10) + 1;
+      }
+
+      triggerNotice('Comment published successfully!', 'fa-comment');
+    }
+
+    // Close preview modal on ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePreviewModal();
+        const uploadModal = document.getElementById('upload-modal');
+        if (uploadModal && !uploadModal.classList.contains('hidden')) {
+          toggleUploadModal();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
