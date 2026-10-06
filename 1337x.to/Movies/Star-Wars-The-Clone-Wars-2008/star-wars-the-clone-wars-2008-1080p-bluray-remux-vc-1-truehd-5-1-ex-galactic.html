@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars: The Clone Wars (2008) 1080p Blu-ray Remux VC-1 TrueHD 5.1 EX - 1337x</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Roboto & Fira Code for NFO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#b81d24',
+              redHover: '#d32f2f',
+              dark: '#111111',
+              darkCard: '#1a1a1a',
+              darkBorder: '#2a2a2a',
+              header: '#0d0d0d',
+              accent: '#e50914',
+              gold: '#f59e0b',
+              seedGreen: '#10b981',
+              leechRed: '#ef4444'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbars for NFO and file lists */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #121212;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555555;
+    }
+
+    /* 1337x signature diagonal patterned top header */
+    .bg-carbon {
+      background-color: #141414;
+      background-image: radial-gradient(#222 15%, transparent 16%), radial-gradient(#222 15%, transparent 16%);
+      background-size: 16px 16px;
+      background-position: 0 0, 8px 8px;
+    }
+
+    /* ASCII art container glow & styling */
+    .nfo-box {
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
+      white-space: pre;
+      line-height: 1.15;
+      font-size: 11px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Badge glowing animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.02); }
+    }
+    .pulse-vip {
+      animation: pulseGlow 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0f0f0f] text-gray-200 font-sans antialiased min-h-screen flex flex-col selection:bg-red-700 selection:text-white">
+
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <header class="bg-[#0c0c0c] border-b border-[#252525] sticky top-0 z-40 shadow-lg">
+    <!-- Top Announcement Bar -->
+    <div class="bg-[#180506] border-b border-red-950/60 py-1.5 px-4 text-center text-xs text-red-300 flex items-center justify-center gap-2">
+      <i class="fa-solid fa-shield-halved text-brand-red"></i>
+      <span>Official Domain: <strong>1337x.to</strong> &bull; Always verify SSL certificate and release hash!</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 text-2xl font-black tracking-tight text-white group">
+        <span class="bg-gradient-to-r from-red-600 to-red-800 text-white px-2.5 py-0.5 rounded shadow-md group-hover:from-red-500 group-hover:to-red-700 transition">1337x</span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-gray-400 bg-[#1c1c1c] px-2 py-0.5 rounded border border-[#333]">P2P REMUX</span>
+      </a>
+
+      <!-- Quick Search Bar -->
+      <div class="flex-1 max-w-xl mx-2">
+        <form id="searchForm" class="flex items-center relative" onsubmit="event.preventDefault(); triggerSearch();">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search Star Wars remuxes, movies, series..." 
+            value="Star Wars The Clone Wars 2008 Remux"
+            class="w-full bg-[#181818] border border-[#333] text-gray-100 rounded-l-md px-4 py-2 text-sm focus:outline-none focus:border-red-600 transition pr-8"
+          />
+          <button type="submit" class="bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 text-white px-5 py-2 rounded-r-md text-sm font-semibold transition flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span class="hidden sm:inline">Search</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- User Nav & Links -->
+      <div class="flex items-center gap-3 text-sm">
+        <div class="hidden md:flex items-center gap-4 text-gray-400 font-medium">
+          <a href="#" class="hover:text-red-400 transition">Top 100</a>
+          <a href="#" class="hover:text-red-400 transition">Trending</a>
+          <a href="#" class="hover:text-red-400 transition">Movie Library</a>
+        </div>
+        <button onclick="toggleUploadModal()" class="bg-[#242424] hover:bg-[#2e2e2e] text-gray-200 border border-[#444] px-3.5 py-1.5 rounded text-xs font-semibold transition flex items-center gap-1.5">
+          <i class="fa-solid fa-cloud-arrow-up text-red-500"></i>
+          <span>Upload</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Categories Navigation -->
+    <nav class="bg-[#141414] border-t border-[#222] hidden sm:block">
+      <div class="max-w-7xl mx-auto px-4 py-1.5 flex items-center gap-6 text-xs font-semibold text-gray-400 overflow-x-auto">
+        <a href="#" class="text-red-500 border-b-2 border-red-600 pb-0.5"><i class="fa-solid fa-film mr-1.5"></i>Movies</a>
+        <a href="#" class="hover:text-white transition"><i class="fa-solid fa-tv mr-1.5"></i>Television</a>
+        <a href="#" class="hover:text-white transition"><i class="fa-solid fa-gamepad mr-1.5"></i>Games</a>
+        <a href="#" class="hover:text-white transition"><i class="fa-solid fa-music mr-1.5"></i>Music</a>
+        <a href="#" class="hover:text-white transition"><i class="fa-solid fa-box-archive mr-1.5"></i>Applications</a>
+        <a href="#" class="hover:text-white transition"><i class="fa-solid fa-book mr-1.5"></i>Documentaries</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-6 flex-1 w-full">
+    
+    <!-- Breadcrumb path -->
+    <nav class="flex items-center gap-2 text-xs text-gray-400 mb-4 overflow-hidden text-ellipsis whitespace-nowrap">
+      <a href="#" class="hover:text-red-400"><i class="fa-solid fa-house mr-1"></i>Home</a>
+      <span>/</span>
+      <a href="#" class="hover:text-red-400">Movies</a>
+      <span>/</span>
+      <a href="#" class="hover:text-red-400">Blu-ray Remux</a>
+      <span>/</span>
+      <span class="text-gray-200 truncate">Star Wars: The Clone Wars (2008) 1080p Blu-ray Remux VC-1 TrueHD 5.1 EX</span>
+    </nav>
+
+    <!-- Release Main Title Card -->
+    <div class="bg-[#181818] border border-[#2b2b2b] rounded-t-lg p-5 shadow-xl relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 w-48 h-48 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 flex-wrap mb-2">
+            <span class="bg-red-900/60 text-red-300 border border-red-700/60 text-[11px] font-bold px-2.5 py-0.5 rounded tracking-wide uppercase">
+              1080p REMUX
+            </span>
+            <span class="bg-[#242424] text-amber-400 border border-amber-500/30 text-[11px] font-bold px-2 py-0.5 rounded">
+              <i class="fa-solid fa-compact-disc mr-1"></i>VC-1
+            </span>
+            <span class="bg-[#242424] text-blue-400 border border-blue-500/30 text-[11px] font-bold px-2 py-0.5 rounded">
+              <i class="fa-solid fa-volume-high mr-1"></i>TrueHD 5.1 EX
+            </span>
+            <span class="bg-[#1f2937] text-gray-300 text-[11px] px-2 py-0.5 rounded border border-gray-700">
+              Verified Group Release
+            </span>
+          </div>
+
+          <h1 class="text-xl sm:text-2xl font-bold text-white tracking-wide break-words leading-snug">
+            Star Wars: The Clone Wars (2008) 1080p Blu-ray Remux VC-1 TrueHD 5.1 EX - <span class="text-red-500">GALACTIC</span>
+          </h1>
+        </div>
+
+        <!-- Seeders / Leechers Status Pill -->
+        <div class="flex items-center gap-3 bg-[#111] p-3 rounded-lg border border-[#2d2d2d] shrink-0 self-start md:self-center">
+          <div class="text-center px-3 border-r border-[#262626]">
+            <span class="text-xs text-gray-400 uppercase font-semibold block">Seeders</span>
+            <span class="text-lg font-bold text-emerald-400 flex items-center justify-center gap-1">
+              <i class="fa-solid fa-arrow-up text-xs"></i> 264
+            </span>
+          </div>
+          <div class="text-center px-3">
+            <span class="text-xs text-gray-400 uppercase font-semibold block">Leechers</span>
+            <span class="text-lg font-bold text-red-400 flex items-center justify-center gap-1">
+              <i class="fa-solid fa-arrow-down text-xs"></i> 18
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#131313] border-x border-b border-[#2b2b2b] p-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <!-- Direct Magnet Button -->
+        <button 
+          id="btnMagnet" 
+          onclick="copyMagnetLink()" 
+          class="bg-gradient-to-r from-red-700 via-red-600 to-red-800 hover:from-red-600 hover:to-red-700 text-white font-bold px-4 py-2.5 rounded shadow-lg flex items-center gap-2 text-sm transition transform active:scale-95"
+        >
+          <i class="fa-solid fa-magnet text-base text-yellow-300"></i>
+          <span>Magnet Download</span>
+        </button>
+
+        <!-- Torrent File Mock Button -->
+        <button 
+          onclick="downloadTorrentMeta()" 
+          class="bg-[#242424] hover:bg-[#303030] text-gray-100 font-semibold px-4 py-2.5 rounded border border-[#3d3d3d] flex items-center gap-2 text-sm transition"
+        >
+          <i class="fa-solid fa-file-arrow-down text-emerald-400"></i>
+          <span>Torrent File (.torrent)</span>
+        </button>
+
+        <!-- Copy Hash Button -->
+        <button 
+          onclick="copyInfoHash()" 
+          class="bg-[#1c1c1c] hover:bg-[#282828] text-gray-300 font-mono text-xs px-3 py-2.5 rounded border border-[#333] flex items-center gap-2 transition"
+          title="Copy InfoHash (SHA-1)"
+        >
+          <i class="fa-regular fa-copy text-red-400"></i>
+          <span class="hidden sm:inline">Hash:</span>
+          <span>7A4E819...99F2</span>
+        </button>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex items-center gap-2">
+        <button onclick="bookmarkRelease(this)" class="p-2.5 bg-[#202020] hover:bg-[#2b2b2b] text-gray-300 rounded border border-[#333] text-sm transition" title="Add to Bookmarks">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <button onclick="toggleShareModal()" class="p-2.5 bg-[#202020] hover:bg-[#2b2b2b] text-gray-300 rounded border border-[#333] text-sm transition" title="Share release">
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6">
+      
+      <!-- Left 2 Cols: Torrent Specs Table -->
+      <div class="lg:col-span-2 bg-[#161616] border border-[#2b2b2b] rounded-lg p-5">
+        <h2 class="text-sm font-bold text-gray-200 uppercase tracking-wider mb-4 pb-2 border-b border-[#2d2d2d] flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-red-500"></i>
+          Torrent Technical Specifications
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6 text-sm">
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Category:</span>
+            <span class="text-gray-200 font-semibold">Movies &bull; Highres / Remux</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Total Size:</span>
+            <span class="text-amber-400 font-bold font-mono">21.82 GB (23,431,894,016 bytes)</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Language:</span>
+            <span class="text-gray-200">English (Multi-subtitles included)</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Uploaded Date:</span>
+            <span class="text-gray-300">Today, 14:32 (UTC)</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Format / Container:</span>
+            <span class="text-gray-200 font-mono">Matroska (.mkv)</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Video Codec:</span>
+            <span class="text-blue-300 font-semibold font-mono">VC-1 Advanced Profile @ L3</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Resolution:</span>
+            <span class="text-gray-200 font-mono">1920 &times; 1080p (2.35:1 Cinematic)</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Primary Audio:</span>
+            <span class="text-yellow-400 font-semibold font-mono">Dolby TrueHD 5.1 EX @ 3420 kbps</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Secondary Audio:</span>
+            <span class="text-gray-300 font-mono">Dolby Digital EX 5.1 @ 640 kbps</span>
+          </div>
+
+          <div class="flex justify-between py-1.5 border-b border-[#222]">
+            <span class="text-gray-400 font-medium">Audio Channels:</span>
+            <span class="text-gray-200">6 channels (Left, Center, Right, Surrounds, LFE)</span>
+          </div>
+        </div>
+
+        <!-- Release hash display -->
+        <div class="mt-4 p-3 bg-[#101010] border border-[#242424] rounded text-xs font-mono flex items-center justify-between text-gray-400">
+          <span>InfoHash: <span class="text-gray-200 selection:bg-red-900">7A4E819E0FD7193F161CC28F421C94119B5199F2</span></span>
+          <span class="text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2 py-0.5 rounded">Remux Bit-Identical</span>
+        </div>
+      </div>
+
+      <!-- Right 1 Col: Uploader Release Group Profile -->
+      <div class="bg-[#161616] border border-[#2b2b2b] rounded-lg p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-[#2a2a2a] mb-4">
+            <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wider">Release Group</h3>
+            <span class="bg-red-950 text-red-300 border border-red-800 text-[10px] font-bold px-2 py-0.5 rounded pulse-vip">
+              VIP GROUP
+            </span>
+          </div>
+
+          <!-- Group Header Profile -->
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-red-600 via-stone-800 to-black p-0.5 flex items-center justify-center shadow-lg">
+              <div class="w-full h-full bg-[#111] rounded-md flex items-center justify-center text-red-500 font-black text-xl">
+                <i class="fa-solid fa-jedi"></i>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-base font-bold text-white">GALACTIC</span>
+                <i class="fa-solid fa-circle-check text-blue-400 text-xs" title="Official Verified Release Group"></i>
+              </div>
+              <p class="text-xs text-gray-400">Specialized Remux &amp; Lossless Archival Team</p>
+            </div>
+          </div>
+
+          <!-- Group Stats -->
+          <div class="bg-[#111111] rounded p-3 border border-[#242424] space-y-2 text-xs mb-4">
+            <div class="flex justify-between">
+              <span class="text-gray-400">Total Releases:</span>
+              <span class="text-white font-semibold">1,482 Remuxes</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-400">Reputation:</span>
+              <span class="text-amber-400 font-semibold"><i class="fa-solid fa-star text-[10px]"></i> 4.98 / 5.0</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-400">Specialty:</span>
+              <span class="text-gray-300 font-mono">VC-1, AVC, HEVC Untouched</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-400">Seeding Nodes:</span>
+              <span class="text-emerald-400 font-mono">10 Gbps Dedicated Seedbox cluster</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 italic">
+            &ldquo;Zero re-encoding. 100% original video bitstream from retail discs paired with uncompressed TrueHD / DTS-HD Master Audio and complete PGS subtitles.&rdquo;
+          </p>
+        </div>
+
+        <button onclick="showGroupRules()" class="mt-4 w-full bg-[#202020] hover:bg-[#2c2c2c] text-gray-200 border border-[#383838] py-2 rounded text-xs font-semibold transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-users text-red-400"></i>
+          <span>View GALACTIC Releases (1,482)</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="bg-[#161616] border border-[#2b2b2b] rounded-lg overflow-hidden shadow-xl">
+      
+      <!-- Tab Navigation Headers -->
+      <div class="bg-[#121212] border-b border-[#292929] flex flex-wrap items-center overflow-x-auto text-sm font-semibold">
+        <button onclick="switchTab('tab-desc', this)" class="tab-btn px-5 py-3 text-red-500 border-b-2 border-red-600 bg-[#181818] transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-solid fa-align-left text-xs"></i> Description &amp; Synopsis
+        </button>
+        <button onclick="switchTab('tab-mediainfo', this)" class="tab-btn px-5 py-3 text-gray-400 hover:text-white transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-solid fa-sliders text-xs"></i> Full MediaInfo
+        </button>
+        <button onclick="switchTab('tab-nfo', this)" class="tab-btn px-5 py-3 text-gray-400 hover:text-white transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-solid fa-terminal text-xs"></i> Release NFO (ASCII)
+        </button>
+        <button onclick="switchTab('tab-files', this)" class="tab-btn px-5 py-3 text-gray-400 hover:text-white transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-regular fa-folder-open text-xs"></i> Torrent Contents (4)
+        </button>
+        <button onclick="switchTab('tab-screens', this)" class="tab-btn px-5 py-3 text-gray-400 hover:text-white transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-regular fa-images text-xs"></i> Remux Frame Screencaps
+        </button>
+        <button onclick="switchTab('tab-comments', this)" class="tab-btn px-5 py-3 text-gray-400 hover:text-white transition flex items-center gap-2 whitespace-nowrap">
+          <i class="fa-regular fa-comments text-xs"></i> Comments (<span id="commentBadgeCount">14</span>)
+        </button>
+      </div>
+
+      <!-- Tab 1: Description & Movie Synopsis -->
+      <div id="tab-desc" class="tab-content p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Poster -->
+          <div class="w-full md:w-64 shrink-0 flex flex-col items-center">
+            <div class="w-56 rounded-lg overflow-hidden border-2 border-[#333] shadow-2xl bg-black relative group">
+              <svg class="w-full h-80 bg-gradient-to-b from-stone-900 via-zinc-900 to-black text-gray-400" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Movie Poster Art Illustration -->
+                <rect width="200" height="300" fill="#0d1117"/>
+                <circle cx="100" cy="90" r="45" fill="#e50914" fill-opacity="0.15"/>
+                <!-- Lightsaber cross effect -->
+                <line x1="30" y1="230" x2="160" y2="40" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                <line x1="170" y1="230" x2="40" y2="40" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+                <line x1="100" y1="250" x2="100" y2="30" stroke="#ef4444" stroke-width="3" stroke-dasharray="6 4"/>
+                <text x="100" y="110" font-family="Inter, sans-serif" font-weight="900" font-size="16" fill="#f8fafc" text-anchor="middle">STAR WARS</text>
+                <text x="100" y="130" font-family="Inter, sans-serif" font-weight="700" font-size="10" fill="#f59e0b" letter-spacing="2" text-anchor="middle">THE CLONE WARS</text>
+                <text x="100" y="160" font-family="Inter, sans-serif" font-weight="600" font-size="8" fill="#94a3b8" text-anchor="middle">2008 &bull; 1080p REMUX</text>
+                <!-- Clones Helmet outline silhouette -->
+                <path d="M75 190 C75 175, 125 175, 125 190 L120 220 L80 220 Z" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+                <path d="M85 200 H115 V206 H85 Z" fill="#0f172a"/>
+                <text x="100" y="275" font-family="Inter, sans-serif" font-size="9" fill="#e2e8f0" font-weight="bold" text-anchor="middle">VC-1 &bull; TRUEHD 5.1 EX</text>
+              </svg>
+            </div>
+            
+            <div class="mt-3 text-center">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#202020] border border-[#333] rounded-full text-xs text-amber-400 font-semibold">
+                <i class="fa-solid fa-star"></i> IMDb 6.0 / 10 (65K votes)
+              </span>
+            </div>
+          </div>
+
+          <!-- Description details -->
+          <div class="flex-1 space-y-5">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Star Wars: The Clone Wars (2008)</h3>
+              <p class="text-xs text-gray-400 mb-4">
+                <strong>Director:</strong> Dave Filoni &bull; 
+                <strong>Producer:</strong> George Lucas, Catherine Winder &bull; 
+                <strong>Runtime:</strong> 1h 38m &bull; 
+                <strong>Country:</strong> United States
+              </p>
+              <div class="bg-[#1a1a1a] p-4 rounded-lg border border-[#2b2b2b] text-sm text-gray-300 leading-relaxed">
+                <h4 class="text-xs font-bold text-red-400 uppercase tracking-wider mb-1.5">Synopsis</h4>
+                <p>
+                  As the Clone Wars sweep across the galaxy, the heroic Jedi Knights struggle to maintain order and restore peace. More and more systems fall prey to the dark side as the Galactic Republic slips further under the sway of the Separatists and their sinister droid army. Anakin Skywalker and his new Padawan learner, Ahsoka Tano, are dispatched on a high-stakes mission to rescue the kidnapped infant son of crime lord Jabba the Hutt. Renegade Count Dooku and assassin Asajj Ventress will stop at nothing to ensure their quest fails, framing the Jedi Order for the crime.
+                </p>
+              </div>
+            </div>
+
+            <!-- Release Group Encoding Notes -->
+            <div class="border-l-4 border-red-600 bg-[#181818] p-4 rounded-r-lg space-y-2">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-fingerprint text-red-500"></i>
+                GALACTIC Release Group Master Notes:
+              </h4>
+              <ul class="text-xs text-gray-300 space-y-1.5 list-disc list-inside">
+                <li><strong>Source:</strong> Retail North American Blu-ray (Disc ID: <code>STAR_WARS_CLONE_WARS_BD</code>)</li>
+                <li><strong>Video Transfer:</strong> Untouched raw VC-1 stream remuxed directly into MKV without any transcoding, compression, or color-space tampering. Preserves original grain, frame cadence (23.976 fps), and master bitrates peaking over 34 Mbps.</li>
+                <li><strong>Lossless Surround Audio:</strong> Dolby TrueHD 5.1 EX (Extended Surround Matrix encoded rear-center channel) preserved bit-for-bit from original Dolby MLP stream. Includes original embedded AC-3 5.1 EX core (640 kbps) for playback compatibility on legacy AV receivers.</li>
+                <li><strong>Subtitles:</strong> Untouched PGS subtitles extracted from retail disc: English (SDH), French, Spanish, German, Italian, Japanese, Portuguese, Dutch, Danish, Swedish, Norwegian, Finnish.</li>
+                <li><strong>Chapters:</strong> Complete 24 retail chapter markers preserved with accurate naming.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-mediainfo" class="tab-content p-6 hidden">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-gray-300 uppercase tracking-wider">Raw MediaInfo 24.03 Output</span>
+            <span class="text-[11px] bg-red-950 text-red-300 border border-red-800 px-2 py-0.5 rounded font-mono">v2.1 Remux Pass</span>
+          </div>
+          <button onclick="copyMediaInfo()" class="text-xs bg-[#242424] hover:bg-[#333] text-gray-300 px-3 py-1 rounded border border-[#3a3a3a] transition flex items-center gap-1.5">
+            <i class="fa-regular fa-copy"></i>
+            <span>Copy MediaInfo</span>
+          </button>
+        </div>
+
+        <pre id="mediainfoText" class="bg-[#0f0f0f] border border-[#262626] p-4 rounded-lg font-mono text-xs text-gray-300 overflow-x-auto leading-relaxed select-all">
+General
+Unique ID                                : 23489104810294810294810294810294819
+Complete name                            : Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC.mkv
+Format                                   : Matroska
+Format version                           : Version 4
+File size                                : 21.8 GiB
+Duration                                 : 1 h 38 min 24 s
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 31.7 Mb/s
+Movie name                               : Star Wars: The Clone Wars (2008)
+Encoded date                             : 2026-10-06 14:15:00 UTC
+Writing application                      : mkvmerge v84.0 ('The Long Road') 64-bit
+Writing library                          : libmatroska v1.7.1
+
+Video
+ID                                       : 1
+Format                                   : VC-1
+Format profile                           : Advanced@L3
+Codec ID                                 : V_MS/VFW/FOURCC / WVC1
+Duration                                 : 1 h 38 min 24 s
+Bit rate mode                            : Variable
+Bit rate                                 : 27.2 Mb/s
+Maximum bit rate                         : 34.6 Mb/s
+Width                                    : 1 920 pixels
+Height                                   : 1 080 pixels
+Display aspect ratio                     : 16:9
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+Compression mode                         : Lossy
+Default                                  : Yes
+Forced                                   : No
+
+Audio #1
+ID                                       : 2
+Format                                   : TrueHD
+Format profile                           : TrueHD+Atmos / EX Matrix
+Codec ID                                 : A_TRUEHD
+Duration                                 : 1 h 38 min 24 s
+Bit rate mode                            : Variable
+Bit rate                                 : 3 420 kb/s
+Maximum bit rate                         : 4 912 kb/s
+Channel(s)                               : 6 channels (5.1 EX Surround)
+Channel layout                           : L R C LFE Ls Rs (Matrix Center Back)
+Sampling rate                            : 48.0 kHz
+Frame rate                               : 1 200.000 FPS (40 SPF)
+Bit depth                                : 24 bits
+Compression mode                         : Lossless
+Title                                    : English Dolby TrueHD 5.1 EX [Lossless Original]
+Language                                 : English
+Default                                  : Yes
+Forced                                   : No
+
+Audio #2
+ID                                       : 3
+Format                                   : AC-3
+Format/Info                              : Audio Coding 3
+Commercial name                          : Dolby Digital EX
+Codec ID                                 : A_AC3
+Duration                                 : 1 h 38 min 24 s
+Bit rate mode                            : Constant
+Bit rate                                 : 640 kb/s
+Channel(s)                               : 6 channels
+Channel layout                           : L R C LFE Ls Rs
+Sampling rate                            : 48.0 kHz
+Bit depth                                : 16 bits
+Compression mode                         : Lossy
+Title                                    : English AC-3 5.1 EX Compatibility Track @ 640 kbps
+Language                                 : English
+Default                                  : No
+Forced                                   : No
+
+Text #1
+ID                                       : 4
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Duration                                 : 1 h 36 min 12 s
+Bit rate                                 : 32.4 kb/s
+Title                                    : English [SDH Retail]
+Language                                 : English
+Default                                  : No
+Forced                                   : No
+
+Text #2
+ID                                       : 5
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Title                                    : French (Français Retail)
+Language                                 : French
+Default                                  : No
+Forced                                   : No
+
+Menu
+00:00:00.000                             : en:01. Opening Crawl & Main Title
+00:04:12.835                             : en:02. Battle of Christophsis
+00:11:45.287                             : en:03. The New Padawan Ahsoka
+00:23:19.480                             : en:04. Infiltration of the Shield
+00:35:50.189                             : en:05. Mission to Teth
+00:52:10.043                             : en:06. Confronting Asajj Ventress
+01:14:32.190                             : en:07. Duel on Tatooine
+01:31:05.418                             : en:08. Truth Revealed & End Credits
+        </pre>
+      </div>
+
+      <div id="tab-nfo" class="tab-content p-6 hidden">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-gray-300 uppercase tracking-wider">Release NFO File</span>
+            <span class="text-xs text-gray-500 font-mono">STAR.WARS.CLONE.WARS.2008.REMUX-GALACTIC.NFO</span>
+          </div>
+          <button onclick="copyNFO()" class="text-xs bg-[#242424] hover:bg-[#333] text-gray-300 px-3 py-1 rounded border border-[#3a3a3a] transition flex items-center gap-1.5">
+            <i class="fa-solid fa-copy"></i>
+            <span>Copy ASCII NFO</span>
+          </button>
+        </div>
+
+        <div class="bg-[#0b0b0b] border border-[#242424] p-4 rounded-lg overflow-x-auto text-emerald-400 font-mono nfo-box shadow-inner">
+          <pre id="nfoContent">
+  ____________________________________________________________________________
+ /                                                                            \
+|   _______       ___       __          ___        ______  .___________. ___   |
+|  /  _____|     /   \     |  |        /   \      /      | |           |/   \  |
+| |  |  __      /  ^  \    |  |       /  ^  \    |  ,----' `---|  |----/  ^  \ |
+| |  | |_ |    /  /_\  \   |  |      /  /_\  \   |  |          |  |   /  /_\  \|
+| |  |__| |   /  _____  \  |  `----./  _____  \  |  `----.     |  |  /  _____  \
+|  \______|  /__/     \__\ |_______/__/     \__\  \______|     |__| /__/     \_|
+ \____________________________________________________________________________/
+           P R O U D L Y   P R E S E N T S   T O   T H E   S C E N E
+
+   Title      : Star Wars: The Clone Wars (2008)
+   Group      : GALACTIC [Bit-for-Bit Remux Division]
+   Release    : Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC
+   Date       : 2026-10-06
+   Source     : Retail 1080p Blu-ray Disc (USA / AVC/VC-1 Hybrid Master)
+   Genre      : Animation / Action / Sci-Fi / Adventure
+   Runtime    : 98 Minutes
+   IMDb       : https://www.imdb.com/title/tt1185834/
+
+   [ VIDEO SPECIFICATIONS ]
+   Codec      : VC-1 Advanced Profile Level 3 (Untouched Retail Stream)
+   Format     : MKV (Matroska)
+   Resolution : 1920x1080 (16:9 Panavision 2.35:1 Letterboxed within 1080p)
+   Bitrate    : ~27,200 kbps (Peak ~34,600 kbps)
+   Framerate  : 23.976 fps
+
+   [ AUDIO SPECIFICATIONS ]
+   Track 1    : English Dolby TrueHD 5.1 EX Surround @ 3,420 kbps [Master Lossless]
+   Track 2    : English Dolby Digital EX 5.1 @ 640 kbps [Compatibility Fallback]
+   Track 3    : Commentary with Director Dave Filoni & Crew @ 224 kbps AC-3
+
+   [ SUBTITLES ]
+   Format     : HDMV PGS Untouched Bitmaps
+   Languages  : English SDH, French, Spanish, German, Italian, Japanese, Portuguese
+
+   [ GROUP GREETINGS & SHOUTS ]
+   EPSILON - CHD - DON - TayTO - FraMeSToR - WiKi - KRaLiMaRKo - CtrlHD
+   “Preserving cinematic fidelity, one sector at a time.”
+   NFO Last updated: October 2026 by GALACTIC SysOp.
+          </pre>
+        </div>
+      </div>
+
+      <div id="tab-files" class="tab-content p-6 hidden">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-bold text-gray-200">Torrent File Structure (4 Files)</span>
+          </div>
+          <span class="text-xs text-gray-400 font-mono">Total: 21.82 GB</span>
+        </div>
+
+        <div class="space-y-2 text-xs font-mono">
+          <!-- Folder Header -->
+          <div class="bg-[#1c1c1c] p-2.5 rounded border border-[#2e2e2e] flex items-center gap-2 text-amber-300 font-semibold">
+            <i class="fa-solid fa-folder-open text-amber-400"></i>
+            <span>Star.Wars.The.Clone.Wars.2008.1080p.BluRay.Remux.VC-1.TrueHD.5.1.EX-GALACTIC/</span>
+          </div>
+
+          <!-- File 1: Main MKV -->
+          <div class="ml-6 bg-[#131313] p-2.5 rounded border border-[#242424] flex items-center justify-between hover:bg-[#1a1a1a] transition">
+            <div class="flex items-center gap-2 text-gray-200">
+              <i class="fa-solid fa-file-video text-red-500 text-sm"></i>
+              <span class="font-medium">Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC.mkv</span>
+            </div>
+            <span class="text-amber-400 font-bold shrink-0">21.81 GB</span>
+          </div>
+
+          <!-- File 2: NFO -->
+          <div class="ml-6 bg-[#131313] p-2.5 rounded border border-[#242424] flex items-center justify-between hover:bg-[#1a1a1a] transition">
+            <div class="flex items-center gap-2 text-gray-200">
+              <i class="fa-solid fa-file-lines text-blue-400 text-sm"></i>
+              <span>Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC.nfo</span>
+            </div>
+            <span class="text-gray-400 shrink-0">4.18 KB</span>
+          </div>
+
+          <!-- File 3: SFV Verification Checksum -->
+          <div class="ml-6 bg-[#131313] p-2.5 rounded border border-[#242424] flex items-center justify-between hover:bg-[#1a1a1a] transition">
+            <div class="flex items-center gap-2 text-gray-200">
+              <i class="fa-solid fa-file-shield text-emerald-400 text-sm"></i>
+              <span>Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC.sfv</span>
+            </div>
+            <span class="text-gray-400 shrink-0">1.02 KB</span>
+          </div>
+
+          <!-- File 4: Sample Clip -->
+          <div class="ml-6 bg-[#131313] p-2.5 rounded border border-[#242424] flex items-center justify-between hover:bg-[#1a1a1a] transition">
+            <div class="flex items-center gap-2 text-gray-200">
+              <i class="fa-solid fa-file-video text-purple-400 text-sm"></i>
+              <span>Sample/sample-starwars-clonewars-remux-vc1.mkv</span>
+            </div>
+            <span class="text-gray-400 shrink-0">104.2 MB</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-screens" class="tab-content p-6 hidden">
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-xs text-gray-400">
+            Direct uncompressed PNG lossless screengrabs captured from the VC-1 bitstream using mpv (BT.709 colorimetry).
+          </p>
+          <span class="text-xs font-semibold text-red-400 bg-red-950/60 border border-red-900 px-2 py-0.5 rounded">1920x1080 Native</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Screen 1 -->
+          <div class="bg-[#111] border border-[#292929] rounded-lg overflow-hidden group">
+            <div class="relative bg-gradient-to-tr from-slate-950 to-blue-950 h-52 flex items-center justify-center p-4">
+              <!-- Visual graphic representation of Scene 1: Battle of Christophsis -->
+              <svg class="w-full h-full" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="200" fill="#080e1a"/>
+                <polygon points="50,180 120,40 180,180" fill="#1e293b" opacity="0.6"/>
+                <polygon points="160,180 230,60 300,180" fill="#0f172a" opacity="0.8"/>
+                <circle cx="200" cy="100" r="80" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+                <line x1="80" y1="160" x2="220" y2="90" stroke="#38bdf8" stroke-width="3"/>
+                <line x1="310" y1="170" x2="210" y2="95" stroke="#ef4444" stroke-width="3"/>
+                <text x="20" y="30" font-family="monospace" font-size="11" fill="#94a3b8">FRAME: 00:08:42.124 | VC-1 @ 31.4 Mbps</text>
+              </svg>
+            </div>
+            <div class="p-2.5 bg-[#181818] border-t border-[#292929] flex justify-between items-center text-xs">
+              <span class="text-gray-300 font-medium">Battle of Christophsis - Energy Shield Assault</span>
+              <span class="text-gray-400 font-mono">1920 &times; 1080</span>
+            </div>
+          </div>
+
+          <!-- Screen 2 -->
+          <div class="bg-[#111] border border-[#292929] rounded-lg overflow-hidden group">
+            <div class="relative bg-gradient-to-tr from-slate-950 via-red-950/40 to-slate-900 h-52 flex items-center justify-center p-4">
+              <!-- Visual graphic representation of Scene 2: Duel on Teth -->
+              <svg class="w-full h-full" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="200" fill="#120c14"/>
+                <circle cx="200" cy="100" r="50" fill="#831843" opacity="0.2"/>
+                <line x1="120" y1="50" x2="280" y2="150" stroke="#22c55e" stroke-width="4"/>
+                <line x1="280" y1="50" x2="120" y2="150" stroke="#dc2626" stroke-width="4"/>
+                <text x="20" y="30" font-family="monospace" font-size="11" fill="#94a3b8">FRAME: 00:54:19.892 | VC-1 @ 33.8 Mbps</text>
+              </svg>
+            </div>
+            <div class="p-2.5 bg-[#181818] border-t border-[#292929] flex justify-between items-center text-xs">
+              <span class="text-gray-300 font-medium">Anakin &amp; Ahsoka vs. Asajj Ventress</span>
+              <span class="text-gray-400 font-mono">1920 &times; 1080</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-comments" class="tab-content p-6 hidden">
+        <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#282828]">
+          <h3 class="text-sm font-bold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-comments text-red-500"></i>
+            User Feedback &amp; Audio Verifications
+          </h3>
+          <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Quality Confirmed</span>
+        </div>
+
+        <!-- Add Comment Form -->
+        <form onsubmit="handleCommentSubmit(event)" class="mb-6 bg-[#121212] p-4 rounded-lg border border-[#292929]">
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fa-solid fa-pen-nib text-xs text-red-400"></i>
+            <label for="commentAuthor" class="text-xs font-semibold text-gray-300">Your Nickname:</label>
+            <input type="text" id="commentAuthor" placeholder="e.g. ObiWanFan99" required class="bg-[#1c1c1c] border border-[#333] text-xs px-2.5 py-1 rounded text-white focus:outline-none focus:border-red-600">
+          </div>
+          <textarea id="commentBody" rows="3" placeholder="Leave remarks on video/audio remux quality, seed speeds, or playback setup..." required class="w-full bg-[#181818] border border-[#333] rounded p-2.5 text-xs text-gray-200 focus:outline-none focus:border-red-600 transition resize-none mb-2"></textarea>
+          <div class="flex justify-end">
+            <button type="submit" class="bg-red-700 hover:bg-red-600 text-white font-semibold px-4 py-1.5 rounded text-xs transition flex items-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Post Comment</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Comments List -->
+        <div id="commentsList" class="space-y-3">
+          <!-- Existing Comment 1 -->
+          <div class="bg-[#131313] border border-[#242424] p-3.5 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-xs text-amber-400">SkywalkerSoundGuy</span>
+                <span class="text-[10px] bg-red-950 text-red-300 px-1.5 py-0.5 rounded border border-red-900">VIP Seeder</span>
+              </div>
+              <span class="text-[11px] text-gray-500">2 hours ago</span>
+            </div>
+            <p class="text-xs text-gray-300">
+              Can confirm the TrueHD 5.1 EX matrix flag is properly preserved in the bitstream! On my Denon receiver with 7.1 discrete channels, the matrix rear surround triggers seamlessly. Incredible dynamics during the vertical cliff walker assault.
+            </p>
+          </div>
+
+          <!-- Existing Comment 2 -->
+          <div class="bg-[#131313] border border-[#242424] p-3.5 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-xs text-blue-400">CoruscantArchivist</span>
+                <span class="text-[10px] bg-zinc-800 text-gray-400 px-1.5 py-0.5 rounded">Member</span>
+              </div>
+              <span class="text-[11px] text-gray-500">4 hours ago</span>
+            </div>
+            <p class="text-xs text-gray-300">
+              Maxed out my 1 Gbps fiber in less than 3 minutes. Thanks GALACTIC for keeping original VC-1 intact instead of converting to x264/x265. Seeding indefinitely on 10Gb seedbox!
+            </p>
+          </div>
+
+          <!-- Existing Comment 3 -->
+          <div class="bg-[#131313] border border-[#242424] p-3.5 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-xs text-emerald-400">PlexServerCommander</span>
+                <span class="text-[10px] bg-zinc-800 text-gray-400 px-1.5 py-0.5 rounded">Member</span>
+              </div>
+              <span class="text-[11px] text-gray-500">6 hours ago</span>
+            </div>
+            <p class="text-xs text-gray-300">
+              Direct plays on Apple TV 4K with Infuse and Nvidia Shield with zero issues. Audio tracks and PGS subtitles are in sync down to the millisecond. 10/10 remux!
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-8">
+      <h3 class="text-sm font-bold text-gray-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <i class="fa-solid fa-list-check text-red-500"></i>
+        Related Remux Releases by GALACTIC
+      </h3>
+
+      <div class="bg-[#161616] border border-[#292929] rounded-lg overflow-hidden divide-y divide-[#222] text-xs">
+        <!-- Item 1 -->
+        <div class="p-3 flex items-center justify-between hover:bg-[#1f1f1f] transition">
+          <div class="flex items-center gap-2 truncate pr-4">
+            <span class="text-red-500"><i class="fa-solid fa-compact-disc"></i></span>
+            <a href="#" class="text-gray-200 hover:text-red-400 font-medium truncate">
+              Star Wars: The Clone Wars (Complete Seasons 1-6) 1080p Blu-ray Remux AVC DTS-HD MA 5.1-GALACTIC
+            </a>
+          </div>
+          <div class="flex items-center gap-4 shrink-0 font-mono text-gray-400">
+            <span class="hidden sm:inline">268.4 GB</span>
+            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-arrow-up text-[10px]"></i> 142</span>
+            <span class="text-red-400 font-bold"><i class="fa-solid fa-arrow-down text-[10px]"></i> 9</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="p-3 flex items-center justify-between hover:bg-[#1f1f1f] transition">
+          <div class="flex items-center gap-2 truncate pr-4">
+            <span class="text-red-500"><i class="fa-solid fa-compact-disc"></i></span>
+            <a href="#" class="text-gray-200 hover:text-red-400 font-medium truncate">
+              Star Wars: Episode III - Revenge of the Sith (2005) 1080p Blu-ray Remux AVC DTS-HD MA 6.1-GALACTIC
+            </a>
+          </div>
+          <div class="flex items-center gap-4 shrink-0 font-mono text-gray-400">
+            <span class="hidden sm:inline">34.2 GB</span>
+            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-arrow-up text-[10px]"></i> 390</span>
+            <span class="text-red-400 font-bold"><i class="fa-solid fa-arrow-down text-[10px]"></i> 12</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="p-3 flex items-center justify-between hover:bg-[#1f1f1f] transition">
+          <div class="flex items-center gap-2 truncate pr-4">
+            <span class="text-red-500"><i class="fa-solid fa-compact-disc"></i></span>
+            <a href="#" class="text-gray-200 hover:text-red-400 font-medium truncate">
+              Star Wars: Episode II - Attack of the Clones (2002) 1080p Blu-ray Remux AVC DTS-HD MA 5.1-GALACTIC
+            </a>
+          </div>
+          <div class="flex items-center gap-4 shrink-0 font-mono text-gray-400">
+            <span class="hidden sm:inline">31.8 GB</span>
+            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-arrow-up text-[10px]"></i> 214</span>
+            <span class="text-red-400 font-bold"><i class="fa-solid fa-arrow-down text-[10px]"></i> 7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Share Modal -->
+  <div id="shareModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-[#181818] border border-[#333] rounded-lg max-w-md w-full p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#2a2a2a] mb-4">
+        <h4 class="font-bold text-sm text-white">Share Torrent Release</h4>
+        <button onclick="toggleShareModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <p class="text-xs text-gray-300 mb-3">Copy direct permalink to this 1337x release page:</p>
+      <div class="flex items-center gap-2 mb-4">
+        <input id="shareUrlInput" type="text" readonly value="https://1337x.to/torrent/6481029/Star-Wars-The-Clone-Wars-2008-1080p-Blu-ray-Remux-VC-1-TrueHD-5-1-EX-GALACTIC/" class="w-full bg-[#111] border border-[#333] text-gray-200 text-xs px-3 py-2 rounded focus:outline-none font-mono">
+        <button onclick="copyShareLink()" class="bg-red-700 hover:bg-red-600 text-white px-3 py-2 text-xs font-semibold rounded shrink-0">Copy</button>
+      </div>
+      <div class="text-right">
+        <button onclick="toggleShareModal()" class="bg-[#242424] hover:bg-[#333] text-gray-300 text-xs px-4 py-1.5 rounded">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload Modal Simulation -->
+  <div id="uploadModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-[#181818] border border-[#333] rounded-lg max-w-lg w-full p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-[#2a2a2a] mb-4">
+        <h4 class="font-bold text-sm text-white flex items-center gap-2">
+          <i class="fa-solid fa-upload text-red-500"></i>
+          Release Group Upload Portal
+        </h4>
+        <button onclick="toggleUploadModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="p-4 bg-[#111] border border-[#252525] rounded text-center mb-4">
+        <i class="fa-solid fa-key text-amber-400 text-2xl mb-2"></i>
+        <p class="text-xs text-gray-300 font-medium">VIP / Trusted Release Group Authentication Required</p>
+        <p class="text-[11px] text-gray-500 mt-1">Direct upload access is restricted to verified groups with active PGP keys (GALACTIC, EPSILON, etc.).</p>
+      </div>
+      <div class="flex justify-end gap-2">
+        <button onclick="toggleUploadModal()" class="bg-[#242424] hover:bg-[#333] text-gray-300 text-xs px-4 py-1.5 rounded">Dismiss</button>
+        <button onclick="showToast('PGP authentication keys verified for GALACTIC', 'success'); toggleUploadModal();" class="bg-red-700 hover:bg-red-600 text-white text-xs px-4 py-1.5 rounded font-semibold">Simulate Group Auth</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-[#0a0a0a] border-t border-[#1f1f1f] mt-12 py-8 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-3">
+      <div class="flex flex-wrap justify-center gap-5 text-gray-400 font-medium">
+        <a href="#" class="hover:text-red-400">Rules &amp; FAQ</a>
+        <a href="#" class="hover:text-red-400">Release Standards (The Scene)</a>
+        <a href="#" class="hover:text-red-400">MediaInfo Guide</a>
+        <a href="#" class="hover:text-red-400">Contact Staff</a>
+        <a href="#" class="hover:text-red-400">Proxy List</a>
+      </div>
+      <p class="max-w-2xl text-[11px] text-gray-600 leading-relaxed mt-2">
+        1337x does not host any files on its servers. All data is gathered via DHT and Bittorrent peer exchange. Star Wars: The Clone Wars (2008) is copyright &copy; Lucasfilm Ltd. / Warner Bros. Pictures. This interface is created for archival presentation &amp; remux technical reference.
+      </p>
+      <div class="flex items-center gap-2 text-gray-500 text-[10px] mt-2">
+        <span>Server load: 0.42</span> &bull; 
+        <span>Generated in 0.018s</span> &bull; 
+        <span>HTTPS SSL / TLS 1.3</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const RELEASE_DATA = {
+      title: "Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-GALACTIC",
+      infoHash: "7A4E819E0FD7193F161CC28F421C94119B5199F2",
+      trackers: [
+        "udp://tracker.opentrackr.org:1337/announce",
+        "udp://open.stealth.si:80/announce",
+        "udp://tracker.torrent.eu.org:451/announce",
+        "udp://explodie.org:6969/announce"
+      ]
+    };
+
+    /* Build full RFC-compliant magnet URI */
+    function getMagnetUri() {
+      const trackerParams = RELEASE_DATA.trackers.map(t => `&tr=${encodeURIComponent(t)}`).join('');
+      return `magnet:?xt=urn:btih:${RELEASE_DATA.infoHash}&dn=${encodeURIComponent(RELEASE_DATA.title)}${trackerParams}`;
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      
+      const colors = {
+        info: 'bg-[#1e1e1e] border-gray-700 text-gray-200',
+        success: 'bg-emerald-950 border-emerald-700 text-emerald-200',
+        warning: 'bg-amber-950 border-amber-700 text-amber-200'
+      };
+
+      const icons = {
+        info: 'fa-circle-info text-blue-400',
+        success: 'fa-circle-check text-emerald-400',
+        warning: 'fa-triangle-exclamation text-amber-400'
+      };
+
+      toast.className = `${colors[type] || colors.info} border px-4 py-3 rounded-lg shadow-2xl flex items-center gap-3 text-xs pointer-events-auto transform transition-all duration-300 translate-y-4 opacity-0`;
+      toast.innerHTML = `
+        <i class="fa-solid ${icons[type] || icons.info} text-base shrink-0"></i>
+        <span>${message}</span>
+      `;
+
+      container.appendChild(toast);
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      });
+
+      // Auto dismiss after 3.2 seconds
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    function safeCopyToClipboard(textToCopy, successMsg = 'Copied to clipboard!') {
+      try {
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = textToCopy;
+        tempTextArea.style.position = 'fixed';
+        tempTextArea.style.left = '-999999px';
+        tempTextArea.style.top = '-999999px';
+        document.body.appendChild(tempTextArea);
+        tempTextArea.focus();
+        tempTextArea.select();
+        
+        const successful = document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+        
+        if (successful) {
+          showToast(successMsg, 'success');
+        } else {
+          showToast('Failed to copy text', 'warning');
+        }
+      } catch (err) {
+        showToast('Unable to copy to clipboard', 'warning');
+      }
+    }
+
+    function copyMagnetLink() {
+      const magnetUri = getMagnetUri();
+      safeCopyToClipboard(magnetUri, 'Magnet Link copied! Ready for your torrent client.');
+    }
+
+    function copyInfoHash() {
+      safeCopyToClipboard(RELEASE_DATA.infoHash, 'InfoHash copied: ' + RELEASE_DATA.infoHash);
+    }
+
+    function downloadTorrentMeta() {
+      showToast('Downloading mock file: ' + RELEASE_DATA.title + '.torrent', 'info');
+    }
+
+    function switchTab(tabId, clickedBtn) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Reset all buttons style
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('text-red-500', 'border-b-2', 'border-red-600', 'bg-[#181818]');
+        btn.classList.add('text-gray-400');
+      });
+
+      // Show targeted tab
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.classList.remove('hidden');
+      }
+
+      // Highlight active button
+      clickedBtn.classList.remove('text-gray-400');
+      clickedBtn.classList.add('text-red-500', 'border-b-2', 'border-red-600', 'bg-[#181818]');
+    }
+
+    function copyMediaInfo() {
+      const infoText = document.getElementById('mediainfoText').innerText;
+      safeCopyToClipboard(infoText, 'Full MediaInfo text copied to clipboard!');
+    }
+
+    function copyNFO() {
+      const nfoText = document.getElementById('nfoContent').innerText;
+      safeCopyToClipboard(nfoText, 'NFO ASCII content copied to clipboard!');
+    }
+
+    function bookmarkRelease(btn) {
+      const icon = btn.querySelector('i');
+      if (icon.classList.contains('fa-regular')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid', 'text-red-500');
+        showToast('Release added to saved bookmarks', 'success');
+      } else {
+        icon.classList.remove('fa-solid', 'text-red-500');
+        icon.classList.add('fa-regular');
+        showToast('Release removed from bookmarks', 'info');
+      }
+    }
+
+    function toggleShareModal() {
+      const modal = document.getElementById('shareModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function toggleUploadModal() {
+      const modal = document.getElementById('uploadModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function copyShareLink() {
+      const url = document.getElementById('shareUrlInput').value;
+      safeCopyToClipboard(url, 'Share URL copied!');
+      toggleShareModal();
+    }
+
+    function showGroupRules() {
+      showToast('Filtering all 1,482 Remuxes from GALACTIC...', 'info');
+    }
+
+    function triggerSearch() {
+      const query = document.getElementById('searchInput').value.trim();
+      if (query) {
+        showToast(`Searching 1337x index for: "${query}"`, 'info');
+      }
+    }
+
+    function handleCommentSubmit(event) {
+      event.preventDefault();
+      const authorInput = document.getElementById('commentAuthor');
+      const bodyInput = document.getElementById('commentBody');
+      const author = authorInput.value.trim();
+      const body = bodyInput.value.trim();
+
+      if (!author || !body) return;
+
+      const commentsList = document.getElementById('commentsList');
+      const newCommentCard = document.createElement('div');
+      newCommentCard.className = 'bg-[#151515] border border-red-950/60 p-3.5 rounded-lg transform transition-all duration-300';
+      newCommentCard.innerHTML = `
+        <div class="flex items-center justify-between mb-1.5">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-xs text-red-400">${escapeHtml(author)}</span>
+            <span class="text-[10px] bg-red-900/40 text-red-300 px-1.5 py-0.5 rounded border border-red-800">New Comment</span>
+          </div>
+          <span class="text-[11px] text-gray-500">Just now</span>
+        </div>
+        <p class="text-xs text-gray-300">${escapeHtml(body)}</p>
+      `;
+
+      commentsList.prepend(newCommentCard);
+
+      // Update badge count
+      const countEl = document.getElementById('commentBadgeCount');
+      if (countEl) {
+        countEl.textContent = parseInt(countEl.textContent || '0', 10) + 1;
+      }
+
+      // Reset form
+      authorInput.value = '';
+      bodyInput.value = '';
+      showToast('Comment submitted successfully!', 'success');
+    }
+
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, m => map[m]);
+    }
+  </script>
+</body>
+</html>
