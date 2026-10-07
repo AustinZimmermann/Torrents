@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[NSW] Mario Golf: Super Rush [0100C9C00E0E0000] (v1.0.0 / Update + DLC) NSP/XCI - 1337x</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons for accurate tracker UI aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#111111',
+            brandCard: '#1a1a1a',
+            brandCardLight: '#242424',
+            brandRed: '#b71c1c',
+            brandRedHover: '#d32f2f',
+            brandBorder: '#333333',
+            brandTextMuted: '#9e9e9e',
+            brandGreen: '#4caf50',
+            brandBlue: '#1e88e5'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['Consolas', 'Courier New', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbar for dark theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #141414;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555555;
+    }
+    .torrent-header-gradient {
+      background: linear-gradient(180deg, #2a2a2a 0%, #1e1e1e 100%);
+    }
+    .badge-vip {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+  </style>
+</head>
+<body class="bg-[#121212] text-[#e0e0e0] font-sans min-h-screen flex flex-col antialiased selection:bg-red-800 selection:text-white">
+
+  <!-- Top Global Header -->
+  <header class="bg-[#181818] border-b border-[#2d2d2d] sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-2 flex-shrink-0 cursor-pointer" onclick="showDemoToast('Navigating to homepage')">
+          <span class="text-3xl font-extrabold tracking-tight text-white">13<span class="text-[#d32f2f]">37</span>x</span>
+        </div>
+
+        <!-- Search Bar with Dropdown -->
+        <div class="flex-1 max-w-2xl hidden md:flex items-center">
+          <div class="relative flex w-full">
+            <select id="searchCategory" class="bg-[#242424] text-xs text-gray-300 border border-r-0 border-[#383838] rounded-l px-3 py-2 outline-none focus:border-red-600 transition">
+              <option value="all">All Categories</option>
+              <option value="games" selected>Games</option>
+              <option value="apps">Apps</option>
+              <option value="movies">Movies</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search for torrents, games, updates..." 
+                   value="Mario Golf: Super Rush"
+                   class="w-full bg-[#1e1e1e] border border-[#383838] text-sm text-gray-100 px-4 py-2 outline-none focus:border-red-600 transition placeholder-gray-500">
+            <button onclick="handleSearch()" class="bg-[#b71c1c] hover:bg-[#d32f2f] text-white px-5 py-2 rounded-r transition flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex items-center space-x-1 sm:space-x-3 text-sm font-medium">
+          <a href="#" onclick="showDemoToast('Top 100 section')" class="px-3 py-1.5 rounded hover:bg-[#252525] text-gray-300 hover:text-white transition">Top 100</a>
+          <a href="#" onclick="showDemoToast('Trending section')" class="px-3 py-1.5 rounded hover:bg-[#252525] text-gray-300 hover:text-white transition hidden sm:inline-block">Trending</a>
+          <a href="#" onclick="showDemoToast('Upload section')" class="px-3 py-1.5 rounded hover:bg-[#252525] text-gray-300 hover:text-white transition hidden lg:inline-block">Upload</a>
+          <button onclick="showDemoToast('Login modal')" class="bg-[#242424] hover:bg-[#303030] text-gray-200 border border-[#3a3a3a] px-3.5 py-1.5 rounded text-xs uppercase font-semibold tracking-wider transition">
+            <i class="fa-solid fa-user mr-1.5 text-xs text-red-500"></i> Login
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="md:hidden pb-3">
+        <div class="flex w-full">
+          <input type="text" placeholder="Search torrents..." value="Mario Golf: Super Rush" 
+                 class="w-full bg-[#202020] border border-[#333333] text-sm px-3 py-1.5 rounded-l text-gray-200 outline-none">
+          <button onclick="handleSearch()" class="bg-red-700 px-4 rounded-r text-white"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Demo Disclaimer Banner -->
+  <div class="bg-red-950/40 border-b border-red-900/50 py-1.5 px-4 text-center text-xs text-red-200">
+    <i class="fa-solid fa-shield-halved mr-1"></i> Interactive UI Mockup Demo. No actual copyright files or magnets are hosted or resolved.
+  </div>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-5 space-y-5">
+    
+    <!-- Breadcrumbs -->
+    <nav class="text-xs text-gray-400 flex items-center flex-wrap gap-2">
+      <a href="#" class="hover:text-red-400 transition">Home</a>
+      <span><i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i></span>
+      <a href="#" class="hover:text-red-400 transition">Games</a>
+      <span><i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i></span>
+      <a href="#" class="hover:text-red-400 transition">Nintendo Switch</a>
+      <span><i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i></span>
+      <span class="text-gray-200 truncate">Mario Golf: Super Rush</span>
+    </nav>
+
+    <!-- Torrent Header Box -->
+    <div class="bg-[#1b1b1b] border border-[#2b2b2b] rounded-md shadow-lg overflow-hidden">
+      <!-- Title Bar -->
+      <div class="torrent-header-gradient border-b border-[#2d2d2d] p-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="bg-[#b71c1c] text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wide">NSW / ROM</span>
+            <span class="badge-vip text-black text-[10px] font-black px-2 py-0.5 rounded shadow-sm flex items-center gap-1">
+              <i class="fa-solid fa-star text-[9px]"></i> VIP UPLOADER
+            </span>
+            <span class="bg-[#1e3a8a] text-blue-200 text-[10px] px-2 py-0.5 rounded font-mono">v1.4.0 + DLC</span>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold text-gray-100 break-words">
+            [NSW] Mario Golf: Super Rush [0100C9C00E0E0000] (v1.0.0 / Update + DLC) NSP/XCI
+          </h1>
+        </div>
+
+        <div class="flex items-center gap-2 self-start md:self-auto">
+          <button onclick="toggleBookmark(this)" class="bg-[#262626] hover:bg-[#333333] border border-[#3b3b3b] text-gray-300 text-xs px-3 py-2 rounded flex items-center gap-1.5 transition">
+            <i class="fa-regular fa-bookmark"></i> <span id="bookmarkText">Bookmark</span>
+          </button>
+          <button onclick="showDemoToast('Torrent reported to moderation team')" class="bg-[#262626] hover:bg-[#333333] border border-[#3b3b3b] text-gray-400 hover:text-red-400 text-xs px-2.5 py-2 rounded transition" title="Report">
+            <i class="fa-solid fa-flag"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bar -->
+      <div class="p-4 bg-[#181818] border-b border-[#292929] flex flex-wrap gap-2.5 sm:gap-3 items-center">
+        <!-- Magnet Download -->
+        <button onclick="triggerDownloadAlert('Magnet Download')" class="flex-1 sm:flex-initial bg-[#a81c1c] hover:bg-[#c62828] text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded shadow flex items-center justify-center gap-2 transition active:scale-95">
+          <i class="fa-solid fa-magnet text-sm"></i>
+          <span>MAGNET DOWNLOAD</span>
+        </button>
+
+        <!-- Torrent Download -->
+        <button onclick="triggerDownloadAlert('Torrent File Download')" class="flex-1 sm:flex-initial bg-[#2b2b2b] hover:bg-[#383838] border border-[#444] text-gray-200 font-semibold text-xs sm:text-sm px-4 py-2.5 rounded shadow flex items-center justify-center gap-2 transition active:scale-95">
+          <i class="fa-solid fa-download text-xs text-red-500"></i>
+          <span>TORRENT DOWNLOAD</span>
+        </button>
+
+        <!-- Direct Mirror -->
+        <button onclick="triggerDownloadAlert('Direct Mirror Link')" class="bg-[#222222] hover:bg-[#2e2e2e] border border-[#383838] text-gray-300 text-xs sm:text-sm px-4 py-2.5 rounded flex items-center justify-center gap-2 transition">
+          <i class="fa-solid fa-cloud-arrow-down text-gray-400"></i>
+          <span class="hidden sm:inline">DIRECT DOWNLOAD</span>
+        </button>
+
+        <!-- Check/Safe Badge -->
+        <div class="ml-auto flex items-center text-xs bg-[#152a1a] border border-[#225828] text-[#4caf50] px-3 py-2 rounded font-medium gap-1.5">
+          <i class="fa-solid fa-shield-check"></i>
+          <span>CHECKED & SAFE</span>
+        </div>
+      </div>
+
+      <!-- Torrent Details Grid -->
+      <div class="p-4 sm:p-5 bg-[#171717]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm">
+          
+          <div class="space-y-2 border-b sm:border-b-0 border-[#262626] pb-3 sm:pb-0">
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Category</span>
+              <span class="font-semibold text-gray-200"><i class="fa-solid fa-gamepad mr-1 text-red-400"></i> Games / Switch</span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Format / Type</span>
+              <span class="font-semibold text-gray-200">NSP / Custom XCI</span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Language</span>
+              <span class="font-semibold text-gray-200">English (en-US, Multi)</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 border-b sm:border-b-0 border-[#262626] pb-3 sm:pb-0">
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Total Size</span>
+              <span class="font-semibold text-gray-100 font-mono">3.22 GB (3,457,882,112 bytes)</span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Uploaded By</span>
+              <span class="font-semibold text-amber-400 hover:underline cursor-pointer" onclick="showDemoToast('Viewing profile for SwitchReleaseGroup')">
+                SwitchReleaseGroup <i class="fa-solid fa-check-circle text-xs text-blue-400"></i>
+              </span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Date Added</span>
+              <span class="font-semibold text-gray-200">June 25, 2021 (4:12 PM)</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 border-b sm:border-b-0 border-[#262626] pb-3 sm:pb-0">
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Seeders</span>
+              <span class="inline-flex items-center gap-1 font-bold text-green-400 bg-green-950/60 border border-green-800/80 px-2 py-0.5 rounded font-mono">
+                <i class="fa-solid fa-arrow-up text-[11px]"></i> 428
+              </span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Leechers</span>
+              <span class="inline-flex items-center gap-1 font-bold text-red-400 bg-red-950/60 border border-red-800/80 px-2 py-0.5 rounded font-mono">
+                <i class="fa-solid fa-arrow-down text-[11px]"></i> 32
+              </span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Downloads Completed</span>
+              <span class="font-semibold text-gray-200 font-mono">14,892 times</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">Info Hash</span>
+              <span class="font-mono text-[11px] text-gray-300 break-all select-all block bg-[#202020] p-1.5 rounded border border-[#303030]">
+                8f2c3d19a0e678b209e5fa414d6428c9b20e0e01
+              </span>
+            </div>
+            <div class="flex justify-between sm:block">
+              <span class="text-gray-400 block text-xs uppercase font-medium">TID / Title ID</span>
+              <span class="font-mono text-xs text-amber-300">0100C9C00E0E0000</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Controls -->
+    <div class="border-b border-[#303030] flex space-x-1 overflow-x-auto text-sm">
+      <button onclick="switchTab('description')" id="tabBtn-description" class="tab-btn px-4 py-2.5 font-semibold text-white border-b-2 border-red-600 bg-[#1e1e1e] rounded-t flex items-center gap-2">
+        <i class="fa-solid fa-file-lines text-red-500"></i> Description
+      </button>
+      <button onclick="switchTab('files')" id="tabBtn-files" class="tab-btn px-4 py-2.5 font-semibold text-gray-400 hover:text-gray-200 hover:bg-[#1a1a1a] rounded-t flex items-center gap-2 border-b-2 border-transparent transition">
+        <i class="fa-solid fa-folder-tree"></i> Files <span class="bg-[#2c2c2c] text-xs px-1.5 py-0.5 rounded text-gray-300">4</span>
+      </button>
+      <button onclick="switchTab('screenshots')" id="tabBtn-screenshots" class="tab-btn px-4 py-2.5 font-semibold text-gray-400 hover:text-gray-200 hover:bg-[#1a1a1a] rounded-t flex items-center gap-2 border-b-2 border-transparent transition">
+        <i class="fa-solid fa-image"></i> Screenshots <span class="bg-[#2c2c2c] text-xs px-1.5 py-0.5 rounded text-gray-300">4</span>
+      </button>
+      <button onclick="switchTab('comments')" id="tabBtn-comments" class="tab-btn px-4 py-2.5 font-semibold text-gray-400 hover:text-gray-200 hover:bg-[#1a1a1a] rounded-t flex items-center gap-2 border-b-2 border-transparent transition">
+        <i class="fa-solid fa-comments"></i> Comments <span id="commentsCountBadge" class="bg-[#2c2c2c] text-xs px-1.5 py-0.5 rounded text-gray-300">3</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: DESCRIPTION -->
+    <section id="tab-description" class="tab-content block space-y-6 bg-[#1a1a1a] border border-[#2b2b2b] p-5 sm:p-6 rounded-b rounded-tr">
+      
+      <!-- Synopsis & Overview -->
+      <div class="space-y-3">
+        <h2 class="text-lg font-bold text-red-500 flex items-center gap-2 border-b border-[#2d2d2d] pb-2">
+          <i class="fa-solid fa-circle-info"></i> Game Overview: Mario Golf™: Super Rush
+        </h2>
+        <p class="text-sm leading-relaxed text-gray-300">
+          Hit the green with familiar Mushroom Kingdom characters in <strong>Mario Golf: Super Rush</strong> for the Nintendo Switch family of systems! Hit the links with friends and family in the biggest Mario Golf game yet. Choose between standard button controls or motion controls using the Joy-Con controller to swing your club like a real pro.
+        </p>
+      </div>
+
+      <!-- Key Game Modes Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-[#222222] p-4 rounded border border-[#333333]">
+          <h3 class="text-sm font-bold text-amber-400 mb-1.5 flex items-center gap-2">
+            <i class="fa-solid fa-stopwatch text-red-400"></i> Speed Golf
+          </h3>
+          <p class="text-xs text-gray-400 leading-normal">
+            Tee off all at once and sprint across lush fairways to your ball. Use unique Special Dashes and Special Shots to outmaneuver rivals and sink your putts first!
+          </p>
+        </div>
+        <div class="bg-[#222222] p-4 rounded border border-[#333333]">
+          <h3 class="text-sm font-bold text-amber-400 mb-1.5 flex items-center gap-2">
+            <i class="fa-solid fa-trophy text-red-400"></i> Battle Golf
+          </h3>
+          <p class="text-xs text-gray-400 leading-normal">
+            A high-stakes twist in the neon-lit Super Golf Stadium. Compete simultaneously across 9 open holes—first player to capture 3 flags claims victory!
+          </p>
+        </div>
+        <div class="bg-[#222222] p-4 rounded border border-[#333333]">
+          <h3 class="text-sm font-bold text-amber-400 mb-1.5 flex items-center gap-2">
+            <i class="fa-solid fa-user-ninja text-red-400"></i> Golf Adventure
+          </h3>
+          <p class="text-xs text-gray-400 leading-normal">
+            Enroll your custom Mii character in country club training, earn EXP, level up power and curve stats, and tackle quirky golf bosses across varied biomes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Release Information Table -->
+      <div class="space-y-2">
+        <h3 class="text-sm font-bold text-gray-200">Release Specification & Packaging</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border border-[#303030]">
+            <tbody class="divide-y divide-[#2a2a2a]">
+              <tr class="bg-[#222222]"><td class="py-2 px-3 text-gray-400 font-medium w-48">Base Game Title ID</td><td class="py-2 px-3 font-mono text-gray-200">0100C9C00E0E0000</td></tr>
+              <tr><td class="py-2 px-3 text-gray-400 font-medium">Latest Update Version</td><td class="py-2 px-3 font-mono text-gray-200">v1.4.0 [0100C9C00E0E0800]</td></tr>
+              <tr class="bg-[#222222]"><td class="py-2 px-3 text-gray-400 font-medium">Included DLC Content</td><td class="py-2 px-3 text-gray-200">New Donk City Course, Spike & Toadette Roster DLC</td></tr>
+              <tr><td class="py-2 px-3 text-gray-400 font-medium">Required System Firmware</td><td class="py-2 px-3 font-mono text-gray-200">12.0.0 or higher (Atmosphere 0.19.x+)</td></tr>
+              <tr class="bg-[#222222]"><td class="py-2 px-3 text-gray-400 font-medium">Dump Source</td><td class="py-2 px-3 text-gray-200">Clean eShop NSP & Retail GameCard XCI Trimmed</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ASCII NFO Box -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xs uppercase font-bold text-gray-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-terminal text-red-500"></i> Release NFO Log
+          </h3>
+          <button onclick="copyNfo()" class="text-xs text-gray-400 hover:text-white bg-[#252525] border border-[#3a3a3a] px-2.5 py-1 rounded transition">
+            <i class="fa-regular fa-copy mr-1"></i> Copy NFO
+          </button>
+        </div>
+        <pre id="nfoContent" class="bg-[#0f0f0f] border border-[#2b2b2b] p-4 text-[11px] sm:text-xs font-mono text-emerald-400 overflow-x-auto leading-tight select-all rounded">
+  ___ _____ ____ _____       _  _ ___ ___ _____     
+ / _ \_   _/ ___|_   _|     | || |__ \__ \___  |    
+/ /_\ \| | \___ \ | |  _____| || |_ / / / /  / /     
+|  _  || |  ___) || | |_____|__   _/ /_/ /  / /      
+|_| |_|\_/ |____/ |_|          |_| \__/\__/ /_/       
+------------------------------------------------------
+   [NSW] Mario.Golf.Super.Rush.NSW-SwitchReleaseGroup
+------------------------------------------------------
+   RELEASE DATE ...: 2021-06-25
+   GAME PLATFORM ..: Nintendo Switch
+   DEVELOPER ......: Camelot Software Planning
+   PUBLISHER ......: Nintendo
+   REGION .........: Region Free / World
+   LANGUAGES ......: EN, JA, FR, DE, IT, ES, KO, ZH
+   FILE FORMAT ....: Nintendo Submission Package (.nsp)
+   IMAGE SIZE .....: 3.22 GB / 3,457,882,112 bytes
+   VERIFIED CRC32 .: 74E91AC4
+------------------------------------------------------
+   INSTALL NOTES:
+   1. Clean dump extracted via DBI / Tinfoil compliant.
+   2. Install Base NSP first, followed by Update v1.4.0.
+   3. Activate course pack DLCs.
+   4. Enjoy the golf course action with motion or pad!
+------------------------------------------------------
+   GREETS: Big up to all quality preservation dumpers!
+------------------------------------------------------</pre>
+      </div>
+    </section>
+
+    <!-- TAB 2: FILES -->
+    <section id="tab-files" class="tab-content hidden space-y-4 bg-[#1a1a1a] border border-[#2b2b2b] p-5 sm:p-6 rounded-b rounded-tr">
+      <div class="flex items-center justify-between border-b border-[#2e2e2e] pb-3">
+        <h3 class="text-sm font-bold text-gray-200">Torrent Content Hierarchy</h3>
+        <span class="text-xs text-gray-400">Total: 4 Files (3.22 GB)</span>
+      </div>
+
+      <div class="bg-[#141414] border border-[#2c2c2c] rounded overflow-hidden">
+        <div class="p-3 bg-[#1e1e1e] border-b border-[#2c2c2c] flex items-center justify-between text-xs font-semibold text-gray-300">
+          <span>File Name</span>
+          <span>Size</span>
+        </div>
+        
+        <ul class="divide-y divide-[#232323] text-xs font-mono">
+          <li class="p-3 hover:bg-[#1c1c1c] flex items-center justify-between transition">
+            <div class="flex items-center gap-2.5 truncate">
+              <i class="fa-solid fa-file-archive text-amber-500"></i>
+              <span class="text-gray-200 font-sans truncate">Mario_Golf_Super_Rush_BASE_[0100C9C00E0E0000].nsp</span>
+            </div>
+            <span class="text-gray-400 ml-4 flex-shrink-0">3.01 GB</span>
+          </li>
+          <li class="p-3 hover:bg-[#1c1c1c] flex items-center justify-between transition">
+            <div class="flex items-center gap-2.5 truncate">
+              <i class="fa-solid fa-file-arrow-up text-blue-400"></i>
+              <span class="text-gray-200 font-sans truncate">Mario_Golf_Super_Rush_UPDATE_v1.4.0_[0100C9C00E0E0800].nsp</span>
+            </div>
+            <span class="text-gray-400 ml-4 flex-shrink-0">178.4 MB</span>
+          </li>
+          <li class="p-3 hover:bg-[#1c1c1c] flex items-center justify-between transition">
+            <div class="flex items-center gap-2.5 truncate">
+              <i class="fa-solid fa-puzzle-piece text-purple-400"></i>
+              <span class="text-gray-200 font-sans truncate">Mario_Golf_Super_Rush_DLC_Pack_Courses_Characters.nsp</span>
+            </div>
+            <span class="text-gray-400 ml-4 flex-shrink-0">44.8 MB</span>
+          </li>
+          <li class="p-3 hover:bg-[#1c1c1c] flex items-center justify-between transition">
+            <div class="flex items-center gap-2.5 truncate">
+              <i class="fa-solid fa-file-lines text-emerald-400"></i>
+              <span class="text-gray-200 font-sans truncate">switch-release-group.nfo</span>
+            </div>
+            <span class="text-gray-400 ml-4 flex-shrink-0">3.8 KB</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TAB 3: SCREENSHOTS -->
+    <section id="tab-screenshots" class="tab-content hidden space-y-4 bg-[#1a1a1a] border border-[#2b2b2b] p-5 sm:p-6 rounded-b rounded-tr">
+      <div class="border-b border-[#2e2e2e] pb-3 flex items-center justify-between">
+        <h3 class="text-sm font-bold text-gray-200">Verified In-Game Screenshots (1080p Docked)</h3>
+        <span class="text-xs text-gray-400">Click any image to enlarge</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Screenshot Card 1 -->
+        <div class="group relative rounded overflow-hidden border border-[#333333] bg-[#000] cursor-pointer" onclick="openLightbox('Speed Golf Dash Action', 'Mario sprinting down Rookie Course fairways alongside Luigi and Bowser.', 'https://placehold.co/1280x720/1e3a24/ffffff?text=Speed+Golf+-+Sprint+Sprint+Dash!')">
+          <img src="https://placehold.co/640x360/1e3a24/ffffff?text=Speed+Golf+-+Sprint+Dash" 
+               alt="Speed Golf Dash Action" 
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs font-semibold text-gray-200">Speed Golf: Fairway Sprint</span>
+          </div>
+        </div>
+
+        <!-- Screenshot Card 2 -->
+        <div class="group relative rounded overflow-hidden border border-[#333333] bg-[#000] cursor-pointer" onclick="openLightbox('Putting Green Trajectory HUD', 'Reading slopes, wind velocity, and elevation grid.', 'https://placehold.co/1280x720/193043/ffffff?text=Putting+Green+Trajectory+HUD')">
+          <img src="https://placehold.co/640x360/193043/ffffff?text=Putting+HUD+%26+Slope+Scan" 
+               alt="Putting Green Trajectory" 
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs font-semibold text-gray-200">Putting Green & Elevation Grid</span>
+          </div>
+        </div>
+
+        <!-- Screenshot Card 3 -->
+        <div class="group relative rounded overflow-hidden border border-[#333333] bg-[#000] cursor-pointer" onclick="openLightbox('Battle Golf Stadium Neon Arena', 'Simultaneous 9-flag battle golf in the high-tech arena.', 'https://placehold.co/1280x720/3d183b/ffffff?text=Battle+Golf+Stadium+Arena')">
+          <img src="https://placehold.co/640x360/3d183b/ffffff?text=Battle+Golf+Stadium" 
+               alt="Battle Golf Arena" 
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs font-semibold text-gray-200">Battle Golf: Super Golf Stadium</span>
+          </div>
+        </div>
+
+        <!-- Screenshot Card 4 -->
+        <div class="group relative rounded overflow-hidden border border-[#333333] bg-[#000] cursor-pointer" onclick="openLightbox('Golf Adventure Mii Clubhouse', 'Visiting club coaches, shop purchases, and stats upgrades.', 'https://placehold.co/1280x720/382d14/ffffff?text=Golf+Adventure+Story+Clubhouse')">
+          <img src="https://placehold.co/640x360/382d14/ffffff?text=Golf+Adventure+Clubhouse" 
+               alt="Golf Adventure Mii Clubhouse" 
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs font-semibold text-gray-200">Story Mode: Country Club Hub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 4: COMMENTS -->
+    <section id="tab-comments" class="tab-content hidden space-y-6 bg-[#1a1a1a] border border-[#2b2b2b] p-5 sm:p-6 rounded-b rounded-tr">
+      <div class="border-b border-[#2e2e2e] pb-3 flex items-center justify-between">
+        <h3 class="text-sm font-bold text-gray-200">Community Feedback & Torrent Status</h3>
+        <span class="text-xs text-gray-400">All comments are subject to community guidelines</span>
+      </div>
+
+      <!-- Add Comment Form -->
+      <form id="commentForm" onsubmit="handleCommentSubmit(event)" class="bg-[#151515] p-4 rounded border border-[#2d2d2d] space-y-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-red-700 flex items-center justify-center font-bold text-xs text-white">
+            U
+          </div>
+          <span class="text-xs font-semibold text-gray-300">Post as Guest / Member</span>
+        </div>
+        <textarea id="commentInput" rows="3" required placeholder="Write a comment or report speed verification..." 
+                  class="w-full bg-[#1e1e1e] border border-[#363636] rounded p-3 text-xs text-gray-200 placeholder-gray-500 focus:outline-none focus:border-red-600 transition resize-none"></textarea>
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] text-gray-500">Markdown formatting is simulated</span>
+          <button type="submit" class="bg-[#b71c1c] hover:bg-[#d32f2f] text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1.5">
+            <i class="fa-solid fa-paper-plane"></i> Submit Comment
+          </button>
+        </div>
+      </form>
+
+      <!-- Comments List -->
+      <div id="commentsContainer" class="space-y-4">
+        
+        <!-- Comment 1 -->
+        <div class="bg-[#161616] border border-[#282828] p-4 rounded space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-emerald-800 flex items-center justify-center text-xs font-bold text-white">
+                S
+              </div>
+              <span class="text-xs font-bold text-gray-200">SwitchGamer99</span>
+              <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-1.5 py-0.2 rounded font-mono">Verified Seeder</span>
+            </div>
+            <span class="text-[11px] text-gray-500">June 26, 2021</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Installed via DBI installer over USB-C without any issues on Atmosphere 0.19.4. Game runs at solid 60 FPS in standard golf and around 30 FPS during 4-player Speed Golf chaos. Tested the motion swing with Joy-Cons and it is super responsive!
+          </p>
+          <div class="flex items-center gap-3 pt-1 text-[11px] text-gray-400">
+            <button onclick="handleVote(this, 1)" class="hover:text-green-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-up"></i> <span>28</span></button>
+            <button onclick="handleVote(this, -1)" class="hover:text-red-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-down"></i> <span>1</span></button>
+            <button onclick="showDemoToast('Reply prompt')" class="hover:text-gray-200 ml-2">Reply</button>
+          </div>
+        </div>
+
+        <!-- Comment 2 -->
+        <div class="bg-[#161616] border border-[#282828] p-4 rounded space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-blue-800 flex items-center justify-center text-xs font-bold text-white">
+                N
+              </div>
+              <span class="text-xs font-bold text-gray-200">NintendoArchiveGuy</span>
+            </div>
+            <span class="text-[11px] text-gray-500">June 28, 2021</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Seeding at 1 Gbps from seedbox. File hashes match the official Nintendo CDN dump perfectly. Make sure you don't skip the v1.4.0 update if you want the extra New Donk City course!
+          </p>
+          <div class="flex items-center gap-3 pt-1 text-[11px] text-gray-400">
+            <button onclick="handleVote(this, 1)" class="hover:text-green-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-up"></i> <span>14</span></button>
+            <button onclick="handleVote(this, -1)" class="hover:text-red-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-down"></i> <span>0</span></button>
+            <button onclick="showDemoToast('Reply prompt')" class="hover:text-gray-200 ml-2">Reply</button>
+          </div>
+        </div>
+
+        <!-- Comment 3 -->
+        <div class="bg-[#161616] border border-[#282828] p-4 rounded space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-purple-800 flex items-center justify-center text-xs font-bold text-white">
+                W
+              </div>
+              <span class="text-xs font-bold text-gray-200">WaluigiFanatic</span>
+            </div>
+            <span class="text-[11px] text-gray-500">July 02, 2021</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Waluigi's golf outfit and his special dash with the rose are unbeatable. Thanks to the group for the swift upload and good seed speeds.
+          </p>
+          <div class="flex items-center gap-3 pt-1 text-[11px] text-gray-400">
+            <button onclick="handleVote(this, 1)" class="hover:text-green-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-up"></i> <span>9</span></button>
+            <button onclick="handleVote(this, -1)" class="hover:text-red-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-down"></i> <span>0</span></button>
+            <button onclick="showDemoToast('Reply prompt')" class="hover:text-gray-200 ml-2">Reply</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 bg-black/90 z-50 hidden flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-[#1c1c1c] rounded-lg border border-[#333333] overflow-hidden shadow-2xl relative">
+      <div class="flex items-center justify-between p-3 bg-[#171717] border-b border-[#2b2b2b]">
+        <h4 id="lightboxTitle" class="text-sm font-bold text-gray-200">Screenshot Preview</h4>
+        <button onclick="closeLightbox()" class="text-gray-400 hover:text-white px-2 py-1 text-lg leading-none">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-2 bg-black flex items-center justify-center">
+        <img id="lightboxImage" src="" alt="Enlarged screenshot" class="max-h-[70vh] w-auto object-contain rounded">
+      </div>
+      <div class="p-3 bg-[#171717] border-t border-[#2b2b2b] text-xs text-gray-400" id="lightboxCaption">
+        Caption details
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Footer -->
+  <footer class="bg-[#0f0f0f] border-t border-[#222222] mt-12 py-8 text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-lg font-bold text-white">13<span class="text-red-600">37</span>x</span>
+          <p class="text-gray-500 text-[11px] mt-1">Design Replica & Showcase Concept for Educational / Testing Environments.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-gray-400">
+          <a href="#" onclick="showDemoToast('Rules')" class="hover:text-red-400">Rules</a>
+          <a href="#" onclick="showDemoToast('FAQ')" class="hover:text-red-400">FAQ</a>
+          <a href="#" onclick="showDemoToast('DMCA Policy')" class="hover:text-red-400">DMCA Disclaimer</a>
+          <a href="#" onclick="showDemoToast('Chat / IRC')" class="hover:text-red-400">IRC Chat</a>
+          <a href="#" onclick="showDemoToast('Tor Mirror')" class="hover:text-red-400">Tor Onion</a>
+        </div>
+      </div>
+      <div class="border-t border-[#1c1c1c] pt-4 text-[11px] text-gray-600 text-center">
+        None of the files shown are actually hosted or served. This is an authentic web page UI simulation.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabId) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('block');
+      });
+
+      // Reset button styles
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('text-white', 'border-red-600', 'bg-[#1e1e1e]');
+        btn.classList.add('text-gray-400', 'border-transparent');
+      });
+
+      // Show targeted tab
+      const targetContent = document.getElementById(`tab-${tabId}`);
+      const targetBtn = document.getElementById(`tabBtn-${tabId}`);
+      if (targetContent && targetBtn) {
+        targetContent.classList.remove('hidden');
+        targetContent.classList.add('block');
+
+        targetBtn.classList.remove('text-gray-400', 'border-transparent');
+        targetBtn.classList.add('text-white', 'border-red-600', 'bg-[#1e1e1e]');
+      }
+    }
+
+    // Toast Notification System
+    function showDemoToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      
+      const icon = type === 'warning' ? 'fa-triangle-exclamation text-amber-400' :
+                   type === 'success' ? 'fa-circle-check text-green-400' :
+                   'fa-circle-info text-red-500';
+
+      toast.className = `pointer-events-auto bg-[#202020] border border-[#383838] shadow-2xl rounded-md px-4 py-3 flex items-center gap-3 text-xs text-gray-200 transition-all duration-300 transform translate-y-3 opacity-0 max-w-sm`;
+      toast.innerHTML = `
+        <i class="fa-solid ${icon} text-base flex-shrink-0"></i>
+        <div class="flex-1">${message}</div>
+      `;
+
+      container.appendChild(toast);
+
+      // Animate in
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-3', 'opacity-0');
+      });
+
+      // Remove after 3.5 seconds
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-3');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Download / Magnet Click Interception
+    function triggerDownloadAlert(actionType) {
+      showDemoToast(`<strong>${actionType}</strong> was clicked. This is a front-end UI simulation; no real torrents or transfers are initiated.`, 'warning');
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(button) {
+      const icon = button.querySelector('i');
+      const text = document.getElementById('bookmarkText');
+      if (icon.classList.contains('fa-regular')) {
+        icon.classList.replace('fa-regular', 'fa-solid');
+        icon.classList.add('text-red-500');
+        text.innerText = 'Bookmarked';
+        showDemoToast('Torrent added to your local bookmarks list.', 'success');
+      } else {
+        icon.classList.replace('fa-solid', 'fa-regular');
+        icon.classList.remove('text-red-500');
+        text.innerText = 'Bookmark';
+        showDemoToast('Torrent removed from bookmarks.');
+      }
+    }
+
+    // Search Trigger
+    function handleSearch() {
+      const term = document.getElementById('searchInput').value;
+      const cat = document.getElementById('searchCategory').value;
+      showDemoToast(`Search query executed: "${term}" within [${cat}]`, 'info');
+    }
+
+    // Copy NFO to clipboard
+    function copyNfo() {
+      const nfo = document.getElementById('nfoContent').innerText;
+      const textarea = document.createElement('textarea');
+      textarea.value = nfo;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showDemoToast('ASCII Release NFO copied to clipboard!', 'success');
+      } catch (err) {
+        showDemoToast('Failed to copy to clipboard.', 'warning');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // Lightbox Controls
+    function openLightbox(title, caption, imgSrc) {
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxCaption').innerText = caption;
+      document.getElementById('lightboxImage').src = imgSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Close lightbox on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Upvote / Downvote Functionality
+    function handleVote(button, delta) {
+      const span = button.querySelector('span');
+      let currentVal = parseInt(span.innerText, 10);
+      currentVal += delta;
+      span.innerText = currentVal;
+      button.classList.add('text-white');
+      button.disabled = true;
+      showDemoToast(`Feedback recorded (${delta > 0 ? '+1' : '-1'}).`, 'success');
+    }
+
+    // Comment Submission
+    function handleCommentSubmit(event) {
+      event.preventDefault();
+      const input = document.getElementById('commentInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const container = document.getElementById('commentsContainer');
+      const newComment = document.createElement('div');
+      newComment.className = 'bg-[#161616] border border-[#333333] p-4 rounded space-y-2 animate-pulse';
+      
+      const dateString = 'Just now';
+      newComment.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-xs font-bold text-white">
+              Y
+            </div>
+            <span class="text-xs font-bold text-gray-200">You (Guest)</span>
+            <span class="text-[10px] bg-red-950 text-red-300 border border-red-800 px-1.5 py-0.2 rounded font-mono">New</span>
+          </div>
+          <span class="text-[11px] text-gray-500">${dateString}</span>
+        </div>
+        <p class="text-xs text-gray-300 leading-relaxed">${escapeHtml(text)}</p>
+        <div class="flex items-center gap-3 pt-1 text-[11px] text-gray-400">
+          <button onclick="handleVote(this, 1)" class="hover:text-green-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-up"></i> <span>1</span></button>
+          <button onclick="handleVote(this, -1)" class="hover:text-red-400 flex items-center gap-1"><i class="fa-solid fa-thumbs-down"></i> <span>0</span></button>
+          <span class="text-emerald-500 text-[10px]">Posted successfully</span>
+        </div>
+      `;
+
+      container.prepend(newComment);
+      setTimeout(() => newComment.classList.remove('animate-pulse'), 800);
+      
+      input.value = '';
+      
+      // Update comments badge
+      const badge = document.getElementById('commentsCountBadge');
+      let count = parseInt(badge.innerText, 10) || 3;
+      badge.innerText = count + 1;
+
+      showDemoToast('Your comment has been published!', 'success');
+    }
+
+    // Simple HTML Escaping helper
+    function escapeHtml(string) {
+      const div = document.createElement('div');
+      div.innerText = string;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
