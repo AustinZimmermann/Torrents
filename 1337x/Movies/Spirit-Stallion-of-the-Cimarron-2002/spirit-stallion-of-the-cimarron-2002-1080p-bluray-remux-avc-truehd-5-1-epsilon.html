@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit: Stallion of the Cimarron 2002 1080p BluRay REMUX AVC TrueHD 5.1-EPSiLON - 1337x</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#181818',
+                        darkcard: '#232323',
+                        darkborder: '#333333',
+                        accent: '#e53935',
+                        accenthover: '#c62828',
+                        linkblue: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #181818; color: #e0e0e0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        /* Custom scrollbar for authentic look */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #181818; }
+        ::-webkit-scrollbar-thumb { background: #333333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #444444; }
+    </style>
+</head>
+<body class="bg-darkbg text-gray-200 min-h-screen flex flex-col justify-between selection:bg-accent selection:text-white">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="bg-darkcard border-b border-darkborder sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo & Brand -->
+            <div class="flex items-center space-x-6">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="bg-accent text-white font-black text-xl px-2.5 py-1 rounded tracking-tighter shadow">1337x</div>
+                    <span class="text-xs text-gray-400 font-mono hidden sm:inline">.to (en-US)</span>
+                </a>
+                <nav class="hidden md:flex space-x-1 lg:space-x-4 text-sm font-medium">
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#" class="px-3 py-2 rounded bg-zinc-800 text-accent font-semibold transition">Movies</a>
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">TV</a>
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">Games</a>
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">Music</a>
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">Anime</a>
+                    <a href="#" class="px-3 py-2 rounded hover:bg-zinc-800 text-gray-300 hover:text-white transition">Top 100</a>
+                </nav>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex items-center space-x-2 w-full max-w-xs sm:max-w-sm md:max-w-md">
+                <div class="relative w-full">
+                    <input type="text" id="searchInput" placeholder="Search torrents..." class="w-full bg-zinc-900 border border-darkborder rounded-l px-3 py-1.5 text-sm text-white focus:outline-none focus:border-accent">
+                </div>
+                <button onclick="handleSearch()" class="bg-accent hover:bg-accenthover text-white px-4 py-1.5 rounded-r text-sm font-medium transition flex items-center">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
+
+        <!-- Breadcrumbs -->
+        <nav class="text-xs text-gray-400 mb-4 flex items-center space-x-2 overflow-x-auto whitespace-nowrap py-1">
+            <a href="#" class="hover:text-white">Home</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <a href="#" class="hover:text-white">Torrents</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <a href="#" class="hover:text-white">Movies</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <a href="#" class="hover:text-white">HD Movies</a>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            <span class="text-gray-200">Spirit: Stallion of the Cimarron (2002)</span>
+        </nav>
+
+        <!-- TORRENT HEADER TITLE -->
+        <div class="bg-darkcard border border-darkborder rounded-t-lg p-5 shadow">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <div class="flex items-center gap-2 mb-2 flex-wrap">
+                        <span class="bg-accent/20 text-accent text-xs px-2.5 py-1 rounded font-semibold uppercase tracking-wide border border-accent/30">Movies > HD</span>
+                        <span class="bg-zinc-800 text-gray-300 text-xs px-2 py-1 rounded font-mono">REMUX</span>
+                        <span class="bg-zinc-800 text-gray-300 text-xs px-2 py-1 rounded font-mono">TrueHD 5.1</span>
+                        <span class="bg-emerald-900/40 text-emerald-400 border border-emerald-800 text-xs px-2 py-0.5 rounded flex items-center gap-1 font-medium">
+                            <i class="fa-solid fa-shield-check"></i> Verified Torrent
+                        </span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                        Spirit.Stallion.of.the.Cimarron.2002.1080p.BluRay.REMUX.AVC.TrueHD.5.1-EPSiLON
+                    </h1>
+                </div>
+                <div class="flex items-center gap-2 self-end md:self-center">
+                    <div class="text-right hidden sm:block">
+                        <div class="text-xs text-gray-400">Total Size</div>
+                        <div class="text-sm font-bold text-white font-mono">24.8 GB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN TORRENT ACTIONS & INFO PANEL -->
+        <div class="bg-zinc-900 border-x border-b border-darkborder p-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Left 2 Cols: Poster, Download Buttons & Metadata -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- Poster & Quick Stats Banner -->
+                <div class="flex flex-col sm:flex-row gap-6 bg-darkcard p-4 rounded-lg border border-darkborder">
+                    <div class="w-full sm:w-48 flex-shrink-0 flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" 
+                             onerror="this.src='https://placehold.co/300x450/111/fff?text=Spirit+BluRay';"
+                             alt="Spirit: Stallion of the Cimarron Poster" 
+                             class="rounded shadow-lg w-40 sm:w-full h-auto object-cover border border-darkborder">
+                    </div>
+                    <div class="flex-grow space-y-3">
+                        <h3 class="text-lg font-semibold text-white border-b border-darkborder pb-2">Quick Information</h3>
+                        <div class="grid grid-cols-2 gap-y-2 text-sm">
+                            <div class="text-gray-400">Uploader:</div>
+                            <div>
+                                <a href="#" class="text-accent font-medium hover:underline flex items-center gap-1">
+                                    EPSiLON <i class="fa-solid fa-check-circle text-xs text-blue-400" title="Verified Uploader"></i>
+                                </a>
+                            </div>
+
+                            <div class="text-gray-400">Date Added:</div>
+                            <div class="text-gray-200">November 14, 2024</div>
+
+                            <div class="text-gray-400">Category:</div>
+                            <div class="text-gray-200">Movies / HD</div>
+
+                            <div class="text-gray-400">Type:</div>
+                            <div class="text-gray-200">Blu-ray Remux</div>
+
+                            <div class="text-gray-400">Language:</div>
+                            <div class="text-gray-200">English</div>
+
+                            <div class="text-gray-400">Downloads:</div>
+                            <div class="text-gray-200 font-mono">18,420</div>
+
+                            <div class="text-gray-400">Completed:</div>
+                            <div class="text-gray-200 font-mono">12,450 times</div>
+                        </div>
+
+                        <!-- Swarm Health Stats -->
+                        <div class="pt-2 flex items-center gap-4 text-sm border-t border-darkborder">
+                            <div class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span id="seedersCount">1,420</span> Seeders
+                            </div>
+                            <div class="flex items-center gap-1.5 text-amber-400 font-semibold">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <span id="leechersCount">85</span> Leechers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Actions Toolbar -->
+                <div class="bg-darkcard p-4 rounded-lg border border-darkborder space-y-3">
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider">Download Options</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Magnet Download -->
+                        <button onclick="copyMagnet()" class="flex-1 min-w-[180px] bg-accent hover:bg-accenthover text-white font-medium py-3 px-4 rounded transition flex items-center justify-center gap-2 shadow">
+                            <i class="fa-solid fa-magnet text-lg"></i>
+                            <span>Magnet Download</span>
+                        </button>
+                        <!-- Torrent File Download -->
+                        <button onclick="simulateTorrentDownload()" class="flex-1 min-w-[180px] bg-zinc-800 hover:bg-zinc-700 text-gray-200 border border-darkborder font-medium py-3 px-4 rounded transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-arrow-down text-lg text-accent"></i>
+                            <span>Torrent File (.torrent)</span>
+                        </button>
+                    </div>
+                    <!-- Cloud Mirrors -->
+                    <div class="pt-2 flex flex-wrap items-center gap-2 text-xs text-gray-400">
+                        <span class="font-medium text-gray-300">Mirrors:</span>
+                        <a href="#" onclick="showMirrorModal('Rapidgator')" class="bg-zinc-800 hover:bg-zinc-700 px-2.5 py-1 rounded text-gray-300 border border-darkborder transition">Rapidgator</a>
+                        <a href="#" onclick="showMirrorModal('Uptobox')" class="bg-zinc-800 hover:bg-zinc-700 px-2.5 py-1 rounded text-gray-300 border border-darkborder transition">Uptobox</a>
+                        <a href="#" onclick="showMirrorModal('1Fichier')" class="bg-zinc-800 hover:bg-zinc-700 px-2.5 py-1 rounded text-gray-300 border border-darkborder transition">1Fichier</a>
+                        <a href="#" onclick="showMirrorModal('Mega.nz')" class="bg-zinc-800 hover:bg-zinc-700 px-2.5 py-1 rounded text-gray-300 border border-darkborder transition">Mega.nz</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Col: Folder Info & Hash details -->
+            <div class="space-y-6">
+                <!-- Info Hash Box -->
+                <div class="bg-darkcard p-4 rounded-lg border border-darkborder space-y-3">
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider">Torrent Metadata</h4>
+                    <div class="space-y-2 text-xs">
+                        <div>
+                            <span class="text-gray-400 block mb-1">Info Hash:</span>
+                            <div class="bg-zinc-900 p-2 rounded font-mono text-gray-300 break-all border border-darkborder select-all">
+                                4a3f89e21b7c6d5e4f3a2b1c0e9d8f7a6b5c4d3e
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 block mb-1">Exact Folder Name:</span>
+                            <div class="bg-zinc-900 p-2 rounded font-mono text-emerald-400 break-all border border-darkborder">
+                                Spirit.Stallion.of.the.Cimarron.2002.1080p.BluRay.REMUX.AVC.TrueHD.5.1-EPSiLON
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad / Info Banner -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-4 rounded-lg border border-darkborder text-center space-y-2">
+                    <div class="text-accent font-bold text-sm">Need a Torrent Client?</div>
+                    <p class="text-xs text-gray-400">Download qBittorrent, Deluge, or µTorrent to open this .torrent file or magnet link safely.</p>
+                    <a href="https://www.qbittorrent.org/download" target="_blank" class="inline-block bg-zinc-700 hover:bg-zinc-600 text-white text-xs px-3 py-1.5 rounded transition font-medium">Get qBittorrent</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TABBED CONTENT NAVIGATION -->
+        <div class="mt-8">
+            <!-- Tabs Header -->
+            <div class="flex border-b border-darkborder space-x-1 sm:space-x-4 overflow-x-auto">
+                <button onclick="switchTab('description')" id="tab-btn-description" class="px-4 py-3 text-sm font-semibold border-b-2 border-accent text-accent transition flex items-center gap-2">
+                    <i class="fa-solid fa-align-left"></i> Description
+                </button>
+                <button onclick="switchTab('files')" id="tab-btn-files" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-folder-tree"></i> File List (3)
+                </button>
+                <button onclick="switchTab('screenshots')" id="tab-btn-screenshots" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-image"></i> Screenshots
+                </button>
+                <button onclick="switchTab('comments')" id="tab-btn-comments" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-comments"></i> Comments (<span id="commentCountBadge">4</span>)
+                </button>
+            </div>
+
+            <!-- TAB 1: DESCRIPTION & MEDIA INFO -->
+            <div id="tab-description" class="tab-content bg-darkcard border border-t-0 border-darkborder p-6 rounded-b-lg space-y-6">
+                <!-- Synopsis -->
+                <div class="space-y-3">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-film text-accent"></i> Synopsis & Plot
+                    </h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        <i><b>Spirit: Stallion of the Cimarron</b></i> is a 2002 American animated adventure drama film directed by Kelly Asbury and Lorna Cook in their directorial debuts, and written by John Fusco. The film follows the adventures of a wild Kiger Mustang stallion named Spirit, who is captured by the U.S. Cavalry during the American Old West frontier expansion. He refuses to be broken in spirit, even as he befriends a young Lakota man who helps him escape and reunite with his herd and mare, Rain.
+                    </p>
+                </div>
+
+                <!-- Technical MediaInfo Table -->
+                <div class="space-y-3">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-accent"></i> Technical Specifications (MediaInfo)
+                    </h3>
+                    <div class="bg-zinc-900 border border-darkborder rounded-lg overflow-hidden text-sm">
+                        <table class="w-full text-left border-collapse">
+                            <tbody>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium w-1/3">Container / Format</td>
+                                    <td class="p-3 font-mono text-gray-200">Matroska (MKV)</td>
+                                </tr>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Video Codec</td>
+                                    <td class="p-3 font-mono text-gray-200">AVC / H.264 @ High Profile 4.1</td>
+                                 </tr>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Resolution / Bitrate</td>
+                                    <td class="p-3 font-mono text-gray-200">1920x1080 (16:9) | ~22.4 Mbps</td>
+                                </tr>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Audio Track 1 (Primary)</td>
+                                    <td class="p-3 font-mono text-gray-200">English Dolby TrueHD Audio 5.1 @ 3042 kbps (24-bit)</td>
+                                </tr>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Audio Track 2 (Commentary)</td>
+                                    <td class="p-3 font-mono text-gray-200">English Dolby Digital Audio 2.0 @ 192 kbps (Directors)</td>
+                                </tr>
+                                <tr class="border-b border-darkborder hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Subtitles</td>
+                                    <td class="p-3 font-mono text-gray-200">English, French, Spanish, German, Italian (PGS)</td>
+                                </tr>
+                                <tr class="hover:bg-zinc-800/50">
+                                    <td class="p-3 text-gray-400 font-medium">Runtime / Framerate</td>
+                                    <td class="p-3 font-mono text-gray-200">1h 23m 14s | 23.976 FPS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: FILE LIST / EXPLORER -->
+            <div id="tab-files" class="tab-content hidden bg-darkcard border border-t-0 border-darkborder p-6 rounded-b-lg space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-accent"></i> Folder Contents
+                    </h3>
+                    <span class="text-xs text-gray-400 font-mono">Total Size: 24.8 GB</span>
+                </div>
+
+                <!-- Interactive File Tree -->
+                <div class="bg-zinc-900 border border-darkborder rounded-lg p-4 font-mono text-sm space-y-2">
+                    <!-- Root Folder -->
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold cursor-pointer hover:underline" onclick="toggleFolder(this)">
+                        <i class="fa-solid fa-folder-minus folder-icon"></i>
+                        <span>Spirit.Stallion.of.the.Cimarron.2002.1080p.BluRay.REMUX.AVC.TrueHD.5.1-EPSiLON/</span>
+                    </div>
+
+                    <!-- Folder Contents Container -->
+                    <div class="pl-6 space-y-2 border-l border-zinc-800 ml-2 pt-1" id="rootFolderContents">
+                        <!-- MKV File -->
+                        <div class="flex items-center justify-between text-gray-200 hover:bg-zinc-800/60 p-1.5 rounded transition">
+                            <div class="flex items-center gap-2 truncate">
+                                <i class="fa-solid fa-file-video text-blue-400"></i>
+                                <span class="truncate">Spirit.Stallion.of.the.Cimarron.2002.1080p.BluRay.REMUX.AVC.TrueHD.5.1-EPSiLON.mkv</span>
+                            </div>
+                            <span class="text-xs text-gray-400 flex-shrink-0 ml-4">24.7 GB</span>
+                        </div>
+
+                        <!-- Sample Folder -->
+                        <div>
+                            <div class="flex items-center justify-between text-gray-300 hover:bg-zinc-800/60 p-1.5 rounded transition cursor-pointer" onclick="toggleSubFolder(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-folder text-amber-500 folder-icon"></i>
+                                    <span>Sample/</span>
+                                </div>
+                                <span class="text-xs text-gray-400">65.4 MB</span>
+                            </div>
+                            <div class="pl-6 space-y-1 pt-1 hidden subfolder">
+                                <div class="flex items-center justify-between text-gray-400 text-xs p-1 rounded hover:bg-zinc-800">
+                                    <div class="flex items-center gap-2 truncate">
+                                        <i class="fa-solid fa-file-video text-blue-400"></i>
+                                        <span class="truncate">spirit-2002-1080p-sample.mkv</span>
+                                    </div>
+                                    <span>65.4 MB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subs Folder -->
+                        <div>
+                            <div class="flex items-center justify-between text-gray-300 hover:bg-zinc-800/60 p-1.5 rounded transition cursor-pointer" onclick="toggleSubFolder(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-folder text-amber-500 folder-icon"></i>
+                                    <span>Subs/</span>
+                                </div>
+                                <span class="text-xs text-gray-400">12.2 MB</span>
+                            </div>
+                            <div class="pl-6 space-y-1 pt-1 hidden subfolder">
+                                <div class="flex items-center justify-between text-gray-400 text-xs p-1 rounded hover:bg-zinc-800">
+                                    <div class="flex items-center gap-2 truncate">
+                                        <i class="fa-solid fa-file-lines text-gray-400"></i>
+                                        <span>English.srt</span>
+                                    </div>
+                                    <span>145 KB</span>
+                                </div>
+                                <div class="flex items-center justify-between text-gray-400 text-xs p-1 rounded hover:bg-zinc-800">
+                                    <div class="flex items-center gap-2 truncate">
+                                        <i class="fa-solid fa-file-lines text-gray-400"></i>
+                                        <span>French.srt</span>
+                                    </div>
+                                    <span>140 KB</span>
+                                </div>
+                                <div class="flex items-center justify-between text-gray-400 text-xs p-1 rounded hover:bg-zinc-800">
+                                    <div class="flex items-center gap-2 truncate">
+                                        <i class="fa-solid fa-file-lines text-gray-400"></i>
+                                        <span>Spanish.srt</span>
+                                    </div>
+                                    <span>138 KB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SCREENSHOTS -->
+            <div id="tab-screenshots" class="tab-content hidden bg-darkcard border border-t-0 border-darkborder p-6 rounded-b-lg space-y-4">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-images text-accent"></i> Movie Screenshots (1080p Remux Stills)
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-zinc-900 border border-darkborder rounded overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x338/222/fff?text=Screenshot+1';"
+                             alt="Spirit Screenshot 1" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-2 text-xs text-gray-400 font-mono">Frame #00:14:22 - Native 1080p AVC</div>
+                    </div>
+                    <div class="bg-zinc-900 border border-darkborder rounded overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x338/222/fff?text=Screenshot+2';"
+                             alt="Spirit Screenshot 2" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-2 text-xs text-gray-400 font-mono">Frame #00:32:05 - Native 1080p AVC</div>
+                    </div>
+                    <div class="bg-zinc-900 border border-darkborder rounded overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x338/222/fff?text=Screenshot+3';"
+                             alt="Spirit Screenshot 3" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-2 text-xs text-gray-400 font-mono">Frame #01:05:40 - Native 1080p AVC</div>
+                    </div>
+                    <div class="bg-zinc-900 border border-darkborder rounded overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.src='https://placehold.co/600x338/222/fff?text=Screenshot+4';"
+                             alt="Spirit Screenshot 4" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+                        <div class="p-2 text-xs text-gray-400 font-mono">Frame #01:18:12 - Native 1080p AVC</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: COMMENTS -->
+            <div id="tab-comments" class="tab-content hidden bg-darkcard border border-t-0 border-darkborder p-6 rounded-b-lg space-y-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-comments text-accent"></i> User Reviews & Comments
+                    </h3>
+                </div>
+
+                <!-- Add Comment Form -->
+                <div class="bg-zinc-900 p-4 rounded-lg border border-darkborder space-y-4">
+                    <h4 class="text-sm font-semibold text-white">Leave a Comment</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="text" id="commentAuthor" placeholder="Your username" class="bg-darkcard border border-darkborder rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-accent">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-gray-400">Rating:</span>
+                            <div class="flex text-amber-400 text-sm cursor-pointer" id="ratingStars">
+                                <i class="fa-solid fa-star" data-rating="1" onclick="setRating(1)"></i>
+                                <i class="fa-solid fa-star" data-rating="2" onclick="setRating(2)"></i>
+                                <i class="fa-solid fa-star" data-rating="3" onclick="setRating(3)"></i>
+                                <i class="fa-solid fa-star" data-rating="4" onclick="setRating(4)"></i>
+                                <i class="fa-solid fa-star" data-rating="5" onclick="setRating(5)"></i>
+                            </div>
+                            <span id="selectedRatingText" class="text-xs text-gray-400 font-mono">(5/5)</span>
+                        </div>
+                    </div>
+                    <textarea id="commentText" rows="3" placeholder="Write your comment regarding video/audio quality, seeding status..." class="w-full bg-darkcard border border-darkborder rounded p-3 text-sm text-white focus:outline-none focus:border-accent"></textarea>
+                    <button onclick="postComment()" class="bg-accent hover:bg-accenthover text-white text-sm font-medium px-5 py-2 rounded transition shadow">
+                        Post Comment
+                    </button>
+                </div>
+
+                <!-- Comments List -->
+                <div class="space-y-4" id="commentsList">
+                    <!-- Comment 1 -->
+                    <div class="bg-zinc-900/80 border border-darkborder p-4 rounded-lg space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gray-400 border-b border-darkborder pb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-sm">Cinephile99</span>
+                                <span class="bg-zinc-800 text-emerald-400 px-1.5 py-0.5 rounded text-[10px]">VIP Member</span>
+                                <div class="text-amber-400">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span>2 days ago</span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Absolute masterpiece of traditional animation! The TrueHD 5.1 audio track sounds incredible on a proper home theater setup. Hans Zimmer's score and Bryan Adams' songs shine brilliantly in this REMUX. Massive thanks to EPSiLON for preserving this in pristine quality! Seeding 24/7.
+                        </p>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="bg-zinc-900/80 border border-darkborder p-4 rounded-lg space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gray-400 border-b border-darkborder pb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-sm">HorseLover2002</span>
+                                <div class="text-amber-400">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span>1 week ago</span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            I've been looking for a true BluRay remux of this movie for years! The video bitrate is rock solid and colors look breathtaking. Downloaded at full gigabit speed. Keep up the amazing work EPSiLON!
+                        </p>
+                    </div>
+
+                    <!-- Comment 3 -->
+                    <div class="bg-zinc-900/80 border border-darkborder p-4 rounded-lg space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gray-400 border-b border-darkborder pb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-sm">RetroAnimator</span>
+                                <div class="text-amber-400">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <span>2 weeks ago</span>
+                        </div>
+                        <p class="text-sm text-gray-350 text-gray-300">
+                            Quick download, excellent seeders. Audio is crystal clear. Thanks for including all the subtitle tracks as well.
+                        </p>
+                    </div>
+
+                    <!-- Comment 4 -->
+                    <div class="bg-zinc-900/80 border border-darkborder p-4 rounded-lg space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gray-400 border-b border-darkborder pb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-sm">MediaHoarder</span>
+                                <div class="text-amber-400">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <span>1 month ago</span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Flawless rip. Checked MediaInfo and everything matches exact BluRay disc specs. 24.8 GB well spent!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkcard border-t border-darkborder mt-12 py-8 text-center text-xs text-gray-500 space-y-3">
+        <div class="flex justify-center space-x-6 text-gray-400">
+            <a href="#" class="hover:text-white transition">Contact Us</a>
+            <a href="#" class="hover:text-white transition">API</a>
+            <a href="#" class="hover:text-white transition">DMCA</a>
+            <a href="#" class="hover:text-white transition">Privacy</a>
+            <a href="#" class="hover:text-white transition">Terms</a>
+        </div>
+        <p>1337x is a community-driven torrent search engine. All data is provided for educational and archiving purposes.</p>
+        <p class="text-gray-600 font-mono">© 2007-2026 1337x.to - en-US</p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Current user rating state
+        let currentRating = 5;
+
+        function setRating(rating) {
+            currentRating = rating;
+            document.getElementById('selectedRatingText').innerText = `(${rating}/5)`;
+            const stars = document.querySelectorAll('#ratingStars i');
+            stars.forEach((star, idx) => {
+                if (idx < rating) {
+                    star.className = "fa-solid fa-star text-amber-400";
+                } else {
+                    star.className = "fa-regular fa-star text-amber-400";
+                }
+            });
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabName) {
+            const tabs = ['description', 'files', 'screenshots', 'comments'];
+            tabs.forEach(t => {
+                const contentEl = document.getElementById(`tab-${t}`);
+                const btnEl = document.getElementById(`tab-btn-${t}`);
+                if (t === tabName) {
+                    contentEl.classList.remove('hidden');
+                    btnEl.className = "px-4 py-3 text-sm font-semibold border-b-2 border-accent text-accent transition flex items-center gap-2";
+                } else {
+                    contentEl.classList.add('hidden');
+                    btnEl.className = "px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2";
+                }
+            });
+        }
+
+        // Folder tree toggles
+        function toggleFolder(headerEl) {
+            const contents = document.getElementById('rootFolderContents');
+            const icon = headerEl.querySelector('.folder-icon');
+            if (contents.classList.contains('hidden')) {
+                contents.classList.remove('hidden');
+                icon.className = "fa-solid fa-folder-minus folder-icon";
+            } else {
+                contents.classList.add('hidden');
+                icon.className = "fa-solid fa-folder-plus folder-icon";
+            }
+        }
+
+        function toggleSubFolder(headerEl) {
+            const sub = headerEl.nextElementSibling;
+            const icon = headerEl.querySelector('.folder-icon');
+            if (sub.classList.contains('hidden')) {
+                sub.classList.remove('hidden');
+                icon.className = "fa-solid fa-folder-open text-amber-500 folder-icon";
+            } else {
+                sub.classList.add('hidden');
+                icon.className = "fa-solid fa-folder text-amber-500 folder-icon";
+            }
+        }
+
+        // Toast Notification System (No alert() used)
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `px-4 py-3 rounded-lg shadow-xl text-sm font-medium flex items-center gap-3 border transition transform translate-y-2 opacity-0 duration-300 ${
+                type === 'success' ? 'bg-zinc-900 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-accent/50 text-accent'
+            }`;
+            
+            const icon = type === 'success' ? '<i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>' : '<i class="fa-solid fa-circle-info text-accent text-lg"></i>';
+            toast.innerHTML = `${icon}<span>${message}</span>`;
+            
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        // Copy Magnet Link with clipboard fallback
+        function copyMagnet() {
+            const magnetLink = "magnet:?xt=urn:btih:4a3f89e21b7c6d5e4f3a2b1c0e9d8f7a6b5c4d3e&dn=Spirit.Stallion.of.the.Cimarron.2002.1080p.BluRay.REMUX.AVC.TrueHD.5.1-EPSiLON&tr=udp%3A%2F%2Ftracker.opentracker.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce";
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(magnetLink).then(() => {
+                    showToast("Magnet link copied to clipboard successfully!");
+                }).catch(() => {
+                    fallbackCopyText(magnetLink);
+                });
+            } else {
+                fallbackCopyText(magnetLink);
+            }
+        }
+
+        function fallbackCopyText(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Magnet link copied to clipboard successfully!");
+            } catch (err) {
+                showToast("Failed to copy magnet link.", "error");
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // Simulate Torrent Download
+        function simulateTorrentDownload() {
+            showToast("Downloading .torrent file: Spirit.Stallion.of.the.Cimarron.2002.torrent");
+        }
+
+        // Simulate Mirror Modal / Notification
+        function showMirrorModal(mirrorName) {
+            showToast(`Redirecting to secure mirror: ${mirrorName}...`);
+        }
+
+        // Search Bar simulation
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                showToast(`Searching 1337x database for: "${query}"...`);
+            } else {
+                showToast("Please enter a search query.", "error");
+            }
+        }
+
+        // Post New Comment
+        function postComment() {
+            const author = document.getElementById('commentAuthor').value.trim() || "Anonymous Peer";
+            const text = document.getElementById('commentText').value.trim();
+
+            if (!text) {
+                showToast("Please write a comment before posting.", "error");
+                return;
+            }
+
+            const commentsList = document.getElementById('commentsList');
+            const newComment = document.createElement('div');
+            newComment.className = "bg-zinc-900/80 border border-darkborder p-4 rounded-lg space-y-2 animate-pulse";
+            
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= currentRating) starsHtml += '<i class="fa-solid fa-star"></i>';
+                else starsHtml += '<i class="fa-regular fa-star"></i>';
+            }
+
+            newComment.innerHTML = `
+                <div class="flex items-center justify-between text-xs text-gray-400 border-b border-darkborder pb-2">
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-white text-sm">${escapeHtml(author)}</span>
+                        <span class="bg-zinc-800 text-accent px-1.5 py-0.5 rounded text-[10px]">New</span>
+                        <div class="text-amber-400">${starsHtml}</div>
+                    </div>
+                    <span>Just now</span>
+                </div>
+                <p class="text-sm text-gray-300">${escapeHtml(text)}</p>
+            `;
+
+            commentsList.prepend(newComment);
+            setTimeout(() => newComment.classList.remove('animate-pulse'), 1000);
+
+            // Clear form
+            document.getElementById('commentText').value = '';
+            document.getElementById('commentAuthor').value = '';
+
+            // Update badge count
+            const badge = document.getElementById('commentCountBadge');
+            let count = parseInt(badge.innerText) + 1;
+            badge.innerText = count;
+
+            showToast("Comment posted successfully!");
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
