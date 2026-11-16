@@ -1,4 +1,4 @@
-# X-MEN (X-Men.2000.1080p.JPN.BluRay.REMUX.AVC.DTS-HD.MA.5.1-FraMeSToR) — Nyaa.si (ja-JP)
+# X-MEN (X-Men.2000.1080p.JPN.BluRay.REMUX.AVC.DTS-HD.MA.5.1-FraMeSToR) - Nyaa.si (ja-JP)
 
 **リリース名:** `X-Men.2000.1080p.JPN.BluRay.REMUX.AVC.DTS-HD.MA.5.1-FraMeSToR`  
 **カテゴリー:** 実写映画 (Live Action) / 英語・日本語 (English / Japanese)  
