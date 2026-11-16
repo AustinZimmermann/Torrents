@@ -1,11 +1,11 @@
-# 300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR - 1337x (en-US)
+# 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR - 1337x (en-US)
 
 **1337x** | Home • Upload • Rules • Contact • About Us
 Search: `[ 300 2007 remux                      ]` `[ 🔍 Search ]`
 
 ---
 
-### 300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR
+### 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR
 
 `[ 🧲 MAGNET DOWNLOAD ]` | `[ ⬇️ TORRENT DOWNLOAD ]` | `[ 🌐 ANON STREAM / VPN ]`
 
@@ -28,7 +28,7 @@ Search: `[ 300 2007 remux                      ]` `[ 🔍 Search ]`
 > In the Battle of Thermopylae of 480 BC, an alliance of Greek city-states fights the invading Persian army in the mountain pass of Thermopylae. Vastly outnumbered, King Leonidas of Sparta leads 300 Spartans against Xerxes and his massive force.
 
 ```text
-RELEASE NAME : 300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR
+RELEASE NAME : 300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR
 FORMAT       : Matroska (MKV)
 FILE SIZE    : 25.4 GiB
 DURATION     : 1 h 56 min
@@ -44,7 +44,7 @@ Bit Rate     : 25.8 Mb/s
 AUDIO
 #1 English   : Dolby TrueHD 5.1 @ 3,142 kb/s (Default)
 #2 English   : Dolby Digital 5.1 @ 640 kb/s (Compatibility Track)
-#3 English   : Dolby Digital 2.0 @ 192 kb/s (Director's Commentary)
+#3 English   : Dolby Digital 2.0 @ 192 kb/s (Director’s Commentary)
 
 SUBTITLES
 English (SDH), Spanish, French, Portuguese (PGS)
@@ -58,9 +58,9 @@ Included (Named, 32 Chapters)
 
 #### Files (3)
 
-* 📁 **300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR**
-  * 🎬 `300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.mkv` *(25.4 GB)*
-  * 📄 `300.2007.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.nfo` *(14.2 KB)*
+* 📁 **300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR**
+  * 🎬 `300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.mkv` *(25.4 GB)*
+  * 📄 `300.2007.1080p.BluRay.REMUX.VC-1.TrueHD.5.1-FraMeSToR.nfo` *(14.2 KB)*
   * 🖼️ `Poster.jpg` *(412 KB)*
 
 

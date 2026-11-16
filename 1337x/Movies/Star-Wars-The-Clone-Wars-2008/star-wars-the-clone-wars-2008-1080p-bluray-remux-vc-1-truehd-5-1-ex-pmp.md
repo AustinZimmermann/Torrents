@@ -1,8 +1,8 @@
-# Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP - 1337x (en-US)
+# Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP - 1337x.to (en-US)
 
 `Home` / `Browse` / `Movies` / `1080p Blu-ray Remux` / **Torrent Details**
 
-## Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP
+## Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Field | Details |
 | :--- | :--- |
-| **Torrent Name** | `Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv` |
+| **Torrent Name** | `Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv` |
 | **Category** | Movies / Blu-ray Remux (1080p) |
 | **Total Size** | 15.64 GiB (16,793,321,472 bytes) |
 | **Container** | Matroska (`.mkv`) — Untouched Video & Audio Streams |
@@ -56,7 +56,7 @@
 ```text
 General
 Unique ID                                : 249108475612903847120938471029384710293 (0xBB67AE8584CAA73B7268368B823B7268)
-Complete name                            : Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv
+Complete name                            : Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv
 Format                                   : Matroska
 Format version                           : Version 4
 File size                                : 15.6 GiB
@@ -240,9 +240,9 @@ Menu
 ### Directory & File Tree
 
 ```text
-Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP/
-├── Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv  (15.64 GiB)
-└── Star.Wars.The.Clone.Wars.2008.1080p.USA.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.nfo  (4.21 KiB)
+Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP/
+├── Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.mkv  (15.64 GiB)
+└── Star.Wars.The.Clone.Wars.2008.1080p.BluRay.REMUX.VC-1.TrueHD.5.1.EX-PmP.nfo  (4.21 KiB)
 
 ```
 
