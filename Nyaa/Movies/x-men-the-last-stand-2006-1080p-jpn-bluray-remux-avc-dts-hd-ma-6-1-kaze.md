@@ -48,7 +48,7 @@
 <details>
 <summary><b>MediaInfo を表示</b></summary>
 
-```text
+<pre>
 General
 Unique ID                                : 284910472910482719402817492018472910482 (0xD6691A2B3C4D5E6F708192A3B4C5D6E7)
 Complete name                            : X-Men.The.Last.Stand.2006.1080p.JPN.BluRay.REMUX.AVC.DTS-HD.MA.6.1-KAZE.mkv
@@ -202,5 +202,4 @@ Title                                    : Japanese (Commentary)
 Language                                 : Japanese
 Default                                  : No
 Forced                                   : No
-
-```
+</pre>
