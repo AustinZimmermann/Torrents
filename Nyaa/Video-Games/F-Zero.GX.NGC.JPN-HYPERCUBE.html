@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F-Zero.GX.NGC.JPN-HYPERCUBE :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --bg-nav: #f8f8f8;
+      --border-nav: #e7e7e7;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --panel-bg: #ffffff;
+      --panel-border: #d6e9c6;
+      --panel-head-bg: #dff0d8;
+      --panel-head-text: #3c763d;
+      --default-border: #dddddd;
+      --default-head-bg: #f5f5f5;
+      --footer-bg: #f5f5f5;
+      --code-bg: #f8f9fa;
+      --code-border: #e1e4e8;
+      --input-bg: #ffffff;
+      --input-border: #cccccc;
+      --seed-color: #008000;
+      --leech-color: #d9534f;
+      --trusted-color: #3c763d;
+    }
+
+    body.dark {
+      --bg-body: #1f2225;
+      --bg-nav: #292d32;
+      --border-nav: #383c42;
+      --text-main: #e0e0e0;
+      --text-muted: #9aa0a6;
+      --link-color: #6ab0f3;
+      --link-hover: #9bc9f8;
+      --panel-bg: #262a2e;
+      --panel-border: #2e4b36;
+      --panel-head-bg: #233b2a;
+      --panel-head-text: #85d696;
+      --default-border: #3a3f45;
+      --default-head-bg: #2e3338;
+      --footer-bg: #2b3035;
+      --code-bg: #181a1d;
+      --code-border: #343940;
+      --input-bg: #1f2225;
+      --input-border: #444950;
+      --seed-color: #5cb85c;
+      --leech-color: #e06c75;
+      --trusted-color: #85d696;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid var(--border-nav);
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+      padding: 6px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .form-control {
+      height: 32px;
+      padding: 5px 10px;
+      font-size: 13px;
+      color: var(--text-main);
+      background-color: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      height: 32px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 4px;
+      border: 1px solid var(--input-border);
+      background-color: var(--input-bg);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      filter: brightness(0.95);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #286090;
+      color: #ffffff;
+    }
+
+    .btn-xs {
+      height: 22px;
+      padding: 1px 7px;
+      font-size: 11px;
+    }
+
+    /* Alert Toast */
+    .toast {
+      display: none;
+      padding: 10px 15px;
+      margin-bottom: 16px;
+      border-radius: 4px;
+      background-color: #d9edf7;
+      border: 1px solid #bce8f1;
+      color: #31708f;
+      font-size: 13px;
+    }
+
+    body.dark .toast {
+      background-color: #203744;
+      border-color: #2b4d61;
+      color: #8fd3f4;
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--panel-bg);
+      border: 1px solid var(--default-border);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .panel-success {
+      border-color: var(--panel-border);
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--default-border);
+      background-color: var(--default-head-bg);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .panel-success > .panel-heading {
+      background-color: var(--panel-head-bg);
+      border-color: var(--panel-border);
+      color: var(--panel-head-text);
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    .panel-footer {
+      padding: 10px 15px;
+      background-color: var(--footer-bg);
+      border-top: 1px solid var(--default-border);
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: baseline;
+      padding: 3px 0;
+      border-bottom: 1px dashed rgba(128, 128, 128, 0.18);
+    }
+
+    .meta-label {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .meta-value {
+      word-break: break-all;
+    }
+
+    .text-trusted {
+      color: var(--trusted-color);
+      font-weight: 700;
+    }
+
+    .text-seed {
+      color: var(--seed-color);
+      font-weight: 700;
+    }
+
+    .text-leech {
+      color: var(--leech-color);
+      font-weight: 700;
+    }
+
+    .hash-code {
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 12px;
+      background: var(--code-bg);
+      padding: 2px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--code-border);
+    }
+
+    /* Description & NFO */
+    .desc-intro {
+      margin-top: 0;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .nfo-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    pre.nfo-box {
+      margin: 0;
+      padding: 14px;
+      background-color: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: 4px;
+      font-family: "MS Gothic", "DejaVu Sans Mono", Consolas, "Courier New", monospace;
+      font-size: 12.5px;
+      line-height: 1.35;
+      overflow-x: auto;
+      color: var(--text-main);
+    }
+
+    /* File List Tree */
+    .file-tree {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+
+    .file-tree ul {
+      list-style: none;
+      margin: 4px 0 0 22px;
+      padding: 0;
+    }
+
+    .file-item {
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .folder-toggle {
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Comments */
+    .comment-card {
+      border: 1px solid var(--default-border);
+      border-radius: 4px;
+      padding: 12px;
+      margin-bottom: 12px;
+      background-color: var(--bg-body);
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--link-color);
+    }
+
+    .comment-body {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 75px;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text-main);
+      background-color: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      margin-bottom: 8px;
+      resize: vertical;
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a href="#top" class="brand">Nyaa</a>
+        <ul class="nav-links">
+          <li><a href="#upload" onclick="showToast('アップロード機能はデモモードでは無効です。'); return false;">アップロード</a></li>
+          <li><a href="#info" onclick="showToast('Nyaa.si (ja-JP) アーカイブ表示モード'); return false;">情報</a></li>
+          <li><a href="#rss" onclick="showToast('RSSフィード URL をクリップボードにコピーしました。'); return false;">RSS</a></li>
+          <li><a href="#rules" onclick="showToast('ルール: Redump準拠・クリーンNKit保存リリースのみ掲載。'); return false;">ルール</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <select class="form-control" aria-label="カテゴリー選択">
+          <option value="0_0">すべてのカテゴリー</option>
+          <option value="6_0" selected>ゲーム</option>
+          <option value="6_1">ゲーム - アプリケーション</option>
+          <option value="1_0">アニメ</option>
+          <option value="2_0">オーディオ</option>
+          <option value="3_0">書籍</option>
+        </select>
+        <input type="text" id="searchInput" class="form-control" placeholder="検索..." value="F-Zero GX">
+        <button type="button" class="btn btn-primary" onclick="handleSearch()">検索</button>
+        <button type="button" class="btn" id="themeBtn" onclick="toggleDarkMode()">ダークモード</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div id="toastBox" class="toast" role="status"></div>
+
+    <!-- Torrent Details Panel -->
+    <section class="panel panel-success">
+      <div class="panel-heading">
+        <h1 class="panel-title">F-Zero.GX.NGC.JPN-HYPERCUBE</h1>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <span class="meta-label">カテゴリー:</span>
+            <span class="meta-value"><a href="#cat">ゲーム</a> - <a href="#subcat">コンソール (NGC)</a></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">日付:</span>
+            <span class="meta-value" title="発売日 (Street Date): 2003-07-25">2003-07-25 00:00 UTC</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-label">送信者:</span>
+            <span class="meta-value"><a href="#user" class="text-trusted">HYPERCUBE</a> (認証済み)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">シード:</span>
+            <span class="meta-value text-seed">42</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-label">情報:</span>
+            <span class="meta-value"><a href="https://www.nintendo.co.jp/" target="_blank" rel="noopener noreferrer">https://www.nintendo.co.jp/</a></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">リーチ:</span>
+            <span class="meta-value text-leech">3</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-label">サイズ:</span>
+            <span class="meta-value">1.12 GiB</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">完了:</span>
+            <span class="meta-value">1,337</span>
+          </div>
+
+          <div class="meta-row" style="grid-column: 1 / -1;">
+            <span class="meta-label">インフォハッシュ:</span>
+            <span class="meta-value">
+              <code class="hash-code" id="infoHash">9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e</code>
+              <button type="button" class="btn btn-xs" onclick="copyText('infoHash', this)">コピー</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <a href="#download" onclick="showToast('F-Zero.GX.NGC.JPN-HYPERCUBE.torrent のダウンロードを開始しました。'); return false;">
+          <svg class="icon" viewBox="0 0 16 16"><path d="M8 12l-4.5-4.5h3V2h3v5.5h3L8 12zm-6 2h12v1.5H2V14z"/></svg>
+          <strong>トレントをダウンロード</strong>
+        </a>
+        <span>または</span>
+        <a href="#magnet" onclick="copyMagnet(); return false;">
+          <svg class="icon" viewBox="0 0 16 16"><path d="M4 2v6a4 4 0 0 0 8 0V2h-2.5v6a1.5 1.5 0 0 1-3 0V2H4zm-1 0h4v2H3V2zm6 0h4v2H9V2z"/></svg>
+          <strong>マグネットリンク</strong>
+        </a>
+      </div>
+    </section>
+
+    <!-- Description / NFO Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title" style="font-size: 14px;">説明</h2>
+      </div>
+      <div class="panel-body">
+        <p class="desc-intro">
+          <strong>F-ZERO GX (エフゼロ ジーエックス)</strong> – ニンテンドー ゲームキューブ (NGC / NTSC-J)<br>
+          発売日 (Street Date): <strong>2003-07-25</strong> | ゲームID: <code>DOL-GFZJ-JPN</code> | フォーマット: <code>NKit.iso</code> (Redump検証済みソース使用)
+        </p>
+
+        <div class="nfo-toolbar">
+          <span>付属NFO: <strong>hpr-fzgx.nfo</strong></span>
+          <button type="button" class="btn btn-xs" onclick="copyText('nfoContent', this)">NFOをコピー</button>
+        </div>
+
+<pre class="nfo-box" id="nfoContent">==============================================================================
+  F-Zero GX (c) Nintendo / Amusement Vision
+==============================================================================
+
+  Release Group ....: HYPERCUBE (HPR)
+  Title ............: F-Zero GX (エフゼロ ジーエックス)
+  Platform .........: Nintendo GameCube (NGC)
+  Region ...........: Japan (NTSC-J)
+  Game ID ..........: DOL-GFZJ-JPN (GFZJ01)
+  Street Date ......: 2003-07-25
+  Source Media .....: 1x NGC Optical Disc (1.46 GB)
+  Image Format .....: NKit.iso (NKit v1.4 Preserved)
+  File Name ........: hpr-fzgx.nkit.iso
+  Languages ........: Japanese (English Menus / Announcer)
+  Genre ............: Futuristic Racing
+  Players ..........: 1-4 Simultaneous
+
+------------------------------------------------------------------------------
+  RELEASE NOTES
+------------------------------------------------------------------------------
+
+  Developed by SEGA's Amusement Vision and published by Nintendo, F-Zero GX
+  brings blistering 60fps anti-gravity racing to the Nintendo GameCube.
+  Featuring 30 pilots, over 20 tracks across four cups, a full Story Mode,
+  custom machine garage parts, and F-Zero AX arcade memory card connectivity.
+
+  This release is preserved in NKit.iso format, retaining full disc header
+  integrity, banner data, and streaming audio tracks while stripping unused
+  garbage padding for clean archival and hardware/emulator compatibility.
+
+------------------------------------------------------------------------------
+  TECHNICAL / RIP INFO
+------------------------------------------------------------------------------
+
+  - Disc Verification : Redump-aligned clean source prior to NKit conversion
+  - Audio Streaming   : Intact / Unmodified
+  - Protection        : Standard NGC BCA / Disc Check
+  - Compatibility     : Swiss (GC Loader / SD2SP2), Nintendont, Dolphin
+
+------------------------------------------------------------------------------
+  GROUP GREETINGS
+------------------------------------------------------------------------------
+
+  Greetings go out to all classic NGC preservationists, scene pioneers, and
+  everyone keeping sixth-generation console history alive.
+
+==============================================================================
+  HYPERCUBE // FASTER THAN SOUND
+==============================================================================</pre>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title" style="font-size: 14px;">ファイル一覧</h2>
+      </div>
+      <div class="panel-body">
+        <ul class="file-tree">
+          <li>
+            <div class="file-item folder-toggle" onclick="toggleFolder()">
+              <span id="folderArrow">▼</span>
+              <svg class="icon" viewBox="0 0 16 16"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3.293a1.5 1.5 0 0 1 1.06.44l.854.853A.5.5 0 0 0 8.56 2.5H13A1.5 1.5 0 0 1 14.5 4v8.5A1.5 1.5 0 0 1 13 14H3a1.5 1.5 0 0 1-1.5-1.5v-10z"/></svg>
+              <span>F-Zero.GX.NGC.JPN-HYPERCUBE</span>
+            </div>
+            <ul id="folderContents">
+              <li class="file-item">
+                <svg class="icon" viewBox="0 0 16 16"><path d="M4 1h5.5L13 4.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm5 1v3h3L9 2z"/></svg>
+                <span>hpr-fzgx.nkit.iso</span>
+                <span class="file-size">(1.12 GiB)</span>
+              </li>
+              <li class="file-item">
+                <svg class="icon" viewBox="0 0 16 16"><path d="M4 1h5.5L13 4.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm5 1v3h3L9 2z"/></svg>
+                <span>hpr-fzgx.nfo</span>
+                <span class="file-size">(2.1 KiB)</span>
+              </li>
+              <li class="file-item">
+                <svg class="icon" viewBox="0 0 16 16"><path d="M4 1h5.5L13 4.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm5 1v3h3L9 2z"/></svg>
+                <span>hpr-fzgx.sfv</span>
+                <span class="file-size">(48 B)</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title" style="font-size: 14px;">コメント - <span id="commentCount">2</span></h2>
+      </div>
+      <div class="panel-body">
+        <div id="commentList">
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-user">BlueFalcon_JP</span>
+              <span>2003-07-25 02:14 UTC</span>
+            </div>
+            <p class="comment-body">HYPERCUBEさんいつも綺麗なリッピングありがとうございます！NKit変換後もRedumpのSHA-1と完全に一致することを確認しました。ストーリーモードも60fpsで完璧に動作します。</p>
+          </div>
+
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-user">MuteCityDrifter</span>
+              <span>2003-07-25 08:40 UTC</span>
+            </div>
+            <p class="comment-body">実機のSwiss (SD2SP2) および Dolphin 最新版の両方でストリーミングBGM・ムービーともに問題なく再生できました。シード継続します！</p>
+          </div>
+        </div>
+
+        <form class="comment-form" onsubmit="postComment(event)">
+          <textarea id="commentInput" placeholder="コメントを入力してください..." required></textarea>
+          <button type="submit" class="btn btn-primary">コメントを投稿</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById('toastBox');
+      toast.textContent = message;
+      toast.style.display = 'block';
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.body.classList.toggle('dark');
+      document.getElementById('themeBtn').textContent = isDark ? 'ライトモード' : 'ダークモード';
+    }
+
+    function copyText(elementId, btn) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'コピー完了!';
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 1500);
+      });
+    }
+
+    function copyMagnet() {
+      const magnet = 'magnet:?xt=urn:btih:9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e&dn=F-Zero.GX.NGC.JPN-HYPERCUBE';
+      navigator.clipboard.writeText(magnet).then(() => {
+        showToast('マグネットリンクをクリップボードにコピーしました。');
+      });
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.trim();
+      showToast(`「${q || 'すべて'}」の検索結果を表示しています (1件ヒット)`);
+    }
+
+    function toggleFolder() {
+      const contents = document.getElementById('folderContents');
+      const arrow = document.getElementById('folderArrow');
+      const isHidden = contents.style.display === 'none';
+      contents.style.display = isHidden ? 'block' : 'none';
+      arrow.textContent = isHidden ? '▼' : '▶';
+    }
+
+    function postComment(event) {
+      event.preventDefault();
+      const input = document.getElementById('commentInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const list = document.getElementById('commentList');
+      const card = document.createElement('div');
+      card.className = 'comment-card';
+
+      const now = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+      const header = document.createElement('div');
+      header.className = 'comment-header';
+      header.innerHTML = `<span class="comment-user">ゲストユーザー</span><span>${now}</span>`;
+
+      const body = document.createElement('p');
+      body.className = 'comment-body';
+      body.textContent = text;
+
+      card.appendChild(header);
+      card.appendChild(body);
+      list.appendChild(card);
+
+      input.value = '';
+      const countEl = document.getElementById('commentCount');
+      countEl.textContent = parseInt(countEl.textContent, 10) + 1;
+      showToast('コメントを投稿しました。');
+    }
+  </script>
+</body>
+</html>
