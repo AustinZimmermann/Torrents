@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE :: Nyaa.di</title>
+  <style>
+    :root {
+      --bg-body: #f5f5f5;
+      --bg-nav: #222222;
+      --bg-nav-hover: #080808;
+      --bg-panel: #ffffff;
+      --bg-panel-sub: #f9f9f9;
+      --bg-trusted: #dff0d8;
+      --border-trusted: #d6e9c6;
+      --text-trusted: #3c763d;
+      --border-color: #dddddd;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --code-bg: #f8f9fa;
+      --badge-green: #28a745;
+      --badge-red: #dc3545;
+      --btn-primary: #337ab7;
+      --btn-primary-hover: #286090;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #181a1f;
+      --bg-nav: #111317;
+      --bg-nav-hover: #000000;
+      --bg-panel: #22262e;
+      --bg-panel-sub: #1c2026;
+      --bg-trusted: #1e3524;
+      --border-trusted: #2b4c33;
+      --text-trusted: #8fd19e;
+      --border-color: #343a46;
+      --text-main: #e2e6ed;
+      --text-muted: #9aa3b2;
+      --link-color: #6ea8fe;
+      --link-hover: #9ec5fe;
+      --code-bg: #16191f;
+      --badge-green: #3fb950;
+      --badge-red: #f85149;
+      --btn-primary: #2f6feb;
+      --btn-primary-hover: #1f5bd1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid #080808;
+      color: #9d9d9d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: #5bc0de;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: #9d9d9d;
+      padding: 14px 10px;
+      display: block;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      background-color: var(--bg-nav-hover);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+    }
+
+    .search-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-group select,
+    .search-group input {
+      height: 32px;
+      border: 1px solid #444;
+      background-color: #2c3038;
+      color: #fff;
+      padding: 0 8px;
+      font-size: 12px;
+    }
+
+    .search-group select {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+    }
+
+    .search-group input {
+      width: 210px;
+    }
+
+    .search-group button {
+      height: 32px;
+      padding: 0 12px;
+      border: 1px solid var(--btn-primary);
+      background-color: var(--btn-primary);
+      color: #fff;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .theme-btn {
+      height: 32px;
+      padding: 0 10px;
+      background: #2c3038;
+      border: 1px solid #444;
+      color: #e2e6ed;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .theme-btn:hover {
+      background: #3a3f4a;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1170px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    .panel-trusted {
+      border-color: var(--border-trusted);
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-panel-sub);
+      font-weight: 700;
+      font-size: 15px;
+      word-break: break-all;
+    }
+
+    .panel-trusted > .panel-heading {
+      background-color: var(--bg-trusted);
+      border-bottom-color: var(--border-trusted);
+      color: var(--text-trusted);
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    .panel-footer {
+      padding: 10px 15px;
+      background-color: var(--bg-panel-sub);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: baseline;
+      padding: 4px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .meta-label {
+      width: 130px;
+      flex-shrink: 0;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .meta-value {
+      flex: 1;
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .seed-count {
+      color: var(--badge-green);
+      font-weight: 700;
+    }
+
+    .leech-count {
+      color: var(--badge-red);
+      font-weight: 700;
+    }
+
+    .trusted-badge {
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 3px;
+      background-color: var(--badge-green);
+      color: #fff;
+      margin-left: 6px;
+    }
+
+    .hash-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+    }
+
+    .btn-inline {
+      font-size: 11px;
+      padding: 2px 7px;
+      margin-left: 6px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-panel-sub);
+      color: var(--text-main);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .btn-inline:hover {
+      border-color: var(--link-color);
+      color: var(--link-color);
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-panel);
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .action-link:hover {
+      background-color: var(--bg-body);
+      text-decoration: none;
+    }
+
+    .action-primary {
+      background-color: var(--btn-primary);
+      border-color: var(--btn-primary);
+      color: #ffffff;
+    }
+
+    .action-primary:hover {
+      background-color: var(--btn-primary-hover);
+      color: #ffffff;
+    }
+
+    /* Description & NFO */
+    .desc-intro {
+      margin-bottom: 14px;
+      font-size: 13.5px;
+    }
+
+    .desc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .desc-table th,
+    .desc-table td {
+      border: 1px solid var(--border-color);
+      padding: 7px 10px;
+      text-align: left;
+    }
+
+    .desc-table th {
+      width: 180px;
+      background-color: var(--bg-panel-sub);
+      font-weight: 700;
+    }
+
+    .nfo-box {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    /* File Tree */
+    .file-tree {
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .file-tree ul {
+      list-style: none;
+      padding-left: 22px;
+      border-left: 1px dotted var(--border-color);
+      margin-left: 8px;
+    }
+
+    .tree-item {
+      padding: 4px 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 3px;
+    }
+
+    .tree-item:hover {
+      background-color: var(--bg-panel-sub);
+    }
+
+    .folder-toggle {
+      cursor: pointer;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Comments */
+    .comment-card {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 12px;
+      margin-bottom: 12px;
+      background-color: var(--bg-panel-sub);
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--link-color);
+    }
+
+    .comment-form {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background-color: var(--bg-panel);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+      resize: vertical;
+    }
+
+    .comment-submit {
+      align-self: flex-start;
+      padding: 6px 14px;
+      background-color: var(--btn-primary);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-group input {
+        width: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#top" class="brand">Nyaa<span>.di</span></a>
+        <ul class="nav-links">
+          <li><a href="#browse">閲覧</a></li>
+          <li><a href="#upload">アップロード</a></li>
+          <li><a href="#info">情報</a></li>
+          <li><a href="#rss">RSS</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form class="search-group" id="searchForm">
+          <select aria-label="カテゴリ選択">
+            <option value="all">すべてのカテゴリ</option>
+            <option value="live-en" selected>実写 - 英語</option>
+            <option value="live-raw">実写 - 無字幕</option>
+            <option value="anime">アニメ</option>
+          </select>
+          <input type="text" id="searchInput" placeholder="検索..." value="Star Wars Complete Saga" />
+          <button type="submit">検索</button>
+        </form>
+        <button type="button" class="theme-btn" id="themeToggle">ダークモード</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" id="top">
+
+    <!-- Release Info Panel -->
+    <section class="panel panel-trusted">
+      <div class="panel-heading">
+        Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE
+      </div>
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <div class="meta-label">カテゴリ:</div>
+            <div class="meta-value"><a href="#cat-live-en">実写 - 英語</a> (Blu-ray / ISO)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">発売日 / 日時:</div>
+            <div class="meta-value">2011-09-16 00:00 JST (日本盤発売日)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">サブミッター:</div>
+            <div class="meta-value">
+              <a href="#user-archive">ARCHiVE</a>
+              <span class="trusted-badge">認証済み</span>
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">シード:</div>
+            <div class="meta-value"><span class="seed-count">42</span></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">作品情報:</div>
+            <div class="meta-value">20世紀フォックス ホーム エンターテイメント (品番: FXXA-51416)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">リーチ:</div>
+            <div class="meta-value"><span class="leech-count">3</span></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">ファイルサイズ:</div>
+            <div class="meta-value">45.8 GiB (49,177,378,816 Bytes / BD-50)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">完了数:</div>
+            <div class="meta-value">318</div>
+          </div>
+          <div class="meta-row" style="grid-column: 1 / -1;">
+            <div class="meta-label">情報ハッシュ:</div>
+            <div class="meta-value">
+              <code class="hash-code" id="infoHash">9f86d081884c7d659a2feaa0c55ad015a3bf4f1b</code>
+              <button type="button" class="btn-inline" id="copyHashBtn">コピー</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <button type="button" class="action-link action-primary" id="downloadNfoBtn">⬇ NFOファイルを保存 (.nfo)</button>
+        <button type="button" class="action-link" id="copyMagnetBtn">🧲 マグネットリンクをコピー</button>
+        <span style="font-size: 12px; color: var(--text-muted);">BD-50 無加工ディスクイメージ (1920x1080p / 23.976fps / Region A)</span>
+      </div>
+    </section>
+
+    <!-- Description Panel -->
+    <section class="panel">
+      <div class="panel-heading">説明・技術仕様 (Release Notes &amp; BDInfo)</div>
+      <div class="panel-body">
+        <p class="desc-intro">
+          2011年9月16日発売の日本盤9枚組ブルーレイBOX<strong>『スター・ウォーズ コンプリート・サーガ ブルーレイBOX』</strong>（初回生産限定 / 品番: <code>FXXA-51416</code> / JAN: <code>4988142832023</code>）より、<strong>Disc 1『スター・ウォーズ エピソード1／ファントム・メナス（1999年）』</strong>のBD-50完全無加工バックアップです。2011年HDリマスター映像に加え、日本語吹替（DTS 5.1ch）および日本語メニュー・音声解説字幕を完全収録しています。
+        </p>
+
+        <table class="desc-table">
+          <tbody>
+            <tr>
+              <th>商品名 (日本盤)</th>
+              <td>スター・ウォーズ コンプリート・サーガ ブルーレイBOX (Disc 1: エピソード1)</td>
+            </tr>
+            <tr>
+              <th>日本国内発売日</th>
+              <td>2011年9月16日 (2011-09-16)</td>
+            </tr>
+            <tr>
+              <th>メディア / リージョン</th>
+              <td>BD-50 (片面2層) / リージョンA (日本国内正規品)</td>
+            </tr>
+            <tr>
+              <th>映像仕様</th>
+              <td>MPEG-4 AVC / 1920×1080p / 23.976 fps / 2.35:1 (16:9 シネスコ)</td>
+            </tr>
+            <tr>
+              <th>音声トラック</th>
+              <td>
+                1. 英語: DTS-HD Master Audio 6.1ch (48kHz / 24-bit)<br />
+                2. 日本語: DTS 5.1ch (48kHz / 768kbps)<br />
+                3. 英語: Dolby Digital 2.0ch (スタッフ音声解説)<br />
+                4. 英語: Dolby Digital 2.0ch (アーカイブ音声解説)
+              </td>
+            </tr>
+            <tr>
+              <th>収録字幕</th>
+              <td>日本語、英語、韓国語、中国語（繁体字）、広東語、タイ語、日本語音声解説用字幕</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="nfo-box" id="nfoContent">================================================================================
+  Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE
+================================================================================
+
+[ RELEASE INFORMATION ]
+  Release Group ......: ARCHiVE
+  Box Set Title ......: Star Wars: The Complete Saga (1977-2005)
+  Japanese Title .....: スター・ウォーズ コンプリート・サーガ ブルーレイBOX
+  Disc Feature .......: Disc 1 - Star Wars: Episode I - The Phantom Menace (1999)
+  Studio / Label .....: 20th Century Fox Home Entertainment Japan / Lucasfilm
+  Catalog Number .....: FXXA-51416
+  JAN / EAN ..........: 4988142832023
+  Country ............: Japan (ja-JP)
+  Street Date ........: 2011-09-16
+  Disc Format ........: BD-50 (Dual-Layer Blu-ray Disc)
+  Region Code ........: Region A
+
+[ DISC & STREAM SUMMARY ]
+  Disc Label .........: THE_PHANTOM_MENACE
+  Disc Size ..........: 49,177,378,816 bytes (45.80 GiB)
+  Protection .........: AACS
+  Playlist ...........: 00800.MPLS
+  Length .............: 2:16:10.162 (h:m:s.ms)
+  Video ..............: MPEG-4 AVC Video / 29480 kbps / 1080p / 23.976 fps / 16:9
+  Audio 1 ............: English / DTS-HD Master Audio / 6.1 / 48 kHz / 4612 kbps / 24-bit
+  Audio 2 ............: Japanese / DTS Audio / 5.1 / 48 kHz / 768 kbps / 24-bit
+  Audio 3 ............: English / Dolby Digital Audio / 2.0 / 48 kHz / 224 kbps
+  Audio 4 ............: English / Dolby Digital Audio / 2.0 / 48 kHz / 224 kbps
+  Subtitles ..........: Japanese, English, Korean, Mandarin, Cantonese, Thai
+================================================================================</div>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel">
+      <div class="panel-heading">ファイル一覧 (BD-50 ディレクトリ構成)</div>
+      <div class="panel-body">
+        <ul class="file-tree">
+          <li>
+            <div class="tree-item">
+              <span class="folder-toggle" data-target="root-dir">📂 Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE/</span>
+              <span class="file-size">45.80 GiB</span>
+            </div>
+            <ul id="root-dir">
+              <li>
+                <div class="tree-item">
+                  <span>📄 Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE.nfo</span>
+                  <span class="file-size">2.14 KiB</span>
+                </div>
+              </li>
+              <li>
+                <div class="tree-item">
+                  <span class="folder-toggle" data-target="bdmv-dir">📂 BDMV/</span>
+                  <span class="file-size">45.80 GiB</span>
+                </div>
+                <ul id="bdmv-dir">
+                  <li>
+                    <div class="tree-item">
+                      <span>📄 index.bdmv</span>
+                      <span class="file-size">1.42 KiB</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tree-item">
+                      <span>📄 MovieObject.bdmv</span>
+                      <span class="file-size">38.60 KiB</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tree-item">
+                      <span class="folder-toggle" data-target="playlist-dir">📂 PLAYLIST/</span>
+                      <span class="file-size">1.24 MiB</span>
+                    </div>
+                    <ul id="playlist-dir" class="hidden">
+                      <li>
+                        <div class="tree-item">
+                          <span>📄 00800.mpls (本編プレイリスト)</span>
+                          <span class="file-size">412.00 KiB</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="tree-item">
+                      <span class="folder-toggle" data-target="stream-dir">📂 STREAM/</span>
+                      <span class="file-size">45.79 GiB</span>
+                    </div>
+                    <ul id="stream-dir">
+                      <li>
+                        <div class="tree-item">
+                          <span>🎞️ 00001.m2ts (本編映像・音声ストリーム)</span>
+                          <span class="file-size">43.12 GiB</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tree-item">
+                          <span>🎞️ 00002.m2ts (日本語メニュー背景映像)</span>
+                          <span class="file-size">1.48 GiB</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="tree-item">
+                          <span>🎞️ 00003.m2ts (THXトレーラー / イントロ)</span>
+                          <span class="file-size">1.19 GiB</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="tree-item">
+                      <span class="folder-toggle" data-target="cert-dir">📂 CERTIFICATE/</span>
+                      <span class="file-size">128.00 KiB</span>
+                    </div>
+                    <ul id="cert-dir" class="hidden">
+                      <li>
+                        <div class="tree-item">
+                          <span>📄 app.discroot.crt</span>
+                          <span class="file-size">128.00 KiB</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel">
+      <div class="panel-heading">コメント (<span id="commentCount">2</span>件)</div>
+      <div class="panel-body">
+        <div id="commentList">
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-user">kenji_jp</span>
+              <span>2011-09-16 14:22 JST</span>
+            </div>
+            <div>発売日のうちに日本盤BD-50無加工イメージが上がるとは感謝です！日本語DTS 5.1chと音声解説用日本語字幕もしっかり動作しました。Disc 2以降も楽しみにしています。</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-user">force_archive</span>
+              <span>2011-09-17 09:05 JST</span>
+            </div>
+            <div>ハッシュ一致確認済み。メニューの日本語フォントも綺麗で、初回限定BOX (FXXA-51416) の完全保存版として最高です。</div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm">
+          <label for="commentText" style="font-weight: 700; font-size: 13px;">コメントを投稿する</label>
+          <textarea id="commentText" placeholder="リリースに関するコメントを入力してください..." required></textarea>
+          <button type="submit" class="comment-submit">コメントを送信</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const toastEl = document.getElementById("toast");
+
+      function showToast(message) {
+        toastEl.textContent = message;
+        toastEl.classList.add("show");
+        clearTimeout(showToast._timer);
+        showToast._timer = setTimeout(() => {
+          toastEl.classList.remove("show");
+        }, 2400);
+      }
+
+      // Theme Toggle
+      themeToggle.addEventListener("click", () => {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        root.setAttribute("data-theme", isDark ? "light" : "dark");
+        themeToggle.textContent = isDark ? "ダークモード" : "ライトモード";
+      });
+
+      // Copy Info Hash
+      document.getElementById("copyHashBtn").addEventListener("click", () => {
+        const hash = document.getElementById("infoHash").textContent.trim();
+        navigator.clipboard?.writeText(hash);
+        showToast("情報ハッシュをクリップボードにコピーしました");
+      });
+
+      // Copy Magnet Link (Metadata Placeholder)
+      document.getElementById("copyMagnetBtn").addEventListener("click", () => {
+        const hash = document.getElementById("infoHash").textContent.trim();
+        const dn = encodeURIComponent("Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE");
+        const magnet = `magnet:?xt=urn:btih:${hash}&dn=${dn}`;
+        navigator.clipboard?.writeText(magnet);
+        showToast("マグネットリンクをコピーしました");
+      });
+
+      // Download NFO File
+      document.getElementById("downloadNfoBtn").addEventListener("click", () => {
+        const nfoText = document.getElementById("nfoContent").textContent;
+        const blob = new Blob([nfoText], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Star.Wars.The.Complete.Saga.1977-2005.Disc1.JPN.1080p.BluRay.AVC.DTS-HD.MA.6.1-ARCHiVE.nfo";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        showToast("NFOファイルをダウンロードしました");
+      });
+
+      // Collapsible File Tree
+      document.querySelectorAll(".folder-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const targetId = toggle.getAttribute("data-target");
+          const targetList = document.getElementById(targetId);
+          if (targetList) {
+            targetList.classList.toggle("hidden");
+            const isHidden = targetList.classList.contains("hidden");
+            toggle.textContent = toggle.textContent.replace(/^📂|^📁/, isHidden ? "📁" : "📂");
+          }
+        });
+      });
+
+      // Search Simulation
+      document.getElementById("searchForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const q = document.getElementById("searchInput").value.trim();
+        showToast(q ? `「${q}」の検索結果を表示中 (1件)` : "検索キーワードを入力してください");
+      });
+
+      // Interactive Comments
+      const commentForm = document.getElementById("commentForm");
+      const commentList = document.getElementById("commentList");
+      const commentCount = document.getElementById("commentCount");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const textarea = document.getElementById("commentText");
+        const text = textarea.value.trim();
+        if (!text) return;
+
+        const now = new Date();
+        const timestamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")} ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")} JST`;
+
+        const card = document.createElement("div");
+        card.className = "comment-card";
+
+        const header = document.createElement("div");
+        header.className = "comment-header";
+
+        const userSpan = document.createElement("span");
+        userSpan.className = "comment-user";
+        userSpan.textContent = "ゲストユーザー";
+
+        const timeSpan = document.createElement("span");
+        timeSpan.textContent = timestamp;
+
+        const body = document.createElement("div");
+        body.textContent = text;
+
+        header.appendChild(userSpan);
+        header.appendChild(timeSpan);
+        card.appendChild(header);
+        card.appendChild(body);
+        commentList.appendChild(card);
+
+        textarea.value = "";
+        commentCount.textContent = String(commentList.children.length);
+        showToast("コメントを投稿しました");
+      });
+    })();
+  </script>
+</body>
+</html>
