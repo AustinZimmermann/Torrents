@@ -7,7 +7,7 @@
 ### 🟢 Star.Wars.Episode.IV.A.New.Hope.1977.1080p.JPN.BluRay.REMUX.AVC.DTS-HD.MA.6.1-KITSUNE
 
 | 項目 | 内容 | 項目 | 内容 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | **カテゴリー** | 実写 - 無加工 | **投稿日時** | 2026-11-16 20:12 UTC |
 | **投稿者** | **KITSUNE** *(信頼済み)* | **シード** | **42** |
 | **情報** | `[https://starwars.disney.co.jp/](https://starwars.disney.co.jp/)` | **リーチ** | **3** |
