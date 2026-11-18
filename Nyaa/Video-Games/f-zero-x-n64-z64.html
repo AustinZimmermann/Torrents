@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[No-Intro] F-Zero X (Japan) (N64) [Z64] :: Nyaa.si (JP)</title>
+  <style>
+    :root {
+      --bg-body: #191919;
+      --bg-nav: #222222;
+      --border-nav: #090909;
+      --bg-panel: #242424;
+      --bg-panel-head: #2e2e2e;
+      --border-panel: #363636;
+      --text-main: #d8d8d8;
+      --text-muted: #9a9a9a;
+      --link-color: #5ea8e6;
+      --link-hover: #8ac4f5;
+      --accent-blue: #337ab7;
+      --accent-green: #5cb85c;
+      --accent-red: #d9534f;
+      --accent-amber: #f0ad4e;
+      --input-bg: #181818;
+      --input-border: #3d3d3d;
+      --row-alt: #202020;
+
+      /* NFO Default Theme (Nyaa Dark Terminal) */
+      --nfo-bg: #111317;
+      --nfo-fg: #d6e2f0;
+      --nfo-accent: #5ea8e6;
+      --nfo-border: #2c3340;
+      --nfo-glow: none;
+    }
+
+    html[data-theme="light"] {
+      --bg-body: #f5f5f5;
+      --bg-nav: #222222;
+      --border-nav: #080808;
+      --bg-panel: #ffffff;
+      --bg-panel-head: #f0f0f0;
+      --border-panel: #dddddd;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --link-color: #286090;
+      --link-hover: #1b4263;
+      --input-bg: #ffffff;
+      --input-border: #cccccc;
+      --row-alt: #f9f9f9;
+    }
+
+    /* NFO Color Presets */
+    .nfo-theme-nyaa {
+      --nfo-bg: #111317;
+      --nfo-fg: #d6e2f0;
+      --nfo-accent: #5ea8e6;
+      --nfo-border: #2c3340;
+      --nfo-glow: none;
+    }
+    .nfo-theme-dos {
+      --nfo-bg: #000084;
+      --nfo-fg: #f2f2f2;
+      --nfo-accent: #55ffff;
+      --nfo-border: #55ffff;
+      --nfo-glow: 0 0 2px rgba(255, 255, 255, 0.25);
+    }
+    .nfo-theme-green {
+      --nfo-bg: #071209;
+      --nfo-fg: #39ff6a;
+      --nfo-accent: #9bffb3;
+      --nfo-border: #1d5c2d;
+      --nfo-glow: 0 0 5px rgba(57, 255, 106, 0.35);
+    }
+    .nfo-theme-amber {
+      --nfo-bg: #140d04;
+      --nfo-fg: #ffb642;
+      --nfo-accent: #ffe09e;
+      --nfo-border: #664212;
+      --nfo-glow: 0 0 5px rgba(255, 182, 66, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      font-size: 13px;
+      line-height: 1.45;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Top Nyaa.si Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid var(--border-nav);
+      padding: 0 16px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 48px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .jp-badge {
+      font-size: 10px;
+      background: #bc002d;
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 14px;
+    }
+
+    .nav-links a {
+      color: #b5b5b5;
+      font-size: 13px;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-search input {
+      background: #141414;
+      border: 1px solid #3c3c3c;
+      color: #e0e0e0;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 3px 0 0 3px;
+      width: 190px;
+    }
+
+    .nav-search button {
+      background: var(--accent-blue);
+      border: 1px solid var(--accent-blue);
+      color: #fff;
+      padding: 4px 9px;
+      font-size: 12px;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+    }
+
+    .btn-mini {
+      background: #333333;
+      color: #e6e6e6;
+      border: 1px solid #4a4a4a;
+      border-radius: 3px;
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-mini:hover {
+      background: #444444;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1140px;
+      margin: 18px auto 40px;
+      padding: 0 16px;
+    }
+
+    /* Nyaa Panels */
+    .panel {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border-panel);
+      border-radius: 4px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .panel-heading {
+      background-color: var(--bg-panel-head);
+      border-bottom: 1px solid var(--border-panel);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trusted-tag {
+      background: rgba(92, 184, 92, 0.18);
+      color: #67d167;
+      border: 1px solid rgba(92, 184, 92, 0.45);
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .panel-body {
+      padding: 14px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+    }
+
+    @media (max-width: 720px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .meta-row {
+      display: flex;
+      border-bottom: 1px solid var(--border-panel);
+      padding: 5px 0;
+    }
+
+    .meta-label {
+      width: 140px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .meta-val {
+      word-break: break-all;
+    }
+
+    .seed { color: var(--accent-green); font-weight: 700; }
+    .leech { color: var(--accent-red); font-weight: 700; }
+    .done { font-weight: 700; }
+
+    .hash-code {
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 12px;
+      background: var(--row-alt);
+      padding: 1px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--border-panel);
+    }
+
+    .panel-footer {
+      background-color: var(--bg-panel-head);
+      border-top: 1px solid var(--border-panel);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-download {
+      background: var(--accent-blue);
+      color: #fff;
+    }
+    .btn-download:hover {
+      background: #286090;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-magnet {
+      background: #3a3a3a;
+      color: #f0f0f0;
+      border-color: #505050;
+    }
+    .btn-magnet:hover {
+      background: #4a4a4a;
+      text-decoration: none;
+    }
+
+    /* NFO Toolbar & Viewer (Pure DOM, Zero Canvas) */
+    .nfo-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: var(--row-alt);
+      border: 1px solid var(--border-panel);
+      border-bottom: none;
+      padding: 8px 10px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .nfo-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nfo-select, .nfo-search-input {
+      background: var(--input-bg);
+      color: var(--text-main);
+      border: 1px solid var(--input-border);
+      border-radius: 3px;
+      padding: 3px 7px;
+      font-size: 12px;
+    }
+
+    .nfo-wrapper {
+      position: relative;
+      background-color: var(--nfo-bg);
+      border: 1px solid var(--nfo-border);
+      border-radius: 0 0 4px 4px;
+      overflow-x: auto;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    /* Optional Pure CSS CRT Scanline Overlay */
+    .nfo-wrapper.scanlines::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(0, 0, 0, 0) 2px,
+        rgba(0, 0, 0, 0.24) 3px,
+        rgba(0, 0, 0, 0.24) 4px
+      );
+    }
+
+    pre#nfo-content {
+      margin: 0;
+      padding: 18px 20px;
+      font-family: "DejaVu Sans Mono", "Consolas", "Lucida Console", "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.22;
+      color: var(--nfo-fg);
+      text-shadow: var(--nfo-glow);
+      white-space: pre;
+      tab-size: 4;
+      user-select: text;
+    }
+
+    .nfo-hl {
+      background-color: #ffe066;
+      color: #111111;
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+
+    /* File List Tree */
+    .file-tree {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 12.5px;
+    }
+
+    .file-tree li {
+      padding: 5px 8px;
+      border-bottom: 1px solid var(--border-panel);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .file-tree li:last-child {
+      border-bottom: none;
+    }
+
+    .file-tree .folder {
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--row-alt);
+    }
+
+    .file-tree .sub-file {
+      padding-left: 26px;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Comments Section */
+    .comment-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-panel);
+    }
+    .comment-item:last-child {
+      border-bottom: none;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 4px;
+      background: #2b4c7e;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-panel);
+    }
+
+    .comment-body {
+      flex: 1;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--link-color);
+    }
+
+    .comment-form {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 70px;
+      background: var(--input-bg);
+      color: var(--text-main);
+      border: 1px solid var(--input-border);
+      border-radius: 3px;
+      padding: 8px;
+      font-family: inherit;
+      font-size: 13px;
+      resize: vertical;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #222;
+      color: #fff;
+      border-left: 4px solid var(--accent-green);
+      padding: 10px 14px;
+      border-radius: 3px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+      font-size: 12.5px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 100;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#top" class="brand">
+          <span>Nyaa</span>
+          <span class="jp-badge">JP / 日本</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#torrent" class="active" data-i18n="nav_browse">Browse</a></li>
+          <li><a href="#nfo-section" data-i18n="nav_nfo">NFO Viewer</a></li>
+          <li><a href="#files-section" data-i18n="nav_files">Files</a></li>
+          <li><a href="#comments-section" data-i18n="nav_comments">Comments</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form class="nav-search" id="top-search-form">
+          <input type="text" id="top-search-input" placeholder="Search Nyaa.si (JP)..." />
+          <button type="submit">Search</button>
+        </form>
+        <button class="btn-mini" id="lang-toggle" title="Switch English / Japanese">EN / 日本語</button>
+        <button class="btn-mini" id="theme-toggle" title="Toggle Nyaa Dark / Light Mode">Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+
+    <!-- Torrent Metadata Panel -->
+    <section class="panel" id="torrent">
+      <div class="panel-heading">
+        <h1 class="panel-title">
+          <span class="trusted-tag" data-i18n="trusted">Trusted</span>
+          <span>[No-Intro] F-Zero X (Japan) (Nintendo 64) [Z64] / エフゼロ エックス</span>
+        </h1>
+        <span style="color: var(--text-muted); font-size: 12px;">ID: #19980714</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_category">Category:</div>
+            <div class="meta-val">
+              <a href="#torrent">Games</a> - <a href="#torrent">Nintendo 64 (ROM / Z64)</a>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_date">Date:</div>
+            <div class="meta-val">2026-11-17 19:54 JST (UTC+9 / 東京)</div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_submitter">Submitter:</div>
+            <div class="meta-val">
+              <a href="#torrent" style="color: #67d167; font-weight: 700;">MuteCity_Archive_JP</a>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_seeders">Seeders:</div>
+            <div class="meta-val"><span class="seed">64</span></div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_info">Information:</div>
+            <div class="meta-val">NUS-CFZJ-JPN (Nintendo EAD / 1998.07.14)</div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_leechers">Leechers:</div>
+            <div class="meta-val"><span class="leech">2</span></div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_size">File size:</div>
+            <div class="meta-val">16.0 MiB (16,777,216 Bytes / 128 Mbit)</div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_completed">Completed:</div>
+            <div class="meta-val"><span class="done">1,998</span></div>
+          </div>
+        </div>
+
+        <div class="meta-row" style="margin-top: 6px; border-bottom: none;">
+          <div class="meta-label" data-i18n="lbl_hash">Info hash:</div>
+          <div class="meta-val">
+            <span class="hash-code" id="info-hash">7f08e1c4a9b23d5890f61e24c7b3a910d5e842f1</span>
+            <button class="btn-mini" id="copy-hash-btn" style="margin-left: 6px;">Copy Hash</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <div class="action-group">
+          <button class="btn-action btn-download" id="download-nfo-footer">
+            <span>&#11015;</span> <span data-i18n="btn_dl_nfo">Download .NFO</span>
+          </button>
+          <button class="btn-action btn-magnet" id="copy-magnet-btn">
+            <span>&#129522;</span> <span data-i18n="btn_magnet">Copy Magnet URI</span>
+          </button>
+        </div>
+        <div style="font-size: 12px; color: var(--text-muted);">
+          Region: <strong>Japan (NTSC-J / 日本)</strong> | Format: <strong>Big-Endian (.z64)</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pure HTML/CSS/JS NFO Viewer Panel (No <canvas>) -->
+    <section class="panel" id="nfo-section">
+      <div class="panel-heading">
+        <h2 class="panel-title" data-i18n="nfo_header">Release Description &amp; NFO (ASCII / CP437 DOM Renderer)</h2>
+        <span style="font-size: 12px; color: var(--text-muted);">f-zero_x_jpn.nfo</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="nfo-toolbar">
+          <div class="nfo-controls">
+            <label for="nfo-theme-select" style="font-size: 12px; color: var(--text-muted);">Terminal:</label>
+            <select id="nfo-theme-select" class="nfo-select">
+              <option value="nfo-theme-nyaa" selected>Nyaa Dark</option>
+              <option value="nfo-theme-dos">DOS VGA Blue</option>
+              <option value="nfo-theme-green">CRT Phosphor Green</option>
+              <option value="nfo-theme-amber">Amber Monochrome</option>
+            </select>
+
+            <button class="btn-mini" id="font-dec" title="Decrease NFO font size">A-</button>
+            <button class="btn-mini" id="font-inc" title="Increase NFO font size">A+</button>
+            <button class="btn-mini" id="scanline-toggle">CRT Scanlines: OFF</button>
+          </div>
+
+          <div class="nfo-controls">
+            <input type="text" id="nfo-find" class="nfo-search-input" placeholder="Highlight in NFO..." />
+            <button class="btn-mini" id="copy-nfo-btn">Copy NFO</button>
+            <button class="btn-mini" id="save-nfo-btn">Save .NFO</button>
+          </div>
+        </div>
+
+        <div class="nfo-wrapper nfo-theme-nyaa" id="nfo-wrapper">
+          <pre id="nfo-content"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel" id="files-section">
+      <div class="panel-heading">
+        <h2 class="panel-title" data-i18n="files_header">File List (3 files)</h2>
+        <span style="font-size: 12px; color: var(--text-muted);">Total: 16.0 MiB</span>
+      </div>
+      <div class="panel-body" style="padding: 0;">
+        <ul class="file-tree" id="file-tree">
+          <li class="folder" id="folder-toggle">
+            <span>&#9662; [No-Intro] F-Zero X (Japan) (N64) [Z64]/</span>
+            <span class="file-size">16.0 MiB</span>
+          </li>
+          <li class="sub-file">
+            <span>&#128190; F-Zero X (Japan).z64</span>
+            <span class="file-size">16.0 MiB (16,777,216 B)</span>
+          </li>
+          <li class="sub-file">
+            <span>&#128196; f-zero_x_jpn.nfo</span>
+            <span class="file-size">4.1 KiB (4,192 B)</span>
+          </li>
+          <li class="sub-file">
+            <span>&#128274; F-Zero X (Japan).sfv</span>
+            <span class="file-size">128 B</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel" id="comments-section">
+      <div class="panel-heading">
+        <h2 class="panel-title" data-i18n="comments_header">Comments (2)</h2>
+      </div>
+      <div class="panel-body">
+        <div id="comment-list">
+          <div class="comment-item">
+            <div class="avatar">CF</div>
+            <div class="comment-body">
+              <div class="comment-meta">
+                <span class="comment-user">BlueFalcon07</span>
+                <span>• 2026-11-17 20:02 JST</span>
+              </div>
+              <div>
+                Verified clean Big-Endian (.z64) dump matching No-Intro database! Runs at locked 60 FPS with 30 machines on Mute City. ありがとうございます！
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="avatar" style="background: #7a2e2e;">SG</div>
+            <div class="comment-body">
+              <div class="comment-meta">
+                <span class="comment-user">SamuraiGoroh_JP</span>
+                <span>• 2026-11-17 20:15 JST</span>
+              </div>
+              <div>
+                日本のN64名作！CIC-6102ブートコードとSRAMセーブも実機EverDriveで正常動作確認済みです。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="comment-form">
+          <textarea id="comment-input" placeholder="Add a comment (English or 日本語)..."></textarea>
+          <div>
+            <button type="submit" class="btn-action btn-download" data-i18n="btn_post">Post Comment</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Raw ASCII/CP437 NFO Text (Strictly half-width alignment inside box borders)
+    const RAW_NFO = String.raw`
++------------------------------------------------------------------------------+
+|  ______        ______  ______  _____    ____     __   __                     |
+| |  ____|      |___  / |  ____||  __ \  / __ \    \ \ / /                     |
+| | |__   ______   / /  | |__   | |__) || |  | |    \ V /                      |
+| |  __| |______| / /   |  __|  |  _  / | |  | |     > <                       |
+| | |            / /__  | |____ | | \ \ | |__| |    / . \                      |
+| |_|           /_____| |______||_|  \_\ \____/    /_/ \_\                     |
+|                                                                              |
+|            NINTENDO 64  //  JAPAN (NTSC-J)  //  BIG-ENDIAN (.Z64)            |
++------------------------------------------------------------------------------+
+| RELEASE OVERVIEW                                                             |
++------------------------------------------------------------------------------+
+| Title (EN)      : F-Zero X                                                   |
+| Title (JP)      : Efu Zero Ekkusu (Japan)                                    |
+| Platform        : Nintendo 64 (N64)                                          |
+| Region          : Japan (NTSC-J)                                             |
+| Product Code    : NUS-CFZJ-JPN (NUS-P-CFZJ)                                  |
+| Release Date    : 1998-07-14                                                 |
+| Developer       : Nintendo EAD                                               |
+| Publisher       : Nintendo Co., Ltd. (Kyoto, Japan)                          |
+| Tracker Origin  : Nyaa.si (JP Preservation Node)                             |
++------------------------------------------------------------------------------+
+| ROM & TECHNICAL SPECIFICATIONS                                                 |
++------------------------------------------------------------------------------+
+| File Name       : F-Zero X (Japan).z64                                       |
+| Byte Order      : Native Big-Endian (.z64 / ABCD)                            |
+| ROM Size        : 16,777,216 Bytes (16.0 MiB / 128 Megabits)                 |
+| Internal Header : F-ZERO X                                                   |
+| Country Code    : 0x4A ('J' - Japan)                                         |
+| Revision        : Rev 0 (v1.0)                                               |
+| CIC Boot Chip   : CIC-NUS-6102                                               |
+| Save Type       : 256 Kbit SRAM (32 KiB)                                     |
+| Frame Rate      : 60 FPS (30-Machine High-Speed Mode)                        |
+| Expansion Pak   : Supported (64DD Expansion Kit Compatible)                  |
++------------------------------------------------------------------------------+
+| CHECKSUM VERIFICATION (NO-INTRO / GOODN64)                                   |
++------------------------------------------------------------------------------+
+| CRC32           : 6B196215                                                   |
+| MD5             : 325397E820265B40A474518339C45526                           |
+| SHA-1           : 1938847C88B68544099B20D5D5C4B6116950A14E                   |
+| Status          : [VERIFIED] Clean Cart Dump - Zero Overdump / Zero Intro    |
++------------------------------------------------------------------------------+
+| RELEASE NOTES                                                                |
++------------------------------------------------------------------------------+
+| * Pure Big-Endian (.z64) image verified against Japanese retail cartridge.   |
+| * Features 24 standard courses across 4 cups + X-Cup random track generator. |
+| * Runs at a rock-solid 60 frames per second with 30 racers on circuit.       |
+| * Compatible with real N64 hardware flashcarts and cycle-accurate emulators. |
++------------------------------------------------------------------------------+
+| [EOF]  Seed & Preserve Classic Japanese Gaming History  //  Nyaa.si (JP)     |
++------------------------------------------------------------------------------+`.trim();
+
+    const nfoElement = document.getElementById("nfo-content");
+    const nfoWrapper = document.getElementById("nfo-wrapper");
+    const toastEl = document.getElementById("toast");
+
+    // Initialize NFO content safely
+    nfoElement.textContent = RAW_NFO;
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toastEl.classList.remove("show");
+      }, 2400);
+    }
+
+    // Nyaa Dark / Light Mode Toggle
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const html = document.documentElement;
+      const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      showToast(`Nyaa theme switched to ${next.toUpperCase()}`);
+    });
+
+    // NFO Terminal Theme Switcher
+    document.getElementById("nfo-theme-select").addEventListener("change", (e) => {
+      nfoWrapper.classList.remove(
+        "nfo-theme-nyaa",
+        "nfo-theme-dos",
+        "nfo-theme-green",
+        "nfo-theme-amber"
+      );
+      nfoWrapper.classList.add(e.target.value);
+    });
+
+    // NFO Font Size Controls
+    let nfoFontSize = 13;
+    document.getElementById("font-inc").addEventListener("click", () => {
+      if (nfoFontSize < 18) {
+        nfoFontSize += 1;
+        nfoElement.style.fontSize = nfoFontSize + "px";
+      }
+    });
+    document.getElementById("font-dec").addEventListener("click", () => {
+      if (nfoFontSize > 10) {
+        nfoFontSize -= 1;
+        nfoElement.style.fontSize = nfoFontSize + "px";
+      }
+    });
+
+    // CRT Scanlines Toggle (Pure CSS)
+    let scanlinesOn = false;
+    document.getElementById("scanline-toggle").addEventListener("click", (e) => {
+      scanlinesOn = !scanlinesOn;
+      nfoWrapper.classList.toggle("scanlines", scanlinesOn);
+      e.target.textContent = `CRT Scanlines: ${scanlinesOn ? "ON" : "OFF"}`;
+    });
+
+    // Live Search & Highlight inside NFO (Pure DOM)
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function highlightNfo(query) {
+      const q = query.trim();
+      if (!q) {
+        nfoElement.textContent = RAW_NFO;
+        return;
+      }
+      const escapedRaw = escapeHtml(RAW_NFO);
+      const escapedQuery = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const regex = new RegExp(`(${escapedQuery})`, "gi");
+      nfoElement.innerHTML = escapedRaw.replace(regex, '<span class="nfo-hl">$1</span>');
+    }
+
+    document.getElementById("nfo-find").addEventListener("input", (e) => {
+      highlightNfo(e.target.value);
+    });
+
+    document.getElementById("top-search-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = document.getElementById("top-search-input").value;
+      document.getElementById("nfo-find").value = val;
+      highlightNfo(val);
+      document.getElementById("nfo-section").scrollIntoView({ behavior: "smooth" });
+      if (val.trim()) showToast(`Highlighted "${val}" in NFO`);
+    });
+
+    // Copy NFO / Hash / Magnet
+    document.getElementById("copy-nfo-btn").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(RAW_NFO);
+      showToast("Copied full .NFO text to clipboard!");
+    });
+
+    document.getElementById("copy-hash-btn").addEventListener("click", async () => {
+      const hash = document.getElementById("info-hash").textContent;
+      await navigator.clipboard.writeText(hash);
+      showToast("Info hash copied to clipboard!");
+    });
+
+    document.getElementById("copy-magnet-btn").addEventListener("click", async () => {
+      const hash = document.getElementById("info-hash").textContent;
+      const magnet = `magnet:?xt=urn:btih:${hash}&dn=%5BNo-Intro%5D%20F-Zero%20X%20(Japan)%20(N64)%20%5BZ64%5D`;
+      await navigator.clipboard.writeText(magnet);
+      showToast("Copied Magnet URI to clipboard!");
+    });
+
+    // Download Real .NFO File via Blob
+    function downloadNfoFile() {
+      const blob = new Blob([RAW_NFO], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "f-zero_x_jpn.nfo";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      showToast("Downloaded f-zero_x_jpn.nfo");
+    }
+
+    document.getElementById("save-nfo-btn").addEventListener("click", downloadNfoFile);
+    document.getElementById("download-nfo-footer").addEventListener("click", downloadNfoFile);
+
+    // Collapsible File Tree
+    let folderOpen = true;
+    document.getElementById("folder-toggle").addEventListener("click", (e) => {
+      folderOpen = !folderOpen;
+      e.currentTarget.firstElementChild.innerHTML = `${folderOpen ? "&#9662;" : "&#9656;"} [No-Intro] F-Zero X (Japan) (N64) [Z64]/`;
+      document.querySelectorAll(".sub-file").forEach((el) => {
+        el.style.display = folderOpen ? "flex" : "none";
+      });
+    });
+
+    // Local Interactive Comment Posting
+    document.getElementById("comment-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("comment-input");
+      const text = input.value.trim();
+      if (!text) return;
+
+      const list = document.getElementById("comment-list");
+      const item = document.createElement("div");
+      item.className = "comment-item";
+      item.innerHTML = `
+        <div class="avatar" style="background: #2d6a4f;">JP</div>
+        <div class="comment-body">
+          <div class="comment-meta">
+            <span class="comment-user">Guest_Racer_JP</span>
+            <span>• Just now (JST)</span>
+          </div>
+          <div>${escapeHtml(text)}</div>
+        </div>
+      `;
+      list.appendChild(item);
+      input.value = "";
+      showToast("Comment added!");
+    });
+
+    // Bilingual EN / 日本語 Toggle
+    const i18n = {
+      en: {
+        nav_browse: "Browse",
+        nav_nfo: "NFO Viewer",
+        nav_files: "Files",
+        nav_comments: "Comments",
+        trusted: "Trusted",
+        lbl_category: "Category:",
+        lbl_date: "Date:",
+        lbl_submitter: "Submitter:",
+        lbl_seeders: "Seeders:",
+        lbl_info: "Information:",
+        lbl_leechers: "Leechers:",
+        lbl_size: "File size:",
+        lbl_completed: "Completed:",
+        lbl_hash: "Info hash:",
+        btn_dl_nfo: "Download .NFO",
+        btn_magnet: "Copy Magnet URI",
+        nfo_header: "Release Description & NFO (ASCII / CP437 DOM Renderer)",
+        files_header: "File List (3 files)",
+        comments_header: "Comments",
+        btn_post: "Post Comment"
+      },
+      jp: {
+        nav_browse: "一覧",
+        nav_nfo: "NFO表示",
+        nav_files: "ファイル",
+        nav_comments: "コメント",
+        trusted: "認証済み",
+        lbl_category: "カテゴリ:",
+        lbl_date: "投稿日時:",
+        lbl_submitter: "投稿者:",
+        lbl_seeders: "シーダー:",
+        lbl_info: "製品情報:",
+        lbl_leechers: "リーチャー:",
+        lbl_size: "サイズ:",
+        lbl_completed: "完了数:",
+        lbl_hash: "ハッシュ:",
+        btn_dl_nfo: ".NFO を保存",
+        btn_magnet: "マグネットをコピー",
+        nfo_header: "リリース詳細 & NFO (ASCII / 純粋DOM表示)",
+        files_header: "ファイル一覧 (3 ファイル)",
+        comments_header: "コメント",
+        btn_post: "コメント投稿"
+      }
+    };
+
+    let currentLang = "en";
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "jp" : "en";
+      const dict = i18n[currentLang];
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+      showToast(currentLang === "jp" ? "表示言語: 日本語" : "Language: English");
+    });
+  </script>
+</body>
+</html>
