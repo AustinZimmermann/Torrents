@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[BDMV][110916] Star Wars: The Complete Saga (1977-2005) Disc 4 - Episode IV: A New Hope [JP][BD-50] :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --bg-nav: #f8f8f8;
+      --border-nav: #e7e7e7;
+      --text-nav: #555555;
+      --text-nav-hover: #222222;
+      --bg-panel: #ffffff;
+      --bg-panel-head: #f5f5f5;
+      --bg-panel-foot: #f5f5f5;
+      --border-panel: #dddddd;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --bg-pre: #f5f5f5;
+      --border-pre: #cccccc;
+      --bg-input: #ffffff;
+      --border-input: #cccccc;
+      --bg-btn: #ffffff;
+      --border-btn: #cccccc;
+      --bg-btn-hover: #e6e6e6;
+      --row-hover: #f9f9f9;
+      --seeder-color: #3c763d;
+      --leecher-color: #a94442;
+      --trusted-bg: #dff0d8;
+      --trusted-border: #d6e9c6;
+      --trusted-head-bg: #dff0d8;
+      --trusted-head-text: #3c763d;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #1e1e1e;
+      --bg-nav: #2a2a2a;
+      --border-nav: #3a3a3a;
+      --text-nav: #cccccc;
+      --text-nav-hover: #ffffff;
+      --bg-panel: #262626;
+      --bg-panel-head: #303030;
+      --bg-panel-foot: #2d2d2d;
+      --border-panel: #3d3d3d;
+      --text-main: #dcdcdc;
+      --text-muted: #999999;
+      --link-color: #5bc0de;
+      --link-hover: #8ad6ec;
+      --bg-pre: #1b1b1b;
+      --border-pre: #3d3d3d;
+      --bg-input: #1e1e1e;
+      --border-input: #444444;
+      --bg-btn: #333333;
+      --border-btn: #4a4a4a;
+      --bg-btn-hover: #424242;
+      --row-hover: #2f2f2f;
+      --seeder-color: #5cb85c;
+      --leecher-color: #d9534f;
+      --trusted-bg: #262626;
+      --trusted-border: #3d5a3d;
+      --trusted-head-bg: #253b25;
+      --trusted-head-text: #74c974;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid var(--border-nav);
+      margin-bottom: 20px;
+      min-height: 50px;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .navbar-brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-nav);
+      padding: 12px 14px 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .navbar-brand:hover {
+      color: var(--text-nav-hover);
+      text-decoration: none;
+    }
+
+    .jp-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: #bc002d;
+      color: #ffffff;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links li a,
+    .theme-btn {
+      display: inline-block;
+      padding: 14px 12px;
+      color: var(--text-nav);
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .nav-links li a:hover,
+    .theme-btn:hover {
+      color: var(--text-nav-hover);
+      text-decoration: none;
+    }
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      padding: 6px 0;
+    }
+
+    .search-form select,
+    .search-form input {
+      height: 32px;
+      padding: 4px 10px;
+      font-size: 13px;
+      color: var(--text-main);
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-input);
+      outline: none;
+    }
+
+    .search-form select {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+    }
+
+    .search-form input {
+      width: 210px;
+    }
+
+    .search-form button {
+      height: 32px;
+      padding: 4px 12px;
+      background-color: #337ab7;
+      border: 1px solid #2e6da4;
+      color: #ffffff;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-form button:hover {
+      background-color: #286090;
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border-panel);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .panel-trusted {
+      border-color: var(--trusted-border);
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      background-color: var(--bg-panel-head);
+      border-bottom: 1px solid var(--border-panel);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .panel-trusted .panel-heading {
+      background-color: var(--trusted-head-bg);
+      border-bottom-color: var(--trusted-border);
+      color: var(--trusted-head-text);
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    .panel-footer {
+      padding: 10px 15px;
+      background-color: var(--bg-panel-foot);
+      border-top: 1px solid var(--border-panel);
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr 140px 1fr;
+      row-gap: 8px;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+
+    .meta-label {
+      font-weight: 700;
+    }
+
+    .meta-val {
+      word-break: break-all;
+    }
+
+    .seeders {
+      color: var(--seeder-color);
+      font-weight: 700;
+    }
+
+    .leechers {
+      color: var(--leecher-color);
+      font-weight: 700;
+    }
+
+    .hash-row {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .hash-row .meta-label {
+      width: 140px;
+      flex-shrink: 0;
+    }
+
+    .hash-code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 13px;
+      background: var(--bg-pre);
+      border: 1px solid var(--border-pre);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      background-color: var(--bg-btn);
+      border: 1px solid var(--border-btn);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--bg-btn-hover);
+      text-decoration: none;
+    }
+
+    .btn-xs {
+      padding: 2px 7px;
+      font-size: 12px;
+    }
+
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #286090;
+      color: #ffffff;
+    }
+
+    /* Description & BDInfo */
+    .desc-content h4 {
+      margin: 0 0 8px 0;
+      font-size: 15px;
+    }
+
+    .desc-content ul {
+      margin: 6px 0 14px 20px;
+      padding: 0;
+    }
+
+    .desc-content li {
+      margin-bottom: 4px;
+    }
+
+    pre.bdinfo {
+      background-color: var(--bg-pre);
+      border: 1px solid var(--border-pre);
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.4;
+      overflow-x: auto;
+      margin: 10px 0 0 0;
+      color: var(--text-main);
+    }
+
+    /* File Tree */
+    .file-tree {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+
+    .file-tree ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .tree-item {
+      padding: 3px 6px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tree-item:hover {
+      background-color: var(--row-hover);
+    }
+
+    .folder-toggle {
+      cursor: pointer;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+
+    .file-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-family: Menlo, Monaco, Consolas, monospace;
+    }
+
+    .collapsed > ul {
+      display: none;
+    }
+
+    /* Comments */
+    .comment-card {
+      display: flex;
+      gap: 14px;
+      padding: 12px;
+      border: 1px solid var(--border-panel);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      background-color: var(--bg-panel);
+    }
+
+    .comment-user {
+      width: 120px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 4px;
+      background: #337ab7;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+
+    .uploader-tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background-color: #5cb85c;
+      color: #ffffff;
+      margin-top: 2px;
+    }
+
+    .comment-body {
+      flex: 1;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--border-panel);
+      padding-bottom: 4px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text-main);
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-input);
+      border-radius: 4px;
+      resize: vertical;
+      margin-bottom: 8px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #323232;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 120px 1fr;
+      }
+      .hash-row .meta-label {
+        width: 120px;
+      }
+      .search-form input {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a href="#top" class="navbar-brand">
+          Nyaa <span class="jp-badge">JP</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#upload" onclick="showToast('Upload requires an active Nyaa account.'); return false;">Upload</a></li>
+          <li><a href="#rules" onclick="showToast('Rules: No re-encodes in Raw category. Full BDMV/ISO only.'); return false;">Rules</a></li>
+          <li><a href="#rss" onclick="showToast('RSS Feed URL copied to clipboard.'); return false;">RSS</a></li>
+          <li><button type="button" class="theme-btn" id="themeToggle">Dark Mode</button></li>
+        </ul>
+      </div>
+
+      <form class="search-form" id="searchForm">
+        <select aria-label="Category">
+          <option value="all">All categories</option>
+          <option value="4_4" selected>Live Action - Raw</option>
+          <option value="4_1">Live Action - English</option>
+          <option value="4_3">Live Action - Non-English</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search..." value="Star Wars Complete Saga BD-50" />
+        <button type="submit" title="Search">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Main Torrent Info Panel -->
+    <div class="panel panel-trusted">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          [BDMV][110916] Star Wars: The Complete Saga (1977-2005) Disc 4 - Episode IV: A New Hope [JP/EN][BD-50]
+        </h3>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-label">Category:</div>
+          <div class="meta-val">
+            <a href="#cat-live-action">Live Action</a> - <a href="#cat-raw">Raw</a>
+          </div>
+
+          <div class="meta-label">Date:</div>
+          <div class="meta-val">2026-11-17 12:34 UTC (21:34 JST)</div>
+
+          <div class="meta-label">Submitter:</div>
+          <div class="meta-val">
+            <a href="#user-jpbdmv" style="color: var(--seeder-color); font-weight: 600;">JP_BDMV_Archive</a>
+          </div>
+
+          <div class="meta-label">Seeders:</div>
+          <div class="meta-val"><span class="seeders">18</span></div>
+
+          <div class="meta-label">Information:</div>
+          <div class="meta-val">
+            <a href="https://www.20thfox.jp/" target="_blank" rel="noopener noreferrer">20th Century Fox Home Entertainment Japan (FXXA-51416)</a>
+          </div>
+
+          <div class="meta-label">Leechers:</div>
+          <div class="meta-val"><span class="leechers">2</span></div>
+
+          <div class="meta-label">File size:</div>
+          <div class="meta-val">45.8 GiB</div>
+
+          <div class="meta-label">Completed:</div>
+          <div class="meta-val">142</div>
+
+          <div class="hash-row">
+            <div class="meta-label">Info hash:</div>
+            <code class="hash-code" id="infoHash">a1b2c3d4e5f60718293a4b5c6d7e8f9012345678</code>
+            <button type="button" class="btn btn-xs" id="copyHashBtn">Copy Hash</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <button type="button" class="btn" id="downloadTorrentBtn">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+          Download Torrent
+        </button>
+
+        <a href="#magnet" class="btn" id="magnetBtn">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a7 7 0 0 0-7 7v3h4V8a3 3 0 0 1 6 0v3h4V8a7 7 0 0 0-7-7zM1 12v3h4v-3H1zm10 0v3h4v-3h-4z"/>
+          </svg>
+          Magnet
+        </a>
+      </div>
+    </div>
+
+    <!-- Description & BDInfo Panel -->
+    <div class="panel">
+      <div class="panel-heading" style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 class="panel-title">Description</h3>
+        <button type="button" class="btn btn-xs" id="toggleBdInfoBtn">Hide BDInfo</button>
+      </div>
+      <div class="panel-body desc-content">
+        <h4>スター・ウォーズ コンプリート・サーガ ブルーレイBOX (Disc 4: エピソード4／新たなる希望)</h4>
+        <p>
+          Untouched full retail Japanese Blu-ray Disc (BD-50) dump from <strong>Star Wars: The Complete Saga (1977–2005)</strong> 9-Disc Box Set released in Japan on September 16, 2011.
+        </p>
+        <ul>
+          <li><strong>Catalog Number:</strong> FXXA-51416 (20th Century Fox Home Entertainment Japan)</li>
+          <li><strong>Disc Format:</strong> BD-50 Dual-Layer (49,177,198,592 bytes) -- Region Free (A/B/C)</li>
+          <li><strong>Video:</strong> MPEG-4 AVC / 1080p / 23.976 fps / 2.35:1 Aspect Ratio</li>
+          <li><strong>Audio:</strong> English DTS-HD Master Audio 6.1 (48kHz, 24-bit), Japanese DTS 5.1 Surround (768 kbps), Cast & Crew Commentaries (Dolby Digital 2.0)</li>
+          <li><strong>Subtitles:</strong> Japanese (日本語), English SDH, and localized commentary tracks</li>
+        </ul>
+
+        <pre class="bdinfo" id="bdInfoBlock">DISC INFO:
+Disc Title:     STAR_WARS_COMPLETE_SAGA_D4
+Disc Label:     STAR WARS EPISODE IV: A NEW HOPE (JP)
+Disc Size:      49,177,198,592 bytes
+Protection:     AACS (Removed)
+Extras:         BD-Java Menus, Interactive Scene Selection
+
+PLAYLIST REPORT:
+Name:                   00800.MPLS
+Length:                 2:04:46.479 (h:m:s.ms)
+Size:                   36,722,196,480 bytes
+Total Bitrate:          39.24 Mbps
+
+VIDEO:
+Codec                   Bitrate             Description
+-----                   -------             -----------
+MPEG-4 AVC Video        29840 kbps          1080p / 23.976 fps / 16:9 / High Profile 4.1
+
+AUDIO:
+Codec                           Language        Bitrate         Description
+-----                           --------        -------         -----------
+DTS-HD Master Audio             English         4612 kbps       6.1 / 48 kHz / 24-bit (DTS Core: 5.1 / 1509 kbps)
+DTS Audio                       Japanese        768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+Dolby Digital Audio             English         224 kbps        2.0 / 48 kHz / 224 kbps (Commentary #1)
+Dolby Digital Audio             English         224 kbps        2.0 / 48 kHz / 224 kbps (Commentary #2)
+
+SUBTITLES:
+Codec                           Language        Bitrate         Description
+-----                           --------        -----------
+Presentation Graphics           Japanese        24.18 kbps      Japanese Main Subtitles
+Presentation Graphics           English         31.04 kbps      English SDH
+Presentation Graphics           Japanese        29.65 kbps      Japanese Commentary Subtitles</pre>
+      </div>
+    </div>
+
+    <!-- File List Panel -->
+    <div class="panel">
+      <div class="panel-heading">
+        <h3 class="panel-title">File list</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="file-tree" id="fileTree">
+          <li>
+            <div class="tree-item">
+              <span class="folder-toggle" onclick="toggleFolder(this)">
+                <span class="caret">▼</span> 📁 A_NEW_HOPE
+              </span>
+              <span class="file-size">45.8 GiB</span>
+            </div>
+            <ul>
+              <li>
+                <div class="tree-item">
+                  <span class="folder-toggle" onclick="toggleFolder(this)">
+                    <span class="caret">▼</span> 📁 BDMV
+                  </span>
+                  <span class="file-size">45.8 GiB</span>
+                </div>
+                <ul>
+                  <li>
+                    <div class="tree-item">
+                      <span class="folder-toggle" onclick="toggleFolder(this)">
+                        <span class="caret">▼</span> 📁 STREAM
+                      </span>
+                      <span class="file-size">45.6 GiB</span>
+                    </div>
+                    <ul>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00001.m2ts (Main Feature - Episode IV)</span>
+                        <span class="file-size">34.2 GiB</span>
+                      </li>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00002.m2ts (JP/EN Title Cards & Seamless Branching)</span>
+                        <span class="file-size">6.8 GiB</span>
+                      </li>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00014.m2ts (Animated Menu Loop)</span>
+                        <span class="file-size">2.9 GiB</span>
+                      </li>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00021.m2ts (20th Century Fox / Lucasfilm Intro)</span>
+                        <span class="file-size">1.7 GiB</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="collapsed">
+                    <div class="tree-item">
+                      <span class="folder-toggle" onclick="toggleFolder(this)">
+                        <span class="caret">▶</span> 📁 PLAYLIST
+                      </span>
+                      <span class="file-size">412.4 KiB</span>
+                    </div>
+                    <ul>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00800.mpls</span>
+                        <span class="file-size">184.0 KiB</span>
+                      </li>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00801.mpls</span>
+                        <span class="file-size">176.2 KiB</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="collapsed">
+                    <div class="tree-item">
+                      <span class="folder-toggle" onclick="toggleFolder(this)">
+                        <span class="caret">▶</span> 📁 CLIPINF
+                      </span>
+                      <span class="file-size">628.0 KiB</span>
+                    </div>
+                    <ul>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00001.clpi</span>
+                        <span class="file-size">410.5 KiB</span>
+                      </li>
+                      <li class="tree-item">
+                        <span class="file-name">📄 00002.clpi</span>
+                        <span class="file-size">217.5 KiB</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tree-item">
+                    <span class="file-name">📄 index.bdmv</span>
+                    <span class="file-size">2.4 KiB</span>
+                  </li>
+                  <li class="tree-item">
+                    <span class="file-name">📄 MovieObject.bdmv</span>
+                    <span class="file-size">18.6 KiB</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="collapsed">
+                <div class="tree-item">
+                  <span class="folder-toggle" onclick="toggleFolder(this)">
+                    <span class="caret">▶</span> 📁 CERTIFICATE
+                  </span>
+                  <span class="file-size">12.0 KiB</span>
+                </div>
+                <ul>
+                  <li class="tree-item">
+                    <span class="file-name">📄 app.discroot.crt</span>
+                    <span class="file-size">12.0 KiB</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Comments Panel -->
+    <div class="panel">
+      <div class="panel-heading">
+        <h3 class="panel-title" id="commentCountHeader">Comments - 2</h3>
+      </div>
+      <div class="panel-body">
+        <div id="commentsList">
+          <div class="comment-card">
+            <div class="comment-user">
+              <div class="avatar" style="background:#2e7d32;">TK</div>
+              <div><a href="#user-tokyo">Tokyo_LaserDisc</a></div>
+            </div>
+            <div class="comment-body">
+              <div class="comment-meta">2026-11-17 13:05 UTC</div>
+              <div>
+                ありがとうございます！Been looking for the untouched Japanese BD-50 of Disc 4 with the DTS 5.1 Japanese dub track and original Japanese PGS subtitles intact.
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-card">
+            <div class="comment-user">
+              <div class="avatar">JP</div>
+              <div><a href="#user-jpbdmv">JP_BDMV_Archive</a></div>
+              <span class="uploader-tag">Uploader</span>
+            </div>
+            <div class="comment-body">
+              <div class="comment-meta">2026-11-17 13:18 UTC</div>
+              <div>
+                どういたしまして！Seeding from a 10 Gbps Osaka fiber node. Discs 5 &amp; 6 (Empire Strikes Back &amp; Return of the Jedi) will follow shortly.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm" style="margin-top:16px;">
+          <label for="commentText" style="display:block; font-weight:700; margin-bottom:6px;">
+            Post a comment
+          </label>
+          <textarea id="commentText" placeholder="Write a comment..."></textarea>
+          <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Toast helper
+    let toastTimer = null;
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2800);
+    }
+
+    // Dark / Light Mode Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener("click", () => {
+      const htmlEl = document.documentElement;
+      const isDark = htmlEl.getAttribute("data-theme") === "dark";
+      htmlEl.setAttribute("data-theme", isDark ? "light" : "dark");
+      themeToggle.textContent = isDark ? "Dark Mode" : "Light Mode";
+    });
+
+    // Copy Info Hash
+    document.getElementById("copyHashBtn").addEventListener("click", () => {
+      const hash = document.getElementById("infoHash").textContent.trim();
+      navigator.clipboard?.writeText(hash);
+      showToast("Info hash copied to clipboard.");
+    });
+
+    // Copy Simulated Magnet Link
+    document.getElementById("magnetBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      const hash = document.getElementById("infoHash").textContent.trim();
+      const dn = encodeURIComponent("[BDMV][110916] Star Wars: The Complete Saga (1977-2005) Disc 4 - Episode IV: A New Hope [JP/EN][BD-50]");
+      const magnetUri = `magnet:?xt=urn:btih:${hash}&dn=${dn}&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce`;
+      navigator.clipboard?.writeText(magnetUri);
+      showToast("Magnet link copied to clipboard.");
+    });
+
+    // Simulated .torrent metadata file download
+    document.getElementById("downloadTorrentBtn").addEventListener("click", () => {
+      const placeholderMetadata = [
+        "Nyaa.si Mockup Metadata File",
+        "Release: [BDMV][110916] Star Wars: The Complete Saga (1977-2005) Disc 4 - Episode IV: A New Hope [JP/EN][BD-50]",
+        "Category: Live Action - Raw",
+        "Size: 45.8 GiB",
+        "Info Hash (Placeholder): a1b2c3d4e5f60718293a4b5c6d7e8f9012345678"
+      ].join("\n");
+
+      const blob = new Blob([placeholderMetadata], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Star_Wars_Complete_Saga_Disc4_JP_BD50.torrent.txt";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("Mockup torrent metadata downloaded.");
+    });
+
+    // Toggle BDInfo block
+    const toggleBdInfoBtn = document.getElementById("toggleBdInfoBtn");
+    const bdInfoBlock = document.getElementById("bdInfoBlock");
+    toggleBdInfoBtn.addEventListener("click", () => {
+      const isHidden = bdInfoBlock.style.display === "none";
+      bdInfoBlock.style.display = isHidden ? "block" : "none";
+      toggleBdInfoBtn.textContent = isHidden ? "Hide BDInfo" : "Show BDInfo";
+    });
+
+    // Collapsible File Tree
+    function toggleFolder(el) {
+      const li = el.closest("li");
+      if (!li) return;
+      li.classList.toggle("collapsed");
+      const caret = el.querySelector(".caret");
+      if (caret) {
+        caret.textContent = li.classList.contains("collapsed") ? "▶" : "▼";
+      }
+    }
+
+    // Search form handler
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = document.getElementById("searchInput").value.trim();
+      showToast(query ? `Searching Nyaa JP for "${query}"...` : "Showing all releases...");
+    });
+
+    // Live comment submission
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    document.getElementById("commentForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const textarea = document.getElementById("commentText");
+      const rawText = textarea.value.trim();
+      if (!rawText) {
+        showToast("Please enter a comment first.");
+        return;
+      }
+
+      const commentsList = document.getElementById("commentsList");
+      const now = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+
+      const card = document.createElement("div");
+      card.className = "comment-card";
+      card.innerHTML = `
+        <div class="comment-user">
+          <div class="avatar" style="background:#6c757d;">GU</div>
+          <div><a href="#guest">Guest_User</a></div>
+        </div>
+        <div class="comment-body">
+          <div class="comment-meta">${now}</div>
+          <div>${escapeHtml(rawText).replace(/\n/g, "<br>")}</div>
+        </div>
+      `;
+
+      commentsList.appendChild(card);
+      textarea.value = "";
+
+      const totalComments = commentsList.querySelectorAll(".comment-card").length;
+      document.getElementById("commentCountHeader").textContent = `Comments - ${totalComments}`;
+      showToast("Comment posted.");
+    });
+  </script>
+</body>
+</html>
