@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[GameCube] F-Zero GX (Japan) [NKit.iso] :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #f5f5f5;
+      --bg-nav: #222222;
+      --bg-panel: #ffffff;
+      --bg-panel-head: #f0f0f0;
+      --bg-input: #ffffff;
+      --bg-nfo: #0c0e14;
+      --border-color: #dddddd;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --text-link: #337ab7;
+      --text-link-hover: #23527c;
+      --badge-trusted-bg: #dff0d8;
+      --badge-trusted-border: #d6e9c6;
+      --seeder: #28a745;
+      --leecher: #dc3545;
+      --nfo-text: #a9dc76;
+      --nfo-accent: #78dce8;
+      --nfo-warn: #ffd866;
+      --nfo-border: #2c323c;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #191a1c;
+      --bg-nav: #111214;
+      --bg-panel: #222426;
+      --bg-panel-head: #2b2e31;
+      --bg-input: #18191b;
+      --bg-nfo: #090b0f;
+      --border-color: #36393e;
+      --text-main: #d8dadc;
+      --text-muted: #8e9297;
+      --text-link: #58a6ff;
+      --text-link-hover: #79b8ff;
+      --badge-trusted-bg: #1e3323;
+      --badge-trusted-border: #2d4f35;
+      --seeder: #3fb950;
+      --leecher: #f85149;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    a {
+      color: var(--text-link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--text-link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid #080808;
+      color: #9d9d9d;
+      padding: 0 16px;
+    }
+
+    .nav-inner {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      letter-spacing: -0.3px;
+    }
+
+    .brand span {
+      color: #58a6ff;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 14px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: #b0b3b8;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+    }
+
+    .search-group {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .search-group select,
+    .search-group input,
+    .search-group button {
+      border: 1px solid #3c3f44;
+      background-color: var(--bg-input);
+      color: var(--text-main);
+      font-size: 13px;
+      padding: 5px 9px;
+      outline: none;
+    }
+
+    .search-group select {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+    }
+
+    .search-group input {
+      width: 180px;
+    }
+
+    .search-group button {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+      color: #ffffff;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .theme-btn {
+      background: #2f3237;
+      border: 1px solid #454950;
+      color: #e4e6eb;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .theme-btn:hover {
+      background: #3d4147;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1170px;
+      margin: 20px auto 40px;
+      padding: 0 16px;
+    }
+
+    .panel {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .panel-trusted {
+      border-color: var(--badge-trusted-border);
+    }
+
+    .panel-heading {
+      background-color: var(--bg-panel-head);
+      border-bottom: 1px solid var(--border-color);
+      padding: 11px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .panel-trusted .panel-heading {
+      background-color: var(--badge-trusted-bg);
+      border-bottom-color: var(--badge-trusted-border);
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .tag-jp {
+      display: inline-block;
+      background-color: #d9534f;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-group input {
+        width: 120px;
+      }
+    }
+
+    .meta-row {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+
+    .meta-label {
+      width: 130px;
+      flex-shrink: 0;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .meta-value {
+      flex: 1;
+      word-break: break-all;
+    }
+
+    .text-seeder {
+      color: var(--seeder);
+      font-weight: 700;
+    }
+
+    .text-leecher {
+      color: var(--leecher);
+      font-weight: 700;
+    }
+
+    .hash-code {
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 12px;
+      background: rgba(127, 127, 127, 0.12);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    /* Action Bar */
+    .panel-footer {
+      background-color: var(--bg-panel-head);
+      border-top: 1px solid var(--border-color);
+      padding: 10px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #286090;
+    }
+
+    .btn-success {
+      background-color: #2ea44f;
+      border-color: #299046;
+      color: #ffffff;
+    }
+
+    .btn-success:hover {
+      background-color: #268941;
+    }
+
+    .btn-default {
+      background-color: var(--bg-panel);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-default:hover {
+      background-color: var(--bg-panel-head);
+    }
+
+    /* NFO Viewer (Pure HTML/CSS, No Canvas) */
+    .nfo-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background-color: #161920;
+      border: 1px solid var(--nfo-border);
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      padding: 8px 12px;
+      color: #abb2bf;
+      font-size: 12px;
+    }
+
+    .nfo-filename {
+      font-family: "Consolas", "Courier New", monospace;
+      color: var(--nfo-accent);
+      font-weight: 700;
+    }
+
+    .nfo-controls {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nfo-btn {
+      background: #21252b;
+      border: 1px solid #383e4a;
+      color: #d7dae0;
+      padding: 3px 8px;
+      font-size: 11px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .nfo-btn:hover,
+    .nfo-btn.active {
+      background: #2c313a;
+      border-color: var(--nfo-accent);
+      color: var(--nfo-accent);
+    }
+
+    .nfo-wrapper {
+      position: relative;
+      background-color: var(--bg-nfo);
+      border: 1px solid var(--nfo-border);
+      border-radius: 0 0 4px 4px;
+      overflow-x: auto;
+      padding: 18px;
+    }
+
+    /* Optional Pure-CSS CRT Scanlines (No Canvas) */
+    .nfo-wrapper.crt::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0px,
+        rgba(255, 255, 255, 0) 2px,
+        rgba(0, 0, 0, 0.28) 3px,
+        rgba(0, 0, 0, 0.28) 4px
+      );
+    }
+
+    .nfo-art {
+      margin: 0 auto;
+      width: max-content;
+      font-family: "Consolas", "Lucida Console", "DejaVu Sans Mono", "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.18;
+      color: var(--nfo-text);
+      white-space: pre;
+      letter-spacing: 0;
+    }
+
+    .nfo-wrapper.amber .nfo-art {
+      color: #ffb000;
+      text-shadow: 0 0 4px rgba(255, 176, 0, 0.35);
+    }
+
+    .nfo-wrapper.crt .nfo-art {
+      text-shadow: 0 0 5px rgba(169, 220, 118, 0.45);
+    }
+
+    .nfo-wrapper.crt.amber .nfo-art {
+      text-shadow: 0 0 6px rgba(255, 176, 0, 0.5);
+    }
+
+    .nfo-banner-accent {
+      color: var(--nfo-accent);
+    }
+
+    .nfo-banner-gold {
+      color: var(--nfo-warn);
+    }
+
+    .nfo-wrapper.amber .nfo-banner-accent,
+    .nfo-wrapper.amber .nfo-banner-gold {
+      color: #ffd066;
+    }
+
+    /* File Tree */
+    .file-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 13px;
+    }
+
+    .file-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .file-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Comments */
+    .comment-item {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comment-item:last-child {
+      border-bottom: none;
+    }
+
+    .comment-user {
+      width: 140px;
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .comment-badge {
+      display: inline-block;
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: #2ea44f;
+      color: #fff;
+      margin-top: 3px;
+    }
+
+    .comment-body {
+      flex: 1;
+    }
+
+    .comment-date {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .comment-form {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 75px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-input);
+      color: var(--text-main);
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #22262c;
+      color: #ffffff;
+      border: 1px solid #444c56;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#top" class="brand">Nyaa<span>.si</span></a>
+        <ul class="nav-links">
+          <li><a href="#top">Browse</a></li>
+          <li><a href="#nfo-section">NFO</a></li>
+          <li><a href="#files-section">Files</a></li>
+          <li><a href="#comments-section">Comments</a></li>
+          <li><a href="#top" onclick="showToast('RSS feed URL copied to clipboard.'); return false;">RSS</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form class="search-group" onsubmit="event.preventDefault(); showToast('Filtered catalog for: ' + this.q.value);">
+          <select aria-label="Category">
+            <option>Games - Console</option>
+            <option>All categories</option>
+            <option>Software - Games</option>
+          </select>
+          <input type="text" name="q" value="F-Zero GX GFZJ01" aria-label="Search" />
+          <button type="submit">Search</button>
+        </form>
+        <button type="button" class="theme-btn" id="themeToggle">Light Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <!-- Release Header Panel -->
+    <section class="panel panel-trusted">
+      <div class="panel-heading">
+        <h1 class="panel-title">
+          <span class="tag-jp">NTSC-J</span>[GameCube] F-ZERO GX (Japan) [GFZJ01] [NKit.iso]
+        </h1>
+        <span style="font-size: 12px; font-weight: 600; color: var(--seeder);">Trusted Preservation Upload</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <div class="meta-label">Category:</div>
+            <div class="meta-value"><a href="#top">Games</a> - <a href="#top">Nintendo GameCube (NTSC-J)</a></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Date:</div>
+            <div class="meta-value">2026-11-17 09:42 UTC</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Submitter:</div>
+            <div class="meta-value"><a href="#top">NGC-ArchiveJP</a> (Japan Mirror)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Seeders:</div>
+            <div class="meta-value text-seeder">48</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Information:</div>
+            <div class="meta-value">Redump Verified Source | Lossless NKit v1.4 | Dual Language (JP/EN)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Leechers:</div>
+            <div class="meta-value text-leecher">2</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">File Size:</div>
+            <div class="meta-value">1.14 GiB (1,224,736,768 Bytes)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Completed:</div>
+            <div class="meta-value">1,337</div>
+          </div>
+          <div class="meta-row" style="grid-column: 1 / -1; border-bottom: none; padding-bottom: 0;">
+            <div class="meta-label">Info Hash:</div>
+            <div class="meta-value"><span class="hash-code" id="infoHash">9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary" id="downloadTorrentBtn">Download Metadata (.torrent)</button>
+          <button type="button" class="btn btn-success" id="copyMagnetBtn">Copy Magnet URI</button>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" id="downloadNfoBtn">Save .NFO File</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NFO Viewer Panel (Pure DOM / Preformatted CP437 Art, Zero Canvas) -->
+    <section class="panel" id="nfo-section">
+      <div class="nfo-toolbar">
+        <div>
+          <span class="nfo-filename">fzero-gx-gfzj01-jp.nfo</span>
+          <span style="margin-left: 8px; color: #7f848e;">Encoding: CP437 / UTF-8 Monospace (No Canvas)</span>
+        </div>
+        <div class="nfo-controls">
+          <button type="button" class="nfo-btn active" id="toggleCrtBtn">CRT Scanlines: ON</button>
+          <button type="button" class="nfo-btn" id="toggleAmberBtn">Phosphor: Green</button>
+          <button type="button" class="nfo-btn" id="copyNfoBtn">Copy NFO Text</button>
+        </div>
+      </div>
+
+      <div class="nfo-wrapper crt" id="nfoWrapper">
+<pre class="nfo-art" id="nfoContent"><span class="nfo-banner-accent">╔══════════════════════════════════════════════════════════════════════════════╗
+║  ███████╗      ███████╗███████╗██████╗  ██████╗        ██████╗ ██╗  ██╗      ║
+║  ██╔════╝      ╚══███╔╝██╔════╝██╔══██╗██╔═══██╗      ██╔════╝ ╚██╗██╔╝      ║
+║  █████╗  █████╗  ███╔╝ █████╗  ██████╔╝██║   ██║      ██║  ███╗ ╚███╔╝       ║
+║  ██╔══╝  ╚════╝ ███╔╝  ██╔══╝  ██╔══██╗██║   ██║      ██║   ██║ ██╔██╗       ║
+║  ██║           ███████╗███████╗██║  ██║╚██████╔╝      ╚██████╔╝██╔╝ ██╗      ║
+║  ╚═╝           ╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝        ╚═════╝ ╚═╝  ╚═╝      ║
+╠══════════════════════════════════════════════════════════════════════════════╣</span>
+<span class="nfo-banner-gold">║       NINTENDO GAMECUBE  ::  NTSC-J (JAPAN)  ::  NKIT ISO PRESERVATION       ║</span>
+<span class="nfo-banner-accent">╚══════════════════════════════════════════════════════════════════════════════╝</span>
+
+  ┌─[ RELEASE OVERVIEW ]───────────────────────────────────────────────────────┐
+  │                                                                            │
+  │  Title          : F-ZERO GX (エフゼロ ジーエックス)                        │
+  │  Platform       : Nintendo GameCube (DOL-001 / DOL-101)                    │
+  │  Region         : Japan (NTSC-J)                                           │
+  │  Game ID        : GFZJ01 (Disc 00 / Revision 0)                            │
+  │  Developer      : Amusement Vision (SEGA)                                  │
+  │  Publisher      : Nintendo Co., Ltd.                                       │
+  │  Release Date   : 2003-07-25 (Japan Retail Optical Disc)                   │
+  │  Languages      : Japanese, English (Selectable in Options Menu)           │
+  │  Image Format   : NKit ISO (.nkit.iso) - Scrubbed &amp; Lossless Recoverable   │
+  │  Source Media   : Redump.org Verified 1:1 Retail GCM Dump                  │
+  │                                                                            │
+  └────────────────────────────────────────────────────────────────────────────┘
+
+  ┌─[ CHECKSUMS &amp; VERIFICATION ]───────────────────────────────────────────────┐
+  │                                                                            │
+  │  [NKit ISO Image - Included in Archive]                                    │
+  │  File Name      : F-Zero GX (Japan) (En,Ja) [GFZJ01].nkit.iso              │
+  │  NKit Size      : 1,224,736,768 bytes (1.14 GiB)                           │
+  │  NKit CRC32     : 4A91E8C2                                                 │
+  │  NKit MD5       : 8d7f6e5c4b3a29180f1e2d3c4b5a6978                         │
+  │  NKit SHA-1     : 3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d                 │
+  │                                                                            │
+  │  [Rebuilt Redump 1:1 Raw ISO Target]                                       │
+  │  Raw GCM Size   : 1,459,978,240 bytes (1.36 GiB)                           │
+  │  Redump CRC32   : B72E118D                                                 │
+  │  Redump MD5     : 59c0b59c8b4e3866a1d6f89f7c9e4421                         │
+  │  Redump SHA-1   : 91e4f0c27d8b6a35e2f1c0b9a8d7e6f5c4b3a291                 │
+  │                                                                            │
+  └────────────────────────────────────────────────────────────────────────────┘
+
+  ┌─[ TECHNICAL &amp; PLAYABILITY NOTES ]──────────────────────────────────────────┐
+  │                                                                            │
+  │  1. DUAL-LANGUAGE SUPPORT:                                                 │
+  │     The Japanese retail disc (GFZJ01) includes full English menus, pilot   │
+  │     profiles, and subtitles alongside Japanese. From the Title Screen,     │
+  │     enter OPTIONS (オプション) -&gt; LANGUAGE (言語) to switch to English.    │
+  │                                                                            │
+  │  2. PROGRESSIVE SCAN (480p):                                               │
+  │     Hold the [B] button during boot on NTSC-J / NTSC-U hardware or enable  │
+  │     Progressive Scan in Dolphin to run at a locked 60 FPS in 480p.         │
+  │                                                                            │
+  │  3. NKIT RESTORATION:                                                      │
+  │     This image was converted using NKit v1.4 with the official GameCube    │
+  │     Redump DAT. Running “Recover to ISO” restores the exact 1.36 GiB       │
+  │     byte-identical Redump master image with matching SHA-1.                │
+  │                                                                            │
+  │  4. COMPATIBILITY:                                                         │
+  │     - Dolphin Emulator (5.0-19368+ / 2407+): Boots natively, full speed.   │
+  │     - Nintendont (Wii / Wii U vWii): Supported directly as .nkit.iso.      │
+  │     - Swiss (GameCube ODE / SD2SP2): Supported (v0.6r1400 or newer).       │
+  │                                                                            │
+  └────────────────────────────────────────────────────────────────────────────┘
+
+<span class="nfo-banner-accent">════════════════════════════════════════════════════════════════════════════════
+   PRESERVED BY NGC-ARCHIVEJP  //  KEEP SEEDING FOR FUTURE RACERS  //  MUTE CITY
+════════════════════════════════════════════════════════════════════════════════</span></pre>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel" id="files-section">
+      <div class="panel-heading">
+        <h2 class="panel-title" style="font-size: 14px;">File List (2 files)</h2>
+      </div>
+      <div class="panel-body" style="padding: 8px 15px;">
+        <ul class="file-list">
+          <li>
+            <span>[DIR] F-Zero GX (Japan) [GFZJ01]/</span>
+            <span style="color: var(--text-muted);">1.14 GiB</span>
+          </li>
+          <li>
+            <span style="padding-left: 18px;">├─ F-Zero GX (Japan) [GFZJ01].nkit.iso</span>
+            <span style="color: var(--text-muted);">1.14 GiB</span>
+          </li>
+          <li>
+            <span style="padding-left: 18px;">└─ fzero-gx-gfzj01-jp.nfo</span>
+            <span style="color: var(--text-muted);">4.21 KiB</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel" id="comments-section">
+      <div class="panel-heading">
+        <h2 class="panel-title" style="font-size: 14px;">Comments (<span id="commentCount">2</span>)</h2>
+      </div>
+      <div class="panel-body">
+        <div id="commentList">
+          <div class="comment-item">
+            <div class="comment-user">
+              BlueFalcon_JP<br />
+              <span class="comment-badge">Verified</span>
+            </div>
+            <div class="comment-body">
+              <div class="comment-date">2026-11-17 10:15 UTC</div>
+              <div>Confirmed Redump match after NKit recovery (<code>B72E118D</code>). English toggle in the options menu works cleanly on both Dolphin and Swiss.</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-user">
+              CaptainFalcon07
+            </div>
+            <div class="comment-body">
+              <div class="comment-date">2026-11-17 11:04 UTC</div>
+              <div>Thanks for keeping the Japanese GFZJ01 revision seeded! Works out of the box with F-Zero AX course unlock codes too.</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm">
+          <label for="commentInput" style="font-size: 12px; font-weight: 600;">Add a comment</label>
+          <textarea id="commentInput" placeholder="Share verification notes, emulator settings, or seeding status..." required></textarea>
+          <div>
+            <button type="submit" class="btn btn-primary">Post Comment</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const nfoWrapper = document.getElementById("nfoWrapper");
+    const nfoContent = document.getElementById("nfoContent");
+    const toggleCrtBtn = document.getElementById("toggleCrtBtn");
+    const toggleAmberBtn = document.getElementById("toggleAmberBtn");
+    const toastEl = document.getElementById("toast");
+
+    let toastTimer = null;
+    function showToast(message) {
+      toastEl.textContent = message;
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastEl.classList.remove("show");
+      }, 2600);
+    }
+
+    // Light / Dark Mode Toggle
+    themeToggle.addEventListener("click", () => {
+      const isDark = htmlEl.getAttribute("data-theme") === "dark";
+      htmlEl.setAttribute("data-theme", isDark ? "light" : "dark");
+      themeToggle.textContent = isDark ? "Dark Mode" : "Light Mode";
+    });
+
+    // CRT Scanlines Toggle (Pure CSS, no <canvas>)
+    toggleCrtBtn.addEventListener("click", () => {
+      const enabled = nfoWrapper.classList.toggle("crt");
+      toggleCrtBtn.classList.toggle("active", enabled);
+      toggleCrtBtn.textContent = enabled ? "CRT Scanlines: ON" : "CRT Scanlines: OFF";
+    });
+
+    // Phosphor Color Toggle (Green / Amber)
+    toggleAmberBtn.addEventListener("click", () => {
+      const isAmber = nfoWrapper.classList.toggle("amber");
+      toggleAmberBtn.classList.toggle("active", isAmber);
+      toggleAmberBtn.textContent = isAmber ? "Phosphor: Amber" : "Phosphor: Green";
+    });
+
+    // Copy NFO text
+    document.getElementById("copyNfoBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(nfoContent.innerText);
+        showToast("NFO ASCII text copied to clipboard.");
+      } catch {
+        showToast("Unable to access clipboard in this context.");
+      }
+    });
+
+    // Download .NFO file via Blob
+    document.getElementById("downloadNfoBtn").addEventListener("click", () => {
+      const blob = new Blob([nfoContent.innerText], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "fzero-gx-gfzj01-jp.nfo";
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast("Downloaded fzero-gx-gfzj01-jp.nfo");
+    });
+
+    // Copy Magnet URI
+    document.getElementById("copyMagnetBtn").addEventListener("click", async () => {
+      const hash = document.getElementById("infoHash").textContent.trim();
+      const dn = encodeURIComponent("[GameCube] F-Zero GX (Japan) (En,Ja) [GFZJ01] [NKit.iso]");
+      const magnet = `magnet:?xt=urn:btih:${hash}&dn=${dn}`;
+      try {
+        await navigator.clipboard.writeText(magnet);
+        showToast("Magnet URI copied to clipboard.");
+      } catch {
+        showToast("Magnet URI: " + magnet);
+      }
+    });
+
+    // Download Metadata summary
+    document.getElementById("downloadTorrentBtn").addEventListener("click", () => {
+      showToast("Metadata summary ready (demo UI – no external tracker linked).");
+    });
+
+    // Interactive Comment Form
+    const commentForm = document.getElementById("commentForm");
+    const commentInput = document.getElementById("commentInput");
+    const commentList = document.getElementById("commentList");
+    const commentCount = document.getElementById("commentCount");
+
+    commentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const text = commentInput.value.trim();
+      if (!text) return;
+
+      const now = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+      const item = document.createElement("div");
+      item.className = "comment-item";
+
+      const userDiv = document.createElement("div");
+      userDiv.className = "comment-user";
+      userDiv.textContent = "Guest_Racer";
+
+      const bodyDiv = document.createElement("div");
+      bodyDiv.className = "comment-body";
+
+      const dateDiv = document.createElement("div");
+      dateDiv.className = "comment-date";
+      dateDiv.textContent = now;
+
+      const msgDiv = document.createElement("div");
+      msgDiv.textContent = text;
+
+      bodyDiv.appendChild(dateDiv);
+      bodyDiv.appendChild(msgDiv);
+      item.appendChild(userDiv);
+      item.appendChild(bodyDiv);
+      commentList.appendChild(item);
+
+      commentCount.textContent = String(commentList.children.length);
+      commentInput.value = "";
+      showToast("Comment posted.");
+    });
+  </script>
+</body>
+</html>
