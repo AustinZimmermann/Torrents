@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Wii U] マリオテニス ウルトラスマッシュ / Mario Tennis: Ultra Smash [WUP-AVXJ-JPN] [JP] :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #f5f5f5;
+      --bg-panel: #ffffff;
+      --bg-panel-alt: #f9f9f9;
+      --bg-nav: #222222;
+      --border-color: #dddddd;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --trusted-bg: #dff0d8;
+      --trusted-border: #d6e9c6;
+      --trusted-text: #3c763d;
+      --remake-bg: #f2dede;
+      --remake-text: #a94442;
+      --seed-color: #3c763d;
+      --leech-color: #a94442;
+      --input-bg: #ffffff;
+      --code-bg: #f0f0f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #181a1b;
+      --bg-panel: #222526;
+      --bg-panel-alt: #2a2d2f;
+      --bg-nav: #111314;
+      --border-color: #3a3e41;
+      --text-main: #d8d4cf;
+      --text-muted: #9e9689;
+      --link-color: #5ea2de;
+      --link-hover: #82b9ea;
+      --trusted-bg: #223520;
+      --trusted-border: #324f2f;
+      --trusted-text: #8cd18c;
+      --remake-bg: #3b2020;
+      --remake-text: #e08282;
+      --seed-color: #6bc46d;
+      --leech-color: #e06c75;
+      --input-bg: #2b2e30;
+      --code-bg: #2e3235;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid #080808;
+      color: #9d9d9d;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
+    .nav-container {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+      padding: 6px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .brand:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: #9d9d9d;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .search-bar select,
+    .search-bar input {
+      height: 32px;
+      padding: 4px 8px;
+      font-size: 13px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      background-color: var(--input-bg);
+      color: var(--text-main);
+    }
+
+    .search-bar input {
+      width: 220px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      height: 32px;
+      padding: 0 12px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      cursor: pointer;
+      background-color: #337ab7;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      background-color: #286090;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .btn-dark-toggle {
+      background-color: #373b3e;
+      border-color: #4d5256;
+      color: #e0e0e0;
+    }
+
+    .btn-dark-toggle:hover {
+      background-color: #4a4f54;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1170px;
+      margin: 0 auto 40px;
+      padding: 0 15px;
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    .panel-trusted {
+      border-color: var(--trusted-border);
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      background-color: var(--bg-panel-alt);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .panel-trusted .panel-heading {
+      background-color: var(--trusted-bg);
+      border-bottom-color: var(--trusted-border);
+      color: var(--trusted-text);
+    }
+
+    .panel-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .jp-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 3px;
+      background-color: #d9534f;
+      color: #ffffff;
+      vertical-align: middle;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 24px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-bar input {
+        width: 150px;
+      }
+    }
+
+    .meta-row {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+
+    .meta-label {
+      width: 135px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .meta-value {
+      word-break: break-all;
+    }
+
+    .seeders {
+      color: var(--seed-color);
+      font-weight: 700;
+    }
+
+    .leechers {
+      color: var(--leech-color);
+      font-weight: 700;
+    }
+
+    .hash-code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 12px;
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .panel-footer {
+      padding: 10px 15px;
+      background-color: var(--bg-panel-alt);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-success {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+    }
+
+    .btn-success:hover {
+      background-color: #449d44;
+    }
+
+    /* Description Markdown */
+    .description-content h3 {
+      font-size: 15px;
+      margin: 12px 0 6px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+    }
+
+    .description-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .description-content ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .description-content li {
+      margin-bottom: 3px;
+    }
+
+    .info-table {
+      width: 100%;
+      max-width: 540px;
+      border-collapse: collapse;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    .info-table td {
+      border: 1px solid var(--border-color);
+      padding: 6px 10px;
+    }
+
+    .info-table td:first-child {
+      font-weight: 700;
+      background-color: var(--bg-panel-alt);
+      width: 170px;
+    }
+
+    /* File Tree */
+    .file-tree {
+      list-style: none;
+      font-family: Menlo, Monaco, Consolas, monospace;
+      font-size: 12.5px;
+    }
+
+    .file-tree ul {
+      list-style: none;
+      padding-left: 20px;
+      border-left: 1px dashed var(--border-color);
+      margin-left: 6px;
+    }
+
+    .file-tree li {
+      padding: 3px 0;
+    }
+
+    .folder-toggle {
+      cursor: pointer;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      margin-left: 6px;
+    }
+
+    /* Related Browse Table */
+    .torrent-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .torrent-table th,
+    .torrent-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .torrent-table th {
+      background-color: var(--bg-panel-alt);
+      font-weight: 700;
+    }
+
+    .row-trusted {
+      background-color: var(--trusted-bg);
+    }
+
+    .row-remake {
+      background-color: var(--remake-bg);
+    }
+
+    .cat-tag {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 11px;
+      border-radius: 3px;
+      background-color: #5bc0de;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    /* Comments */
+    .comment-item {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comment-item:last-child {
+      border-bottom: none;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background-color: #d9534f;
+      color: #ffffff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .comment-form {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 70px;
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+      background-color: var(--input-bg);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #222222;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#top" class="brand">Nyaa</a>
+        <ul class="nav-links">
+          <li><a href="#browse">Browse</a></li>
+          <li><a href="#upload" onclick="showToast('Upload requires an authenticated account.'); return false;">Upload</a></li>
+          <li><a href="#info" onclick="showToast('Category 6_2: Software - Games'); return false;">Info</a></li>
+          <li><a href="#rss" onclick="showToast('RSS Feed: ?page=rss&c=6_2&q=Mario+Tennis'); return false;">RSS</a></li>
+        </ul>
+      </div>
+
+      <form class="search-bar" onsubmit="filterTable(event)">
+        <select id="filterSelect" aria-label="Filter">
+          <option value="all">No filter</option>
+          <option value="noremake">No remakes</option>
+          <option value="trusted">Trusted only</option>
+        </select>
+        <select id="categorySelect" aria-label="Category">
+          <option value="0_0">All categories</option>
+          <option value="6_0">Software</option>
+          <option value="6_2" selected>Software - Games</option>
+        </select>
+        <input type="text" id="searchInput" value="Mario Tennis Ultra Smash" placeholder="Search..." />
+        <button type="submit" class="btn">Search</button>
+        <button type="button" class="btn btn-dark-toggle" id="themeToggle">Dark Mode</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <!-- Primary Torrent View Panel -->
+    <section class="panel panel-trusted">
+      <div class="panel-heading">
+        <div class="panel-title">
+          [Wii U] マリオテニス ウルトラスマッシュ / Mario Tennis: Ultra Smash [WUP-AVXJ-JPN] [JP]
+          <span class="jp-badge">JPN / NTSC-J</span>
+        </div>
+        <span style="font-size: 12px; font-weight: 700;">Trusted Uploader</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <div class="meta-label">Category:</div>
+            <div class="meta-value"><a href="#browse">Software</a> - <a href="#browse">Games</a></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Date:</div>
+            <div class="meta-value">2016-01-28 00:05 UTC (09:05 JST)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Submitter:</div>
+            <div class="meta-value"><a href="#submitter">NintendoJP_Archive</a></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Seeders:</div>
+            <div class="meta-value seeders">18</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Information:</div>
+            <div class="meta-value">Nintendo Wii U eShop / Retail Dump (WUP-AVXJ)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Leechers:</div>
+            <div class="meta-value leechers">1</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">File size:</div>
+            <div class="meta-value">888.0 MiB (931,135,488 Bytes)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Completed:</div>
+            <div class="meta-value">1,429</div>
+          </div>
+          <div class="meta-row" style="grid-column: 1 / -1;">
+            <div class="meta-label">Info hash:</div>
+            <div class="meta-value">
+              <span class="hash-code" id="infoHash" title="Click to copy">a1b2c3d4e5f60718293a4b5c6d7e8f9012345678</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <a href="#download" class="btn" onclick="showToast('Mockup: .torrent metadata previewed.'); return false;">
+          Download Torrent
+        </a>
+        <a href="#magnet" class="btn btn-success" onclick="showToast('Mockup: Magnet URI copied to clipboard.'); return false;">
+          Magnet
+        </a>
+      </div>
+    </section>
+
+    <!-- Description Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">Description</div>
+      </div>
+      <div class="panel-body description-content">
+        <h3>Release Overview (日本国内版 / Japan Release)</h3>
+        <table class="info-table">
+          <tr>
+            <td>Japanese Title</td>
+            <td>マリオテニス ウルトラスマッシュ</td>
+          </tr>
+          <tr>
+            <td>English Title</td>
+            <td>Mario Tennis: Ultra Smash</td>
+          </tr>
+          <tr>
+            <td>Platform</td>
+            <td>Nintendo Wii U (JP)</td>
+          </tr>
+          <tr>
+            <td>Product / Title Code</td>
+            <td>WUP-AVXJ-JPN / AVXJ (JAN: 4902370531992)</td>
+          </tr>
+          <tr>
+            <td>Release Date (JP)</td>
+            <td>2016-01-28 (January 28, 2016)</td>
+          </tr>
+          <tr>
+            <td>Developer / Publisher</td>
+            <td>Camelot Software Planning / Nintendo</td>
+          </tr>
+          <tr>
+            <td>CERO Rating</td>
+            <td>CERO A (全年齢対象)</td>
+          </tr>
+        </table>
+
+        <h3>Package Notes</h3>
+        <ul>
+          <li>Clean Japanese region package verified against title metadata.</li>
+          <li>Supports Japanese UI, voices, and 1–4 local multiplayer modes (Mega Battle, Classic Tennis, Knockout Challenge).</li>
+          <li>Compatible with hardware backups and Cemu emulator setups.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">File list</div>
+      </div>
+      <div class="panel-body">
+        <ul class="file-tree">
+          <li>
+            <span class="folder-toggle" id="rootFolderToggle">▼ [Wii U] マリオテニス ウルトラスマッシュ [WUP-AVXJ-JPN]</span>
+            <ul id="rootFolderList">
+              <li>📄 00000000.app <span class="file-size">(184.2 MiB)</span></li>
+              <li>📄 00000001.app <span class="file-size">(412.6 MiB)</span></li>
+              <li>📄 00000002.app <span class="file-size">(291.1 MiB)</span></li>
+              <li>📄 title.tmd <span class="file-size">(2.8 KiB)</span></li>
+              <li>📄 title.cert <span class="file-size">(1.8 KiB)</span></li>
+              <li>📄 readme_jp.txt <span class="file-size">(1.1 KiB)</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Related Search Results Panel -->
+    <section class="panel" id="browse">
+      <div class="panel-heading">
+        <div class="panel-title">Related Entries in Software - Games (Japan)</div>
+        <span style="font-size: 12px; color: var(--text-muted);" id="resultCount">Showing 3 results</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="torrent-table" id="torrentTable">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Name</th>
+              <th>Size</th>
+              <th>Date</th>
+              <th class="text-center">S</th>
+              <th class="text-center">L</th>
+              <th class="text-center">D</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-trusted" data-status="trusted">
+              <td><span class="cat-tag">Software - Games</span></td>
+              <td><a href="#top">[Wii U] マリオテニス ウルトラスマッシュ / Mario Tennis: Ultra Smash [WUP-AVXJ-JPN] [JP]</a></td>
+              <td>888.0 MiB</td>
+              <td>2016-01-28 00:05</td>
+              <td class="text-center seeders">18</td>
+              <td class="text-center leechers">1</td>
+              <td class="text-center">1,429</td>
+            </tr>
+            <tr data-status="normal">
+              <td><span class="cat-tag">Software - Games</span></td>
+              <td><a href="#top">[Wii U] マリオテニス ウルトラスマッシュ (Mario Tennis Ultra Smash) [JP] [Loadiine GX2]</a></td>
+              <td>842.5 MiB</td>
+              <td>2016-02-03 14:22</td>
+              <td class="text-center seeders">6</td>
+              <td class="text-center leechers">0</td>
+              <td class="text-center">512</td>
+            </tr>
+            <tr class="row-remake" data-status="remake">
+              <td><span class="cat-tag">Software - Games</span></td>
+              <td><a href="#top">[Wii U] Mario Tennis: Ultra Smash [JPN] [Re-packed ISO]</a></td>
+              <td>1.1 GiB</td>
+              <td>2016-04-11 19:40</td>
+              <td class="text-center seeders">2</td>
+              <td class="text-center leechers">0</td>
+              <td class="text-center">198</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">Comments (<span id="commentCount">2</span>)</div>
+      </div>
+      <div class="panel-body">
+        <div id="commentList">
+          <div class="comment-item">
+            <div class="avatar">TK</div>
+            <div>
+              <div class="comment-meta"><strong>TokyoGamer88</strong> • 2016-01-28 11:30 JST</div>
+              <div>発売日当日のアップロードありがとうございます！動作確認済みです。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="avatar" style="background-color: #337ab7;">CM</div>
+            <div>
+              <div class="comment-meta"><strong>CamelotFan</strong> • 2016-02-14 18:05 JST</div>
+              <div>Clean WUP-AVXJ-JPN dump, checksums match retail JP release. Still seeding!</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm">
+          <textarea id="commentInput" placeholder="Leave a comment..." required></textarea>
+          <div>
+            <button type="submit" class="btn">Post Comment</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Dark mode toggle
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener("click", () => {
+      const root = document.documentElement;
+      const isDark = root.getAttribute("data-theme") === "dark";
+      root.setAttribute("data-theme", isDark ? "light" : "dark");
+      themeToggle.textContent = isDark ? "Dark Mode" : "Light Mode";
+    });
+
+    // Toast helper
+    const toastEl = document.getElementById("toast");
+    let toastTimer;
+    function showToast(message) {
+      toastEl.textContent = message;
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2600);
+    }
+
+    // Copy Info Hash on click
+    document.getElementById("infoHash").addEventListener("click", function () {
+      const hash = this.textContent.trim();
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(hash).catch(() => {});
+      }
+      showToast("Info hash copied: " + hash);
+    });
+
+    // Collapsible file list tree
+    const folderToggle = document.getElementById("rootFolderToggle");
+    const folderList = document.getElementById("rootFolderList");
+    folderToggle.addEventListener("click", () => {
+      const isHidden = folderList.style.display === "none";
+      folderList.style.display = isHidden ? "block" : "none";
+      folderToggle.textContent = folderToggle.textContent.replace(
+        isHidden ? "▶" : "▼",
+        isHidden ? "▼" : "▶"
+      );
+    });
+
+    // Interactive search and filter for browse table
+    function filterTable(event) {
+      if (event) event.preventDefault();
+      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+      const filter = document.getElementById("filterSelect").value;
+      const rows = document.querySelectorAll("#torrentTable tbody tr");
+      let visibleCount = 0;
+
+      rows.forEach((row) => {
+        const text = row.textContent.toLowerCase();
+        const status = row.getAttribute("data-status");
+        const matchesQuery = !query || text.includes(query);
+        const matchesFilter =
+          filter === "all" ||
+          (filter === "noremake" && status !== "remake") ||
+          (filter === "trusted" && status === "trusted");
+
+        if (matchesQuery && matchesFilter) {
+          row.style.display = "";
+          visibleCount++;
+        } else {
+          row.style.display = "none";
+        }
+      });
+
+      document.getElementById("resultCount").textContent =
+        "Showing " + visibleCount + (visibleCount === 1 ? " result" : " results");
+    }
+
+    // Interactive comments
+    document.getElementById("commentForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = document.getElementById("commentInput");
+      const text = input.value.trim();
+      if (!text) return;
+
+      const commentList = document.getElementById("commentList");
+      const item = document.createElement("div");
+      item.className = "comment-item";
+
+      const avatar = document.createElement("div");
+      avatar.className = "avatar";
+      avatar.style.backgroundColor = "#5cb85c";
+      avatar.textContent = "GU";
+
+      const content = document.createElement("div");
+      const meta = document.createElement("div");
+      meta.className = "comment-meta";
+      meta.innerHTML = "<strong>GuestUser</strong> • Just now";
+
+      const body = document.createElement("div");
+      body.textContent = text;
+
+      content.appendChild(meta);
+      content.appendChild(body);
+      item.appendChild(avatar);
+      item.appendChild(content);
+      commentList.appendChild(item);
+
+      const countEl = document.getElementById("commentCount");
+      countEl.textContent = String(Number(countEl.textContent) + 1);
+      input.value = "";
+      showToast("Comment posted.");
+    });
+  </script>
+</body>
+</html>
