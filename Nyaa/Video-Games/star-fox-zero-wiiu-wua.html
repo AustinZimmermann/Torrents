@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スターフォックス ゼロ / Star Fox Zero (Wii U) [JPN] [WUA] :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --nav-bg: #222222;
+      --nav-border: #080808;
+      --nav-text: #9d9d9d;
+      --nav-hover: #ffffff;
+      --panel-bg: #ffffff;
+      --panel-border: #dddddd;
+      --panel-heading-bg: #f5f5f5;
+      --panel-success-bg: #dff0d8;
+      --panel-success-border: #d6e9c6;
+      --panel-success-text: #3c763d;
+      --panel-danger-bg: #f2dede;
+      --input-bg: #ffffff;
+      --input-border: #cccccc;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --code-bg: #f5f5f5;
+      --table-stripe: #f9f9f9;
+      --table-hover: #f0f4f8;
+      --seed-color: #008000;
+      --leech-color: #d9534f;
+    }
+
+    body.dark {
+      --bg-body: #191919;
+      --text-main: #cccccc;
+      --text-muted: #888888;
+      --nav-bg: #121212;
+      --nav-border: #2b2b2b;
+      --nav-text: #aaaaaa;
+      --nav-hover: #ffffff;
+      --panel-bg: #222222;
+      --panel-border: #333333;
+      --panel-heading-bg: #2a2a2a;
+      --panel-success-bg: #233827;
+      --panel-success-border: #2f4d35;
+      --panel-success-text: #9cd4a0;
+      --panel-danger-bg: #3b2323;
+      --input-bg: #2b2b2b;
+      --input-border: #444444;
+      --link-color: #5ea3de;
+      --link-hover: #8bc0ed;
+      --code-bg: #2c2c2c;
+      --table-stripe: #202020;
+      --table-hover: #2d2d2d;
+      --seed-color: #5cb85c;
+      --leech-color: #e06c68;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--nav-bg);
+      border-bottom: 1px solid var(--nav-border);
+      min-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .navbar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .navbar-brand {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 12px 15px 12px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .navbar-brand:hover {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      display: block;
+      padding: 15px 12px;
+      color: var(--nav-text);
+      font-size: 13px;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: var(--nav-hover);
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Search Bar */
+    .search-form {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 6px 0;
+    }
+
+    .form-control {
+      height: 32px;
+      padding: 4px 10px;
+      font-size: 13px;
+      color: var(--text-main);
+      background-color: var(--input-bg);
+      border: 1px solid var(--input-border);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: #66afe9;
+    }
+
+    .search-select-filter {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+    }
+
+    .search-select-cat {
+      border-right: none;
+    }
+
+    .search-input {
+      width: 220px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      height: 32px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background-color: #337ab7;
+      border-color: #2e6da4;
+    }
+
+    .btn-primary:hover {
+      background-color: #286090;
+    }
+
+    .btn-search {
+      border-radius: 0 4px 4px 0;
+    }
+
+    .btn-default {
+      color: var(--text-main);
+      background-color: var(--panel-heading-bg);
+      border-color: var(--panel-border);
+    }
+
+    .btn-default:hover {
+      filter: brightness(0.95);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--nav-text);
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .panel-success {
+      border-color: var(--panel-success-border);
+    }
+
+    .panel-heading {
+      padding: 10px 15px;
+      background-color: var(--panel-heading-bg);
+      border-bottom: 1px solid var(--panel-border);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .panel-success > .panel-heading {
+      background-color: var(--panel-success-bg);
+      border-color: var(--panel-success-border);
+      color: var(--panel-success-text);
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    .panel-footer {
+      padding: 10px 15px;
+      background-color: var(--panel-heading-bg);
+      border-top: 1px solid var(--panel-border);
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-input {
+        width: 140px;
+      }
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: baseline;
+      padding: 3px 0;
+      border-bottom: 1px dashed rgba(128, 128, 128, 0.15);
+    }
+
+    .meta-label {
+      width: 145px;
+      flex-shrink: 0;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .meta-value {
+      flex: 1;
+      word-break: break-all;
+    }
+
+    .seeders {
+      color: var(--seed-color);
+      font-weight: 700;
+    }
+
+    .leechers {
+      color: var(--leech-color);
+      font-weight: 700;
+    }
+
+    .trusted-user {
+      color: var(--seed-color);
+      font-weight: 600;
+    }
+
+    kbd.hash {
+      background-color: var(--code-bg);
+      color: var(--text-main);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 12px;
+      border: 1px solid var(--panel-border);
+    }
+
+    /* Description Markdown Area */
+    .torrent-description h4 {
+      margin: 0 0 10px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--panel-border);
+      font-size: 15px;
+    }
+
+    .torrent-description ul {
+      margin: 0 0 14px 0;
+      padding-left: 22px;
+    }
+
+    .torrent-description li {
+      margin-bottom: 4px;
+    }
+
+    .code-block {
+      background-color: var(--code-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 12.5px;
+      overflow-x: auto;
+      margin: 8px 0 0 0;
+    }
+
+    /* File Tree */
+    .file-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .file-list li {
+      padding: 5px 8px;
+      border-bottom: 1px solid var(--panel-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .file-list li:last-child {
+      border-bottom: none;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-left: 12px;
+      white-space: nowrap;
+    }
+
+    /* Comments */
+    .comment-item {
+      display: flex;
+      gap: 14px;
+      padding: 12px;
+      border: 1px solid var(--panel-border);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      background-color: var(--panel-bg);
+    }
+
+    .comment-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background-color: var(--panel-heading-bg);
+      border: 1px solid var(--panel-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .comment-body {
+      flex: 1;
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 75px;
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--input-border);
+      background-color: var(--input-bg);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+      margin-bottom: 8px;
+      resize: vertical;
+    }
+
+    /* Search Results Table View */
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table.torrent-list {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--panel-border);
+      font-size: 13px;
+    }
+
+    table.torrent-list th,
+    table.torrent-list td {
+      padding: 8px 10px;
+      border: 1px solid var(--panel-border);
+      vertical-align: middle;
+    }
+
+    table.torrent-list th {
+      background-color: var(--panel-heading-bg);
+      text-align: left;
+      font-weight: 700;
+    }
+
+    table.torrent-list tr.success {
+      background-color: var(--panel-success-bg);
+    }
+
+    table.torrent-list tr:not(.success):nth-child(even) {
+      background-color: var(--table-stripe);
+    }
+
+    table.torrent-list tbody tr:hover {
+      background-color: var(--table-hover);
+    }
+
+    .cat-badge {
+      display: inline-block;
+      padding: 3px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 3px;
+      background-color: #5bc0de;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #222222;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      border-left: 4px solid #5cb85c;
+      font-size: 13px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--panel-border);
+      margin-top: 30px;
+      padding: 16px 0 28px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <div class="nav-left">
+        <a href="#view" class="navbar-brand" id="brandLink">Nyaa</a>
+        <ul class="nav-links">
+          <li><a href="#results" id="navBrowse">一覧</a></li>
+          <li><a href="#upload" onclick="showToast('ゲストユーザーはアップロードできません'); return false;">アップロード</a></li>
+          <li><a href="#rules" onclick="showToast('ルール・ヘルプ (ja-JP)'); return false;">情報</a></li>
+          <li><a href="#rss" onclick="showToast('RSSフィード URL をコピーしました'); return false;">RSS</a></li>
+        </ul>
+      </div>
+
+      <form class="search-form" id="searchForm">
+        <select class="form-control search-select-filter" id="filterSelect" aria-label="フィルター">
+          <option value="0">フィルターなし</option>
+          <option value="1">リメイクなし</option>
+          <option value="2" selected>信頼済みのみ</option>
+        </select>
+        <select class="form-control search-select-cat" id="categorySelect" aria-label="カテゴリー">
+          <option value="0_0">すべてのカテゴリー</option>
+          <option value="1_0">アニメ</option>
+          <option value="2_0">オーディオ</option>
+          <option value="3_0">書籍</option>
+          <option value="4_0">実写</option>
+          <option value="5_0">画像</option>
+          <option value="6_0">ソフトウェア</option>
+          <option value="6_2" selected>ソフトウェア - ゲーム</option>
+        </select>
+        <input
+          type="text"
+          class="form-control search-input"
+          id="searchInput"
+          value="Star Fox Zero Wii U WUA"
+          placeholder="検索..."
+        />
+        <button type="submit" class="btn btn-primary btn-search">🔍 検索</button>
+      </form>
+
+      <div class="nav-right">
+        <span>🌐 日本語 (ja-JP)</span>
+        <button type="button" class="btn btn-default" id="darkModeBtn" title="ダークモード切替">🌓 ダーク</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- VIEW 1: Torrent Details Page -->
+    <div id="torrentDetailView">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">スターフォックス ゼロ / Star Fox Zero (Wii U) [JPN] [WUA] [Cemu]</h3>
+          <button type="button" class="btn btn-default" id="backToSearchBtn">← 検索結果一覧へ</button>
+        </div>
+
+        <div class="panel-body">
+          <div class="meta-grid">
+            <div class="meta-row">
+              <div class="meta-label">カテゴリー:</div>
+              <div class="meta-value">
+                <a href="#results" class="switch-to-results">ソフトウェア</a> -
+                <a href="#results" class="switch-to-results">ゲーム</a>
+              </div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">シード:</div>
+              <div class="meta-value"><span class="seeders">42</span></div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">投稿者:</div>
+              <div class="meta-value">
+                <span class="trusted-user" title="信頼済みアップローダー">WiiU_Archive_JP ✔</span>
+              </div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">リーチ:</div>
+              <div class="meta-value"><span class="leechers">3</span></div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">情報:</div>
+              <div class="meta-value">
+                <a href="https://www.nintendo.co.jp/wiiu/afxj/" target="_blank" rel="noopener noreferrer">
+                  https://www.nintendo.co.jp/wiiu/afxj/
+                </a>
+              </div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">完了数:</div>
+              <div class="meta-value">1,284</div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">ファイルサイズ:</div>
+              <div class="meta-value">4.8 GiB</div>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta-label">投稿日時:</div>
+              <div class="meta-value">2026-05-14 18:22 UTC</div>
+            </div>
+
+            <div class="meta-row" style="grid-column: 1 / -1;">
+              <div class="meta-label">ハッシュ:</div>
+              <div class="meta-value">
+                <kbd class="hash" id="infoHash">0000000000000000000000000000000000000000</kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-footer">
+          <a href="#download-torrent" id="downloadTorrentBtn">⬇ トレントをダウンロード</a>
+          <span>|</span>
+          <a href="#magnet-link" id="copyMagnetBtn">🧲 マグネットリンク</a>
+        </div>
+      </div>
+
+      <!-- Description Panel -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">説明</h3>
+        </div>
+        <div class="panel-body torrent-description">
+          <h4>スターフォックス ゼロ (Star Fox Zero) – Nintendo Wii U [WUA形式]</h4>
+          <ul>
+            <li><strong>タイトルID:</strong> 00050000-101B0400 (WUP-P-AFXJ / 日本版)</li>
+            <li><strong>形式:</strong> <code>.wua</code> (Wii U Archive – ゲーム本編 v1.00 + 更新データ v1.01 統合アーカイブ)</li>
+            <li><strong>対応エミュレータ:</strong> Cemu 2.0 以降（1ファイルでそのまま起動可能）</li>
+            <li><strong>言語:</strong> 日本語（音声・字幕・UI）</li>
+            <li><strong>備考:</strong> Wii U GamePad 画面表示およびジャイロエイム操作に対応。</li>
+          </ul>
+          <pre class="code-block">ファイル名 : Star Fox Zero [WUP-P-AFXJ][JPN].wua
+サイズ     : 5,153,960,755 bytes (4.8 GiB)
+SHA-256    : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (検証用ダミー)</pre>
+        </div>
+      </div>
+
+      <!-- File List Panel -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">ファイル一覧 (3)</h3>
+        </div>
+        <div class="panel-body" style="padding: 6px 15px;">
+          <ul class="file-list">
+            <li>
+              <span>📦 Star Fox Zero [WUP-P-AFXJ][JPN].wua</span>
+              <span class="file-size">4.8 GiB</span>
+            </li>
+            <li>
+              <span>📄 checksums.sha256</span>
+              <span class="file-size">128 B</span>
+            </li>
+            <li>
+              <span>📄 readme_jp.txt</span>
+              <span class="file-size">1.4 KiB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Comments Panel -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="commentCountTitle">コメント - 2</h3>
+        </div>
+        <div class="panel-body">
+          <div id="commentList">
+            <div class="comment-item">
+              <div class="comment-avatar">🦊</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <strong>Arwing_Pilot</strong>
+                  <span>2026-05-15 09:14 UTC</span>
+                </div>
+                <div>Cemu 2.6 で問題なく起動しました。WUA形式なのでアップデート適用済みで助かります！</div>
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-avatar">🎮</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <strong>Corneria_Tech</strong>
+                  <span>2026-05-16 21:40 UTC</span>
+                </div>
+                <div>ハッシュ一致確認済み。シードありがとうございます。</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="comment-form" id="commentForm">
+            <label for="commentInput" style="display:block; font-weight:700; margin-bottom:6px;">
+              コメントを投稿する
+            </label>
+            <textarea id="commentInput" placeholder="コメントを入力してください..."></textarea>
+            <button type="submit" class="btn btn-primary">送信</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 2: Search Results Table View -->
+    <div id="searchResultsView" class="hidden">
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="resultsHeading">検索結果: “Star Fox Zero Wii U WUA” (3 件)</h3>
+          <button type="button" class="btn btn-default" id="backToDetailBtn">詳細表示に戻る →</button>
+        </div>
+        <div class="table-responsive">
+          <table class="torrent-list">
+            <thead>
+              <tr>
+                <th style="width: 140px;">カテゴリー</th>
+                <th>名前</th>
+                <th class="text-center" style="width: 85px;">リンク</th>
+                <th class="text-center" style="width: 90px;">サイズ</th>
+                <th class="text-center" style="width: 145px;">日時</th>
+                <th class="text-center" style="width: 60px;">シード</th>
+                <th class="text-center" style="width: 60px;">リーチ</th>
+                <th class="text-center" style="width: 70px;">完了数</th>
+              </tr>
+            </thead>
+            <tbody id="resultsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      ダークモード: <a href="#dark" id="footerDarkToggle">切り替え</a> :: ロケール: <strong>ja-JP</strong>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const torrentEntries = [
+      {
+        id: 1,
+        trusted: true,
+        category: "ソフトウェア - ゲーム",
+        title: "スターフォックス ゼロ / Star Fox Zero (Wii U) [JPN] [WUA] [Cemu]",
+        size: "4.8 GiB",
+        date: "2026-05-14 18:22",
+        seeders: 42,
+        leechers: 3,
+        completed: 1284
+      },
+      {
+        id: 2,
+        trusted: true,
+        category: "ソフトウェア - ゲーム",
+        title: "Star Fox Zero + Star Fox Guard (Wii U) [USA] [WUA] [Cemu 2.0+]",
+        size: "6.9 GiB",
+        date: "2026-03-02 11:05",
+        seeders: 29,
+        leechers: 1,
+        completed: 912
+      },
+      {
+        id: 3,
+        trusted: false,
+        category: "ソフトウェア - ゲーム",
+        title: "[Wii U] スターフォックス ゼロ (Star Fox Zero) [JPN] [Loadiine GX2]",
+        size: "5.2 GiB",
+        date: "2025-11-19 04:48",
+        seeders: 7,
+        leechers: 0,
+        completed: 430
+      }
+    ];
+
+    const detailView = document.getElementById("torrentDetailView");
+    const resultsView = document.getElementById("searchResultsView");
+    const resultsTableBody = document.getElementById("resultsTableBody");
+    const searchInput = document.getElementById("searchInput");
+    const filterSelect = document.getElementById("filterSelect");
+    const resultsHeading = document.getElementById("resultsHeading");
+    const toastEl = document.getElementById("toast");
+
+    let toastTimer = null;
+    function showToast(message) {
+      toastEl.textContent = message;
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastEl.classList.remove("show");
+      }, 2600);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      document.getElementById("darkModeBtn").textContent = isDark ? "☀️ ライト" : "🌓 ダーク";
+    }
+
+    document.getElementById("darkModeBtn").addEventListener("click", toggleDarkMode);
+    document.getElementById("footerDarkToggle").addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleDarkMode();
+    });
+
+    function showDetailView() {
+      resultsView.classList.add("hidden");
+      detailView.classList.remove("hidden");
+    }
+
+    function showResultsView() {
+      const query = searchInput.value.trim();
+      const trustedOnly = filterSelect.value === "2";
+
+      const filtered = torrentEntries.filter((item) => {
+        if (trustedOnly && !item.trusted) return false;
+        if (!query) return true;
+        const terms = query.toLowerCase().split(/\s+/);
+        const hay = item.title.toLowerCase();
+        return terms.every((t) => hay.includes(t));
+      });
+
+      resultsHeading.textContent = `検索結果: "${query || "すべて"}" (${filtered.length} 件)`;
+      resultsTableBody.innerHTML = "";
+
+      if (filtered.length === 0) {
+        resultsTableBody.innerHTML = `<tr><td colspan="8" class="text-center">該当するトレントが見つかりませんでした。</td></tr>`;
+      } else {
+        filtered.forEach((item) => {
+          const tr = document.createElement("tr");
+          if (item.trusted) tr.classList.add("success");
+          tr.innerHTML = `
+            <td><span class="cat-badge">${item.category}</span></td>
+            <td><a href="#view" class="open-detail">${item.title}</a></td>
+            <td class="text-center">
+              <a href="#dl" title="トレントをダウンロード" onclick="showToast('ダミー .torrent をダウンロードしました'); return false;">⬇</a>
+              &nbsp;
+              <a href="#mag" title="マグネットリンク" onclick="copyMagnet(); return false;">🧲</a>
+            </td>
+            <td class="text-center">${item.size}</td>
+            <td class="text-center">${item.date}</td>
+            <td class="text-center seeders">${item.seeders}</td>
+            <td class="text-center leechers">${item.leechers}</td>
+            <td class="text-center">${item.completed}</td>
+          `;
+          tr.querySelector(".open-detail").addEventListener("click", (e) => {
+            e.preventDefault();
+            showDetailView();
+          });
+          resultsTableBody.appendChild(tr);
+        });
+      }
+
+      detailView.classList.add("hidden");
+      resultsView.classList.remove("hidden");
+    }
+
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      showResultsView();
+    });
+
+    document.getElementById("backToSearchBtn").addEventListener("click", showResultsView);
+    document.getElementById("navBrowse").addEventListener("click", (e) => {
+      e.preventDefault();
+      showResultsView();
+    });
+
+    document.querySelectorAll(".switch-to-results").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        showResultsView();
+      });
+    });
+
+    document.getElementById("backToDetailBtn").addEventListener("click", showDetailView);
+    document.getElementById("brandLink").addEventListener("click", (e) => {
+      e.preventDefault();
+      showDetailView();
+    });
+
+    function copyMagnet() {
+      const dummyMagnet =
+        "magnet:?xt=urn:btih:0000000000000000000000000000000000000000&dn=Star+Fox+Zero+%5BWUP-P-AFXJ%5D%5BJPN%5D.wua";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(dummyMagnet).catch(() => {});
+      }
+      showToast("マグネットリンクをクリップボードにコピーしました");
+    }
+
+    document.getElementById("copyMagnetBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      copyMagnet();
+    });
+
+    document.getElementById("downloadTorrentBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      showToast("ダミー .torrent ファイルのダウンロードを開始しました");
+    });
+
+    // Live comment submission
+    const commentForm = document.getElementById("commentForm");
+    const commentList = document.getElementById("commentList");
+    const commentCountTitle = document.getElementById("commentCountTitle");
+    let commentCount = 2;
+
+    commentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("commentInput");
+      const text = input.value.trim();
+      if (!text) return;
+
+      commentCount += 1;
+      commentCountTitle.textContent = `コメント - ${commentCount}`;
+
+      const now = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+      const item = document.createElement("div");
+      item.className = "comment-item";
+      item.innerHTML = `
+        <div class="comment-avatar">👤</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            <strong>ゲスト (Guest)</strong>
+            <span>${now}</span>
+          </div>
+          <div></div>
+        </div>
+      `;
+      item.querySelector(".comment-body div:last-child").textContent = text;
+      commentList.appendChild(item);
+
+      input.value = "";
+      showToast("コメントを投稿しました");
+    });
+  </script>
+</body>
+</html>
