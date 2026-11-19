@@ -1,4 +1,4 @@
-# 
+# [KansaiRemux] スター・ウォーズ エピソード1／ファントム・メナス / Star Wars: Episode I – The Phantom Menace (1999) [JPN Blu-ray 1080p AVC DTS-HD MA Dual Audio] - Nyaa.si
 
 ## Nyaa.si `JP`
 
@@ -22,7 +22,7 @@
 
 #### 説明 (Description)
 
-**スター・ウォーズ エピソード1／ファントム・メナス (1999)**
+**スター・ウォーズ エピソード1／ファントム・メナス (1999)**  
 *Star Wars: Episode I – The Phantom Menace*
 
 日本国内正規品 Blu-ray（20世紀フォックス ホーム エンターテイメント ジャパン）より無劣化抽出した 1080p Remux 版です。映像・音声の再エンコードは一切行っておりません。
