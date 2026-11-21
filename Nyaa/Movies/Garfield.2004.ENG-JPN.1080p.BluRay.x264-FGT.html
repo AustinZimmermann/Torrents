@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ガーフィールド ザ・ムービー / Garfield: The Movie (2004) [Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT] :: Nyaa</title>
+  <style>
+    :root {
+      --bg-body: #f5f5f5;
+      --bg-surface: #ffffff;
+      --bg-panel-head: #f0f0f0;
+      --bg-code: #f8f9fa;
+      --bg-nav: #222222;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --text-nav: #9d9d9d;
+      --border-color: #dddddd;
+      --link-color: #337ab7;
+      --link-hover: #23527c;
+      --seed-color: #2e8b57;
+      --leech-color: #d9534f;
+      --trusted-bg: #dff0d8;
+      --trusted-border: #d6e9c6;
+      --trusted-text: #3c763d;
+      --garfield-orange: #ff7b1c;
+      --garfield-dark: #2c1d11;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #191a1c;
+      --bg-surface: #222426;
+      --bg-panel-head: #2b2e31;
+      --bg-code: #18191b;
+      --bg-nav: #111213;
+      --text-main: #dcdcdc;
+      --text-muted: #999999;
+      --text-nav: #b0b0b0;
+      --border-color: #383b3e;
+      --link-color: #5ca4e6;
+      --link-hover: #82bcf0;
+      --seed-color: #4cc38a;
+      --leech-color: #ff6b6b;
+      --trusted-bg: #1e3325;
+      --trusted-border: #2c4a36;
+      --trusted-text: #75d492;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid #080808;
+      padding: 0 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 50px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .jp-badge {
+      background: #bc002d;
+      color: #fff;
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 14px;
+    }
+
+    .nav-links a {
+      color: var(--text-nav);
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+    }
+
+    .search-group {
+      display: flex;
+    }
+
+    .search-group select,
+    .search-group input,
+    .search-group button {
+      height: 30px;
+      border: 1px solid #444;
+      background: #2f3133;
+      color: #eee;
+      font-size: 12px;
+      padding: 0 8px;
+    }
+
+    .search-group select {
+      border-radius: 3px 0 0 3px;
+      border-right: none;
+    }
+
+    .search-group input {
+      width: 190px;
+    }
+
+    .search-group button {
+      border-radius: 0 3px 3px 0;
+      background: #337ab7;
+      border-color: #2e6da4;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-control {
+      height: 30px;
+      padding: 0 10px;
+      font-size: 12px;
+      border-radius: 3px;
+      border: 1px solid #444;
+      background: #2f3133;
+      color: #eee;
+      cursor: pointer;
+    }
+
+    .btn-control:hover {
+      background: #3e4144;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1140px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    /* Panels */
+    .panel {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    .panel-trusted {
+      border-color: var(--trusted-border);
+    }
+
+    .panel-heading {
+      background-color: var(--bg-panel-head);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .panel-trusted > .panel-heading {
+      background-color: var(--trusted-bg);
+      border-color: var(--trusted-border);
+      color: var(--trusted-text);
+    }
+
+    .panel-title {
+      font-size: 16px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+
+    /* Metadata Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 24px;
+    }
+
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-group input {
+        width: 120px;
+      }
+    }
+
+    .meta-row {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .meta-label {
+      width: 145px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .meta-value {
+      flex: 1;
+      word-break: break-all;
+    }
+
+    .seeders {
+      color: var(--seed-color);
+      font-weight: 700;
+    }
+
+    .leechers {
+      color: var(--leech-color);
+      font-weight: 700;
+    }
+
+    .hash-box {
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 12px;
+      background: var(--bg-code);
+      padding: 2px 6px;
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+    }
+
+    /* Action Bar */
+    .panel-footer {
+      background-color: var(--bg-panel-head);
+      border-top: 1px solid var(--border-color);
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #286090;
+    }
+
+    .btn-success {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      color: #ffffff;
+    }
+
+    .btn-success:hover {
+      background-color: #449d44;
+    }
+
+    .btn-default {
+      background-color: var(--bg-surface);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-default:hover {
+      background-color: var(--bg-panel-head);
+    }
+
+    /* Description & Poster Card */
+    .release-showcase {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .poster-card {
+      width: 210px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid var(--garfield-orange);
+      background: linear-gradient(145deg, #ff9636 0%, #ff6a00 100%);
+      color: #fff;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .poster-art {
+      padding: 16px 12px 10px;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffb347, #e65c00);
+    }
+
+    .poster-caption {
+      background: var(--garfield-dark);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .poster-caption h3 {
+      font-size: 14px;
+      color: #ffb84d;
+      margin-bottom: 2px;
+    }
+
+    .poster-caption p {
+      font-size: 11px;
+      color: #e0d6cc;
+    }
+
+    .specs-summary {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 14px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: var(--bg-code);
+      border: 1px solid var(--border-color);
+    }
+
+    .tag-audio {
+      border-color: #337ab7;
+      color: var(--link-color);
+    }
+
+    .tag-sub {
+      border-color: #5cb85c;
+      color: var(--seed-color);
+    }
+
+    .mediainfo-pre {
+      background-color: var(--bg-code);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 12px;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    /* File Tree */
+    .file-tree {
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .file-tree ul {
+      list-style: none;
+      padding-left: 22px;
+      border-left: 1px dashed var(--border-color);
+      margin-left: 7px;
+    }
+
+    .file-item {
+      padding: 4px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .folder-toggle {
+      cursor: pointer;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    .file-size {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-family: monospace;
+    }
+
+    /* Comments */
+    .comment-card {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      background: var(--bg-code);
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+    }
+
+    .comment-author {
+      font-weight: 700;
+      color: var(--link-color);
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      min-height: 75px;
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background: var(--bg-surface);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+      margin-bottom: 8px;
+      resize: vertical;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      border-left: 4px solid var(--garfield-orange);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#top" class="brand">
+          Nyaa <span class="jp-badge">JP • 東京</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#upload" data-i18n="nav_upload">アップロード</a></li>
+          <li><a href="#info" data-i18n="nav_info">情報</a></li>
+          <li><a href="#rules" data-i18n="nav_rules">規約</a></li>
+          <li><a href="#rss">RSS</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form class="search-group" id="searchForm">
+          <select aria-label="Category">
+            <option value="all" data-i18n="cat_all">全カテゴリー</option>
+            <option value="4_1" selected data-i18n="cat_live">実写 - 英語/日本語翻訳</option>
+            <option value="1_2">アニメ - 英語翻訳</option>
+          </select>
+          <input type="text" id="searchInput" value="Garfield 2004 1080p" aria-label="Search" />
+          <button type="submit" data-i18n="btn_search">検索</button>
+        </form>
+        <button class="btn-control" id="langToggle" title="Switch UI Language">EN / 日本語</button>
+        <button class="btn-control" id="themeToggle" title="Toggle Dark Mode">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container" id="top">
+    <!-- Primary Torrent Info Panel -->
+    <section class="panel panel-trusted">
+      <div class="panel-heading">
+        <h1 class="panel-title">
+          ガーフィールド ザ・ムービー / Garfield: The Movie (2004) [Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT]
+        </h1>
+        <span style="font-size: 12px; font-weight: 700;">✔ Trusted (FGT-JP)</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="meta-grid">
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_category">カテゴリー:</div>
+            <div class="meta-value"><a href="#cat">Live Action - English-translated (実写映画)</a></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_date">投稿日時:</div>
+            <div class="meta-value">2026-11-20 22:34 JST (日本標準時)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_submitter">投稿者:</div>
+            <div class="meta-value"><a href="#user">FGT_Japan_Archive</a></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_seeders">シーダー:</div>
+            <div class="meta-value"><span class="seeders" id="seedCount">48</span></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_info">作品情報:</div>
+            <div class="meta-value">
+              <a href="#imdb">IMDb: tt0356634</a> | <a href="#eiga">映画.com: ガーフィールド (2004)</a>
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_leechers">リーチャー:</div>
+            <div class="meta-value"><span class="leechers" id="leechCount">4</span></div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_size">ファイルサイズ:</div>
+            <div class="meta-value">8.42 GiB (9,040,906,240 Bytes)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label" data-i18n="lbl_completed">完了数:</div>
+            <div class="meta-value" id="completedCount">1,429</div>
+          </div>
+          <div class="meta-row" style="grid-column: 1 / -1;">
+            <div class="meta-label">Info Hash:</div>
+            <div class="meta-value">
+              <span class="hash-box" id="infoHash">9f4b2c8e1d7a6053c8b2e4f190a7d6c5b4e3f2a1</span>
+              <button class="btn btn-default" style="padding: 2px 8px; font-size: 11px; margin-left: 6px;" id="copyHashBtn" data-i18n="btn_copy">コピー</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <div class="btn-group">
+          <button class="btn btn-primary" id="downloadTorrentBtn">
+            ⬇ <span data-i18n="btn_torrent">Torrent ダウンロード</span>
+          </button>
+          <button class="btn btn-success" id="magnetBtn">
+            🧲 <span data-i18n="btn_magnet">マグネットリンク</span>
+          </button>
+          <button class="btn btn-default" id="refreshSwarmBtn">
+            🔄 <span data-i18n="btn_refresh">ピア状況更新</span>
+          </button>
+        </div>
+        <span style="font-size: 12px; color: var(--text-muted);">Region: JP (Tokyo Edge Node) • Dual Audio BD</span>
+      </div>
+    </section>
+
+    <!-- Description & Technical MediaInfo Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title" data-i18n="sec_desc">リリース詳細 / MediaInfo</h2>
+      </div>
+      <div class="panel-body">
+        <div class="release-showcase">
+          <!-- Custom SVG Artwork Card (No HTML Canvas) -->
+          <div class="poster-card">
+            <div class="poster-art">
+              <svg width="110" height="100" viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg" aria-label="Garfield Silhouette">
+                <!-- Ears -->
+                <polygon points="22,42 16,10 46,28" fill="#ff7b1c" stroke="#2c1d11" stroke-width="4" stroke-linejoin="round"/>
+                <polygon points="98,42 104,10 74,28" fill="#ff7b1c" stroke="#2c1d11" stroke-width="4" stroke-linejoin="round"/>
+                <!-- Head -->
+                <ellipse cx="60" cy="60" rx="44" ry="36" fill="#ff8c24" stroke="#2c1d11" stroke-width="4"/>
+                <!-- Stripes -->
+                <path d="M54,25 L60,36 L66,25" fill="none" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M18,56 L30,58 M19,66 L31,65" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M102,56 L90,58 M101,66 L89,65" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round"/>
+                <!-- Lazy Half-Closed Eyes -->
+                <circle cx="46" cy="52" r="13" fill="#ffffff" stroke="#2c1d11" stroke-width="3"/>
+                <circle cx="74" cy="52" r="13" fill="#ffffff" stroke="#2c1d11" stroke-width="3"/>
+                <circle cx="48" cy="54" r="4" fill="#2c1d11"/>
+                <circle cx="72" cy="54" r="4" fill="#2c1d11"/>
+                <!-- Heavy Eyelids -->
+                <path d="M33,49 Q46,53 59,49 L59,41 Q46,37 33,41 Z" fill="#ff7b1c" stroke="#2c1d11" stroke-width="2.5"/>
+                <path d="M61,49 Q74,53 87,49 L87,41 Q74,37 61,41 Z" fill="#ff7b1c" stroke="#2c1d11" stroke-width="2.5"/>
+                <!-- Muzzle & Nose -->
+                <ellipse cx="49" cy="70" rx="12" ry="9" fill="#ffd27d" stroke="#2c1d11" stroke-width="2.5"/>
+                <ellipse cx="71" cy="70" rx="12" ry="9" fill="#ffd27d" stroke="#2c1d11" stroke-width="2.5"/>
+                <ellipse cx="60" cy="63" rx="6" ry="4" fill="#ff6b8b" stroke="#2c1d11" stroke-width="2"/>
+                <path d="M44,76 Q60,84 76,76" fill="none" stroke="#2c1d11" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="poster-caption">
+              <h3>ガーフィールド ザ・ムービー</h3>
+              <p>GARFIELD: THE MOVIE (2004)<br/>1080p BluRay x264-FGT</p>
+            </div>
+          </div>
+
+          <div class="specs-summary">
+            <p style="margin-bottom: 8px;">
+              <strong>ガーフィールド ザ・ムービー (Garfield: The Movie, 2004)</strong> – 日本国内向け Blu-ray リマスター音源（日本語吹替 5.1ch DTS）および英語オリジナル（5.1ch DTS-HD Master Audio）を収録したデュアルオーディオ版です。
+            </p>
+            <div class="tag-list">
+              <span class="tag">1080p BluRay x264</span>
+              <span class="tag tag-audio">Audio #1: English 5.1 DTS-HD Master Audio</span>
+              <span class="tag tag-audio">Audio #2: Japanese 5.1 DTS (日本語吹替)</span>
+              <span class="tag tag-sub">Sub #1: Japanese (日本語字幕)</span>
+              <span class="tag tag-sub">Sub #2: English SDH</span>
+            </div>
+            <pre class="mediainfo-pre" id="mediainfoBlock">RELEASE NAME   : Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT
+CONTAINER      : Matroska (MKV)
+DURATION       : 1 h 20 min (80 min)
+VIDEO          : MPEG-4 AVC (x264 High@L4.1) | 1920x1080 (16:9) | 23.976 fps | 11.4 Mbps
+AUDIO #1 (ENG) : DTS-HD Master Audio | 6 channels (5.1) | 48.0 kHz | 24-bit | 3,642 kbps (English)
+AUDIO #2 (JPN) : DTS | 6 channels (5.1) | 48.0 kHz | 24-bit | 1,509 kbps (Japanese Dub / 日本語吹替)
+SUBTITLE #1    : Japanese (PGS + UTF-8 SRT) – 日本語字幕
+SUBTITLE #2    : English SDH (PGS + UTF-8 SRT) – Hearing Impaired
+CHAPTERS       : Yes (24 Named Chapters)
+SOURCE         : JPN/USA Retail Blu-ray Disc</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- File List Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title" data-i18n="sec_files">ファイル一覧 (4 files)</h2>
+      </div>
+      <div class="panel-body">
+        <ul class="file-tree">
+          <li>
+            <div class="folder-toggle" id="rootFolderToggle">📁 Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT</div>
+            <ul id="rootFolderList">
+              <li class="file-item">
+                <span>🎬 Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT.mkv</span>
+                <span class="file-size">8.41 GiB</span>
+              </li>
+              <li class="file-item">
+                <span>📄 Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT.nfo</span>
+                <span class="file-size">12.4 KiB</span>
+              </li>
+              <li>
+                <div class="folder-toggle" id="subFolderToggle">📁 Subtitles</div>
+                <ul id="subFolderList">
+                  <li class="file-item">
+                    <span>💬 Garfield.2004.JPN.srt</span>
+                    <span class="file-size">78.2 KiB</span>
+                  </li>
+                  <li class="file-item">
+                    <span>💬 Garfield.2004.ENG.SDH.srt</span>
+                    <span class="file-size">91.6 KiB</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comments Panel -->
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title"><span data-i18n="sec_comments">コメント</span> (<span id="commentCounter">2</span>)</h2>
+      </div>
+      <div class="panel-body">
+        <div id="commentsList">
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">TokyoCatLover99</span>
+              <span>2026-11-20 22:45 JST</span>
+            </div>
+            <div>日本語 5.1ch DTS 吹替と英語 DTS-HD MA の両方が完璧に同期しています！字幕のタイミングもバッチリです。ありがとうございます。</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">LasagnaMonday</span>
+              <span>2026-11-20 23:02 JST</span>
+            </div>
+            <div>Clean x264 encode and fast peering from Japan. Both Japanese and English SDH subtitle tracks work cleanly in mpv and VLC.</div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm">
+          <textarea id="commentInput" placeholder="コメントを入力... / Write a comment..." required></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="btn_post">コメントを投稿</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Localization Dictionary (Japanese / English)
+    const i18n = {
+      ja: {
+        nav_upload: "アップロード",
+        nav_info: "情報",
+        nav_rules: "規約",
+        cat_all: "全カテゴリー",
+        cat_live: "実写 - 英語/日本語翻訳",
+        btn_search: "検索",
+        lbl_category: "カテゴリー:",
+        lbl_date: "投稿日時:",
+        lbl_submitter: "投稿者:",
+        lbl_seeders: "シーダー:",
+        lbl_info: "作品情報:",
+        lbl_leechers: "リーチャー:",
+        lbl_size: "ファイルサイズ:",
+        lbl_completed: "完了数:",
+        btn_copy: "コピー",
+        btn_torrent: "Torrent ダウンロード",
+        btn_magnet: "マグネットリンク",
+        btn_refresh: "ピア状況更新",
+        sec_desc: "リリース詳細 / MediaInfo",
+        sec_files: "ファイル一覧 (4 files)",
+        sec_comments: "コメント",
+        btn_post: "コメントを投稿"
+      },
+      en: {
+        nav_upload: "Upload",
+        nav_info: "Info",
+        nav_rules: "Rules",
+        cat_all: "All categories",
+        cat_live: "Live Action - English-translated",
+        btn_search: "Search",
+        lbl_category: "Category:",
+        lbl_date: "Date:",
+        lbl_submitter: "Submitter:",
+        lbl_seeders: "Seeders:",
+        lbl_info: "Information:",
+        lbl_leechers: "Leechers:",
+        lbl_size: "File size:",
+        lbl_completed: "Completed:",
+        btn_copy: "Copy",
+        btn_torrent: "Download Torrent",
+        btn_magnet: "Magnet",
+        btn_refresh: "Refresh Swarm",
+        sec_desc: "Description / MediaInfo",
+        sec_files: "File list (4 files)",
+        sec_comments: "Comments",
+        btn_post: "Submit Comment"
+      }
+    };
+
+    let currentLang = "ja";
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    // Language Toggle
+    document.getElementById("langToggle").addEventListener("click", () => {
+      currentLang = currentLang === "ja" ? "en" : "ja";
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (i18n[currentLang][key]) {
+          el.textContent = i18n[currentLang][key];
+        }
+      });
+      showToast(currentLang === "ja" ? "表示言語: 日本語" : "Interface Language: English");
+    });
+
+    // Dark Mode Toggle
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const html = document.documentElement;
+      const nextTheme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", nextTheme);
+      showToast(nextTheme === "dark" ? "ダークモードを有効にしました" : "ライトモードに切り替えました");
+    });
+
+    // Copy Info Hash
+    document.getElementById("copyHashBtn").addEventListener("click", () => {
+      const hash = document.getElementById("infoHash").textContent;
+      navigator.clipboard?.writeText(hash);
+      showToast("Info Hash copied: " + hash);
+    });
+
+    // Simulated Torrent & Magnet Actions
+    document.getElementById("downloadTorrentBtn").addEventListener("click", () => {
+      showToast("Preparing metadata: Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT.torrent");
+    });
+
+    document.getElementById("magnetBtn").addEventListener("click", () => {
+      const hash = document.getElementById("infoHash").textContent;
+      const magnet = `magnet:?xt=urn:btih:${hash}&dn=Garfield.2004.ENG-JPN.1080p.BluRay.x264-FGT`;
+      navigator.clipboard?.writeText(magnet);
+      showToast("Magnet URI copied to clipboard!");
+    });
+
+    // Refresh Swarm Peers Simulation
+    document.getElementById("refreshSwarmBtn").addEventListener("click", () => {
+      const seedEl = document.getElementById("seedCount");
+      const leechEl = document.getElementById("leechCount");
+      const deltaSeed = Math.floor(Math.random() * 5) - 1;
+      const newSeeds = Math.max(12, parseInt(seedEl.textContent, 10) + deltaSeed);
+      const newLeechs = Math.max(1, Math.floor(Math.random() * 8));
+      seedEl.textContent = newSeeds;
+      leechEl.textContent = newLeechs;
+      showToast(`Tracker scraped (JP-TYO): ${newSeeds} seeders, ${newLeechs} leechers`);
+    });
+
+    // Collapsible File Tree
+    function bindFolderToggle(toggleId, listId) {
+      document.getElementById(toggleId).addEventListener("click", () => {
+        const list = document.getElementById(listId);
+        const hidden = list.style.display === "none";
+        list.style.display = hidden ? "block" : "none";
+      });
+    }
+    bindFolderToggle("rootFolderToggle", "rootFolderList");
+    bindFolderToggle("subFolderToggle", "subFolderList");
+
+    // Search Bar Demo Handler
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = document.getElementById("searchInput").value.trim();
+      showToast(`Searching Nyaa JP for: "${query || "Garfield"}"`);
+    });
+
+    // Add New Comment
+    document.getElementById("commentForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("commentInput");
+      const text = input.value.trim();
+      if (!text) return;
+
+      const list = document.getElementById("commentsList");
+      const card = document.createElement("div");
+      card.className = "comment-card";
+
+      const header = document.createElement("div");
+      header.className = "comment-header";
+
+      const author = document.createElement("span");
+      author.className = "comment-author";
+      author.textContent = "Guest_JP";
+
+      const time = document.createElement("span");
+      time.textContent = "Just now (JST)";
+
+      header.append(author, time);
+
+      const body = document.createElement("div");
+      body.textContent = text;
+
+      card.append(header, body);
+      list.appendChild(card);
+
+      const counter = document.getElementById("commentCounter");
+      counter.textContent = parseInt(counter.textContent, 10) + 1;
+      input.value = "";
+      showToast("コメントを投稿しました / Comment posted");
+    });
+  </script>
+</body>
+</html>
