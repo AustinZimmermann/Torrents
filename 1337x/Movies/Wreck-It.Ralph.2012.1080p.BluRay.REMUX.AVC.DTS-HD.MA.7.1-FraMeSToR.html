@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR Torrent | 1337x</title>
+  <title>Download Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR | 1337x (US)</title>
   <style>
     :root {
-      --bg-body: #181818;
-      --bg-panel: #222222;
-      --bg-panel-alt: #2a2a2a;
-      --bg-header: #101010;
-      --border-color: #363636;
-      --accent-orange: #d63600;
-      --accent-orange-hover: #f04308;
-      --accent-green: #388e3c;
-      --accent-green-hover: #43a047;
-      --accent-blue: #1976d2;
-      --accent-blue-hover: #1e88e5;
-      --text-main: #e0e0e0;
-      --text-muted: #9e9e9e;
-      --seed-green: #4caf50;
-      --leech-red: #ef5350;
+      --bg-body: #141414;
+      --bg-header: #1d1d1d;
+      --bg-card: #222222;
+      --bg-card-alt: #292929;
+      --bg-hover: #303030;
+      --border-color: #383838;
+      --accent-orange: #e04e14;
+      --accent-orange-hover: #ff5b1a;
+      --accent-green: #2ea44f;
+      --accent-green-hover: #36bd5b;
+      --accent-red: #d73a49;
+      --accent-blue: #3b82f6;
+      --text-primary: #ececec;
+      --text-secondary: #a8a8a8;
+      --text-muted: #777777;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     }
 
     * {
@@ -30,146 +32,228 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-body);
-      color: var(--text-main);
-      font-size: 13px;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 14px;
       line-height: 1.5;
     }
 
     a {
-      color: #ff6a33;
+      color: var(--accent-orange);
       text-decoration: none;
+      transition: color 0.15s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: var(--accent-orange-hover);
     }
 
     /* Top Bar */
     .top-bar {
-      background-color: var(--bg-header);
+      background: #101010;
       border-bottom: 1px solid var(--border-color);
-      padding: 12px 0;
+      padding: 6px 0;
+      font-size: 12px;
+      color: var(--text-secondary);
     }
 
     .container {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 0 15px;
+      padding: 0 16px;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .region-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1e2530;
+      border: 1px solid #2e3b4e;
+      color: #93c5fd;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .region-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+    }
+
+    .top-links {
+      display: flex;
+      gap: 14px;
+    }
+
+    .top-links a {
+      color: var(--text-secondary);
+    }
+
+    .top-links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Main Header */
+    header {
+      background: var(--bg-header);
+      border-bottom: 3px solid var(--accent-orange);
+      padding: 14px 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 15px;
     }
 
     .logo {
+      display: flex;
+      align-items: baseline;
       font-size: 32px;
       font-weight: 900;
       letter-spacing: -1px;
       color: #ffffff;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
+      user-select: none;
     }
 
     .logo span {
       color: var(--accent-orange);
-      font-style: italic;
-      margin-left: 1px;
     }
 
-    .search-box {
+    .logo small {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-left: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .search-form {
       display: flex;
       flex: 1;
       max-width: 540px;
+      min-width: 260px;
     }
 
-    .search-box input {
+    .search-form input {
       flex: 1;
-      background: #252525;
-      border: 1px solid #3c3c3c;
+      background: #121212;
+      border: 1px solid var(--border-color);
       border-right: none;
-      color: #fff;
-      padding: 8px 12px;
+      color: var(--text-primary);
+      padding: 9px 14px;
+      border-radius: 4px 0 0 4px;
       font-size: 13px;
-      border-radius: 3px 0 0 3px;
       outline: none;
     }
 
-    .search-box input:focus {
+    .search-form input:focus {
       border-color: var(--accent-orange);
     }
 
-    .search-box button {
+    .search-form button {
       background: var(--accent-orange);
-      border: none;
       color: #fff;
-      font-weight: 700;
+      border: none;
       padding: 0 18px;
-      cursor: pointer;
-      border-radius: 0 3px 3px 0;
+      font-weight: 700;
+      font-size: 13px;
       text-transform: uppercase;
-      font-size: 12px;
-      transition: background 0.15s;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background 0.15s ease;
     }
 
-    .search-box button:hover {
+    .search-form button:hover {
       background: var(--accent-orange-hover);
     }
 
-    .user-links {
-      display: flex;
-      gap: 14px;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .user-links a {
-      color: #cccccc;
-    }
-
-    .user-links a:hover {
-      color: var(--accent-orange);
-      text-decoration: none;
-    }
-
-    /* Navigation Menu */
-    .main-nav {
-      background-color: #1c1c1c;
-      border-bottom: 2px solid var(--accent-orange);
-      margin-bottom: 20px;
+    /* Nav Bar */
+    nav.main-nav {
+      background: #181818;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .nav-list {
       display: flex;
       list-style: none;
-      flex-wrap: wrap;
+      overflow-x: auto;
     }
 
     .nav-list li a {
       display: block;
-      padding: 10px 18px;
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 12px;
+      padding: 10px 16px;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: background 0.15s;
+      border-right: 1px solid #262626;
+      white-space: nowrap;
     }
 
     .nav-list li a:hover,
     .nav-list li a.active {
-      background-color: var(--accent-orange);
-      text-decoration: none;
+      background: var(--accent-orange);
+      color: #fff;
     }
 
-    /* Layout Grid */
+    /* US Notice Banner */
+    .us-notice {
+      margin-top: 16px;
+      background: linear-gradient(90deg, #251d1a 0%, #1f2229 100%);
+      border: 1px solid #49332a;
+      border-left: 4px solid var(--accent-orange);
+      border-radius: 4px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .us-notice strong {
+      color: #ffb08e;
+    }
+
+    .badge-demo {
+      background: #2f2f2f;
+      border: 1px solid #4a4a4a;
+      color: #d4d4d4;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      margin: 14px 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    /* Main Layout Grid */
     .content-grid {
       display: grid;
       grid-template-columns: 1fr 270px;
@@ -177,376 +261,454 @@
       margin-bottom: 40px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 920px) {
       .content-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    /* Main Box */
-    .box {
-      background-color: var(--bg-panel);
+    /* Torrent Box */
+    .torrent-box {
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 3px;
+      border-radius: 4px;
       overflow: hidden;
-      margin-bottom: 20px;
     }
 
-    .box-header {
-      background: linear-gradient(180deg, #2d2d2d 0%, #222222 100%);
+    .torrent-title-bar {
+      background: var(--bg-card-alt);
+      padding: 14px 18px;
       border-bottom: 1px solid var(--border-color);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
     }
 
-    .box-header h1 {
-      font-size: 16px;
+    .torrent-title-bar h1 {
+      font-size: 17px;
       font-weight: 700;
-      color: #ffffff;
       word-break: break-all;
+      color: #ffffff;
     }
 
-    .badge-vip {
-      background-color: #d63600;
-      color: #fff;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-    }
-
-    /* Torrent Info Columns + Download Buttons */
-    .torrent-top-section {
-      padding: 16px;
+    .torrent-meta-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 220px;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
+      padding: 18px;
       border-bottom: 1px solid var(--border-color);
-      background-color: #1f1f1f;
     }
 
-    @media (max-width: 768px) {
-      .torrent-top-section {
+    @media (max-width: 680px) {
+      .torrent-meta-wrapper {
         grid-template-columns: 1fr;
       }
     }
 
-    .meta-list {
-      list-style: none;
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    .meta-list li {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 10px;
-      border-bottom: 1px solid #2b2b2b;
-      font-size: 12.5px;
+    .meta-table tr {
+      border-bottom: 1px solid #2e2e2e;
     }
 
-    .meta-list li:last-child {
+    .meta-table tr:last-child {
       border-bottom: none;
     }
 
-    .meta-list strong {
-      color: var(--text-muted);
+    .meta-table td {
+      padding: 7px 6px;
+      font-size: 13px;
+    }
+
+    .meta-table td:first-child {
+      color: var(--text-secondary);
       font-weight: 600;
+      width: 38%;
     }
 
-    .meta-list span {
-      color: #ffffff;
-      font-weight: 500;
+    .seeders {
+      color: #4ade80;
+      font-weight: 700;
     }
 
-    .seeds {
-      color: var(--seed-green) !important;
-      font-weight: 700 !important;
+    .leechers {
+      color: #f87171;
+      font-weight: 700;
     }
 
-    .leeches {
-      color: var(--leech-red) !important;
-      font-weight: 700 !important;
-    }
-
-    .download-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .btn-dl {
-      display: flex;
+    .uploader-badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 14px;
+      gap: 5px;
+      background: rgba(224, 78, 20, 0.16);
+      border: 1px solid rgba(224, 78, 20, 0.45);
+      color: #ff8c5a;
+      padding: 1px 7px;
       border-radius: 3px;
       font-weight: 700;
       font-size: 12px;
-      text-transform: uppercase;
-      color: #ffffff;
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s, transform 0.05s;
-      text-align: center;
     }
 
-    .btn-dl:active {
+    /* Movie Info Card (Right Half of Meta) */
+    .movie-card {
+      display: flex;
+      gap: 14px;
+      background: #1b1b1b;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 12px;
+    }
+
+    /* Pure CSS/SVG Poster (No <canvas>) */
+    .poster-art {
+      width: 112px;
+      min-width: 112px;
+      height: 164px;
+      border-radius: 3px;
+      background: linear-gradient(160deg, #b91c1c 0%, #7f1d1d 45%, #1e1b4b 100%);
+      border: 1px solid #444;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 8px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .poster-art .studio {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fde68a;
+      font-weight: 700;
+    }
+
+    .poster-art .bricks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      opacity: 0.35;
+    }
+
+    .poster-art .bricks span {
+      height: 8px;
+      background: #fca5a5;
+      border-radius: 1px;
+    }
+
+    .poster-art .poster-title {
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 1.1;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .poster-art .poster-year {
+      font-size: 11px;
+      color: #fcd34d;
+      font-weight: 700;
+    }
+
+    .movie-details h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .imdb-pill {
+      display: inline-block;
+      background: #f5c518;
+      color: #000;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+
+    .genre-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .genre-tags span {
+      background: #2b2b2b;
+      border: 1px solid #3f3f3f;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .movie-details p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Download Action Buttons */
+    .download-actions {
+      padding: 16px 18px;
+      background: #1b1b1b;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.08s ease, background 0.15s ease;
+    }
+
+    .btn:active {
       transform: translateY(1px);
     }
 
     .btn-magnet {
-      background-color: var(--accent-green);
+      background: var(--accent-green);
+      color: #fff;
     }
 
     .btn-magnet:hover {
-      background-color: var(--accent-green-hover);
-      text-decoration: none;
+      background: var(--accent-green-hover);
+      color: #fff;
     }
 
     .btn-torrent {
-      background-color: var(--accent-orange);
+      background: var(--accent-orange);
+      color: #fff;
     }
 
     .btn-torrent:hover {
-      background-color: var(--accent-orange-hover);
-      text-decoration: none;
+      background: var(--accent-orange-hover);
+      color: #fff;
     }
 
-    .btn-stream {
-      background-color: var(--accent-blue);
+    .btn-secondary {
+      background: #2e2e2e;
+      color: var(--text-primary);
+      border: 1px solid #444;
     }
 
-    .btn-stream:hover {
-      background-color: var(--accent-blue-hover);
-      text-decoration: none;
+    .btn-secondary:hover {
+      background: #3a3a3a;
     }
 
-    .infohash-bar {
-      padding: 8px 16px;
-      background-color: #171717;
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      min-width: 210px;
+      background: #252525;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      z-index: 20;
+    }
+
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #333;
+      color: var(--text-primary);
+      padding: 9px 14px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu button:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu button:hover {
+      background: var(--accent-orange);
+      color: #fff;
+    }
+
+    /* Info Hash Bar */
+    .info-hash-bar {
+      padding: 10px 18px;
+      background: #171717;
       border-bottom: 1px solid var(--border-color);
-      font-size: 11.5px;
-      color: var(--text-muted);
+      font-size: 12px;
+      color: var(--text-secondary);
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 8px;
     }
 
-    .infohash-bar code {
-      color: #bdbdbd;
-      font-family: Consolas, Monaco, monospace;
+    .info-hash-bar code {
+      font-family: var(--font-mono);
+      color: #d4d4d4;
+      background: #242424;
+      padding: 2px 6px;
+      border-radius: 3px;
     }
 
     /* Tabs */
-    .tabs-bar {
+    .tabs-header {
       display: flex;
-      background-color: #181818;
+      background: #1a1a1a;
       border-bottom: 1px solid var(--border-color);
       overflow-x: auto;
     }
 
     .tab-btn {
-      background: transparent;
+      background: none;
       border: none;
       border-right: 1px solid var(--border-color);
-      color: var(--text-muted);
-      padding: 11px 20px;
+      color: var(--text-secondary);
+      padding: 12px 20px;
+      font-size: 13px;
       font-weight: 700;
-      font-size: 12px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.15s;
       white-space: nowrap;
     }
 
     .tab-btn:hover {
-      color: #ffffff;
-      background-color: #242424;
+      color: #fff;
+      background: #242424;
     }
 
     .tab-btn.active {
-      background-color: var(--bg-panel);
-      color: #ffffff;
-      border-top: 2px solid var(--accent-orange);
+      background: var(--bg-card);
+      color: var(--accent-orange);
+      border-bottom: 2px solid var(--accent-orange);
     }
 
-    .tab-content {
+    .tab-panel {
       display: none;
-      padding: 20px;
+      padding: 20px 18px;
     }
 
-    .tab-content.active {
+    .tab-panel.active {
       display: block;
     }
 
-    /* Movie Overview Card inside Description */
-    .movie-card {
-      display: flex;
-      gap: 18px;
-      background-color: #1b1b1b;
-      border: 1px solid var(--border-color);
-      border-radius: 3px;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .movie-card {
-        flex-direction: column;
-      }
-    }
-
-    .poster-placeholder {
-      width: 145px;
-      min-width: 145px;
-      height: 215px;
-      background: linear-gradient(135deg, #2b1d42 0%, #8c2318 55%, #f29f05 100%);
-      border: 1px solid #444;
-      border-radius: 2px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 12px 10px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    .poster-placeholder .studio {
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      opacity: 0.85;
-    }
-
-    .poster-placeholder .poster-title {
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 1.1;
-      text-transform: uppercase;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .poster-placeholder .poster-year {
-      font-size: 11px;
-      font-weight: 700;
-      background: rgba(0, 0, 0, 0.55);
-      padding: 3px 6px;
-      border-radius: 2px;
-    }
-
-    .movie-details h2 {
-      font-size: 18px;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .movie-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      background-color: #2c2c2c;
-      border: 1px solid #3f3f3f;
-      color: #cccccc;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 2px;
-    }
-
-    .rating-pill {
-      background-color: #f5c518;
-      color: #000000;
-      font-weight: 800;
-      font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 2px;
-    }
-
-    .movie-synopsis {
-      color: #cccccc;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-
-    .movie-credits {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .movie-credits strong {
-      color: #e0e0e0;
-    }
-
-    /* NFO / MediaInfo Block */
-    .nfo-section-title {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
+    .desc-section h4 {
       color: var(--accent-orange);
-      margin-bottom: 8px;
-      letter-spacing: 0.5px;
+      font-size: 14px;
+      margin: 14px 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
     }
 
-    .nfo-box {
-      background-color: #121212;
-      border: 1px solid #333333;
-      border-radius: 3px;
-      padding: 15px;
-      font-family: "Consolas", "Courier New", monospace;
-      font-size: 12px;
-      line-height: 1.45;
-      color: #d4d4d4;
-      overflow-x: auto;
-      white-space: pre;
+    .desc-section h4:first-child {
+      margin-top: 0;
     }
 
-    /* Files Tab */
+    .desc-list {
+      margin-left: 18px;
+      color: var(--text-secondary);
+    }
+
+    .desc-list li {
+      margin-bottom: 4px;
+    }
+
+    /* File Tree */
     .file-tree {
       list-style: none;
-      background-color: #181818;
-      border: 1px solid var(--border-color);
-      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
     }
 
     .file-tree li {
+      padding: 8px 10px;
+      border-bottom: 1px solid #2d2d2d;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 14px;
-      border-bottom: 1px solid #282828;
-      font-family: Consolas, Monaco, monospace;
-      font-size: 12px;
+      gap: 10px;
     }
 
-    .file-tree li:last-child {
-      border-bottom: none;
+    .file-tree li:hover {
+      background: var(--bg-hover);
     }
 
     .file-size {
-      color: var(--text-muted);
+      color: var(--text-secondary);
       white-space: nowrap;
-      margin-left: 12px;
     }
 
-    /* Comments Tab */
-    .comment-item {
-      background-color: #1a1a1a;
+    /* MediaInfo Pre */
+    .mediainfo-block {
+      background: #131313;
+      border: 1px solid #303030;
+      border-radius: 4px;
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #cbd5e1;
+      overflow-x: auto;
+      line-height: 1.55;
+      white-space: pre;
+    }
+
+    /* Comments */
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .comment-form textarea {
+      background: #151515;
       border: 1px solid var(--border-color);
-      border-radius: 3px;
+      border-radius: 4px;
+      color: var(--text-primary);
+      padding: 10px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      resize: vertical;
+      min-height: 75px;
+    }
+
+    .comment-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-orange);
+    }
+
+    .comment-item {
+      background: #1b1b1b;
+      border: 1px solid #2e2e2e;
+      border-radius: 4px;
       padding: 12px 14px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .comment-header {
@@ -554,163 +716,185 @@
       justify-content: space-between;
       font-size: 12px;
       margin-bottom: 6px;
-      border-bottom: 1px solid #292929;
-      padding-bottom: 5px;
+      color: var(--text-secondary);
     }
 
     .comment-author {
       font-weight: 700;
-      color: #ff6a33;
-    }
-
-    .comment-date {
-      color: var(--text-muted);
-    }
-
-    .comment-form {
-      margin-top: 16px;
-    }
-
-    .comment-form textarea {
-      width: 100%;
-      background-color: #161616;
-      border: 1px solid var(--border-color);
-      color: #fff;
-      padding: 10px;
-      border-radius: 3px;
-      font-family: inherit;
-      font-size: 13px;
-      resize: vertical;
-      min-height: 75px;
-      margin-bottom: 8px;
-    }
-
-    /* Trackers Table */
-    .tracker-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
-
-    .tracker-table th,
-    .tracker-table td {
-      padding: 9px 12px;
-      border: 1px solid var(--border-color);
-      text-align: left;
-    }
-
-    .tracker-table th {
-      background-color: #181818;
-      color: var(--text-muted);
-      text-transform: uppercase;
-    }
-
-    .status-ok {
-      color: var(--seed-green);
-      font-weight: 700;
+      color: var(--accent-orange);
     }
 
     /* Sidebar */
     .sidebar-widget {
-      background-color: var(--bg-panel);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 3px;
-      margin-bottom: 20px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      overflow: hidden;
     }
 
-    .widget-title {
-      background-color: #181818;
-      border-bottom: 2px solid var(--accent-orange);
+    .sidebar-widget h3 {
+      background: var(--bg-card-alt);
       padding: 10px 14px;
       font-size: 13px;
-      font-weight: 700;
       text-transform: uppercase;
-      color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      color: #fff;
     }
 
-    .category-list {
+    .sidebar-list {
       list-style: none;
     }
 
-    .category-list li a {
-      display: flex;
-      justify-content: space-between;
-      padding: 9px 14px;
-      border-bottom: 1px solid #2b2b2b;
-      color: #d0d0d0;
-      font-size: 12.5px;
-      transition: background 0.15s;
+    .sidebar-list li {
+      border-bottom: 1px solid #2c2c2c;
     }
 
-    .category-list li:last-child a {
+    .sidebar-list li:last-child {
       border-bottom: none;
     }
 
-    .category-list li a:hover {
-      background-color: #2b2b2b;
-      color: #ffffff;
-      text-decoration: none;
+    .sidebar-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 14px;
+      color: var(--text-secondary);
+      font-size: 13px;
     }
 
-    .category-list li a span {
-      color: var(--text-muted);
+    .sidebar-list a:hover {
+      background: var(--bg-hover);
+      color: #fff;
+    }
+
+    .sidebar-count {
+      background: #161616;
+      border: 1px solid #333;
+      padding: 1px 7px;
+      border-radius: 10px;
       font-size: 11px;
+      color: var(--text-muted);
     }
 
     /* Footer */
     footer {
-      background-color: var(--bg-header);
-      border-top: 1px solid var(--border-color);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--text-muted);
+      background: #101010;
+      border-top: 2px solid var(--accent-orange);
+      padding: 22px 0;
+      color: var(--text-secondary);
       font-size: 12px;
+      text-align: center;
     }
 
-    /* Toast Notification */
+    /* Modal & Toast */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #222;
+      border: 1px solid #444;
+      border-top: 3px solid var(--accent-orange);
+      border-radius: 6px;
+      max-width: 480px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .modal-card h3 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .modal-card p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .modal-uri {
+      background: #141414;
+      border: 1px solid #333;
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      word-break: break-all;
+      color: #93c5fd;
+      margin-bottom: 16px;
+    }
+
     .toast {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #252525;
+      background: #1f2937;
+      color: #f9fafb;
       border-left: 4px solid var(--accent-orange);
-      color: #ffffff;
-      padding: 12px 18px;
-      border-radius: 3px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+      padding: 10px 16px;
+      border-radius: 4px;
       font-size: 13px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
       opacity: 0;
-      pointer-events: none;
       transform: translateY(10px);
-      transition: all 0.25s ease;
-      z-index: 999;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 150;
     }
 
     .toast.show {
       opacity: 1;
-      pointer-events: auto;
       transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="top-bar">
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="region-pill">
+        <span class="region-dot"></span>
+        <span>US Mirror Node &middot; United States (EST)</span>
+      </div>
+      <div class="top-links">
+        <a href="#rules" data-toast="Community upload & seeding guidelines opened.">Rules</a>
+        <a href="#faq" data-toast="Indexer FAQ opened.">FAQ</a>
+        <a href="#login" data-toast="Demo login modal disabled in static preview.">Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header>
     <div class="container header-inner">
-      <a href="#top" class="logo">1337<span>X</span></a>
-      <form class="search-box" id="searchForm">
-        <input type="text" id="searchInput" placeholder="Search for torrents..." value="Wreck-It Ralph 2012 FraMeSToR" />
+      <a href="#home" class="logo">1337<span>x</span><small>.to</small></a>
+      <form class="search-form" id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          value="Wreck-It Ralph 2012 1080p BluRay REMUX"
+          placeholder="Search for torrents..."
+          aria-label="Search torrents"
+        />
         <button type="submit">Search</button>
       </form>
-      <div class="user-links">
-        <a href="#register" onclick="showToast('Registration is currently invite-only.'); return false;">Register</a>
-        <a href="#login" onclick="showToast('Login modal triggered (UI Demo).'); return false;">Login</a>
-      </div>
     </div>
   </header>
 
-  <!-- Main Nav -->
+  <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="container">
       <ul class="nav-list">
@@ -720,341 +904,470 @@
         <li><a href="#games">Games</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#apps">Apps</a></li>
-        <li><a href="#rules">Rules</a></li>
+        <li><a href="#anime">Anime</a></li>
+        <li><a href="#top100">Top 100</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Container -->
-  <main class="container content-grid">
-    <!-- Left Main Column -->
-    <div>
-      <div class="box">
-        <div class="box-header">
+  <!-- Main Content -->
+  <main class="container">
+    <!-- US Region & Frontend Mockup Notice -->
+    <div class="us-notice">
+      <div>
+        <strong>United States Region Notice:</strong> Viewing localized metadata layout for US connections. Always comply with US copyright laws and use licensed streaming or physical Blu-ray editions.
+      </div>
+      <span class="badge-demo">HTML/CSS/JS UI Mockup</span>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="#home">Home</a>
+      <span>/</span>
+      <a href="#movies">Movies</a>
+      <span>/</span>
+      <a href="#hd">HD</a>
+      <span>/</span>
+      <span>Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR</span>
+    </div>
+
+    <div class="content-grid">
+      <!-- Left Primary Column -->
+      <section class="torrent-box">
+        <div class="torrent-title-bar">
           <h1>Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR</h1>
-          <span class="badge-vip">VIP Uploader</span>
         </div>
 
-        <div class="torrent-top-section">
-          <ul class="meta-list">
-            <li><strong>Category</strong> <span>Movies</span></li>
-            <li><strong>Type</strong> <span>HD / BluRay Remux</span></li>
-            <li><strong>Language</strong> <span>English (Multi-Sub)</span></li>
-            <li><strong>Total size</strong> <span>26.84 GB</span></li>
-            <li><strong>Uploaded By</strong> <span><a href="#uploader">FraMeSToR</a></span></li>
-          </ul>
+        <!-- Two-Column Metadata -->
+        <div class="torrent-meta-wrapper">
+          <table class="meta-table">
+            <tr>
+              <td>Category</td>
+              <td>Movies</td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>HD (1080p BluRay REMUX)</td>
+            </tr>
+            <tr>
+              <td>Language</td>
+              <td>English</td>
+            </tr>
+            <tr>
+              <td>Total Size</td>
+              <td><strong>24.8 GB</strong></td>
+            </tr>
+            <tr>
+              <td>Uploaded By</td>
+              <td><span class="uploader-badge">&#9733; FraMeSToR</span></td>
+            </tr>
+            <tr>
+              <td>Downloads</td>
+              <td>18,492</td>
+            </tr>
+            <tr>
+              <td>Last Checked</td>
+              <td>2 hours ago</td>
+            </tr>
+            <tr>
+              <td>Date Uploaded</td>
+              <td>Mar 19, 2013</td>
+            </tr>
+            <tr>
+              <td>Seeders</td>
+              <td><span class="seeders" id="seederCount">142</span></td>
+            </tr>
+            <tr>
+              <td>Leechers</td>
+              <td><span class="leechers">19</span></td>
+            </tr>
+          </table>
 
-          <ul class="meta-list">
-            <li><strong>Downloads</strong> <span>18,412</span></li>
-            <li><strong>Last checked</strong> <span>14 mins ago</span></li>
-            <li><strong>Date uploaded</strong> <span>Mar. 5th '13 (Street Date)</span></li>
-            <li><strong>Seeders</strong> <span class="seeds">92</span></li>
-            <li><strong>Leechers</strong> <span class="leeches">4</span></li>
-          </ul>
-
-          <div class="download-actions">
-            <button class="btn-dl btn-magnet" onclick="showToast('Magnet URI handler triggered (Demo Mode — no active hash).')">
-              &#9889; Magnet Download
-            </button>
-            <button class="btn-dl btn-torrent" onclick="showToast('Downloading .torrent metadata container (Demo Mode).')">
-              &#11015; Torrent Download
-            </button>
-            <button class="btn-dl btn-stream" onclick="showToast('Direct stream preview is unavailable for 26.8 GB lossless REMUX files.')">
-              &#9654; Play Now (Stream)
-            </button>
+          <!-- Film Info Card -->
+          <div class="movie-card">
+            <div class="poster-art" aria-hidden="true">
+              <div class="studio">Walt Disney</div>
+              <div class="bricks">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+              <div class="poster-title">Wreck-It<br />Ralph</div>
+              <div class="poster-year">2012 &middot; PG</div>
+            </div>
+            <div class="movie-details">
+              <h3>Wreck-It Ralph (2012)</h3>
+              <span class="imdb-pill">IMDb 7.7 / 10</span>
+              <div class="genre-tags">
+                <span>Animation</span>
+                <span>Adventure</span>
+                <span>Comedy</span>
+                <span>Family</span>
+              </div>
+              <p>
+                <strong>Director:</strong> Rich Moore<br />
+                <strong>Stars:</strong> John C. Reilly, Sarah Silverman, Jack McBrayer, Jane Lynch<br />
+                <strong>Runtime:</strong> 1h 41m (101 min)
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="infohash-bar">
-          <span><strong>InfoHash:</strong> <code>0000000000000000000000000000000000000000</code> (Placeholder / UI Mockup)</span>
-          <span><strong>Region:</strong> en-US (Retail Blu-ray)</span>
+        <!-- Download Action Buttons -->
+        <div class="download-actions">
+          <button type="button" class="btn btn-magnet" id="magnetBtn">
+            &#129522; Magnet Download
+          </button>
+
+          <div class="dropdown" id="torrentDropdown">
+            <button type="button" class="btn btn-torrent" id="torrentBtn">
+              &#11015; Torrent Download &#9662;
+            </button>
+            <div class="dropdown-menu">
+              <button type="button" data-mirror="ITORRENTS Mirror (US-East)">ITORRENTS Mirror (US-East)</button>
+              <button type="button" data-mirror="TORRAGE Mirror (US-West)">TORRAGE Mirror (US-West)</button>
+              <button type="button" data-mirror="BTCACHE Mirror (Cloudflare)">BTCACHE Mirror (Cloudflare)</button>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-secondary" id="copyHashBtn">
+            Copy Info Hash
+          </button>
         </div>
 
-        <!-- Tabs -->
-        <div class="tabs-bar">
-          <button class="tab-btn active" data-tab="desc">Description</button>
-          <button class="tab-btn" data-tab="files">Files (2)</button>
-          <button class="tab-btn" data-tab="comments" id="commentsTabBtn">Comments (3)</button>
-          <button class="tab-btn" data-tab="trackers">Tracker List (4)</button>
+        <!-- Info Hash Bar -->
+        <div class="info-hash-bar">
+          <div>
+            <strong>Info Hash (Placeholder):</strong>
+            <code id="infoHashText">0000000000000000000000000000000000000000</code>
+          </div>
+          <span>Status: <strong>Verified Release Metadata</strong></span>
+        </div>
+
+        <!-- Interactive Tabs -->
+        <div class="tabs-header" role="tablist">
+          <button type="button" class="tab-btn active" data-tab="description">Description</button>
+          <button type="button" class="tab-btn" data-tab="files">Files (3)</button>
+          <button type="button" class="tab-btn" data-tab="mediainfo">MediaInfo</button>
+          <button type="button" class="tab-btn" data-tab="comments" id="commentsTabBtn">Comments (3)</button>
         </div>
 
         <!-- Tab 1: Description -->
-        <div class="tab-content active" id="tab-desc">
-          <div class="movie-card">
-            <div class="poster-placeholder">
-              <div class="studio">Walt Disney Animation</div>
-              <div class="poster-title">Wreck-It<br />Ralph</div>
-              <div class="poster-year">2012 &bull; 1080p</div>
-            </div>
-            <div class="movie-details">
-              <h2>Wreck-It Ralph (2012)</h2>
-              <div class="movie-tags">
-                <span class="rating-pill">IMDb 7.7/10</span>
-                <span class="tag">Animation</span>
-                <span class="tag">Adventure</span>
-                <span class="tag">Comedy</span>
-                <span class="tag">PG</span>
-                <span class="tag">101 min</span>
-                <span class="tag">US Street Date: 2013-03-05</span>
-              </div>
-              <p class="movie-synopsis">
-                A video game villain wants to be a hero and sets out to fulfill his dream, but his quest brings havoc to the whole arcade where he lives. Tired of being overshadowed by Fix-It Felix, Ralph sets off on a game-hopping journey across multiple generations of arcade cabinets to prove he’s got what it takes to be a hero.
-              </p>
-              <div class="movie-credits">
-                <p><strong>Director:</strong> Rich Moore</p>
-                <p><strong>Cast:</strong> John C. Reilly, Sarah Silverman, Jack McBrayer, Jane Lynch, Alan Tudyk</p>
-                <p><strong>Blu-ray Release:</strong> Walt Disney Studios Home Entertainment (US Retail Disc — March 5, 2013)</p>
-              </div>
-            </div>
-          </div>
+        <div class="tab-panel active desc-section" id="tab-description">
+          <h4>Synopsis</h4>
+          <p>
+            A video game villain wants to be a hero and sets out to fulfill his dream, but his quest brings havoc to the whole arcade where he lives. Featuring voice performances by John C. Reilly as Wreck-It Ralph and Sarah Silverman as Vanellope von Schweetz.
+          </p>
 
-          <div class="nfo-section-title">Release MediaInfo &amp; NFO</div>
-          <div class="nfo-box">================================================================================
-  Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR
-================================================================================
-
-[ RELEASE SUMMARY ]
-  Title ............: Wreck-It Ralph (2012)
-  Street Date ......: 2013-03-05 (United States / Region A)
-  Source ...........: US Retail Blu-ray Disc (1:1 Untouched Streams)
-  Container ........: Matroska (.mkv)
-  File Size ........: 26.84 GiB (28,819,231,488 bytes)
-  Duration .........: 01:41:12.066 (145,584 frames)
-  Overall Bitrate ..: 37.9 Mbps
-  Chapters .........: Yes (21 Named Retail Chapters)
-
-[ VIDEO ]
-  Codec ............: MPEG-4 AVC / H.264 (High@L4.1)
-  Resolution .......: 1920x1080p
-  Aspect Ratio .....: 2.39:1 (OAR)
-  Frame Rate .......: 23.976 fps (24000/1001)
-  Bitrate ..........: 29.8 Mbps
-  Bit Depth ........: 8 bits
-  Chroma Subsampling: 4:2:0
-  Color Primaries ..: BT.709
-
-[ AUDIO ]
-  Track #1 .........: English   | DTS-HD Master Audio | 7.1 ch | 48 kHz | 24-bit | 5,112 kbps (Core: 1,509 kbps)
-  Track #2 .........: English   | Dolby Digital       | 2.0 ch | 48 kHz | 320 kbps (Descriptive Audio)
-  Track #3 .........: French    | Dolby Digital       | 5.1 ch | 48 kHz | 640 kbps
-  Track #4 .........: Spanish   | Dolby Digital       | 5.1 ch | 48 kHz | 640 kbps
-
-[ SUBTITLES ]
-  Sub #1 ...........: English (SDH) - PGS
-  Sub #2 ...........: French - PGS
-  Sub #3 ...........: Spanish - PGS
-
-[ RELEASE NOTES ]
-  Lossless 1:1 remux extracted directly from the US retail Blu-ray pressing
-  released on March 5, 2013. Zero video or audio re-encoding performed.
-  All original chapters and lossless DTS-HD MA 7.1 master track preserved.
-
-================================================================================
-  FraMeSToR - Quality Without Compromise
-================================================================================</div>
+          <h4>Release Notes</h4>
+          <ul class="desc-list">
+            <li><strong>Source:</strong> US Region A 2D Blu-ray Disc (untouched AVC video stream)</li>
+            <li><strong>Container:</strong> Matroska (.mkv) lossless remux</li>
+            <li><strong>Primary Audio:</strong> English DTS-HD Master Audio 7.1 (48 kHz / 24-bit)</li>
+            <li><strong>Subtitles:</strong> English SDH, Spanish, French (PGS)</li>
+            <li><strong>Chapters:</strong> Named Blu-ray chapters included</li>
+          </ul>
         </div>
 
         <!-- Tab 2: Files -->
-        <div class="tab-content" id="tab-files">
+        <div class="tab-panel" id="tab-files">
           <ul class="file-tree">
             <li>
               <span>&#127916; Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR.mkv</span>
-              <span class="file-size">26.84 GB</span>
+              <span class="file-size">24.78 GB</span>
             </li>
             <li>
               <span>&#128196; Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR.nfo</span>
-              <span class="file-size">2.41 KB</span>
+              <span class="file-size">14.2 KB</span>
+            </li>
+            <li>
+              <span>&#128193; Sample/wreck-it.ralph.2012.sample.mkv</span>
+              <span class="file-size">21.4 MB</span>
             </li>
           </ul>
         </div>
 
-        <!-- Tab 3: Comments -->
-        <div class="tab-content" id="tab-comments">
-          <div id="commentsList">
+        <!-- Tab 3: MediaInfo -->
+        <div class="tab-panel" id="tab-mediainfo">
+          <div class="mediainfo-block">General
+Unique ID                                : 19482736451029384756102938475610
+Complete name                            : Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR.mkv
+Format                                   : Matroska
+Format version                           : Version 4
+File size                                : 24.8 GiB
+Duration                                 : 1 h 41 min
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 35.1 Mb/s
+Movie name                               : Wreck-It Ralph (2012)
+
+Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4.1
+Format settings                          : CABAC / 4 Ref Frames
+Codec ID                                 : V_MPEG4/ISO/AVC
+Duration                                 : 1 h 41 min
+Bit rate mode                            : Variable
+Bit rate                                 : 28.9 Mb/s
+Width                                    : 1 920 pixels
+Height                                   : 1 080 pixels
+Display aspect ratio                     : 16:9
+Original display aspect ratio            : 2.39:1
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+
+Audio
+ID                                       : 2
+Format                                   : DTS XLL
+Format/Info                              : Digital Theater Systems
+Commercial name                          : DTS-HD Master Audio
+Codec ID                                 : A_DTS
+Duration                                 : 1 h 41 min
+Bit rate mode                            : Variable
+Bit rate                                 : 5 112 kb/s
+Channel(s)                               : 8 channels
+Channel layout                           : C L R LFE Ls Rs Lrs Rrs
+Sampling rate                            : 48.0 kHz
+Bit depth                                : 24 bits
+Language                                 : English
+
+Text #1
+ID                                       : 3
+Format                                   : PGS
+Codec ID                                 : S_HDMV/PGS
+Language                                 : English (SDH)</div>
+        </div>
+
+        <!-- Tab 4: Comments -->
+        <div class="tab-panel" id="tab-comments">
+          <form class="comment-form" id="commentForm">
+            <textarea
+              id="commentInput"
+              placeholder="Write a comment about video/audio quality or release specs..."
+              required
+            ></textarea>
+            <div>
+              <button type="submit" class="btn btn-torrent">Post Comment</button>
+            </div>
+          </form>
+
+          <div id="commentList">
             <div class="comment-item">
               <div class="comment-header">
-                <span class="comment-author">ArcadeKing84</span>
-                <span class="comment-date">Mar. 5th '13</span>
+                <span class="comment-author">ArcadeArchivist</span>
+                <span>2 days ago</span>
               </div>
-              <p>Day-one retail Blu-ray remux! Lossless DTS-HD MA 7.1 track sounds incredible during the Sugar Rush race scenes. Thanks FraMeSToR.</p>
+              <p>Clean untouched Blu-ray remux. The DTS-HD MA 7.1 mix during the Sugar Rush race scenes sounds phenomenal.</p>
             </div>
             <div class="comment-item">
               <div class="comment-header">
-                <span class="comment-author">PixelVault</span>
-                <span class="comment-date">Mar. 6th '13</span>
+                <span class="comment-author">PixelHunter_US</span>
+                <span>1 week ago</span>
               </div>
-              <p>Confirmed untouched AVC video stream and all 21 chapters intact. Seamless playback on Plex and Kodi.</p>
+              <p>Chapters and English PGS subtitles are properly muxed and synced.</p>
             </div>
             <div class="comment-item">
               <div class="comment-header">
-                <span class="comment-author">CinemaBuff_US</span>
-                <span class="comment-date">Mar. 9th '13</span>
+                <span class="comment-author">CinemaBuff99</span>
+                <span>3 weeks ago</span>
               </div>
-              <p>Best transfer for this film. PGS subtitles sync cleanly with zero timing drift.</p>
+              <p>Confirmed 1920x1080 23.976fps AVC source. Great reference animation transfer.</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <form class="comment-form" id="commentForm">
-            <textarea id="commentInput" placeholder="Write a comment about this release..." required></textarea>
-            <button type="submit" class="btn-dl btn-torrent" style="display: inline-flex;">Post Comment</button>
-          </form>
+      <!-- Right Sidebar -->
+      <aside>
+        <div class="sidebar-widget">
+          <h3>Browse Categories</h3>
+          <ul class="sidebar-list">
+            <li><a href="#movies"><span>Movies</span><span class="sidebar-count">142,810</span></a></li>
+            <li><a href="#tv"><span>TV Shows</span><span class="sidebar-count">218,405</span></a></li>
+            <li><a href="#games"><span>Games</span><span class="sidebar-count">49,112</span></a></li>
+            <li><a href="#music"><span>Music</span><span class="sidebar-count">87,340</span></a></li>
+            <li><a href="#apps"><span>Applications</span><span class="sidebar-count">34,920</span></a></li>
+            <li><a href="#anime"><span>Anime</span><span class="sidebar-count">61,508</span></a></li>
+            <li><a href="#docs"><span>Documentaries</span><span class="sidebar-count">19,774</span></a></li>
+          </ul>
         </div>
 
-        <!-- Tab 4: Trackers -->
-        <div class="tab-content" id="tab-trackers">
-          <table class="tracker-table">
-            <thead>
-              <tr>
-                <th>Tracker URL (Mock Endpoints)</th>
-                <th>Status</th>
-                <th>Seeders</th>
-                <th>Leechers</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>udp://tracker.example-open.org:6969/announce</code></td>
-                <td class="status-ok">Working</td>
-                <td>48</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td><code>udp://tracker.example-archive.net:1337/announce</code></td>
-                <td class="status-ok">Working</td>
-                <td>29</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td><code>http://tracker.example-ipv6.org:80/announce</code></td>
-                <td class="status-ok">Working</td>
-                <td>15</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td><code>DHT / PeX / LSD</code></td>
-                <td class="status-ok">Enabled</td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="sidebar-widget">
+          <h3>Release Specs Summary</h3>
+          <ul class="sidebar-list">
+            <li><a href="#spec-res"><span>Resolution</span><span class="sidebar-count">1080p</span></a></li>
+            <li><a href="#spec-codec"><span>Video Codec</span><span class="sidebar-count">AVC</span></a></li>
+            <li><a href="#spec-audio"><span>Audio Track</span><span class="sidebar-count">DTS-HD MA 7.1</span></a></li>
+            <li><a href="#spec-group"><span>Release Group</span><span class="sidebar-count">FraMeSToR</span></a></li>
+          </ul>
         </div>
-      </div>
+      </aside>
     </div>
-
-    <!-- Right Sidebar -->
-    <aside>
-      <div class="sidebar-widget">
-        <div class="widget-title">Browse Torrents</div>
-        <ul class="category-list">
-          <li><a href="#movies">Movies <span>142,890</span></a></li>
-          <li><a href="#tv">Television <span>298,410</span></a></li>
-          <li><a href="#games">Games <span>64,120</span></a></li>
-          <li><a href="#music">Music <span>112,305</span></a></li>
-          <li><a href="#apps">Applications <span>48,912</span></a></li>
-          <li><a href="#anime">Anime <span>73,540</span></a></li>
-          <li><a href="#docs">Documentaries <span>29,118</span></a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <div class="widget-title">Release Details</div>
-        <ul class="category-list">
-          <li><a href="#group">Group <span>FraMeSToR</span></a></li>
-          <li><a href="#source">Source <span>US Blu-ray (2013)</span></a></li>
-          <li><a href="#video">Video <span>1080p AVC</span></a></li>
-          <li><a href="#audio">Audio <span>DTS-HD MA 7.1</span></a></li>
-          <li><a href="#locale">Locale <span>en-US</span></a></li>
-        </ul>
-      </div>
-    </aside>
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>1337x UI Template Mockup (en-US) &bull; Static Educational / Front-End Demonstration &bull; No actual torrent files or trackers are hosted.</p>
+      <p>1337x UI Layout Prototype &middot; US Region View &middot; Static Frontend Demonstration (No copyrighted files or active trackers hosted).</p>
     </div>
   </footer>
+
+  <!-- Simulated Magnet Modal -->
+  <div class="modal-backdrop" id="magnetModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <h3 id="modalTitle">Simulated Magnet URI (Frontend Demo)</h3>
+      <p>
+        This is a static HTML/CSS/JS UI mockup. No actual torrent trackers or copyrighted content hashes are linked.
+      </p>
+      <div class="modal-uri">
+        magnet:?xt=urn:btih:0000000000000000000000000000000000000000&amp;dn=Wreck-It.Ralph.2012.1080p.BluRay.REMUX.AVC.DTS-HD.MA.7.1-FraMeSToR
+      </div>
+      <button type="button" class="btn btn-torrent" id="closeModalBtn">Close</button>
+    </div>
+  </div>
 
   <!-- Toast Notification -->
   <div class="toast" id="toast"></div>
 
   <script>
-    // Tab Switching Logic
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const tabContents = document.querySelectorAll(".tab-content");
+    (function () {
+      const toastEl = document.getElementById('toast');
+      let toastTimer = null;
 
-    tabButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-tab");
-
-        tabButtons.forEach((b) => b.classList.remove("active"));
-        tabContents.forEach((c) => c.classList.remove("active"));
-
-        btn.classList.add("active");
-        document.getElementById(`tab-${target}`).classList.add("active");
-      });
-    });
-
-    // Toast Feedback Helper
-    let toastTimeout;
-    function showToast(message) {
-      const toast = document.getElementById("toast");
-      toast.textContent = message;
-      toast.classList.add("show");
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove("show");
-      }, 3200);
-    }
-
-    // Search Form Simulation
-    document.getElementById("searchForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const query = document.getElementById("searchInput").value.trim();
-      if (query) {
-        showToast(`Searching index for: "${query}" (UI Demo)`);
+      function showToast(message) {
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toastEl.classList.remove('show');
+        }, 2800);
       }
-    });
 
-    // Interactive Comment Submission
-    let commentCount = 3;
-    document.getElementById("commentForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const input = document.getElementById("commentInput");
-      const text = input.value.trim();
-      if (!text) return;
+      // Top utility links toast feedback
+      document.querySelectorAll('[data-toast]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          showToast(el.getAttribute('data-toast'));
+        });
+      });
 
-      const list = document.getElementById("commentsList");
-      const item = document.createElement("div");
-      item.className = "comment-item";
+      // Search form handler
+      document.getElementById('searchForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value.trim();
+        if (!query) {
+          showToast('Enter a search query first.');
+          return;
+        }
+        showToast('Simulated US index search for: "' + query + '"');
+      });
 
-      const header = document.createElement("div");
-      header.className = "comment-header";
+      // Tab switching
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
 
-      const author = document.createElement("span");
-      author.className = "comment-author";
-      author.textContent = "GuestUser";
+      tabButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-tab');
+          tabButtons.forEach((b) => b.classList.remove('active'));
+          tabPanels.forEach((p) => p.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById('tab-' + target).classList.add('active');
+        });
+      });
 
-      const date = document.createElement("span");
-      date.className = "comment-date";
-      date.textContent = "Just now";
+      // Torrent mirror dropdown
+      const dropdown = document.getElementById('torrentDropdown');
+      const torrentBtn = document.getElementById('torrentBtn');
 
-      const body = document.createElement("p");
-      body.textContent = text;
+      torrentBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
 
-      header.appendChild(author);
-      header.appendChild(date);
-      item.appendChild(header);
-      item.appendChild(body);
-      list.appendChild(item);
+      document.querySelectorAll('[data-mirror]').forEach((mirrorBtn) => {
+        mirrorBtn.addEventListener('click', () => {
+          dropdown.classList.remove('open');
+          showToast('Demo mirror selected: ' + mirrorBtn.getAttribute('data-mirror'));
+        });
+      });
 
-      commentCount++;
-      document.getElementById("commentsTabBtn").textContent = `Comments (${commentCount})`;
-      input.value = "";
-      showToast("Comment posted to thread.");
-    });
+      document.addEventListener('click', () => {
+        dropdown.classList.remove('open');
+      });
+
+      // Magnet modal
+      const magnetModal = document.getElementById('magnetModal');
+      document.getElementById('magnetBtn').addEventListener('click', () => {
+        magnetModal.classList.add('open');
+      });
+
+      document.getElementById('closeModalBtn').addEventListener('click', () => {
+        magnetModal.classList.remove('open');
+      });
+
+      magnetModal.addEventListener('click', (e) => {
+        if (e.target === magnetModal) {
+          magnetModal.classList.remove('open');
+        }
+      });
+
+      // Copy placeholder info hash
+      document.getElementById('copyHashBtn').addEventListener('click', () => {
+        const hash = document.getElementById('infoHashText').textContent;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(hash).then(() => {
+            showToast('Placeholder info hash copied to clipboard.');
+          });
+        } else {
+          showToast('Placeholder info hash: ' + hash);
+        }
+      });
+
+      // Interactive comment submission
+      const commentForm = document.getElementById('commentForm');
+      const commentInput = document.getElementById('commentInput');
+      const commentList = document.getElementById('commentList');
+      const commentsTabBtn = document.getElementById('commentsTabBtn');
+      let commentCount = 3;
+
+      commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = commentInput.value.trim();
+        if (!text) return;
+
+        const item = document.createElement('div');
+        item.className = 'comment-item';
+
+        const header = document.createElement('div');
+        header.className = 'comment-header';
+
+        const author = document.createElement('span');
+        author.className = 'comment-author';
+        author.textContent = 'US_GuestUser';
+
+        const time = document.createElement('span');
+        time.textContent = 'Just now';
+
+        const body = document.createElement('p');
+        body.textContent = text;
+
+        header.appendChild(author);
+        header.appendChild(time);
+        item.appendChild(header);
+        item.appendChild(body);
+
+        commentList.prepend(item);
+        commentInput.value = '';
+        commentCount += 1;
+        commentsTabBtn.textContent = 'Comments (' + commentCount + ')';
+        showToast('Comment posted.');
+      });
+    })();
   </script>
 </body>
 </html>
